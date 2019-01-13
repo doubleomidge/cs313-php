@@ -1,0 +1,34 @@
+.hero {
+  background-image: url(img/dream.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover; }
+  .hero .hero-info {
+    color: #C6FFFB;
+    padding-top: 350px;
+    padding-bottom: 350px; }
+    .hero .hero-info h1 {
+      font-size: 4em; }
+    .hero .hero-info p {
+      font-size: 2em; }
+
+.socials {
+  padding-top: 2em;
+  padding-bottom: 1.4em;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center; }
+
+.check-out {
+  background-color: #C6FFFB;
+  color: #00487C;
+  padding-top: 100px;
+  padding-bottom: 50px; }
+  .check-out .public {
+    padding-bottom: 50px; }
+  .check-out img {
+    width: 150px; }
+
+/*# sourceMappingURL=main.css.map */
