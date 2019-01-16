@@ -6,12 +6,15 @@
   background-size: cover; }
   .hero .hero-info {
     color: #C6FFFB;
-    padding-top: 350px;
-    padding-bottom: 350px; }
+    padding-top: 200px;
+    padding-bottom: 200px; }
     .hero .hero-info h1 {
       font-size: 4em; }
     .hero .hero-info p {
       font-size: 2em; }
+
+.logo img {
+  width: 60px; }
 
 .socials {
   padding-top: 2em;
