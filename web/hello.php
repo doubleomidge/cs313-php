@@ -17,11 +17,14 @@
 </head>
 
 <body>
+	<?php include 'header.php'; ?>
 	<div class="container-fluid hero">
 		<div class="container hero-info">
 			<h1>Hello world!</h1>
 			<p>Welcome to the Vast Reaches</p>
-			<a href="" class="btn btn-light" role="button">To the projects</a>
+			<p class="space">I’ve got a bit
+				<a href="#about">about me</a>, and a little more about what I’m working on.</p>
+			<a href="assign.html" class="btn btn-light" role="button">To the projects</a>
 		</div>
 	</div>
 	<nav class="container-fluid navbar navbar-dark bg-dark" data-spy="affix" data-offset-top="197">

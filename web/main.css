@@ -5,13 +5,18 @@
   background-position: center center;
   background-size: cover; }
   .hero .hero-info {
-    color: #C6FFFB;
+    color: #FAFAF7;
     padding-top: 200px;
     padding-bottom: 200px; }
     .hero .hero-info h1 {
-      font-size: 4em; }
-    .hero .hero-info p {
-      font-size: 2em; }
+      font-size: 4em;
+      margin-bottom: 20px; }
+  .hero p {
+    font-size: 2em;
+    line-height: 1em;
+    width: 600px; }
+  .hero .btn {
+    margin-top: 20px; }
 
 .logo img {
   width: 60px; }
@@ -33,5 +38,42 @@
     padding-bottom: 50px; }
   .check-out img {
     width: 150px; }
+
+.jumbotron.j-assign {
+  background: transparent; }
+  .jumbotron.j-assign .intro-assign {
+    max-width: 450px;
+    margin: 0 auto; }
+
+.main-assign {
+  margin-top: 200px;
+  margin: 0 auto;
+  max-width: 1000px; }
+  .main-assign h2 {
+    font-size: 2.5em; }
+
+.project {
+  height: 500px;
+  margin-bottom: 50px; }
+  .project .pro-content {
+    text-align: center;
+    width: 65%;
+    margin: 0 auto; }
+
+.recent1 {
+  background-color: #A2DACB;
+  margin-right: 50px; }
+  .recent1 .pro-content {
+    padding-top: 90px; }
+
+.recent2 {
+  background-color: #EBE9A1; }
+
+.recent3 {
+  background-color: #F7BFB6;
+  margin-right: 50px; }
+
+.recent4 {
+  background-color: #AFD0F8; }
 
 /*# sourceMappingURL=main.css.map */
