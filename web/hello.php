@@ -12,12 +12,17 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 	 crossorigin="anonymous"></script>
 
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+	 crossorigin="anonymous">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- my compiled css -->
 	<link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-	<?php include 'header.php'; ?>
 	<div class="container-fluid hero">
 		<div class="container hero-info">
 			<h1>Hello world!</h1>
@@ -27,24 +32,8 @@
 			<a href="assign.html" class="btn btn-light" role="button">To the projects</a>
 		</div>
 	</div>
-	<nav class="container-fluid navbar navbar-dark bg-dark" data-spy="affix" data-offset-top="197">
-		<a class="navbar-brand logo" href="#">
-			<img src="img/webii-white.png" class="d-inline-block align-top" alt=""> Vast Reaches
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-		 aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			<div class="navbar-nav">
-				<a class="nav-item nav-link active" href="#">Home
-					<span class="sr-only">(current)</span>
-				</a>
-				<a class="nav-item nav-link" href="#about">About Me</a>
-				<a class="nav-item nav-link" href="#">Projects</a>
-			</div>
-		</div>
-	</nav>
+	<?php include 'nav.php'; ?>
+
 
 	<div class="container">
 		<div class="row mb-3 socials">
@@ -60,7 +49,70 @@
 		</div>
 	</div>
 
-	<div class="container-fluid check-out">
+	<div class="container" id="about">
+		<div class="row">
+			<div class="col-sm-8 about-info">
+				<h2>I'm Abby</h2>
+				<p>web developer / designer</p>
+
+				<p>I enjoy building stuff for the web, making people smile, and SASS.</p>
+			</div>
+			<div class="col-sm-4">
+				<img src="img/code.gif" alt="I love to code">
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container about-icon">
+		<div class="row">
+			<div class="col">
+				<div class="info">
+					<span class="fas fa-plane-departure"></span>
+					<p>I love to travel</p>
+				</div>
+
+			</div>
+			<div class="col center-block">
+				<span class="fas fa-jedi"></span>
+				<p>I am a geek</p>
+			</div>
+			<div class="col center-block">
+				<span class="fas fa-grin-beam"></span>
+				<p>I am a happy person</p>
+			</div>
+			<div class="col center-block">
+				<span class="fas fa-bicycle"></span>
+				<p>I like to bike around</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="container work">
+		<h2>How I work</h2>
+		<div class="row">
+			<div class="col-4 work-container">
+				<h3>Mock up Design</h3>
+				<span class="fas fa-drafting-compass"></span>
+				<span class="fas fa-draw-polygon"></span>
+				<p></p>
+			</div>
+
+			<div class="col-4 work-container">
+				<h3>Code</h3>
+				<span class="fas fa-code"></span>
+				<p></p>
+			</div>
+
+			<div class="col-4 work-container">
+				<h3>Mock up Design</h3>
+				<span class="fas fa-drafting-compass"></span>
+				<p></p>
+			</div>
+		</div>
+	</div> -->
+
+	<div class="container check-out">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-sm-6 col-lg-8 public">
@@ -75,6 +127,7 @@
 		</div>
 	</div>
 
+	<?php include 'footer.php'; ?>
 </body>
 
 </html>

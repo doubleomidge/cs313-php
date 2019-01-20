@@ -1,3 +1,7 @@
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+$bgDefault: #1C5253;
+
 .hero {
     background-image: url(img/dream.jpeg);
     background-repeat: no-repeat;
@@ -31,6 +35,18 @@
     width: 60px;
 }
 
+.navbar {
+  background-color: #1c5253;
+
+  .navbar-brand {
+      color: white;
+  }
+
+  .nav-link {
+      color: #d8d7d7;
+  }
+}
+
 .socials {
     padding-top: 2em;
     padding-bottom: 1.4em;
@@ -40,11 +56,47 @@
     text-align: center;
 }
 
+#about {
+    margin-bottom: 50px;
+
+    .about-info {
+        padding-top: 55px;
+    }
+
+    & img {
+        width: 100%;
+    }
+}
+
+.about-icon {
+    margin-bottom: 100px;
+    text-align: center;
+    
+    & span {
+        font-size: 3em;
+    }
+
+    span + p {
+        padding-top: 15px;
+    }
+}
+
+.work {
+    background-color: #FAFAF7;
+    text-align: center;
+    padding: 100px 100px;
+
+    .work-container {
+    border: 2px solid #009B72;
+    }
+}
+
 .check-out {
-    background-color: #C6FFFB;
-    color: #00487C;
+    background-color: #306B34;
+    color: #d8d7d7;
     padding-top: 100px;
     padding-bottom: 50px;
+    margin-bottom: 100px;
 
     .public {
         padding-bottom: 50px;
@@ -53,6 +105,13 @@
     img {
         width: 150px;
     }
+}
+
+.foot {
+    background-color: #1C2753;
+    color: #d8d7d7;
+    padding: 30px 0;
+
 }
 
 .jumbotron.j-assign {
@@ -76,7 +135,7 @@
 
 .project {
     height: 500px;
-    margin-bottom: 50px;
+    margin: 0 50px 50px 50px;
 
     .pro-content {
         text-align: center;
@@ -87,7 +146,6 @@
 
 .recent1 {
     background-color: #A2DACB;
-    margin-right: 50px;
 
     .pro-content {
         padding-top: 90px;
@@ -100,9 +158,18 @@
 
 .recent3 {
     background-color: #F7BFB6;
-    margin-right: 50px;
 }
 
 .recent4 {
     background-color: #AFD0F8;
 }
+
+  .affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  .affix ~ .container-fluid {
+   position: relative;
+   top: 50px;
+  }

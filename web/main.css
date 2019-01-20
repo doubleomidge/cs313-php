@@ -21,6 +21,13 @@
 .logo img {
   width: 60px; }
 
+.navbar {
+  background-color: #1c5253; }
+  .navbar .navbar-brand {
+    color: white; }
+  .navbar .nav-link {
+    color: #d8d7d7; }
+
 .socials {
   padding-top: 2em;
   padding-bottom: 1.4em;
@@ -29,15 +36,43 @@
   text-decoration: underline;
   text-align: center; }
 
+#about {
+  margin-bottom: 50px; }
+  #about .about-info {
+    padding-top: 55px; }
+  #about img {
+    width: 100%; }
+
+.about-icon {
+  margin-bottom: 100px;
+  text-align: center; }
+  .about-icon span {
+    font-size: 3em; }
+  .about-icon span + p {
+    padding-top: 15px; }
+
+.work {
+  background-color: #FAFAF7;
+  text-align: center;
+  padding: 100px 100px; }
+  .work .work-container {
+    border: 2px solid #009B72; }
+
 .check-out {
-  background-color: #C6FFFB;
-  color: #00487C;
+  background-color: #306B34;
+  color: #d8d7d7;
   padding-top: 100px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  margin-bottom: 100px; }
   .check-out .public {
     padding-bottom: 50px; }
   .check-out img {
     width: 150px; }
+
+.foot {
+  background-color: #1C2753;
+  color: #d8d7d7;
+  padding: 30px 0; }
 
 .jumbotron.j-assign {
   background: transparent; }
@@ -54,15 +89,14 @@
 
 .project {
   height: 500px;
-  margin-bottom: 50px; }
+  margin: 0 50px 50px 50px; }
   .project .pro-content {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%; }
 
 .recent1 {
-  background-color: #A2DACB;
-  margin-right: 50px; }
+  background-color: #A2DACB; }
   .recent1 .pro-content {
     padding-top: 90px; }
 
@@ -70,10 +104,18 @@
   background-color: #EBE9A1; }
 
 .recent3 {
-  background-color: #F7BFB6;
-  margin-right: 50px; }
+  background-color: #F7BFB6; }
 
 .recent4 {
   background-color: #AFD0F8; }
+
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important; }
+
+.affix ~ .container-fluid {
+  position: relative;
+  top: 50px; }
 
 /*# sourceMappingURL=main.css.map */

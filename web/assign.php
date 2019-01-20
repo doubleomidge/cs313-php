@@ -17,24 +17,7 @@
 </head>
 
 <body>
-    <nav class="container-fluid navbar navbar-dark bg-dark" data-spy="affix" data-offset-top="197">
-        <a class="navbar-brand logo" href="#">
-            <img src="img/webii-white.png" class="d-inline-block align-top" alt=""> Vast Reaches
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home
-                    <span class="sr-only">(current)</span>
-                </a>
-                <a class="nav-item nav-link" href="#about">About Me</a>
-                <a class="nav-item nav-link" href="#">Projects</a>
-            </div>
-        </div>
-    </nav>
+   <?php include 'nav.php'; ?>
 
     <header>
         <div class="jumbotron j-assign">
@@ -64,10 +47,12 @@
                 <p>If you’d like to collaborate, please email me, or fill out this contact form.</p>
             </div>
         </div>
-        <div class="w-100"></div>
+        <!-- <div class="w-100"></div>
         <div class="col project recent3">col</div>
-        <div class="col project recent4">col</div>
+        <div class="col project recent4">col</div> -->
     </div>
+
+    <?php include 'footer.php'; ?>
 
 </body>
 
