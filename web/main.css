@@ -11,6 +11,9 @@ h1, h2, h3, h4 {
   color: #009B72;
   font-weight: 600; }
 
+.subtle-link {
+  color: #FAFAF7; }
+
 .hero {
   background-image: url(img/dream.jpeg);
   background-repeat: no-repeat;

@@ -16,6 +16,10 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
+.subtle-link {
+    color: $ygrey;
+}
+
 .hero {
     background-image: url(img/dream.jpeg);
     background-repeat: no-repeat;
@@ -121,7 +125,6 @@ h1, h2, h3, h4 {
     background-color: #1C2753;
     color: #d8d7d7;
     padding: 30px 0;
-
 }
 
 .jumbotron.j-assign {
