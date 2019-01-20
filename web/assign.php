@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Abby is great @ Web2</title>
+    <title>Abby's Projects</title>
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">

@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
     background-size: cover;
 
     .hero-info {
-        color: $grey;
+        color: $ygrey;
         padding-top: 200px;
         padding-bottom: 200px;
 
@@ -92,18 +92,18 @@ h1, h2, h3, h4 {
 }
 
 .work {
-    background-color: $grey;
+    background-color: $ygrey;
     text-align: center;
     padding: 100px 100px;
 
     .work-container {
-    border: 2px solid #009B72;
+    border: 2px solid $tgreen;
     }
 }
 
 .check-out {
-    background-color: #25967C;
-    color: #d8d7d7;
+    background-color: $ygrey;
+    color: $tgreen;
     padding-top: 100px;
     padding-bottom: 50px;
     margin-bottom: 100px;
