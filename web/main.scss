@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Montserrat');
 @import 'variables';
 
+/* ----------------------------------------------------- */
+/* --------- Common ----------- */
+/* ----------------------------------------------------- */
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
@@ -9,6 +13,22 @@ body {
 h1, h2, h3, h4 {
     font-family: 'Inconsolata', monospace;
     font-weight: 700;
+}
+
+.navbar {
+  background-color: $dkgreen;
+  
+    .navbar-brand {
+        color: white;
+    }
+
+    .nav-link {
+        color: $grey;
+    }
+
+    .navbar-toggler{
+        background-color: #fff;
+    }
 }
 
 .emp-text {
@@ -23,6 +43,16 @@ h1, h2, h3, h4 {
         color: $lgreen;
     }
 }
+
+.foot {
+    background-color: $dkblue;
+    color: $grey;
+    padding: 30px 0;
+}
+
+/* ----------------------------------------------------- */
+/* --------- Hello/home page ----------- */
+/* ----------------------------------------------------- */
 
 .hero {
     background-image: url(img/dream.jpeg);
@@ -51,18 +81,6 @@ h1, h2, h3, h4 {
     & .btn {
         margin-top: 20px;
     }
-}
-
-.navbar {
-  background-color: #1c5253;
-
-  .navbar-brand {
-      color: white;
-  }
-
-  .nav-link {
-      color: #d8d7d7;
-  }
 }
 
 .socials {
@@ -125,11 +143,9 @@ h1, h2, h3, h4 {
     }
 }
 
-.foot {
-    background-color: #1C2753;
-    color: #d8d7d7;
-    padding: 30px 0;
-}
+/* ----------------------------------------------------- */
+/* --------- Projects ----------- */
+/* ----------------------------------------------------- */
 
 .jumbotron.j-assign {
     background: transparent;
@@ -169,7 +185,7 @@ h1, h2, h3, h4 {
 }
 
 .comingsoon {
-    background-color: #EBE9A1;
+    background-color: $grey;
 }
 
 .recent3 {
