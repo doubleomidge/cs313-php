@@ -15,7 +15,7 @@
 					<a class="nav-link" href="#about">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="assign.html">Projects</a>
+					<a class="nav-link" href="assign.php">Projects</a>
 				</li>
 			</ul>
 		</div>

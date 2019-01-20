@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Montserrat");
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em; }
+
+h1, h2, h3, h4 {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 700; }
+
+.emp-text {
+  color: #009B72;
+  font-weight: 600; }
+
 .hero {
   background-image: url(img/dream.jpeg);
   background-repeat: no-repeat;
@@ -17,9 +30,6 @@
     width: 600px; }
   .hero .btn {
     margin-top: 20px; }
-
-.logo img {
-  width: 60px; }
 
 .navbar {
   background-color: #1c5253; }
@@ -47,7 +57,7 @@
   margin-bottom: 100px;
   text-align: center; }
   .about-icon span {
-    font-size: 3em; }
+    font-size: 2em; }
   .about-icon span + p {
     padding-top: 15px; }
 
@@ -59,7 +69,7 @@
     border: 2px solid #009B72; }
 
 .check-out {
-  background-color: #306B34;
+  background-color: #25967C;
   color: #d8d7d7;
   padding-top: 100px;
   padding-bottom: 50px;

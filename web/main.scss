@@ -1,6 +1,20 @@
-$grid-columns: 12 !default;
-$grid-gutter-width: 30px !default;
-$bgDefault: #1C5253;
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Montserrat');
+@import 'variables';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+}
+
+.emp-text {
+    color: $tgreen;
+    font-weight: 600;
+}
 
 .hero {
     background-image: url(img/dream.jpeg);
@@ -10,7 +24,7 @@ $bgDefault: #1C5253;
     background-size: cover;
 
     .hero-info {
-        color: #FAFAF7;
+        color: $grey;
         padding-top: 200px;
         padding-bottom: 200px;
 
@@ -29,10 +43,6 @@ $bgDefault: #1C5253;
     & .btn {
         margin-top: 20px;
     }
-}
-
-.logo img {
-    width: 60px;
 }
 
 .navbar {
@@ -73,7 +83,7 @@ $bgDefault: #1C5253;
     text-align: center;
     
     & span {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     span + p {
@@ -82,7 +92,7 @@ $bgDefault: #1C5253;
 }
 
 .work {
-    background-color: #FAFAF7;
+    background-color: $grey;
     text-align: center;
     padding: 100px 100px;
 
@@ -92,7 +102,7 @@ $bgDefault: #1C5253;
 }
 
 .check-out {
-    background-color: #306B34;
+    background-color: #25967C;
     color: #d8d7d7;
     padding-top: 100px;
     padding-bottom: 50px;

@@ -51,15 +51,17 @@
 
 	<div class="container" id="about">
 		<div class="row">
-			<div class="col-sm-8 about-info">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-4 col-sm-8 about-info">
 				<h2>I'm Abby</h2>
-				<p>web developer / designer</p>
+				<p class="emp-text">web developer / designer</p>
 
-				<p>I enjoy building stuff for the web, making people smile, and SASS.</p>
+				<p>I enjoy building responsive stuff for the web, making people smile, baking cookies, and SASS.</p>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-lg-4 col-sm-4">
 				<img src="img/code.gif" alt="I love to code">
 			</div>
+			<div class="col-lg-2"></div>
 		</div>
 
 	</div>
@@ -74,16 +76,16 @@
 
 			</div>
 			<div class="col center-block">
-				<span class="fas fa-jedi"></span>
-				<p>I am a geek</p>
+				<span class="fas fa-film"></span>
+				<p>I watch lots of movies</p>
 			</div>
 			<div class="col center-block">
 				<span class="fas fa-grin-beam"></span>
 				<p>I am a happy person</p>
 			</div>
 			<div class="col center-block">
-				<span class="fas fa-bicycle"></span>
-				<p>I like to bike around</p>
+				<span class="fas fa-umbrella-beach"></span>
+				<p>I like the beach</p>
 			</div>
 		</div>
 	</div>
@@ -115,7 +117,7 @@
 	<div class="container check-out">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-sm-6 col-lg-8 public">
+				<div class="col-sm-6 col-lg-8 public">
 					<h2>Check me out on my portfolio site</h2>
 					<p>I've got a lot of my experience and my work up there</p>
 				</div>
