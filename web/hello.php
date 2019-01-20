@@ -29,7 +29,7 @@
 			<p>Welcome to the Vast Reaches</p>
 			<p class="space">I’ve got a bit
 				<a href="#about">about me</a>, and a little more about what I’m working on.</p>
-			<a href="assign.html" class="btn btn-light" role="button">To the projects</a>
+			<a href="assign.php" class="btn btn-light" role="button">To the projects</a>
 		</div>
 	</div>
 	<?php include 'nav.php'; ?>

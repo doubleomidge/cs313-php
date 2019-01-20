@@ -7,12 +7,12 @@
 		<div class="collapse navbar-collapse" id="navbarText">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Home
+					<a class="nav-link" href="hello.php">Home
 						<span class="sr-only">(current)</span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#about">About</a>
+					<a class="nav-link" href="hello.php#about">About</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="assign.php">Projects</a>
