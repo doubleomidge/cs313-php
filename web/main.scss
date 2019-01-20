@@ -151,25 +151,24 @@ h1, h2, h3, h4 {
 }
 
 .project {
-    height: 500px;
+    height: 520px;
     margin: 0 50px 50px 50px;
+    text-align: center;
 
     .pro-content {
-        text-align: center;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-top: 15%;
+    }
+
+    .pro-extra {
+        margin-top: 20%;
     }
 }
 
 .recent1 {
     background-color: #A2DACB;
-
-    .pro-content {
-        padding-top: 90px;
-    }
 }
 
-.recent2 {
+.comingsoon {
     background-color: #EBE9A1;
 }
 
