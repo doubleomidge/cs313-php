@@ -18,6 +18,10 @@ h1, h2, h3, h4 {
 
 .subtle-link {
     color: $ygrey;
+
+    & :hover {
+        color: $lgreen;
+    }
 }
 
 .hero {
