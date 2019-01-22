@@ -19,7 +19,7 @@ $userTravel = filter_input(INPUT_POST, 'travel');
         <p>This is your email link: <a href="mailto:<?php echo $userEmail ?>"><?php echo $userEmail ?></a></p>
         <p>Your major is: <?php echo $userMajor ?></p>
         <p>You said: <?php echo $userComments ?></p>
-        <p>You've been to: <?php echo $userComments ?></p>
+        <p>You've been to: <?php echo $userTravel ?></p>
     </div>
 </body>
 </html>
