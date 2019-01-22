@@ -43,33 +43,33 @@
 
 		<p>Where have you visited? Check all that apply.</p>
 		<div class="form-check form-check-inline">
-  			<input class="form-check-input" type="checkbox" name="travel" id="North America" value="option1">
+  			<input class="form-check-input" type="checkbox" name="travel" id="North America" value="North America">
   			<label class="form-check-label" for="inlineCheckbox1">North America</label>
 		</div>
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="checkbox" name="travel" id="South America" value="option2">
+			<input class="form-check-input" type="checkbox" name="travel" id="South America" value="South America">
   			<label class="form-check-label" for="inlineCheckbox2">South America</label>
 		</div>
 		<div class="form-check form-check-inline">
-  			<input class="form-check-input" type="checkbox" name="travel" id="Europe" value="option1">
+  			<input class="form-check-input" type="checkbox" name="travel" id="Europe" value="Europe">
   			<label class="form-check-label" for="inlineCheckbox1">Europe</label>
 		</div>
 
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="checkbox" name="travel" id="Asia" value="option2">
+			<input class="form-check-input" type="checkbox" name="travel" id="Asia" value="Asia">
   			<label class="form-check-label" for="inlineCheckbox2">Asia</label>
 		</div>
 		<div class="form-check form-check-inline">
-  			<input class="form-check-input" type="checkbox" name="travel" id="Australia" value="option1">
+  			<input class="form-check-input" type="checkbox" name="travel" id="Australia" value="Australia">
   			<label class="form-check-label" for="inlineCheckbox1">Australia</label>
 		</div>
 
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="checkbox" name="travel" id="Africa" value="option2">
+			<input class="form-check-input" type="checkbox" name="travel" id="Africa" value="Africa">
   			<label class="form-check-label" for="inlineCheckbox2">Africa</label>
 		</div>
 		<div class="form-check form-check-inline">
-  			<input class="form-check-input" type="checkbox" name="travel" id="Antartica" value="option1">
+  			<input class="form-check-input" type="checkbox" name="travel" id="Antartica" value="Antartica">
   			<label class="form-check-label" for="inlineCheckbox1">Antartica</label>
 		</div>
 
