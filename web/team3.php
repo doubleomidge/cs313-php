@@ -24,14 +24,16 @@ $countries = array(
 
 <div class="container">
 	<form method="post" action="results.php">
-		<div class="form-group col-md-6">
-			<label for="nameinput">Name: </label>
-			<input type="text" name="name" id="nameinput">
-		</div>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="nameinput">Name: </label>
+				<input type="text" name="name" id="nameinput">
+			</div>
 
-		<div class="form-group col-md-6">
-			<label for="emailinput">Email Address: </label>
-			<input type="text" name="email" id="emailinput">
+			<div class="form-group col-md-6">
+				<label for="emailinput">Email Address: </label>
+				<input type="text" name="email" id="emailinput">
+			</div>
 		</div>
 
 		<p>Major: </p>
