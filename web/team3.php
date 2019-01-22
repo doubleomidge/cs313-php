@@ -1,5 +1,16 @@
 <html>
+<?php
 
+$countries = array(
+	"NA" => "North America",
+	"SA" => "South America",
+	"EU" => "Europe",
+	"AI" => "Asia",
+	"AU" => "Australia",
+	"AF" => "Africa",
+	"AN" => "Antartica"
+);
+?>
 <head>
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -37,7 +48,17 @@
 		?>
 
 		<p style="margin-top: 1em;">Where have you visited? Check all that apply.</p>
-		<div class="form-check form-check-inline">
+		<?php
+		foreach($countries as $key=>$country) {
+			echo '<div class="form-check form-check-inline">
+  			<input class="form-check-input" type="checkbox" name="travel[]" id=" ' . $country . ' " value=" ' . $country . ' ">
+  			<label class="form-check-label" for="inlineCheckbox1"> ' . $country . ' a</label>
+			</div>';
+		}
+
+		?>
+
+		<!-- <div class="form-check form-check-inline">
   			<input class="form-check-input" type="checkbox" name="travel[]" id="North America" value="North America">
   			<label class="form-check-label" for="inlineCheckbox1">North America</label>
 		</div>
@@ -49,7 +70,6 @@
   			<input class="form-check-input" type="checkbox" name="travel[]" id="Europe" value="Europe">
   			<label class="form-check-label" for="inlineCheckbox1">Europe</label>
 		</div>
-
 		<div class="form-check form-check-inline">
 			<input class="form-check-input" type="checkbox" name="travel[]" id="Asia" value="Asia">
   			<label class="form-check-label" for="inlineCheckbox2">Asia</label>
@@ -58,7 +78,6 @@
   			<input class="form-check-input" type="checkbox" name="travel[]" id="Australia" value="Australia">
   			<label class="form-check-label" for="inlineCheckbox1">Australia</label>
 		</div>
-
 		<div class="form-check form-check-inline">
 			<input class="form-check-input" type="checkbox" name="travel[]" id="Africa" value="Africa">
   			<label class="form-check-label" for="inlineCheckbox2">Africa</label>
@@ -66,7 +85,7 @@
 		<div class="form-check form-check-inline">
   			<input class="form-check-input" type="checkbox" name="travel[]" id="Antartica" value="Antartica">
   			<label class="form-check-label" for="inlineCheckbox1">Antartica</label>
-		</div>
+		</div> -->
 
 		<div class="form-group">
 			<label for="commentinput">Comments: </label>
