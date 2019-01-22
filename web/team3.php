@@ -12,7 +12,7 @@
 <body>
 
 <div class="container">
-	<form action="welcome.php" method="post">
+	<form method="post" action="results.php">
 		<div class="form-group">
 			<label for="nameinput">Name: </label>
 			<input type="text" name="name" id="nameinput">
@@ -25,25 +25,25 @@
 
 		<p>Major: </p>
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+			<input class="form-check-input" type="radio" name="major" id="inlineRadio1" value="option1">
 			<label class="form-check-label" for="inlineRadio1">Computer Science</label>
 		</div>
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+			<input class="form-check-input" type="radio" name="major" id="inlineRadio2" value="option2">
 			<label class="form-check-label" for="inlineRadio2">Web Design and Development</label>
 		</div>
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+			<input class="form-check-input" type="radio" name="major" id="inlineRadio3" value="option3" disabled>
 			<label class="form-check-label" for="inlineRadio3">Computer Information Technology</label>
 		</div>
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+			<input class="form-check-input" type="radio" name="major" id="inlineRadio3" value="option3" disabled>
 			<label class="form-check-label" for="inlineRadio3">Computer Engineering</label>
 		</div>
 
 		<div class="form-group">
 			<label for="commentinput">Comments: </label>
-			<textarea class="form-control" id="commentinput" rows="3"></textarea>
+			<textarea class="form-control" id="commentinput" name="comment" rows="3"></textarea>
 		</div>
 
 		<input type="submit">
