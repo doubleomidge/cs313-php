@@ -11,6 +11,7 @@
 
 <body>
 
+<div class="container">
 	<form action="welcome.php" method="post">
 		<div class="form-group">
 			<label for="nameinput">Name: </label>
@@ -22,6 +23,7 @@
 			<input type="text" name="email" id="emailinput">
 		</div>
 
+		<p>Major: </p>
 		<div class="form-check form-check-inline">
 			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
 			<label class="form-check-label" for="inlineRadio1">Computer Science</label>
@@ -47,6 +49,7 @@
 		<input type="submit">
 
 	</form>
+</div>
 
 </body>
 
