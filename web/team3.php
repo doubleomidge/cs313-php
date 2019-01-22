@@ -13,19 +13,19 @@
 
 <div class="container">
 	<form method="post" action="results.php">
-		<div class="form-group">
+		<div class="form-group col-md-6">
 			<label for="nameinput">Name: </label>
 			<input type="text" name="name" id="nameinput">
 		</div>
 
-		<div class="form-group">
+		<div class="form-group col-md-6">
 			<label for="emailinput">Email Address: </label>
 			<input type="text" name="email" id="emailinput">
 		</div>
 
 		<p>Major: </p>
 		<?php 
-		$majors = ['Computer Science', 'Web Design and Development', 'Computer Information Technology', 'Computer Engineering'];
+		$majors = ['CS Computer Science', 'WDD Web Design and Development', 'CIT Computer Information Technology', 'CE Computer Engineering'];
 
 		foreach($majors as $major) {
 			echo '<div class="form-check form-check-inline">
@@ -35,25 +35,8 @@
 		}
 
 		?>
-		<!-- <div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="major" id="inlineRadio1" value="Computer Science">
-			<label class="form-check-label" for="inlineRadio1">Computer Science</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="major" id="inlineRadio2" value="Web Design and Development">
-			<label class="form-check-label" for="inlineRadio2">Web Design and Development</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="major" id="inlineRadio3" value="Computer Information Technology">
-			<label class="form-check-label" for="inlineRadio3">Computer Information Technology</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="major" id="inlineRadio3" value="Computer Engineering">
-			<label class="form-check-label" for="inlineRadio3">Computer Engineering</label>
-		</div>  -->
-		<br>
 
-		<p>Where have you visited? Check all that apply.</p>
+		<p style="margin-top: 1em;">Where have you visited? Check all that apply.</p>
 		<div class="form-check form-check-inline">
   			<input class="form-check-input" type="checkbox" name="travel[]" id="North America" value="North America">
   			<label class="form-check-label" for="inlineCheckbox1">North America</label>

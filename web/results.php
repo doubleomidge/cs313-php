@@ -27,7 +27,7 @@ $userTravel = $_POST['travel'];
         <h1>Hi <?php echo $userName ?></h1>
         <p>This is your email link: <a href="mailto:<?php echo $userEmail ?>"><?php echo $userEmail ?></a></p>
         <p>Your major is: <?php echo $userMajor ?></p>
-        <p>You've been to: <?php foreach($userTravel as $places){echo $places . ", ";} ?></p>
+        <p>You've been to: <?php foreach($userTravel as $places){echo $places . ", ";} ?> can't wait to keep exploring!</p>
         <p>You said: <?php echo $userComments ?></p>
     </div>
 </body>
