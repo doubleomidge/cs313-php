@@ -3,7 +3,7 @@ $userName = filter_input(INPUT_POST, 'name');
 $userEmail = filter_input(INPUT_POST, 'email');
 $userMajor = filter_input(INPUT_POST, 'major');
 $userComments = filter_input(INPUT_POST, 'comment');
-$userTravel = filter_input(INPUT_POST, 'travel');
+$userTravel = filter_input(INPUT_POST, 'travel[]');
 ?>
 
 <html lang="en">
