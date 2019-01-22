@@ -24,7 +24,18 @@
 		</div>
 
 		<p>Major: </p>
-		<div class="form-check form-check-inline">
+		<?php 
+		$majors = ['Computer Science', 'Web Design and Development', 'Computer Information Technology', 'Computer Engineering'];
+
+		foreach($majors as $major) {
+			echo '<div class="form-check form-check-inline">
+			<input class="form-check-input" type="radio" name="major" id="inlineRadio1" value=" ' . $major . ' ">
+			<label class="form-check-label" for="inlineRadio1"> ' . $major . ' </label>
+			</div>';
+		}
+
+		?>
+		<!-- <div class="form-check form-check-inline">
 			<input class="form-check-input" type="radio" name="major" id="inlineRadio1" value="Computer Science">
 			<label class="form-check-label" for="inlineRadio1">Computer Science</label>
 		</div>
@@ -39,7 +50,7 @@
 		<div class="form-check form-check-inline">
 			<input class="form-check-input" type="radio" name="major" id="inlineRadio3" value="Computer Engineering">
 			<label class="form-check-label" for="inlineRadio3">Computer Engineering</label>
-		</div> 
+		</div>  -->
 		<br>
 
 		<p>Where have you visited? Check all that apply.</p>
