@@ -41,6 +41,38 @@
 			<label class="form-check-label" for="inlineRadio3">Computer Engineering</label>
 		</div>
 
+		<p>Where have you visited? Check all that apply.</p>
+		<div class="form-check form-check-inline">
+  			<input class="form-check-input" type="checkbox" name="travel" id="North America" value="option1">
+  			<label class="form-check-label" for="inlineCheckbox1">North America</label>
+		</div>
+		<div class="form-check form-check-inline">
+			<input class="form-check-input" type="checkbox" name="travel" id="South America" value="option2">
+  			<label class="form-check-label" for="inlineCheckbox2">South America</label>
+		</div>
+		<div class="form-check form-check-inline">
+  			<input class="form-check-input" type="checkbox" name="travel" id="Europe" value="option1">
+  			<label class="form-check-label" for="inlineCheckbox1">Europe</label>
+		</div>
+
+		<div class="form-check form-check-inline">
+			<input class="form-check-input" type="checkbox" name="travel" id="Asia" value="option2">
+  			<label class="form-check-label" for="inlineCheckbox2">Asia</label>
+		</div>
+		<div class="form-check form-check-inline">
+  			<input class="form-check-input" type="checkbox" name="travel" id="Australia" value="option1">
+  			<label class="form-check-label" for="inlineCheckbox1">Australia</label>
+		</div>
+
+		<div class="form-check form-check-inline">
+			<input class="form-check-input" type="checkbox" name="travel" id="Africa" value="option2">
+  			<label class="form-check-label" for="inlineCheckbox2">Africa</label>
+		</div>
+		<div class="form-check form-check-inline">
+  			<input class="form-check-input" type="checkbox" name="travel" id="Antartica" value="option1">
+  			<label class="form-check-label" for="inlineCheckbox1">Antartica</label>
+		</div>
+
 		<div class="form-group">
 			<label for="commentinput">Comments: </label>
 			<textarea class="form-control" id="commentinput" name="comment" rows="3"></textarea>
