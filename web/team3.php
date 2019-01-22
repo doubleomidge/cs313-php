@@ -52,7 +52,7 @@ $countries = array(
 		foreach($countries as $key=>$country) {
 			echo '<div class="form-check form-check-inline">
   			<input class="form-check-input" type="checkbox" name="travel[]" id=" ' . $country . ' " value=" ' . $country . ' ">
-  			<label class="form-check-label" for="inlineCheckbox1"> ' . $country . ' a</label>
+  			<label class="form-check-label" for="inlineCheckbox1"> ' . $country . ' </label>
 			</div>';
 		}
 
