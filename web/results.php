@@ -4,7 +4,7 @@ $userEmail = filter_input(INPUT_POST, 'email');
 $userMajor = filter_input(INPUT_POST, 'major');
 $userComments = filter_input(INPUT_POST, 'comment');
 $userTravel = $_POST['travel'];
-var_dump($_POST);
+
 ?>
 
 <html lang="en">
@@ -27,8 +27,8 @@ var_dump($_POST);
         <h1>Hi <?php echo $userName ?></h1>
         <p>This is your email link: <a href="mailto:<?php echo $userEmail ?>"><?php echo $userEmail ?></a></p>
         <p>Your major is: <?php echo $userMajor ?></p>
+        <p>You've been to: <?php foreach($userTravel as $places){echo $places . ", ";} ?></p>
         <p>You said: <?php echo $userComments ?></p>
-        <p>You've been to: <?php foreach($userTravel as $places){echo $places;} ?></p>
     </div>
 </body>
 </html>

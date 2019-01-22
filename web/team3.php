@@ -39,7 +39,8 @@
 		<div class="form-check form-check-inline">
 			<input class="form-check-input" type="radio" name="major" id="inlineRadio3" value="Computer Engineering">
 			<label class="form-check-label" for="inlineRadio3">Computer Engineering</label>
-		</div>
+		</div> 
+		<br>
 
 		<p>Where have you visited? Check all that apply.</p>
 		<div class="form-check form-check-inline">
