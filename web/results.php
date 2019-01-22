@@ -23,7 +23,7 @@ $userTravel = $_POST['travel'];
 </head>
 
 <body>
-    <div class="container" style="margin-top: 1em;">
+    <div class="container" style="margin-top:1em;">
         <h1>Hi <?php echo $userName ?></h1>
         <p>This is your email link: <a href="mailto:<?php echo $userEmail ?>"><?php echo $userEmail ?></a></p>
         <p>Your major is: <?php echo $userMajor ?></p>

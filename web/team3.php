@@ -27,7 +27,7 @@ $countries = array(
 
 <body>
 
-<div class="container" style="margin-top: 2em;">
+<div class="container" style="margin-top:2em;">
 	<form method="post" action="results.php">
 		<div class="form-row">
 			<div class="form-group col-md-6">
@@ -54,7 +54,7 @@ $countries = array(
 
 		?>
 
-		<p style="margin-top: 1em;">Where have you visited? Check all that apply.</p>
+		<p style="margin-top:1em;">Where have you visited? Check all that apply.</p>
 		<?php
 		foreach($countries as $key=>$country) {
 			echo '<div class="form-check form-check-inline">
