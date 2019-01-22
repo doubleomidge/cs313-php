@@ -4,6 +4,7 @@ $userEmail = filter_input(INPUT_POST, 'email');
 $userMajor = filter_input(INPUT_POST, 'major');
 $userComments = filter_input(INPUT_POST, 'comment');
 $userTravel = filter_input(INPUT_POST, 'travel[]');
+echo $userTravel;
 ?>
 
 <html lang="en">
