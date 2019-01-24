@@ -34,8 +34,6 @@ $_SESSION['cart'] = Array();
     <div class="container-fluid">
         <h1>This is a shopping page.</h1>
 
-        <?php print_r($_SESSION['cart']); ?>
-
         <div class="container products">
             <div class="row">
                 <div class="col-sm br-product">
