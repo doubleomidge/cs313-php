@@ -27,7 +27,7 @@ switch ($action) {
                 $_SESSION['cart'] = array($itemId);
                 print_r($_SESSION['cart']);
             } else { 
-                array_push($_SESSION['cart'], $itemId);
+                $_SESSION['cart'] = array_push($_SESSION['cart'], $itemId);
                 print_r($_SESSION['cart']);
             }
         }
