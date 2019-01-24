@@ -10,6 +10,7 @@ $countries = array(
 	"AF" => "Africa",
 	"AN" => "Antartica"
 );
+
 ?>
 <head>
 	<meta charset="UTF-8">
@@ -58,7 +59,7 @@ $countries = array(
 		<?php
 		foreach($countries as $key=>$country) {
 			echo '<div class="form-check form-check-inline">
-  			<input class="form-check-input" type="checkbox" name="travel[]" id=" ' . $country . ' " value=" ' . $country . ' ">
+  			<input class="form-check-input" type="checkbox" name="travel[]" id=" ' . $country . ' " value=" ' . $key . ' ">
   			<label class="form-check-label" for="inlineCheckbox1"> ' . $country . ' </label>
 			</div>';
 		}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat");
+/* ----------------------------------------------------- */
+/* --------- Common ----------- */
+/* ----------------------------------------------------- */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em; }
+
+h1, h2, h3, h4 {
+  font-family: 'Abril Fatface', monospace;
+  font-size: 3em;
+  color: #a64ac9; }
+
+.navbar {
+  background-color: #392f5a; }
+  .navbar .navbar-brand {
+    color: white; }
+  .navbar .nav-link {
+    color: #d8d7d7; }
+  .navbar .navbar-toggler {
+    background-color: #fff; }
+
+/* ----------------------------------------------------- */
+/* --------- Browse ----------- */
+/* ----------------------------------------------------- */
+#browse {
+  background-color: #9dd9d2;
+  text-align: center; }
+  #browse h1 {
+    font-size: 5em; }
+  #browse .products {
+    padding: 0;
+    margin-top: 2em; }
+
+.br-product {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px; }
+  .br-product img {
+    width: 300px;
+    height: 300px; }
+  .br-product h2 {
+    font-size: 1.5em; }
+
+/* ----------------------------------------------------- */
+/* --------- View Cart ----------- */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* --------- Checkout ----------- */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* --------- Confirmation ----------- */
+/* ----------------------------------------------------- */
+
+/*# sourceMappingURL=main.css.map */
