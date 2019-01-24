@@ -23,9 +23,9 @@ switch ($action) {
         $itemId = filter_input(INPUT_GET, 'itemId', FILTER_SANITIZE_NUMBER_INT);
 
         if($itemId != "") {
-            if($_SESSION['cart'] == "") {
+            if(!isset($_SESSION['cart'])) {
                 $_SESSION['cart'] = array($itemId);
-            } else {
+            } else { 
                 array_push($_SESSION['cart'], $itemId);
             }
         }
