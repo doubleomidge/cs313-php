@@ -22,6 +22,7 @@ switch ($action) {
     case 'addToCart':
         $itemId = filter_input(INPUT_GET, 'item', FILTER_SANITIZE_STRING);
 
+        echo 'I am loading';
         // post message to page saying item has been added
         include 'home.php';
         break;
