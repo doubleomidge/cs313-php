@@ -34,7 +34,7 @@ $_SESSION['cart'] = Array();
     <div class="container-fluid">
         <h1>Your cart</h1>
 
-        <?php echo $_SESSION['cart']; ?>
+        <?php print_r($_SESSION['cart']); ?>
     </div>
 
 </body>

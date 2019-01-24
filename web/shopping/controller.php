@@ -20,9 +20,9 @@ if ($action == NULL) {
 
 switch ($action) {
     case 'addToCart':
-        $itemId = filter_input(INPUT_GET, 'item', FILTER_SANITIZE_NUMBER_INT);
+        $itemId = filter_input(INPUT_GET, 'itemId', FILTER_SANITIZE_NUMBER_INT);
 
-        if($itemName != "") {
+        if($itemId != "") {
             if($_SESSION['cart'] == "") {
                 $_SESSION['cart'] = array($items[$itemId]);
             } else {
