@@ -25,8 +25,10 @@ switch ($action) {
         if($itemId != "") {
             if(!isset($_SESSION['cart'])) {
                 $_SESSION['cart'] = array($itemId);
+                print_r($_SESSION['cart']);
             } else { 
                 array_push($_SESSION['cart'], $itemId);
+                print_r($_SESSION['cart']);
             }
         }
 
