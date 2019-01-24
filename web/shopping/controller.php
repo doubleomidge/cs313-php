@@ -24,9 +24,9 @@ switch ($action) {
 
         if($itemId != "") {
             if($_SESSION['cart'] == "") {
-                $_SESSION['cart'] = array($items[$itemId]);
+                $_SESSION['cart'] = array($itemId);
             } else {
-                array_push($_SESSION['cart'], $items[$itemId]);
+                array_push($_SESSION['cart'], $itemId);
             }
         }
 
