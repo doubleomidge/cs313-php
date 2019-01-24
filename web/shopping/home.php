@@ -37,17 +37,17 @@ session_start();
                 <div class="col-sm br-product">
                     <img src="img/hula-duck.jpeg" alt="Hula duck with flower lei">
                     <h2>Hula Duck</h2>
-                    <a href="controller.php?action=addToCart&itemId=1" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=1" class="btn btn-outline-primary addToCart">Add to Cart</a>
                 </div>
                 <div class="col-sm br-product">
                     <img src="img/glow-duck.jpeg" alt="Green glow in the dark duck">
                     <h2>Glow Duck</h2>
-                    <a href="controller.php?action=addToCart&itemId=2" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=2" class="btn btn-outline-primary addToCart">Add to Cart</a>
                 </div>
                 <div class="col-sm br-product">
                     <img src="img/patty-duck.jpeg" alt="Leprechan duck in honor of St Patricks Day">
                     <h2>St. Patty's Duck</h2>
-                    <a href="controller.php?action=addToCart&itemId=3" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=3" class="btn btn-outline-primary addToCart">Add to Cart</a>
                 </div>
             </div>
 
@@ -55,17 +55,17 @@ session_start();
                 <div class="col-sm br-product">
                     <img src="img/pirate-duck.jpeg" alt="Pirate duck with a pirate hat and eyepatch">
                     <h2>Pirate Duck</h2>
-                    <a href="controller.php?action=addToCart&itemId=4" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=4" class="btn btn-outline-primary addToCart">Add to Cart</a>
                 </div>
                 <div class="col-sm br-product">
                     <img src="img/sail-duck.jpeg" alt="Sailor duck">
                     <h2>Sailor Duck</h2>
-                    <a href="controller.php?action=addToCart&itemId=5" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=5" class="btn btn-outline-primary addToCart">Add to Cart</a>
                 </div>
                 <div class="col-sm br-product">
                     <img src="img/spa-duck.jpeg" alt="Spa duck with towel">
                     <h2>Spa Duck</h2>
-                    <a href="controller.php?action=addToCart&itemId=6" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=6" class="btn btn-outline-primary addToCart">Add to Cart</a>
                 </div>
             </div>
         </div>

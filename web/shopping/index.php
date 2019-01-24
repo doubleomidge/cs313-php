@@ -27,14 +27,9 @@ switch ($action) {
                 $_SESSION['cart'] = array($itemId);
                 print_r($_SESSION['cart']);
             } else { 
-                print_r($_SESSION['cart']);
-                array_push($_SESSION['cart'], $itemId);
-                print_r($_SESSION['cart']);
-                array_push($_SESSION['cart'], 7);
-                print_r($_SESSION['cart']);                              
+                array_push($_SESSION['cart'], $itemId);                              
             }
         }
-
 
         // post message to page saying item has been added
         include 'home.php';
