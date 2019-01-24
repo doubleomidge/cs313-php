@@ -5,12 +5,12 @@ session_start();
 
 // make array of items
 $items = array(
-    array('id'=>1, 'name'=>'Hula Duck', 'image'=>'img/hula-duck.jpeg', 'price'=>4.25, 'cart'=>False),
-    array('id'=>2, 'name'=>'Glow Duck', 'image'=>'img/glow-duck.jpeg', 'price'=>4.50, 'cart'=>False),
-    array('id'=>3, 'name'=>'St. Patty Duck', 'image'=>'img/patty-duck.jpeg', 'price'=>4.25, 'cart'=>False),
-    array('id'=>4, 'name'=>'Pirate Duck', 'image'=>'img/pirate-duck.jpeg', 'price'=>4.25, 'cart'=>False),
-    array('id'=>5, 'name'=>'Sailor Duck', 'image'=>'img/sail-duck.jpeg', 'price'=>4.25, 'cart'=>False),
-    array('id'=>6, 'name'=>'Snorkle Duck', 'image'=>'img/swim-duck.jpeg', 'price'=>4.25, 'cart'=>False),
+    array('id'=>1, 'itemName'=>'Hula Duck', 'image'=>'img/hula-duck.jpeg', 'price'=>4.25, 'cart'=>False),
+    array('id'=>2, 'itemName'=>'Glow Duck', 'image'=>'img/glow-duck.jpeg', 'price'=>4.50, 'cart'=>False),
+    array('id'=>3, 'itemName'=>'St. Patty Duck', 'image'=>'img/patty-duck.jpeg', 'price'=>4.25, 'cart'=>False),
+    array('id'=>4, 'itemName'=>'Pirate Duck', 'image'=>'img/pirate-duck.jpeg', 'price'=>4.25, 'cart'=>False),
+    array('id'=>5, 'itemName'=>'Sailor Duck', 'image'=>'img/sail-duck.jpeg', 'price'=>4.25, 'cart'=>False),
+    array('id'=>6, 'itemName'=>'Spa Duck', 'image'=>'img/spa-duck.jpeg', 'price'=>4.25, 'cart'=>False),
 );
 
 $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
@@ -20,9 +20,9 @@ if ($action == NULL) {
 
 switch ($action) {
     case 'addToCart':
-        $itemId = filter_input(INPUT_GET, 'item', FILTER_SANITIZE_STRING);
+        $itemName = filter_input(INPUT_GET, 'item', FILTER_SANITIZE_STRING);
 
-        echo 'I am loading';
+
         // post message to page saying item has been added
         include 'home.php';
         break;
