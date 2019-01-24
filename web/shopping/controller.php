@@ -20,7 +20,9 @@ if ($action == NULL) {
 
 switch ($action) {
     case 'addToCart':
+        $itemId = filter_input(INPUT_GET, 'item', FILTER_SANITIZE_STRING);
 
+        // post message to page saying item has been added
         include 'home.php';
         break;
     

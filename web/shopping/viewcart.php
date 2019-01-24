@@ -27,6 +27,8 @@
 
     <div class="container-fluid">
         <h1>Your cart</h1>
+
+        <?php echo $_SESSION['cart']; ?>
     </div>
 
 </body>
