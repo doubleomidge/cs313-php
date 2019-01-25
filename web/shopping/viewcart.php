@@ -77,7 +77,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
                 <div class="col-md-4">
                     <h3>Total <?php echo count($_SESSION['cart']) ?></h3>
                     <p class="justify">$Total</p>
-                    <a href="" class="btn btn-success btnCheckout">To Checkout</a>
+                    <a href="" class="btn btn-success btnCheckout"><?php echo $total; ?></a>
                 </div>
             </div>
 
