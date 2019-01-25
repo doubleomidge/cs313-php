@@ -22,6 +22,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $name = $product['itemName'];
     $image = $product['image'];
     $price = $product['price'];
+    $total += $price;
 
     $showProduct .= "<div class='row'>";
     $showProduct .= "<div class='col-md-8'>";
@@ -31,7 +32,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $showProduct .= "</div>";
     $showProduct .= "</div>";
     $showProduct .= "<div class='col-md-4'>";
-    $showProduct .= "<h3>$price</h3>";
+    $showProduct .= "<h3>$$price</h3>";
     $showProduct .= "</div>";
     $showProduct .= "</div>";
     $showProduct .= "<hr class='mb-4'>";
