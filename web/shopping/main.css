@@ -64,7 +64,8 @@ h2, h3, h4 {
 #checkout {
   text-align: left; }
   #checkout h1 {
-    font-size: 5em; }
+    font-size: 5em;
+    text-align: center; }
 
 .your-cart {
   display: flex;

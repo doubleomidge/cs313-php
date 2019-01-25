@@ -26,13 +26,13 @@ session_start();
         <link rel="stylesheet" href="main.css">
     </head>
 
-    <body>
+    <body id="checkout">
         <?php require 'nav.php'; ?>
 
         <div class="container">
             <h1>Checkout</h1>
 
-            <div class="row" id="checkout">
+            <div class="row">
                 <div class="col-md-4 order-md-2 mb-4">
                     <div class="your-cart">
                         <p>Your Cart</p>
@@ -71,11 +71,6 @@ session_start();
                                 <label for="lastName">Last Name</label>
                                 <input type="text" class="form-control" id="lastName">
                             </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Username">
                         </div>
 
                         <div class="mb-3">
