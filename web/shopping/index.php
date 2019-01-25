@@ -8,8 +8,6 @@ if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 }
 
-}
-
 switch ($action) {
     case 'addToCart':
         $itemId = filter_input(INPUT_GET, 'itemId', FILTER_SANITIZE_NUMBER_INT);
