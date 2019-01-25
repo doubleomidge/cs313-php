@@ -1,7 +1,21 @@
 <?php
 session_start();
 
-include 'index.php';
+for($i = 0 ; $i < count($_SESSION['cart']); $i++){
+    
+    $id = $_SESSION['cart'][$i];
+
+    $product = $items[$id];
+    
+    $name = $product['itemName'];
+    $price = $product['price'];
+    $total += $price;
+
+    $showList .= "<li class='list-group-item d-flex justify-content-between'>";
+    $showList .= "<p>$name</p>";
+    $showList .= "<span>$price</span>";
+    $showList .= "</li>";
+}
 ?>
 
     <!DOCTYPE html>
@@ -38,25 +52,18 @@ include 'index.php';
                 <div class="col-md-4 order-md-2 mb-4">
                     <div class="your-cart">
                         <strong>Your Cart</strong>
-                        <span class="badge badge-secondary badge-pill">2</span>
+                        <span class="badge badge-secondary badge-pill"><?php echo count($_SESSION['cart']) ?></span>
                     </div>
 
                     <ul class="list-group mb-3">
-                        <li class="list-group-item d-flex justify-content-between">
-                            <p>Product 1</p>
-                            <span>$4.50</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between">
-                            <p>Product 2</p>
-                            <span>$4.25</span>
-                        </li>
+                        <?php echo $showList ?>
                         <li class="list-group-item d-flex justify-content-between bg-light ship-free">
                             <p>Free Shipping</p>
                             <span>FREE</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between">
                             <p>Total</p>
-                            <strong>$8.75</strong>
+                            <strong><?php echo $total ?></strong>
                         </li>
                     </ul>
                 </div>
