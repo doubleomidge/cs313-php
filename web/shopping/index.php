@@ -24,11 +24,11 @@ switch ($action) {
         include 'home.php';
         break;
 
-        case 'view':
+        // case 'view':
         
-            showProducts();
-            include 'viewcart.php';
-        break;
+        //     showProducts();
+        //     include 'viewcart.php';
+        // break;
 
     case 'delete':
         $itemId = filter_input(INPUT_GET, 'itemId', FILTER_SANITIZE_NUMBER_INT);

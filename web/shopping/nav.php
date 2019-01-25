@@ -13,7 +13,7 @@
                     <a class="nav-link" href="home.php">Browse</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=view">View Cart</a>
+                    <a class="nav-link" href="viewcart.php">View Cart</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="checkout.php">Checkout</a>
