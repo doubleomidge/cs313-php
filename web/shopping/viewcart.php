@@ -13,7 +13,7 @@ $items = array(
 
 // $length = count($_SESSION['cart']);
 
-for($i; $i < count($_SESSION['cart']); $i++){
+for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     
     $id = $_SESSION['cart'][$i];
 
