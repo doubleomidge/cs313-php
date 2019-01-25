@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-// $_SESSION['cart'] = Array();
 ?>
 
     <!DOCTYPE html>
@@ -29,7 +27,7 @@ session_start();
     </head>
 
     <body id="view">
-        <!-- <?php require 'nav.php'; ?> -->
+        <?php require 'nav.php'; ?>
 
         <div class="container">
             <h1>Your cart</h1>
@@ -57,7 +55,7 @@ session_start();
                 </div>
             </div>
 
-            <!-- <?php print_r($_SESSION['cart']); ?> -->
+            <?php print_r($_SESSION['cart']); ?>
         </div>
 
     </body>

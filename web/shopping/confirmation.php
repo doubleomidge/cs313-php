@@ -37,6 +37,7 @@ $_SESSION['cart'] = Array();
         <p>THIS ITEM is being shipped to THIS PLACE.</p>
     </div>
 
+    <?php require 'footer.php'; ?>
 </body>
 
 </html>
