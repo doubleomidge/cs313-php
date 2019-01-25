@@ -24,9 +24,12 @@ switch ($action) {
         include 'home.php';
         break;
 
-    case 'view':
-        
-    
+    case 'delete':
+        $itemId = filter_input(INPUT_GET, 'itemId', FILTER_SANITIZE_NUMBER_INT);
+
+        array_splice($_SESSION['cart'][$itemId]);
+
+        include 'viewcart.php';
         break;
     
     default:

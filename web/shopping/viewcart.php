@@ -28,7 +28,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $showProduct .= "<div class='col-md-8'>";
     $showProduct .= "<h2>$name</h2>";
     $showProduct .= "<div class='updates'>";
-    $showProduct .= "<a href='' class='btn btn-danger'>Delete</a>";
+    $showProduct .= "<a href='index.php?action=delete&itemId=$id' class='btn btn-danger'>Delete</a>";
     $showProduct .= "</div>";
     $showProduct .= "</div>";
     $showProduct .= "<div class='col-md-4'>";
@@ -76,8 +76,8 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
                 </div>
                 <div class="col-md-4">
                     <h3>Total <?php echo count($_SESSION['cart']) ?></h3>
-                    <p class="justify">$Total</p>
-                    <a href="" class="btn btn-success btnCheckout"><?php echo $total; ?></a>
+                    <p class="justify"><?php echo $total; ?></p>
+                    <a href="" class="btn btn-success btnCheckout">To Checkout</a>
                 </div>
             </div>
 
