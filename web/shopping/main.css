@@ -12,7 +12,7 @@ h1, h2, h3, h4 {
   font-family: 'Abril Fatface', monospace;
   color: #a64ac9; }
   h1 h1, h2 h1, h3 h1, h4 h1 {
-    font-size: 5em; }
+    font-size: 3em; }
 
 .navbar {
   background-color: #379683; }
@@ -26,6 +26,8 @@ h1, h2, h3, h4 {
 /* ----------------------------------------------------- */
 /* --------- Browse ----------- */
 /* ----------------------------------------------------- */
+#browse h1 {
+  font-size: 5em; }
 #browse .products {
   padding: 0;
   margin-top: 3em; }
@@ -46,6 +48,8 @@ h1, h2, h3, h4 {
 /* ----------------------------------------------------- */
 #view {
   text-align: left; }
+  #view h1 {
+    font-size: 5em; }
   #view .updates {
     display: flex; }
     #view .updates p {
@@ -59,6 +63,8 @@ h2, h3, h4 {
 
 #checkout {
   text-align: left; }
+  #checkout h1 {
+    font-size: 5em; }
 
 .your-cart {
   display: flex;

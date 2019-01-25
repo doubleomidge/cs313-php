@@ -17,7 +17,7 @@ h1, h2, h3, h4 {
     color: $dblue;
 
     h1 {
-        font-size: 5em;
+        font-size: 3em;
     }
 }
 
@@ -45,6 +45,10 @@ h1, h2, h3, h4 {
 /* ----------------------------------------------------- */
 
 #browse {
+
+    h1 {
+        font-size: 5em;
+    }
 
     .products {
         padding: 0;
@@ -75,6 +79,10 @@ h1, h2, h3, h4 {
 #view {
     text-align: left;
 
+    h1 {
+        font-size: 5em;
+    }
+
     .updates {
         display: flex;
 
@@ -104,6 +112,10 @@ h2, h3, h4 {
 
 #checkout {
     text-align: left;
+
+    h1 {
+        font-size: 5em;
+    }
 }
 
 .your-cart {
