@@ -31,7 +31,7 @@ $_SESSION['cart'] = Array();
 <body>
     <?php require 'nav.php'; ?>
 
-    <div class="container-fluid">
+    <div class="container">
         <h1>Thanks for ordering.</h1>
 
         <p>THIS ITEM is being shipped to THIS PLACE.</p>

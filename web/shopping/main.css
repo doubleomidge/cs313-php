@@ -4,15 +4,18 @@
 /* ----------------------------------------------------- */
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  background-color: #DCDCDC;
+  text-align: center; }
 
 h1, h2, h3, h4 {
   font-family: 'Abril Fatface', monospace;
-  font-size: 3em;
   color: #a64ac9; }
+  h1 h1, h2 h1, h3 h1, h4 h1 {
+    font-size: 3em; }
 
 .navbar {
-  background-color: #392f5a; }
+  background-color: #379683; }
   .navbar .navbar-brand {
     color: white; }
   .navbar .nav-link {
@@ -23,14 +26,11 @@ h1, h2, h3, h4 {
 /* ----------------------------------------------------- */
 /* --------- Browse ----------- */
 /* ----------------------------------------------------- */
-#browse {
-  background-color: #9dd9d2;
-  text-align: center; }
-  #browse h1 {
-    font-size: 5em; }
-  #browse .products {
-    padding: 0;
-    margin-top: 3em; }
+#browse h1 {
+  font-size: 5em; }
+#browse .products {
+  padding: 0;
+  margin-top: 3em; }
 
 .br-product {
   background-color: #ffffff;
@@ -46,9 +46,29 @@ h1, h2, h3, h4 {
 /* ----------------------------------------------------- */
 /* --------- View Cart ----------- */
 /* ----------------------------------------------------- */
+#view {
+  text-align: left; }
+  #view .updates {
+    display: flex; }
+    #view .updates p {
+      padding-right: 30px; }
+
 /* ----------------------------------------------------- */
 /* --------- Checkout ----------- */
 /* ----------------------------------------------------- */
+h2, h3, h4 {
+  color: black; }
+
+.your-cart {
+  display: flex;
+  justify-content: space-between; }
+  .your-cart span {
+    height: 25px;
+    width: 30px; }
+
+.ship-free {
+  color: green; }
+
 /* ----------------------------------------------------- */
 /* --------- Confirmation ----------- */
 /* ----------------------------------------------------- */

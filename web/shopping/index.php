@@ -34,6 +34,12 @@ switch ($action) {
         // post message to page saying item has been added
         include 'home.php';
         break;
+
+    case 'view':
+
+
+    
+        break;
     
     default:
         include 'home.php';

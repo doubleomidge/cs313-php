@@ -8,12 +8,17 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
+    background-color: $neon;
+    text-align: center;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Abril Fatface', monospace;
-    font-size: 3em;
     color: $dblue;
+
+    h1 {
+        font-size: 3em;
+    }
 }
 
 .navbar {
@@ -40,8 +45,6 @@ h1, h2, h3, h4 {
 /* ----------------------------------------------------- */
 
 #browse {
-    background-color: $neon;
-    text-align: center;
 
     h1 {
         font-size: 5em;
@@ -73,9 +76,49 @@ h1, h2, h3, h4 {
 /* --------- View Cart ----------- */
 /* ----------------------------------------------------- */
 
+#view {
+    text-align: left;
+
+    .updates {
+        display: flex;
+
+        p {
+            padding-right: 30px;
+        }
+    }
+
+    // .justify {
+    //     text-align: right;
+    // }
+
+    // .btnCheckout {
+    //     float: right;
+    // }
+}
+
+
 /* ----------------------------------------------------- */
 /* --------- Checkout ----------- */
 /* ----------------------------------------------------- */
+
+
+h2, h3, h4 {
+    color: black;
+}
+
+.your-cart {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        height: 25px;
+        width: 30px;
+    }
+}
+
+.ship-free {
+    color: green;
+}
 
 /* ----------------------------------------------------- */
 /* --------- Confirmation ----------- */
