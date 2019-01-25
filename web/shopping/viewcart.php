@@ -68,7 +68,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
         <div class="container">
             <h1>Your cart</h1>
             <hr class="mb-4">
-                <?php echo $showFeat ;?>
+                <?php echo $showProduct ;?>
 
             <div class="row">
                 <div class="col-md-8">
