@@ -34,6 +34,8 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $showProduct .= "</div>";
     $showProduct .= "</div>";
     $showProduct .= "<hr class='mb-4'>";
+}
+
 ?>
 
     <!DOCTYPE html>
