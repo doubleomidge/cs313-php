@@ -11,9 +11,9 @@ $items = array(
     array('itemId'=>6, 'itemName'=>'Spa Duck', 'image'=>'img/spa-duck.jpeg', 'price'=>4.25,),
 );
 
-$length = count($_SESSION['cart']);
+// $length = count($_SESSION['cart']);
 
-for($i; $i < $length; $i++){
+for($i; $i < count($_SESSION['cart']); $i++){
     print_r($_SESSION['cart'][$i]);
 }
 ?>
