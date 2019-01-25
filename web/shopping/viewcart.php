@@ -11,7 +11,7 @@ $items = array(
     6=>array('itemName'=>'Spa Duck', 'image'=>'img/spa-duck.jpeg', 'price'=>4.25,),
 );
 
-// $length = count($_SESSION['cart']);
+include 'index.php';
 ?>
 
     <!DOCTYPE html>
