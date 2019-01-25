@@ -1,5 +1,21 @@
 <?php
 session_start();
+
+// make array of items
+$items = array(
+    array('itemId'=>1, 'itemName'=>'Hula Duck', 'image'=>'img/hula-duck.jpeg', 'price'=>4.25),
+    array('itemId'=>2, 'itemName'=>'Glow Duck', 'image'=>'img/glow-duck.jpeg', 'price'=>4.50),
+    array('itemId'=>3, 'itemName'=>'St. Patty Duck', 'image'=>'img/patty-duck.jpeg', 'price'=>4.25),
+    array('itemId'=>4, 'itemName'=>'Pirate Duck', 'image'=>'img/pirate-duck.jpeg', 'price'=>4.25),
+    array('itemId'=>5, 'itemName'=>'Sailor Duck', 'image'=>'img/sail-duck.jpeg', 'price'=>4.25),
+    array('itemId'=>6, 'itemName'=>'Spa Duck', 'image'=>'img/spa-duck.jpeg', 'price'=>4.25,),
+);
+
+$length = count($_SESSION['cart']);
+
+for($i; $i < $length; $i++){
+    print_r($_SESSION['cart'][$i]);
+}
 ?>
 
     <!DOCTYPE html>
