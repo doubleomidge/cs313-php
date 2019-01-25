@@ -53,7 +53,8 @@ switch ($action) {
         break;
 
         case 'view':
-        showProducts();
+            include 'viewcart.php';
+            showProducts();
         break;
 
     case 'delete':
