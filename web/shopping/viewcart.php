@@ -23,7 +23,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $image = $product['image'];
     $price = $product['price'];
 
-    $showProduct = "<div class='row'>";
+    $showProduct .= "<div class='row'>";
     $showProduct .= "<div class='col-md-8'>";
     $showProduct .= "<h2>$name</h2>";
     $showProduct .= "<div class='updates'>";
