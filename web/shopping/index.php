@@ -27,7 +27,7 @@ switch ($action) {
     case 'delete':
         $itemId = filter_input(INPUT_GET, 'itemId', FILTER_SANITIZE_NUMBER_INT);
 
-        array_splice($_SESSION['cart'][$itemId]);
+        array_diff_key($_SESSION['cart'][$itemId]);
 
         include 'viewcart.php';
         break;
