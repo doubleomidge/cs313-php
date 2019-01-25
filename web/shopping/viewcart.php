@@ -12,8 +12,6 @@ $items = array(
 );
 
 // $length = count($_SESSION['cart']);
-
-include index.php;
 ?>
 
     <!DOCTYPE html>
