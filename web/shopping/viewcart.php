@@ -11,7 +11,8 @@ $items = array(
     6=>array('itemName'=>'Spa Duck', 'image'=>'img/spa-duck.jpeg', 'price'=>4.25,),
 );
 
-// include 'index.php';
+include 'functions.php';
+showProducts();
 ?>
 
     <!DOCTYPE html>
