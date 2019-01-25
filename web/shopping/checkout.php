@@ -32,7 +32,7 @@ session_start();
         <div class="container">
             <h1>Checkout</h1>
 
-            <div class="row">
+            <div class="row" id="checkout">
                 <div class="col-md-4 order-md-2 mb-4">
                     <div class="your-cart">
                         <p>Your Cart</p>
@@ -117,7 +117,7 @@ session_start();
                             </div>
                         </div>
                         <hr class="mb-4">
-                        <button class="btn btn-primary btn-lg" type="submit">Confirm Purchase</button>
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Confirm Purchase</button>
                     </form>
                 </div>
             </div>
