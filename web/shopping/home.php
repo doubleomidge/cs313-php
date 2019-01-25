@@ -27,7 +27,7 @@ session_start();
 </head>
 
 <body id="browse">
-<?php require 'nav.php'; ?>
+    <?php require 'nav.php'; ?>
 
     <div class="container-fluid">
         <h1>This is a shopping page.</h1>

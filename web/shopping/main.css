@@ -5,12 +5,12 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2em;
-  background-color: #d8d7d7;
+  background-color: #ffffff;
   text-align: center; }
 
 h1, h2, h3, h4 {
   font-family: 'Abril Fatface', monospace;
-  color: #05386B; }
+  color: #a64ac9; }
   h1 h1, h2 h1, h3 h1, h4 h1 {
     font-size: 3em; }
 
@@ -19,7 +19,7 @@ h1, h2, h3, h4 {
   .navbar .navbar-brand {
     color: white; }
   .navbar .nav-link {
-    color: #8EE4AF; }
+    color: #d8d7d7; }
   .navbar .navbar-toggler {
     background-color: #fff; }
 
@@ -33,7 +33,7 @@ h1, h2, h3, h4 {
   margin-top: 3em; }
 
 .br-product {
-  background-color: #EDF5E1;
+  background-color: #8EE4AF;
   border-radius: 10px;
   margin: 10px;
   padding: 10px; }
