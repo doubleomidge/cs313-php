@@ -23,19 +23,18 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $image = $product['image'];
     $price = $product['price'];
 
-    $showFeat = "<div class='row'>";
-    $showFeat .= "<div class='col-md-8'>";
-    $showFeat .= "<h2>$name</h2>";
-    $showFeat .= "div class='updates'>";
-    $showFeat .= "<p># of product</p>";
-    $showFeat .= "<a href='' class='btn btn-danger'>Delete</a>";
-    $showFeat .= "</div>";
-    $showFeat .= "</div>";
-    $showFeat .= "<div class='col-md-4'>";
-    $showFeat .= "<h3>$price</h3>";
-    $showFeat .= "</div>";
-    $showFeat .= "</div>";
-    $showFeat .= "<hr class='mb-4'>";
+    $showProduct = "<div class='row'>";
+    $showProduct .= "<div class='col-md-8'>";
+    $showProduct .= "<h2>$name</h2>";
+    $showProduct .= "<div class='updates'>";
+    $showProduct .= "<a href='' class='btn btn-danger'>Delete</a>";
+    $showProduct .= "</div>";
+    $showProduct .= "</div>";
+    $showProduct .= "<div class='col-md-4'>";
+    $showProduct .= "<h3>$price</h3>";
+    $showProduct .= "</div>";
+    $showProduct .= "</div>";
+    $showProduct .= "<hr class='mb-4'>";
 }
 ?>
 
@@ -70,7 +69,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
             <h1>Your cart</h1>
             <hr class="mb-4">
                 <?php echo $showFeat ;?>
-                
+
             <div class="row">
                 <div class="col-md-8">
                 </div>
