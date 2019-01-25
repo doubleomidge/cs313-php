@@ -36,7 +36,7 @@ session_start();
             <div class="row">
                 <div class="col-sm br-product">
                     <img src="img/hula-duck.jpeg" alt="Hula duck with flower lei">
-                    <h2>Hula Duck</h2>
+                    <h2 class="mb-3">Hula Duck</h2>
                     <a href="index.php?action=addToCart&itemId=1" class="btn btn-outline-primary addToCart">Add to Cart</a>
                 </div>
                 <div class="col-sm br-product">
