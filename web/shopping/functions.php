@@ -1,3 +1,5 @@
+<?php 
+
 function showProducts(){
     for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     
