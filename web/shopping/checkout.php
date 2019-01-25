@@ -35,7 +35,7 @@ session_start();
             <div class="row">
                 <div class="col-md-4 order-md-2 mb-4">
                     <div class="your-cart">
-                        <p>Your Cart</p>
+                        <strong>Your Cart</strong>
                         <span class="badge badge-secondary badge-pill">2</span>
                     </div>
 
@@ -59,7 +59,7 @@ session_start();
                     </ul>
                 </div>
                 <div class="col-md-8 order-md-1">
-                    <p>Shipping Address</p>
+                    <strong>Shipping Address</strong>
                     <form action="address">
 
                         <div class="row">
