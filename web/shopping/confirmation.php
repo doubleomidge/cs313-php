@@ -34,10 +34,8 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
 
     $showProduct .= "<div class='row'>";
     $showProduct .= "<div class='col-md-8'>";
+    $showProduct .= "<img src='$image'>";
     $showProduct .= "<h2>$name</h2>";
-    $showProduct .= "<div class='updates'>";
-    $showProduct .= "<a href='index.php?action=delete&itemId=$i' class='btn btn-danger'>Delete</a>";
-    $showProduct .= "</div>";
     $showProduct .= "</div>";
     $showProduct .= "<div class='col-md-4'>";
     $showProduct .= "<h3>$$price</h3>";
