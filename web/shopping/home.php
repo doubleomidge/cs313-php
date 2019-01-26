@@ -38,19 +38,19 @@ session_start();
                     <img src="img/hula-duck.jpeg" alt="Hula duck with flower lei">
                     <h2 class="product-name">Hula Duck</h2>
                     <span>$2.50</span>
-                    <a href="index.php?action=addToCart&itemId=1" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=1" class="btn btn-primary addToCart">Add to Cart</a>
                 </div>
                 <div class="col-sm br-product">
                     <img src="img/glow-duck.jpeg" alt="Green glow in the dark duck">
                     <h2 class="product-name">Glow Duck</h2>
                     <span>$3.00</span>
-                    <a href="index.php?action=addToCart&itemId=2" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=2" class="btn btn-primary addToCart">Add to Cart</a>
                 </div>
                 <div class="col-sm br-product">
                     <img src="img/patty-duck.jpeg" alt="Leprechan duck in honor of St Patricks Day">
                     <h2 class="product-name">St. Patty's Duck</h2>
                     <span>$2.50</span>
-                    <a href="index.php?action=addToCart&itemId=3" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=3" class="btn btn-primary addToCart">Add to Cart</a>
                 </div>
             </div>
 
@@ -59,19 +59,19 @@ session_start();
                     <img src="img/pirate-duck.jpeg" alt="Pirate duck with a pirate hat and eyepatch">
                     <h2 class="product-name">Pirate Duck</h2>
                     <span>$2.75</span>
-                    <a href="index.php?action=addToCart&itemId=4" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=4" class="btn btn-primary addToCart">Add to Cart</a>
                 </div>
                 <div class="col-sm br-product">
                     <img src="img/sail-duck.jpeg" alt="Sailor duck">
                     <h2 class="product-name">Sailor Duck</h2>
                     <span>$2.25</span>
-                    <a href="index.php?action=addToCart&itemId=5" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=5" class="btn btn-primary addToCart">Add to Cart</a>
                 </div>
                 <div class="col-sm br-product">
                     <img src="img/spa-duck.jpeg" alt="Spa duck with towel">
                     <h2 class="product-name">Spa Duck</h2>
                     <span>$2.50</span>
-                    <a href="index.php?action=addToCart&itemId=6" class="btn btn-outline-primary addToCart">Add to Cart</a>
+                    <a href="index.php?action=addToCart&itemId=6" class="btn btn-primary addToCart">Add to Cart</a>
                 </div>
             </div>
         </div>
