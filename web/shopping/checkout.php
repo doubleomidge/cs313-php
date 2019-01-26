@@ -25,7 +25,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
 
     $showList .= "<li class='list-group-item d-flex justify-content-between'>";
     $showList .= "<p>$name</p>";
-    $showList .= "<span>$price</span>";
+    $showList .= "<span>$$price</span>";
     $showList .= "</li>";
 }
 ?>
@@ -75,7 +75,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
                         </li>
                         <li class="list-group-item d-flex justify-content-between">
                             <p>Total</p>
-                            <strong><?php echo $total ?></strong>
+                            <strong>$<?php echo $total ?></strong>
                         </li>
                     </ul>
                 </div>
