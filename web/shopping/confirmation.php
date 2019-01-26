@@ -35,6 +35,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $showProduct .= "<div class='row'>";
     $showProduct .= "<div class='col-md-2'>";
     $showProduct .= "<img src='$image' class='img-list'>";
+    $showProduct .= "</div>";
     $showProduct .= "<div class='col-md-6'>";
     $showProduct .= "<h2>$name</h2>";
     $showProduct .= "</div>";
