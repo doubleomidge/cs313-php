@@ -29,7 +29,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $showProduct .= "<img src='$image' class='img-list'>";
     $showProduct .= "</div>";
     $showProduct .= "<div class='col-md-6'>";
-    $showProduct .= "<h2>$name</h2>";
+    $showProduct .= "<h2 class='product-name'>$name</h2>";
     $showProduct .= "<div class='updates'>";
     $showProduct .= "<a href='index.php?action=delete&itemId=$i' class='btn btn-danger btn-delete'>Delete</a>";
     $showProduct .= "</div>";
