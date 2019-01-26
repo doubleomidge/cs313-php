@@ -17,8 +17,11 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $product = $items[$id];
     
     $name = $product['itemName'];
-    $price = $product['price'];
-    $total += $price;
+    $image = $product['image'];
+    $number = $product['price'];
+    $tot += $number;
+    $price = number_format($number, 2, ".",",");
+    $total = number_format($tot, 2, ".",",");
 
     $showList .= "<li class='list-group-item d-flex justify-content-between'>";
     $showList .= "<p>$name</p>";

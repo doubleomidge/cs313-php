@@ -27,8 +27,10 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     
     $name = $product['itemName'];
     $image = $product['image'];
-    $price = $product['price'];
-    $total += $price;
+    $number = $product['price'];
+    $tot += $number;
+    $price = number_format($number, 2, ".",",");
+    $total = number_format($tot, 2, ".",",");
 
     $showProduct .= "<div class='row'>";
     $showProduct .= "<div class='col-md-8'>";
