@@ -15,8 +15,6 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $id = $_SESSION['cart'][$i];
 
     $product = $items[$id];
-    echo $id;
-    echo $product;
     
     $name = $product['itemName'];
     $price = $product['price'];

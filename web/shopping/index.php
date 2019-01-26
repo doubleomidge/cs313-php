@@ -15,7 +15,6 @@ switch ($action) {
         if($itemId != "") {
             if(!isset($_SESSION['cart'])) {
                 $_SESSION['cart'] = array($itemId);
-                print_r($_SESSION['cart']);
             } else { 
                 array_push($_SESSION['cart'], $itemId);                              
             }
@@ -23,12 +22,6 @@ switch ($action) {
 
         include 'home.php';
         break;
-
-        // case 'view':
-        
-        //     showProducts();
-        //     include 'viewcart.php';
-        // break;
 
     case 'delete':
         $itemId = filter_input(INPUT_GET, 'itemId', FILTER_SANITIZE_NUMBER_INT);
