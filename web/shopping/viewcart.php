@@ -30,7 +30,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $showProduct .= "</div>";
     $showProduct .= "</div>";
     $showProduct .= "<div class='col-md-4'>";
-    $showProduct .= "<h3>$<?php echo number_format($showProduct, 2). ;?></h3>";
+    $showProduct .= "<h3>$<?php echo number_format($price, 2). ;?></h3>";
     $showProduct .= "</div>";
     $showProduct .= "</div>";
     $showProduct .= "<hr class='mb-4'>";
