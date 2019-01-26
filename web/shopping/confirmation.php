@@ -4,10 +4,45 @@ session_start();
 $userFirstName = filter_input(INPUT_POST, 'firstname');
 $userLastName = filter_input(INPUT_POST, 'lastname');
 $userEmail = filter_input(INPUT_POST, 'email');
-$userMajor = filter_input(INPUT_POST, 'major');
-$userComments = filter_input(INPUT_POST, 'comment');
-$userTravel = $_POST['travel'];
+$userAddress = filter_input(INPUT_POST, 'address');
+$userAddress2 = filter_input(INPUT_POST, 'address2');
+$userCountry = filter_input(INPUT_POST, 'country');
+$userState = filter_input(INPUT_POST, 'state');
 
+
+$items = array(
+    1=>array('itemName'=>'Hula Duck', 'image'=>'img/hula-duck.jpeg', 'price'=>2.50),
+    2=>array('itemName'=>'Glow Duck', 'image'=>'img/glow-duck.jpeg', 'price'=>3.00),
+    3=>array('itemName'=>'St. Patty Duck', 'image'=>'img/patty-duck.jpeg', 'price'=>2.50),
+    4=>array('itemName'=>'Pirate Duck', 'image'=>'img/pirate-duck.jpeg', 'price'=>2.75),
+    5=>array('itemName'=>'Sailor Duck', 'image'=>'img/sail-duck.jpeg', 'price'=>2.25),
+    6=>array('itemName'=>'Spa Duck', 'image'=>'img/spa-duck.jpeg', 'price'=>2.50),
+);
+
+for($i = 0 ; $i < count($_SESSION['cart']); $i++){
+    
+    $id = $_SESSION['cart'][$i];
+
+    $product = $items[$id];
+    
+    $name = $product['itemName'];
+    $image = $product['image'];
+    $price = $product['price'];
+    $total += $price;
+
+    $showProduct .= "<div class='row'>";
+    $showProduct .= "<div class='col-md-8'>";
+    $showProduct .= "<h2>$name</h2>";
+    $showProduct .= "<div class='updates'>";
+    $showProduct .= "<a href='index.php?action=delete&itemId=$i' class='btn btn-danger'>Delete</a>";
+    $showProduct .= "</div>";
+    $showProduct .= "</div>";
+    $showProduct .= "<div class='col-md-4'>";
+    $showProduct .= "<h3>$$price</h3>";
+    $showProduct .= "</div>";
+    $showProduct .= "</div>";
+    $showProduct .= "<hr class='mb-4'>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +75,13 @@ $userTravel = $_POST['travel'];
     <div class="container">
         <h1><?php echo $userFirstName ?> <?php echo $userLastName ?>, Thanks for ordering.</h1>
 
-        <p>THIS ITEM is being shipped to THIS PLACE.</p>
+        <p>We will send a confirmation email to: <?php echo $userEmail ?> .</p>
+
+        <p>The following is being shipped to <?php echo $userAddress ?>, <?php echo $userAddress2 ?>, <?php echo $userState ?>, <?php echo $userCountry ?>.</p>
+
+        <hr class="mb-4">
+        <?php echo $showProduct ;?>
+
     </div>
 
     <?php require 'footer.php'; ?>

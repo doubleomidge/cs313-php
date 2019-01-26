@@ -2,12 +2,12 @@
 session_start();
 
 $items = array(
-    1=>array('itemName'=>'Hula Duck', 'image'=>'img/hula-duck.jpeg', 'price'=>4.25),
-    2=>array('itemName'=>'Glow Duck', 'image'=>'img/glow-duck.jpeg', 'price'=>4.50),
-    3=>array('itemName'=>'St. Patty Duck', 'image'=>'img/patty-duck.jpeg', 'price'=>4.25),
-    4=>array('itemName'=>'Pirate Duck', 'image'=>'img/pirate-duck.jpeg', 'price'=>4.25),
-    5=>array('itemName'=>'Sailor Duck', 'image'=>'img/sail-duck.jpeg', 'price'=>4.25),
-    6=>array('itemName'=>'Spa Duck', 'image'=>'img/spa-duck.jpeg', 'price'=>4.25,),
+    1=>array('itemName'=>'Hula Duck', 'image'=>'img/hula-duck.jpeg', 'price'=>2.50),
+    2=>array('itemName'=>'Glow Duck', 'image'=>'img/glow-duck.jpeg', 'price'=>3.00),
+    3=>array('itemName'=>'St. Patty Duck', 'image'=>'img/patty-duck.jpeg', 'price'=>2.50),
+    4=>array('itemName'=>'Pirate Duck', 'image'=>'img/pirate-duck.jpeg', 'price'=>2.75),
+    5=>array('itemName'=>'Sailor Duck', 'image'=>'img/sail-duck.jpeg', 'price'=>2.25),
+    6=>array('itemName'=>'Spa Duck', 'image'=>'img/spa-duck.jpeg', 'price'=>2.50),
 );
 
 for($i = 0 ; $i < count($_SESSION['cart']); $i++){
@@ -93,23 +93,23 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
 
                         <div class="mb-3">
                             <label for="email">Email</label>
-                            <input type="text" class="form-control" id="email" placeholder="you@example.com">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="you@example.com">
                         </div>
 
                         <div class="mb-3">
                             <label for="address">Address</label>
-                            <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+                            <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
                         </div>
 
                         <div class="mb-3">
                             <label for="address2">Address 2</label>
-                            <input type="text" class="form-control" id="address2" placeholder="Apartment or Suite">
+                            <input type="text" class="form-control" id="address2" name="address2" placeholder="Apartment or Suite">
                         </div>
 
                         <div class="row">
                             <div class="col-md-5 mb-3">
                                 <label for="country">Country</label>
-                                <select id="country" class="form-control">
+2                                <select id="country" class="form-control" name="country">
                                     <option value>Choose ...</option>
                                     <option>United States</option>
                                 </select>
@@ -117,7 +117,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
                             <div class="col-md-4 mb-3">
                                 <label for="state">State</label>
                                 <br>
-                                <select id="state" class="form-control">
+                                <select id="state" class="form-control" name="state">
                                     <option value>Choose ...</option>
                                     <option>California</option>
                                     <option>Idaho</option>
@@ -126,7 +126,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="zip">Zip</label>
-                                <input type="text" class="form-control" id="zip">
+                                <input type="text" class="form-control" id="zip" name="zip">
                             </div>
                         </div>
                         <hr class="mb-4">
