@@ -78,16 +78,16 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
                 </div>
                 <div class="col-md-8 order-md-1">
                     <strong>Shipping Address</strong>
-                    <form action="address">
+                    <form method="post" action="confirmation.php">
 
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstName">First Name</label>
-                                <input type="text" class="form-control" id="firstName">
+                                <input type="text" class="form-control" id="firstName" name="firstname">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" class="form-control" id="lastName">
+                                <input type="text" class="form-control" id="lastName" name="lastname">
                             </div>
                         </div>
 

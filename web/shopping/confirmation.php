@@ -1,7 +1,13 @@
 <?php
 session_start();
 
-$_SESSION['cart'] = Array();
+$userFirstName = filter_input(INPUT_POST, 'firstname');
+$userLastName = filter_input(INPUT_POST, 'lastname');
+$userEmail = filter_input(INPUT_POST, 'email');
+$userMajor = filter_input(INPUT_POST, 'major');
+$userComments = filter_input(INPUT_POST, 'comment');
+$userTravel = $_POST['travel'];
+
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +38,7 @@ $_SESSION['cart'] = Array();
     <?php require 'nav.php'; ?>
 
     <div class="container">
-        <h1>Thanks for ordering.</h1>
+        <h1><?php echo $userFirstName ?> <?php echo $userLastName ?>, Thanks for ordering.</h1>
 
         <p>THIS ITEM is being shipped to THIS PLACE.</p>
     </div>
