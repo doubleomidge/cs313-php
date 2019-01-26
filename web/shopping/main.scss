@@ -46,6 +46,15 @@ h1, h2, h3, h4 {
     background-color: $lgreen;
 }
 
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: $lgreen;
+    border-color: $lgreen;
+}
+
 
 
 
@@ -78,6 +87,10 @@ h1, h2, h3, h4 {
 
     h2 {
         font-size: 1.5em;
+    }
+
+    span {
+        width: 100%;
     }
 }
 
