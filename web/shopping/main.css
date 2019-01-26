@@ -5,12 +5,12 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2em;
-  background-color: #c6c6c6;
+  background-color: #e6e5e5;
   text-align: center; }
 
 h1, h2, h3, h4 {
   font-family: 'Abril Fatface', monospace;
-  color: #fdeb3a; }
+  color: #EFCB00; }
   h1 h1, h2 h1, h3 h1, h4 h1 {
     font-size: 3em; }
 
@@ -22,6 +22,10 @@ h1, h2, h3, h4 {
     color: #ffffff; }
   .navbar .navbar-toggler {
     background-color: #fff; }
+
+.nav-cart {
+  display: flex;
+  flex-flow: row; }
 
 /* ----------------------------------------------------- */
 /* --------- Browse ----------- */
@@ -45,7 +49,8 @@ h1, h2, h3, h4 {
 
 .product-name {
   padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  color: #5eb9ff; }
 
 /* ----------------------------------------------------- */
 /* --------- View Cart ----------- */
