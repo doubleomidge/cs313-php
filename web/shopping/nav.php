@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <nav class="navbar navbar-default navbar-expand-lg">
         <a class="navbar-brand" href="#" class="headerfont">shopping</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
@@ -14,9 +18,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="viewcart.php">View Cart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="checkout.php">Checkout</a>
+                    <span class="badge badge-secondary badge-pill"><?php echo count($_SESSION['cart']) ?></span>
                 </li>
             </ul>
         </div>
