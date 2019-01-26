@@ -46,9 +46,12 @@ h1, h2, h3, h4 {
     background-color: $lgreen;
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    border-color: $lgreen;
-    background-color: $lgreen !important;
+.btn-primary {
+    border-color: $lgreen !important;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+background-color: $lgreen !important;
 }
 
 
