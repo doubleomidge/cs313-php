@@ -17,8 +17,7 @@ session_start();
                     <a class="nav-link" href="home.php">Browse</a>
                 </li>
                 <li class="nav-item nav-cart navbar-right">
-                    <a class="nav-link" href="viewcart.php">View Cart</a>
-                    <span class="badge badge-secondary badge-pill nav-pill"><?php echo count($_SESSION['cart']) ?></span>
+                    <a class="nav-link" href="viewcart.php">View Cart <span class="badge badge-secondary badge-pill nav-pill"><?php echo count($_SESSION['cart']) ?></span></a>
                 </li>
             </ul>
         </div>
