@@ -22,7 +22,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $price = $product['price'];
     $total += $price;
 
-    $showProduct .= "<div class='row'>";
+    $showProduct .= "<div class='row items'>";
     $showProduct .= "<div class='col-md-8'>";
     $showProduct .= "<h2>$name</h2>";
     $showProduct .= "<div class='updates'>";
@@ -30,7 +30,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $showProduct .= "</div>";
     $showProduct .= "</div>";
     $showProduct .= "<div class='col-md-4'>";
-    $showProduct .= "<h3>$$price</h3>";
+    $showProduct .= "<h3>$<?php echo number_format($showProduct, 2). ;?></h3>";
     $showProduct .= "</div>";
     $showProduct .= "</div>";
     $showProduct .= "<hr class='mb-4'>";
@@ -79,8 +79,6 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
                     <a href="index.php?action=checkout" class="btn btn-success btnCheckout">To Checkout</a>
                 </div>
             </div>
-
-            <?php print_r($_SESSION['cart']); ?>
         </div>
 
     </body>
