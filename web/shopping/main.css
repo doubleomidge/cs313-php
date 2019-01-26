@@ -22,10 +22,16 @@ h1, h2, h3, h4 {
     color: #ffffff; }
   .navbar .navbar-toggler {
     background-color: #fff; }
+  .navbar ul.nav a:hover {
+    color: #5eb9ff !important; }
 
 .nav-cart {
   display: flex;
   flex-flow: row; }
+
+.nav-pill {
+  height: 25px;
+  width: 30px; }
 
 /* ----------------------------------------------------- */
 /* --------- Browse ----------- */
