@@ -30,13 +30,9 @@ h1, h2, h3, h4 {
 .nav-pill, .check-pill {
   background-color: #5eb9ff; }
 
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited,
-.btn-primary:focus {
-  background-color: #5eb9ff;
-  border-color: #5eb9ff; }
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  border-color: #5eb9ff;
+  background-color: #5eb9ff !important; }
 
 /* ----------------------------------------------------- */
 /* --------- Browse ----------- */
