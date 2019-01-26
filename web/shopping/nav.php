@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <nav class="navbar navbar-default navbar-expand-lg">
-        <a class="navbar-brand" href="#" class="headerfont">shopping</a>
+        <a class="navbar-brand" href="index.php" class="headerfont">shopping</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>

@@ -33,8 +33,9 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
     $total = number_format($tot, 2, ".",",");
 
     $showProduct .= "<div class='row'>";
-    $showProduct .= "<div class='col-md-8'>";
-    $showProduct .= "<img src='$image'>";
+    $showProduct .= "<div class='col-md-2'>";
+    $showProduct .= "<img src='$image' class='img-list'>";
+    $showProduct .= "<div class='col-md-6'>";
     $showProduct .= "<h2>$name</h2>";
     $showProduct .= "</div>";
     $showProduct .= "<div class='col-md-4'>";
