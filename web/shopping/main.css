@@ -28,7 +28,7 @@ h1, h2, h3, h4 {
   width: 30px; }
 
 .nav-pill, .check-pill {
-  color: #5eb9ff; }
+  background-color: #5eb9ff; }
 
 /* ----------------------------------------------------- */
 /* --------- Browse ----------- */
@@ -68,8 +68,8 @@ h1, h2, h3, h4 {
     display: flex; }
     #view .updates p {
       padding-right: 30px; }
-  #view .items {
-    background-color: white; }
+  #view .btn-delete {
+    padding-bottom: 20px; }
   #view .justify {
     float: right; }
 

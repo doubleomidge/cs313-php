@@ -43,7 +43,7 @@ h1, h2, h3, h4 {
 }
 
 .nav-pill, .check-pill {
-    color: $lgreen;
+    background-color: $lgreen;
 }
 
 
@@ -110,8 +110,8 @@ h1, h2, h3, h4 {
         }
     }
 
-    .items {
-        background-color: white;
+    .btn-delete {
+        padding-bottom: 20px;
     }
 
     .justify {
