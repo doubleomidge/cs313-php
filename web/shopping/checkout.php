@@ -64,7 +64,7 @@ for($i = 0 ; $i < count($_SESSION['cart']); $i++){
                 <div class="col-md-4 order-md-2 mb-4">
                     <div class="your-cart">
                         <strong>Your Cart</strong>
-                        <span class="badge badge-secondary badge-pill"><?php echo count($_SESSION['cart']) ?></span>
+                        <span class="badge badge-secondary badge-pill check-pill"><?php echo count($_SESSION['cart']) ?></span>
                     </div>
 
                     <ul class="list-group mb-3">
