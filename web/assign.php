@@ -36,21 +36,17 @@
     <div class="row main-assign">
         <div class="col project recent1">
             <div class="pro-content">
-                <h2>A homepage interface</h2>
-                <p>The homepage and setup for
-                    <a href="https://vast-reaches-29790.herokuapp.com/hello.php">this site</a> was the first step to diving deeper into web development.</p>
-                <p>The page was built using Bootstrap 4 and SASS.</p>
-                <p>All changes and updates to this page were pushed to GitHub through the terminal.</p>
+                <h2>Movie Database</h2>
+                <p>I create a database, that you can view the relationships
+                    <a href="https://vast-reaches-29790.herokuapp.com/hello.php">at this site</a>.</p>
             </div>
         </div>
 
         <div class="col project recent3">
             <div class="pro-content">
-                <h2>A homepage interface</h2>
-                <p>The homepage and setup for
-                    <a href="https://vast-reaches-29790.herokuapp.com/hello.php">this site</a> was the first step to diving deeper into web development.</p>
-                <p>The page was built using Bootstrap 4 and SASS.</p>
-                <p>All changes and updates to this page were pushed to GitHub through the terminal.</p>
+                <h2>A shopping page</h2>
+                <p>I made a 
+                    <a href="https://vast-reaches-29790.herokuapp.com/shopping">Rubber Duck shop page</a> with PHP. </p>
             </div>
         </div>
 
