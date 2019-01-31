@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="col project recent2">
+        <div class="col project recent3">
             <div class="pro-content">
                 <h2>A homepage interface</h2>
                 <p>The homepage and setup for
@@ -56,6 +56,16 @@
 
         
         <div class="w-100"></div>
+        <div class="col project recent4">
+            <div class="pro-content">
+                <h2>A homepage interface</h2>
+                <p>The homepage and setup for
+                    <a href="https://vast-reaches-29790.herokuapp.com/hello.php">this site</a> was the first step to diving deeper into web development.</p>
+                <p>The page was built using Bootstrap 4 and SASS.</p>
+                <p>All changes and updates to this page were pushed to GitHub through the terminal.</p>
+            </div>
+        </div>
+
         <div class="col project comingsoon">
             <div class="pro-extra">
                 <h2>More coming soon</h2>
@@ -63,8 +73,6 @@
                 <p>If you’d like to collaborate, please email me, or fill out this contact form.</p>
             </div>
         </div>
-        <div class="col project recent3">col</div>
-        <div class="col project recent4">col</div>
     </div>
 
     <?php include 'footer.php'; ?>
