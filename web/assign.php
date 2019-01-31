@@ -39,6 +39,8 @@
                 <h2>Movie Database</h2>
                 <p>I create a database, that you can view the relationships
                     <a href="https://vast-reaches-29790.herokuapp.com/hello.php">at this site</a>.</p>
+                <p>The problem with this age of digital streaming, we have forgotten what movies we bought way back when, and we may not even know where they are stored.</p>
+                <p>This database will allow users to add their movies, and know exactly what movies are available, and where.</p>
             </div>
         </div>
 
