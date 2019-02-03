@@ -30,6 +30,11 @@
         </div>
     </header>
 
+    <div class="container">
+        <h2>Project Description</h2>
+        <p>I want to create a site where users can upload their movie library, and know what DVD’s, digital downloads, and other movies they have! The problem is that in an age of digital streaming, we have forgotten what movies we bought way back when, we may not know where they are stored.</p>
+        <p>This site would provide a way for user’s to log in and see their movie library, both what has been purchased digitally and in a hard copy. I am targeting this towards families, like mine, who have hundreds of DVDs, but don’t know which they are! I am in the process of converting my family’s DVDs digitally and this would help a lot.</p>
+    </div>
     <?php include 'footer.php'; ?>
 
 </body>
