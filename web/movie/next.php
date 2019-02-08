@@ -2,7 +2,7 @@
 
 require 'dbconnect.php';
 
-$titles;
+$titles
 
 if(isset($_POST['genre'])) {
     $genre = $_POST['genre'];
@@ -13,7 +13,7 @@ if(isset($_POST['genre'])) {
 
     $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
     $stmt->execute();
-    $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 
@@ -51,9 +51,9 @@ if(isset($_POST['genre'])) {
                 <form action="#" method="post">
                     <select name="genre">
                     <?php
-                        foreach($titles as $title) {
-                            echo "<p>" . $title[movie_title] . "</p>";
-                        }
+                    foreach($db->query('SELECT * FROM Genre g') as $row) {
+                        echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                    }
                     ?>
                     </select>
                     
@@ -66,9 +66,9 @@ if(isset($_POST['genre'])) {
 
         <div class="container">
             <?php
-                foreach($db->query('SELECT * FROM Genre g') as $row) {
-                        echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
-                    }
+                foreach($titles as $title) {
+                    echo "<p>" . $title[movie_title] . "</p>";
+                }
             ?>
         </div>
     </div>
