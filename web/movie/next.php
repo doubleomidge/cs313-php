@@ -62,15 +62,16 @@ if(isset($_POST['genre'])) {
                     </span>
                 </form>
             </div>
+
+            <div class="container">
+                <?php
+                    foreach($titles as $title) {
+                        echo "<p>" . $title[movie_title] . "</p>";
+                    }
+                ?>
+            </div>
         </div>
 
-        <div class="container">
-            <?php
-                foreach($titles as $title) {
-                    echo "<p>" . $title[movie_title] . "</p>";
-                }
-            ?>
-        </div>
     </div>
 
     <?php include 'footer.php'; ?>
