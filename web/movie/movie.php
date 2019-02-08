@@ -63,10 +63,10 @@ $moviejoin = 'SELECT * FROM Movies m
         <?php
         foreach($db->query($moviejoin) as $row) {
                 echo '<tr><td>' . $row['movie_title'] . '</td>';
-                echo '<tr><td>' . $row['rating_type'] . '</td>';
-                echo '<tr><td>' . $row['genre_name'] . '</td>';
-                echo '<tr><td>' . $row['location_name'] . '</td>';
-                echo '<tr><td>' . $row['genre_name'] . '</td>';
+                echo '<td>' . $row['rating_type'] . '</td>';
+                echo '<td>' . $row['genre_name'] . '</td>';
+                echo '<td>' . $row['location_name'] . '</td>';
+                echo '</tr>';
             }
         ?>
             </tbody>
