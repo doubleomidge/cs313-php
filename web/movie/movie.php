@@ -57,7 +57,7 @@ require 'dbconnect.php';
 
         <?php
         foreach($db->query('SELECT * FROM Movies') as $row) {
-                echo '<tr><td>' . $row['movie_title' . ']</td>'
+                echo '<tr><td>' . $row['movie_title'] . '</td>';
             }
         ?>
             </tbody>
