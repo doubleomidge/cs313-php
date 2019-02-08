@@ -2,6 +2,19 @@
 
 require 'dbconnect.php';
 
+$titles;
+
+if(isset($_POST['genre'])) {
+    $genre = $_POST['genre'];
+
+    $stmt = $db->prepare('SELECT * FROM Genre g
+                        JOIN Movies m on g.genre_id = m.genre_id
+                    WHERE g.genre_id=:id');
+
+    $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
+    $stmt->execute();
+    $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,18 +48,28 @@ require 'dbconnect.php';
         <div class="container search">
             <h1>Let's find a movie</h1>
             <div class="input-group">
-                <select name="genre">
-                <?php
-                    foreach($db->query('SELECT * FROM Genre g') as $row) {
-                            echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                <form action="#" method="post">
+                    <select name="genre">
+                    <?php
+                        foreach($titles as $title) {
+                            echo "<p>" . $title[movie_title] . "</p>";
                         }
-                ?>
-                </select>
-                
-                <span class="input-group-btn">
-                    <button class="btn btn-primary movie-search" type="button">Go!</button>
-                </span>
+                    ?>
+                    </select>
+                    
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary movie-search" type="submit">Find!</button>
+                    </span>
+                </form>
             </div>
+        </div>
+
+        <div class="container">
+            <?php
+                foreach($db->query('SELECT * FROM Genre g') as $row) {
+                        echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                    }
+            ?>
         </div>
     </div>
 
