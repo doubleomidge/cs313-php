@@ -17,7 +17,7 @@ if(isset($_POST['genre'])) {
     $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-echo $titles;
+print_r ($titles);
 ?>
 
 <!DOCTYPE html>
