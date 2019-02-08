@@ -2,6 +2,11 @@
 
 require 'dbconnect.php';
 
+$moviejoin = 'SELECT * FROM Movies m
+                JOIN Rating r ON m.movie_rating_id = r.rating_id
+                JOIN Genre g ON m.genre_id = g.genre_id
+                JOIN Location l on m.location_id = l.location_id';
+
 ?>
 
 <!DOCTYPE html>
@@ -56,8 +61,12 @@ require 'dbconnect.php';
            <tbody>
 
         <?php
-        foreach($db->query('SELECT * FROM Movies') as $row) {
+        foreach($db->query($moviejoin) as $row) {
                 echo '<tr><td>' . $row['movie_title'] . '</td>';
+                echo '<tr><td>' . $row['rating_type'] . '</td>';
+                echo '<tr><td>' . $row['genre_name'] . '</td>';
+                echo '<tr><td>' . $row['location_name'] . '</td>';
+                echo '<tr><td>' . $row['genre_name'] . '</td>';
             }
         ?>
             </tbody>

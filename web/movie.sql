@@ -1,3 +1,8 @@
+-- DROP
+
+
+
+-- CREATE TABLE
 CREATE TABLE Users (
     user_id         SERIAL          NOT NULL,
     username        varchar(15)     NOT NULL,
@@ -18,7 +23,7 @@ ALTER TABLE Users
 ADD FOREIGN KEY (family_id) REFERENCES Family(family_id);
 
 CREATE TABLE Movies (
-    movie_id        SERIAL          NOT NULL,
+    movie_id        SERIAL          PRIMARY KEY,
     movie_title     varchar(30)     NOT NULL,
     movie_year      varchar(20)     NOT NULL,
     movie_desc      varchar(500)    NOT NULL,
@@ -28,8 +33,12 @@ CREATE TABLE Movies (
     genre_id        int             NOT NULL,
     family_id       int             NOT NULL,
     user_id         int             NOT NULL,
-    location_id     int             NOT NULL,
-    PRIMARY KEY (movie_id)
+    location_id     int             NOT NULL
+);
+
+CREATE TABLE Rating (
+    rating_id       SERIAL          PRIMARY KEY,
+    rating_type     varchar(10)     NOT NULL
 );
 
 CREATE TABLE Genre (
@@ -46,6 +55,9 @@ CREATE TABLE Location (
 
 ALTER TABLE Movies
 ADD FOREIGN KEY (genre_id) REFERENCES Genre(genre_id);
+
+ALTER TABLE Movies
+ADD FOREIGN KEY (movie_rating_id) REFERENCES Rating(rating_id);
 
 ALTER TABLE Movies
 ADD FOREIGN KEY (family_id) REFERENCES Family(family_id);
@@ -124,6 +136,23 @@ INSERT INTO Location VALUES (
 (
     DEFAULT,
     'Amazon Prime'
+);
+
+INSERT INTO Rating VALUES (
+    DEFAULT,
+    'G'
+), (
+    DEFAULT,
+    'PG'
+), (
+    DEFAULT,
+    'PG-13'
+), (
+    DEFAULT,
+    'R'
+), (
+    DEFAULT,
+    'NR'
 );
 
 INSERT INTO Movies VALUES (
