@@ -1,5 +1,7 @@
 <?php
 
+require 'dbconnect.php';
+
 ?>
 
 <!DOCTYPE html>
