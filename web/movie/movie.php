@@ -49,15 +49,19 @@ require 'dbconnect.php';
     </div>
 
     <div class="container">
-        <ul>
-            <li>Movie</li>
-        </ul>
+        <table class="product-table">
+           <thead>
+            <tr><th>Your Movies</th><td>&nbsp;</td><td>&nbsp;</td></tr>
+           </thead>
+           <tbody>
 
-        <?php 
+        <?php
         foreach($db->query('SELECT * FROM Movies') as $row) {
-            echo 'Movie Title: ' .$row['movie_title'];
-        }
+                echo '<tr><td>' . $row['movie_title' . ']</td>'
+            }
         ?>
+            </tbody>
+        </table>
 
     </div>
 
