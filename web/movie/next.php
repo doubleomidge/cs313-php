@@ -66,10 +66,10 @@ print_r ($titles);
                 </form>
             </div>
 
-            <div class="container">
+            <div class="container" style="background-color: white;">
                 <?php
                     foreach($titles as $title) {
-                        echo "<p>" . $title[movie_title] . "</p>";
+                        echo "<p>" . $title['movie_title'] . "</p>";
                     }
                 ?>
             </div>
