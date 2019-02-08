@@ -42,7 +42,7 @@ h1, h2, h3, h4, .headerfont {
 /* --------- Hello/home page ----------- */
 /* ----------------------------------------------------- */
 .hero {
-  height: 100vh;
+  height: 90vh;
   background-color: #6b0f1a;
   background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%); }
   .hero .hero-info {
@@ -73,7 +73,10 @@ h1, h2, h3, h4, .headerfont {
     padding-bottom: 15px; }
 
 /* ----------------------------------------------------- */
-/* --------- Movie Search page ----------- */
+/* --------- Movie list page ----------- */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* --------- Watch Next page ----------- */
 /* ----------------------------------------------------- */
 .movie-hero {
   background: url(img/theater.jpeg) no-repeat center center fixed;
