@@ -52,6 +52,13 @@ require 'dbconnect.php';
         <ul>
             <li>Movie</li>
         </ul>
+
+        <?php 
+        foreach($db->query('SELECT * FROM Movies') as $row) {
+            echo 'Movie Title: ' .$row['movie_title'];
+        }
+        ?>
+
     </div>
 
     <?php include 'footer.php'; ?>
