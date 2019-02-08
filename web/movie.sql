@@ -125,3 +125,31 @@ INSERT INTO Location VALUES (
     DEFAULT,
     'Amazon Prime'
 );
+
+INSERT INTO Movies VALUES (
+    DEFAULT,
+    'Get Smart',
+    '2008',
+    'Maxwell Smart, a highly intellectual but bumbling spy working for the CONTROL agency, is tasked with preventing a terrorist attack from rival spy agency KAOS.',
+    TRUE,
+    3,
+    110,
+    3,
+    1,
+    3,
+    3
+);
+
+INSERT INTO Family VALUES (
+    DEFAULT,
+    'King'
+);
+
+INSERT INTO Users VALUES (
+    DEFAULT,
+    'abby_loo',
+    'Abby',
+    'Loosle',
+    'pass',
+    1
+);
