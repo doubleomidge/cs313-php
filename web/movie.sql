@@ -39,7 +39,7 @@ CREATE TABLE Genre (
 );
 
 CREATE TABLE Location (
-    location_id     SERIAL          NOT NULL,
+    location_id     SERIAL          NOT NULL,d
     location_name   varchar(100)    NOT NULL,
     PRIMARY KEY (location_id)
 );
@@ -55,3 +55,73 @@ ADD FOREIGN KEY (user_id) REFERENCES Users(user_id);
 
 ALTER TABLE Movies
 ADD FOREIGN KEY (location_id) REFERENCES Location(location_id);
+
+INSERT INTO Genre VALUES (
+    DEFAULT,
+    'Adventure'
+),
+(
+    DEFAULT,
+    'Action'
+),
+(
+    DEFAULT,
+    'Comedy'
+),
+(
+    DEFAULT,
+    'Crime'
+),
+(
+    DEFAULT,
+    'Drama'
+),
+(
+    DEFAULT,
+    'Fantasy'
+),
+(
+    DEFAULT,
+    'Historical'
+),
+(
+    DEFAULT,
+    'Horror'
+),
+(
+    DEFAULT,
+    'Magical'
+),
+(
+    DEFAULT,
+    'Mystery'
+),
+(
+    DEFAULT,
+    'Rom Com'
+),
+(
+    DEFAULT,
+    'Science Fiction'
+),
+(
+    DEFAULT,
+    'Thriller'
+);
+
+INSERT INTO Location VALUES (
+    DEFAULT,
+    'Physical in Boise'
+),
+(
+    DEFAULT,
+    'Physical in Rexburg'
+),
+(
+    DEFAULT,
+    'iTunes / Apple TV'
+),
+(
+    DEFAULT,
+    'Amazon Prime'
+);
