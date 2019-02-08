@@ -2,6 +2,11 @@
 
 require 'dbconnect.php';
 
+$moviejoin = 'SELECT * FROM Movies m
+                JOIN Rating r ON m.movie_rating_id = r.rating_id
+                JOIN Genre g ON m.genre_id = g.genre_id
+                JOIN Location l on m.location_id = l.location_id';
+
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +14,7 @@ require 'dbconnect.php';
 
 <head>
     <meta charset="utf-8">
-    <title>Movieofile || Home</title>
+    <title>Movieofile || Modify Movie</title>
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -31,24 +36,9 @@ require 'dbconnect.php';
 <body>
     <?php include 'nav.php'; ?>
 
-    <div class="container-fluid movie-hero">
-        <div class="container search">
-            <h1>Let's find a movie</h1>
-            <div class="input-group">
-                <select name="genre">
-                <?php
-                    foreach($db->query('SELECT * FROM Genre g') as $row) {
-                            echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
-                        }
-                ?>
-                </select>
-                
-                <span class="input-group-btn">
-                    <button class="btn btn-primary movie-search" type="button">Go!</button>
-                </span>
-            </div>
-        </div>
-    </div>
+    <form action="" method="post">
+
+    </form>
 
     <?php include 'footer.php'; ?>
 </body>

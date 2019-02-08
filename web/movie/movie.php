@@ -66,6 +66,7 @@ $moviejoin = 'SELECT * FROM Movies m
                 echo '<td>' . $row['rating_type'] . '</td>';
                 echo '<td>' . $row['genre_name'] . '</td>';
                 echo '<td>' . $row['location_name'] . '</td>';
+                echo '<a href="index.php?action=modify&itemId=' . $row['movie_id'] . '">Modify</a>';
                 echo '</tr>';
             }
         ?>
