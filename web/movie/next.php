@@ -2,7 +2,7 @@
 
 require 'dbconnect.php';
 
-$titles
+$titles;
 
 if(isset($_POST['genre'])) {
     $genre = $_POST['genre'];
@@ -13,7 +13,7 @@ if(isset($_POST['genre'])) {
 
     $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
     $stmt->execute();
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 
