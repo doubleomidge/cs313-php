@@ -43,8 +43,7 @@
                     <div class="card-content">
                         <p>We know that you probably share your movies with those in your family. Why purchase the same movie
                             when someone in your family already owns it?</p>
-                        <p>Easily know all the movies you, and your family, owns.
-                        </p>
+                        <p>Easily know all the movies you, and your family, owns.</p>
                     </div>
                 </div>
             </div>
@@ -55,9 +54,8 @@
                     <h2>Find the movie you're looking for</h2>
                     <div class="card-content">
                         <p>With digital movie libraries, and DVD collections, as well as multiple viewing devices, it's now easier than ever
-                        to lose track of what you actually own. By using this site, you can keep track of all of your movies,
-                        and know exactly where that movie is! No more movie viewing confusion.
-                        </p>
+                        to lose track of what you actually own.</p>
+                        <p>By using this site, you can have no more movie viewing confusion.</p>
                     </div>
                 </div>
             </div>
@@ -68,8 +66,7 @@
                     <h2>Get movie suggestions</h2>
                     <div class="card-content">
                         <p>You know the mood you're in, but can't place your finger on exactly which movie to watch. By having all your movies,
-                        at your fingertips, you can easily look up all the movies you own by genre, release date, year, and more!
-                        </p>
+                        at your fingertips, you can easily look up all the movies you own by genre, release date, year, and more!</p>
                     </div>
                 </div>
             </div>
