@@ -51,12 +51,12 @@
 
             <div class="col-md-4">
                 <div class="card">
-                    <span class="fas fa-warehouse"></span>
+                    <span class="fas fa-video"></span>
                     <h2>Find the movie you're looking for</h2>
                     <div class="card-content">
-                        <p>We know that you probably share your movies with those in your family. Why purchase the same movie
-                            when someone in your family already owns it?</p>
-                        <p>Easily know all the movies you, and your family, owns.
+                        <p>With digital movie libraries, and DVD collections, as well as multiple viewing devices, it's now easier than ever
+                        to lose track of what you actually own. By using this site, you can keep track of all of your movies,
+                        and know exactly where that movie is! No more movie viewing confusion.
                         </p>
                     </div>
                 </div>
@@ -64,13 +64,11 @@
 
             <div class="col-md-4">
                 <div class="card">
-                    <!-- <span class="fas fa-video"></span> -->
                     <span class="fas fa-couch"></span>
                     <h2>Get movie suggestions</h2>
                     <div class="card-content">
-                        <p>We know that you probably share your movies with those in your family. Why purchase the same movie
-                            when someone in your family already owns it?</p>
-                        <p>Easily know all the movies you, and your family, owns.
+                        <p>You know the mood you're in, but can't place your finger on exactly which movie to watch. By having all your movies,
+                        at your fingertips, you can easily look up all the movies you own by genre, release date, year, and more!
                         </p>
                     </div>
                 </div>
@@ -86,12 +84,13 @@
             <div class="col-7">
                 <h3>Movies made easier to share</h3>
                 <div class="share-content">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                        it to make a type specimen book. It has survived not only five centuries, but also the leap into
-                        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Just like you, I enjoy settling in for a movie night with my family. Selecting the movie has never been easy.
+                    We usually start by opening up our Apple TV and going through movies we own there, then looking at our DVDs, then going
+                    back to our devices to see what other digital movies we own.</p>
+                    <p>At that point, it's already been an hour and I am getting tired. So I figured why not start a database, for my family,
+                    and others, to be able to see all their movies at once.</p>
+                    <p>With Movie-o-file, you can add members to your family, find all your movies, add new movies, look for suggestions, and more!
+                    It's never been easier to pick a movie.</p>
                 </div>
             </div>
         </div>
