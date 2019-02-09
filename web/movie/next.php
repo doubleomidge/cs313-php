@@ -6,7 +6,6 @@ $titles;
 
 if(isset($_POST['genre'])) {
     $genre = $_POST['genre'];
-    echo $genre;
 
     $stmt = $db->prepare('SELECT * FROM Genre g
                         JOIN Movies m on g.genre_id = m.genre_id
@@ -16,8 +15,6 @@ if(isset($_POST['genre'])) {
     $stmt->execute();
     $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-
-print_r ($titles);
 ?>
 
 <!DOCTYPE html>
