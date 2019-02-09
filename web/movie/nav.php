@@ -9,21 +9,21 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="movie.html">About</a>
+                    <a class="nav-link" href="home.php#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="movie.html">Movies</a>
+                    <a class="nav-link" href="movie.php">Movies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="next.html">Watch next</a>
+                    <a class="nav-link" href="next.php">Watch next</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item">
-                    <a class="nav-link" href="signup.html">Sign up</a>
+                    <a class="nav-link" href="signup.php">Sign up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">Log in</a>
+                    <a class="nav-link" href="login.php">Log in</a>
                 </li>
             </ul>
         </div>
