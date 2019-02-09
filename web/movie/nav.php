@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-expand-lg">
-        <a class="navbar-brand" href="#" class="headerfont">
+        <a class="navbar-brand" href="home.php" class="headerfont">
             <span class="fas fa-film logo"></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
