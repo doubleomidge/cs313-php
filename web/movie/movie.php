@@ -54,15 +54,22 @@ $moviejoin = 'SELECT * FROM Movies m
     </div>
 
     <div class="container">
-        <table class="product-table">
+        <table class="table table-hover">
            <thead>
-            <tr><th>Your Movies</th><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr>
+                <th scrope="col">Your Movies</th>
+                <th scrope="col">Your Movies</th>
+                <th scrope="col">Your Movies</th>
+                <th scrope="col">Your Movies</th>
+                <th scrope="col">Your Movies</th>
+                <th colspan="2"></th>
+            </tr>
            </thead>
            <tbody>
 
         <?php
         foreach($db->query($moviejoin) as $row) {
-                echo '<tr><td>' . $row['movie_title'] . '</td>';
+                echo '<tr><td scope="row">' . $row['movie_title'] . '</td>';
                 echo '<td>' . $row['rating_type'] . '</td>';
                 echo '<td>' . $row['genre_name'] . '</td>';
                 echo '<td>' . $row['location_name'] . '</td>';
