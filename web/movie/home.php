@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="about">
         <div class="row d-flex justify-content-between">
             <div class="col-md-4">
                 <div class="card">
