@@ -30,7 +30,7 @@
             <h1>Movie-o-file</h1>
             <p>All your movies</p>
             <p>in one place</p>
-            <a href="assign.php" class="btn btn-light" role="button">Sign me up</a>
+            <a href="register.php" class="btn btn-light" role="button">Sign me up</a>
         </div>
     </div>
 
@@ -65,8 +65,8 @@
                     <span class="fas fa-couch"></span>
                     <h2>Get movie suggestions</h2>
                     <div class="card-content">
-                        <p>You know the mood you're in, but can't place your finger on exactly which movie to watch. By having all your movies,
-                        at your fingertips, you can easily look up all the movies you own by genre, release date, year, and more!</p>
+                        <p>You know the mood you're in, but can't place your finger on exactly which movie to watch.</p>
+                        <p>You can have all your movies, at your fingertips, and easily look up all the movies you own by genre, release date, year, and more!</p>
                     </div>
                 </div>
             </div>
