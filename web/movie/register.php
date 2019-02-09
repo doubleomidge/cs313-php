@@ -25,7 +25,7 @@
 <body>
     <?php include 'nav.php'; ?>
 
-    <div class="container">
+    <div class="container register card">
         <form method="post" action="#">
             <div class="row">
                 <div class="col-md-6 mb-3">
