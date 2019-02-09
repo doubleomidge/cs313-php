@@ -27,17 +27,7 @@
 
     <div class="container register card">
         <form method="post" action="#">
-            <h1 class="bump-center">Register</h1>
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName" name="firstname" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" name="lastname" required>
-                </div>
-            </div>
+            <h1 class="bump-center">Welcome Back</h1>
 
             <div class="mb-3">
                 <label for="email">Email</label>
@@ -49,18 +39,9 @@
                 <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
             </div>
 
-            <div class="mb-3">
-                <label for="password-confirm">Confirm Password</label>
-                <input type="text" class="form-control" id="password-confirm" name="password-confirm" placeholder="Confirm Password" required>
-            </div>
-
-            <button class="btn btn-primary btn-lg btn-block register-button" type="submit">Register Now</button>
+            <button class="btn btn-primary btn-lg btn-block register-button" type="submit">Sign in</button>
         </form>
-        <div class="log-in-text bump-center">
-            <p>Already have an account?
-                <a href="login.php">Sign In</a>
-            </p>
-        </div>
+
     </div>
 
     <?php include 'footer.php'; ?>

@@ -73,10 +73,16 @@ h1, h2, h3, h4, .headerfont {
     padding-bottom: 15px; }
 
 /* ----------------------------------------------------- */
-/* --------- Hello/home page ----------- */
+/* --------- Registration page ----------- */
 /* ----------------------------------------------------- */
 .register {
-  max-width: 700px; }
+  max-width: 800px;
+  text-align: left; }
+  .register .bump-center {
+    text-align: center; }
+
+.log-in-text, .register-button {
+  margin-top: 30px; }
 
 /* ----------------------------------------------------- */
 /* --------- Movie list page ----------- */

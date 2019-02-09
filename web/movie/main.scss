@@ -113,11 +113,20 @@ background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
 
 
 /* ----------------------------------------------------- */
-/* --------- Hello/home page ----------- */
+/* --------- Registration page ----------- */
 /* ----------------------------------------------------- */
 
 .register {
-    max-width: 700px;
+    max-width: 800px;
+    text-align: left;
+
+    .bump-center {
+        text-align: center;
+    }
+}
+
+.log-in-text, .register-button {
+    margin-top: 30px;
 }
 
 
