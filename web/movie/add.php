@@ -1,20 +1,9 @@
-<?php
-
-require 'dbconnect.php';
-
-$moviejoin = 'SELECT * FROM Movies m
-                JOIN Rating r ON m.movie_rating_id = r.rating_id
-                JOIN Genre g ON m.genre_id = g.genre_id
-                JOIN Location l on m.location_id = l.location_id';
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Movieofile || Modify Movie</title>
+    <title>Movieofile || Home</title>
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -33,11 +22,18 @@ $moviejoin = 'SELECT * FROM Movies m
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body class="add">
     <?php include 'nav.php'; ?>
 
-        <div class="container">
-            <h1>Let's Modify [Movie Title]</h1>
+    <div class="jumbotron">
+        <div class="list-intro">
+            <h1 class="display-4">So you got a new movie?</h1>
+            <p class="lead">That's great news! We are excited to help you keep track of this new movie!</p>
+            <p>Just to make sure we are all on the same page, you are [user] and you are adding this to the [family].</p>
+        </div>
+    </div>
+
+    <div class="container">
         <form>
             <div class="form-group">
                 <label for="movie_title">Movie Title</label>
@@ -122,5 +118,21 @@ $moviejoin = 'SELECT * FROM Movies m
 
     <?php include 'footer.php'; ?>
 </body>
+
+<script>
+    var maxLength = 100;
+
+    $('textarea').keyup(function () {
+        var length = $(this).val().length;
+        var length = maxLength - length;
+        $('#chars').text(length);
+
+        if (length < 20) {
+            $('.bump-right').css({ "color": "red" });
+        } else {
+            $('.bump-right').css({ "color": "black" });
+        };
+    });
+</script>
 
 </html>

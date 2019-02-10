@@ -1,39 +1,35 @@
 -- DROP
+DROP TABLE Family CASCADE;
+DROP TABLE Rating CASCADE;
+DROP TABLE Location CASCADE;
+DROP TABLE Genre CASCADE;
+DROP TABLE Users CASCADE;
+DROP TABLE Movies CASCADE;
 
+
+-- RESET AUTO INCREMENT
+ALTER TABLE Family AUTO_INCREMENT = 1;
+ALTER TABLE Rating AUTO_INCREMENT = 1;
+ALTER TABLE Location AUTO_INCREMENT = 1;
+ALTER TABLE Genre AUTO_INCREMENT = 1;
+ALTER TABLE Users AUTO_INCREMENT = 1;
+ALTER TABLE Movies AUTO_INCREMENT = 1;
 
 
 -- CREATE TABLE
+
+CREATE TABLE Family (
+    family_id       SERIAL          PRIMARY KEY,
+    family_name     varchar(30)     NOT NULL
+);
+
 CREATE TABLE Users (
-    user_id         SERIAL          NOT NULL,
+    user_id         SERIAL          PRIMARY KEY,
     username        varchar(15)     NOT NULL,
     user_firstname  varchar(20)     NOT NULL,
     user_lastname   varchar(20)     NOT NULL,
     user_password   varchar(15)     NOT NULL,
-    family_id       int             NOT NULL,
-    PRIMARY KEY (user_id)
-);
-
-CREATE TABLE Family (
-    family_id       SERIAL          NOT NULL,
-    family_name     varchar(30)     NOT NULL,
-    PRIMARY KEY (family_id)
-);
-
-ALTER TABLE Users
-ADD FOREIGN KEY (family_id) REFERENCES Family(family_id);
-
-CREATE TABLE Movies (
-    movie_id        SERIAL          PRIMARY KEY,
-    movie_title     varchar(30)     NOT NULL,
-    movie_year      varchar(20)     NOT NULL,
-    movie_desc      varchar(500)    NOT NULL,
-    movie_digital   BOOL            NOT NULL,
-    movie_rating_id int             NOT NULL,
-    movie_runtime   int             NOT NULL,
-    genre_id        int             NOT NULL,
-    family_id       int             NOT NULL,
-    user_id         int             NOT NULL,
-    location_id     int             NOT NULL
+    family_id       int             NOT NULL REFERENCES Family(family_id)
 );
 
 CREATE TABLE Rating (
@@ -42,31 +38,29 @@ CREATE TABLE Rating (
 );
 
 CREATE TABLE Genre (
-    genre_id        SERIAL          NOT NULL,
-    genre_name      varchar(100)    NOT NULL,
-    PRIMARY KEY (genre_id)
+    genre_id        SERIAL          PRIMARY KEY,
+    genre_name      varchar(100)    NOT NULL
 );
 
 CREATE TABLE Location (
-    location_id     SERIAL          NOT NULL,d
-    location_name   varchar(100)    NOT NULL,
-    PRIMARY KEY (location_id)
+    location_id     SERIAL          PRIMARY KEY,
+    location_name   varchar(100)    NOT NULL
 );
 
-ALTER TABLE Movies
-ADD FOREIGN KEY (genre_id) REFERENCES Genre(genre_id);
-
-ALTER TABLE Movies
-ADD FOREIGN KEY (movie_rating_id) REFERENCES Rating(rating_id);
-
-ALTER TABLE Movies
-ADD FOREIGN KEY (family_id) REFERENCES Family(family_id);
-
-ALTER TABLE Movies
-ADD FOREIGN KEY (user_id) REFERENCES Users(user_id);
-
-ALTER TABLE Movies
-ADD FOREIGN KEY (location_id) REFERENCES Location(location_id);
+CREATE TABLE Movies (
+    movie_id        SERIAL          PRIMARY KEY,
+    movie_title     varchar(30)     NOT NULL,
+    movie_year      int             ,
+    movie_desc      varchar(500)    NOT NULL,
+    movie_digital   BOOL            NOT NULL,
+    movie_yn        BOOL            NOT NULL,
+    movie_runtime   int            ,
+    movie_rating_id int             NOT NULL REFERENCES Rating(rating_id),
+    genre_id        int             NOT NULL REFERENCES Genre(genre_id),
+    family_id       int             NOT NULL REFERENCES Family(family_id),
+    user_id         int             NOT NULL REFERENCES Users(user_id),
+    location_id     int             NOT NULL REFERENCES Location(location_id)
+);
 
 INSERT INTO Genre VALUES (
     DEFAULT,
@@ -82,10 +76,6 @@ INSERT INTO Genre VALUES (
 ),
 (
     DEFAULT,
-    'Crime'
-),
-(
-    DEFAULT,
     'Drama'
 ),
 (
@@ -94,15 +84,11 @@ INSERT INTO Genre VALUES (
 ),
 (
     DEFAULT,
-    'Historical'
-),
-(
-    DEFAULT,
     'Horror'
 ),
 (
     DEFAULT,
-    'Magical'
+    'Musical'
 ),
 (
     DEFAULT,
@@ -115,10 +101,6 @@ INSERT INTO Genre VALUES (
 (
     DEFAULT,
     'Science Fiction'
-),
-(
-    DEFAULT,
-    'Thriller'
 );
 
 INSERT INTO Location VALUES (
@@ -155,20 +137,6 @@ INSERT INTO Rating VALUES (
     'NR'
 );
 
-INSERT INTO Movies VALUES (
-    DEFAULT,
-    'Get Smart',
-    '2008',
-    'Maxwell Smart, a highly intellectual but bumbling spy working for the CONTROL agency, is tasked with preventing a terrorist attack from rival spy agency KAOS.',
-    TRUE,
-    3,
-    110,
-    3,
-    1,
-    3,
-    3
-);
-
 INSERT INTO Family VALUES (
     DEFAULT,
     'King'
@@ -181,4 +149,58 @@ INSERT INTO Users VALUES (
     'Loosle',
     'pass',
     1
+);
+
+INSERT INTO Movies VALUES (
+    DEFAULT,
+    'Get Smart',
+    2008,
+    'Maxwell Smart, a highly intellectual but bumbling spy working for the CONTROL agency, is tasked with preventing a terrorist attack from rival spy agency KAOS.',
+    TRUE,
+    TRUE,
+    110,
+    3,
+    3,
+    1,
+    1,
+    3
+), (
+    DEFAULT,
+    'Mama Mia!',
+    2008,
+    'The story of a bride-to-be trying to find her real father told using hit songs by the popular 1970s group ABBA.',
+    TRUE,
+    TRUE,
+    109,
+    3,
+    7,
+    1,
+    1,
+    3
+), (
+    DEFAULT,
+    'The Dark Knight',
+    2008,
+    'When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.',
+    TRUE,
+    TRUE,
+    152,
+    3,
+    2,
+    1,
+    1,
+    3
+), (
+    DEFAULT,
+    'Yes Man',
+    2008,
+    'A man challenges himself to say "yes" to everything for an entire year.',
+    TRUE,
+    TRUE,
+    104,
+    3,
+    3,
+    1,
+    1,
+    3
 );

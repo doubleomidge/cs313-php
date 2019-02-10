@@ -58,7 +58,7 @@
         </form>
         <div class="log-in-text bump-center">
             <p>Already have an account?
-                <a href="login.php">Sign In</a>
+                <a href="signin.php">Sign In</a>
             </p>
         </div>
     </div>

@@ -85,6 +85,20 @@ h1, h2, h3, h4, .headerfont {
   margin-top: 30px; }
 
 /* ----------------------------------------------------- */
+/* --------- Hello/home page ----------- */
+/* ----------------------------------------------------- */
+.add form {
+  text-align: left; }
+  .add form .bump-right {
+    float: right; }
+  .add form small {
+    font-style: oblique; }
+.add .d-flex {
+  justify-content: space-around; }
+.add .form-check {
+  padding-bottom: 20px; }
+
+/* ----------------------------------------------------- */
 /* --------- Movie list page ----------- */
 /* ----------------------------------------------------- */
 .list-intro {
