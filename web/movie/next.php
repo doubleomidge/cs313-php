@@ -54,9 +54,9 @@ $moviejoin = 'SELECT * FROM Movies m
     <div class="container-fluid movie-hero">
         <div class="container search">
             <h1>Let's find a movie</h1>
-            <div class="input-group flex-v-center">
+            <!-- <div class="input-group"> -->
                 <form action="#" method="post">
-                    <div class="row">
+                    <div class="form-row align-items-center">
                         <select class="form-control form-control-lg col-xs-6" name="genre">
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
@@ -70,7 +70,7 @@ $moviejoin = 'SELECT * FROM Movies m
                         </span>
                     </div>
                 </form>
-            </div>
+            <!-- </div> -->
 
             <div class="container movie-holder" style="background-color: white;">
                 <?php
