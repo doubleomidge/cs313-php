@@ -48,7 +48,7 @@ if(isset($_POST['inputFormat'])) {
 
 <head>
     <meta charset="utf-8">
-    <title>Movieofile || Home</title>
+    <title>Movieofile || Add a Movie</title>
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">

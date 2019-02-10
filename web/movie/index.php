@@ -8,11 +8,12 @@ if ($action == NULL) {
 }
 
 switch ($action) {
-    case 'mod':
-        $movieId = filter_input(INPUT_GET, 'movie_id', FILTER_SANITIZE_NUMBER_INT);
+    case 'modify':
+        $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $movieInfo = getMovieById($id);
         
         include 'changes.php';
+        exit;
         break;
 
     default: 
