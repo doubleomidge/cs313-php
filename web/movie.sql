@@ -157,9 +157,9 @@ INSERT INTO Movies VALUES (
     110,
     3,
     3,
-    3,
     1,
-    3
+    1,
+    2
 ), (
     DEFAULT,
     'Mama Mia!',
@@ -170,9 +170,9 @@ INSERT INTO Movies VALUES (
     109,
     3,
     7,
-    3,
     1,
-    3
+    1,
+    2
 ), (
     DEFAULT,
     'The Dark Knight',
@@ -183,9 +183,9 @@ INSERT INTO Movies VALUES (
     152,
     3,
     2,
-    3,
     1,
-    3
+    1,
+    2
 ), (
     DEFAULT,
     'Yes Man',
@@ -196,7 +196,7 @@ INSERT INTO Movies VALUES (
     104,
     3,
     3,
-    3,
     1,
-    3
+    1,
+    2
 );

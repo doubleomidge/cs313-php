@@ -7,13 +7,13 @@ $titles;
 $formats;
 
 if(isset($_POST['inputRating'])) {
-    $genre = $_POST['inputRating'];
+    $rating = $_POST['inputRating'];
 
     $stmt = $db->prepare('SELECT * FROM Rating r
                         JOIN Movies m on r.rating_id = m.rating_id
                     WHERE r.rating_id=:id');
 
-    $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
+    $stmt->bindValue(':id', $rating, PDO::PARAM_INT);
     $stmt->execute();
     $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -31,13 +31,13 @@ if(isset($_POST['inputGenre'])) {
 }
 
 if(isset($_POST['inputFormat'])) {
-    $genre = $_POST['inputFormat'];
+    $format = $_POST['inputFormat'];
 
-    $stmt = $db->prepare('SELECT * FROM Location l
-                        JOIN Movies m on l.location_id = m.location_id
-                    WHERE l.genre_id=:id');
+    $stmt = $db->prepare('SELECT * FROM Format f
+                        JOIN Movies m on f.format_id = m.format_id
+                    WHERE l.format_id=:id');
 
-    $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
+    $stmt->bindValue(':id', $format, PDO::PARAM_INT);
     $stmt->execute();
     $formats = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -158,8 +158,8 @@ if(isset($_POST['inputFormat'])) {
                         <option selected>Choose...</option>
                         
                         <?php
-                        foreach($db->query('SELECT * FROM Location l') as $row) {
-                            echo "<option value=" . $row[location_id] . ">". $row[location_name] . "</option>";
+                        foreach($db->query('SELECT * FROM Format f') as $row) {
+                            echo "<option value=" . $row[format_id] . ">". $row[format_type] . "</option>";
                         }
                         ?>
                     
