@@ -2,10 +2,19 @@
 
 require 'dbconnect.php';
 
-$moviejoin = 'SELECT * FROM Movies m
-                JOIN Rating r ON m.movie_rating_id = r.rating_id
-                JOIN Genre g ON m.genre_id = g.genre_id
-                JOIN Location l on m.location_id = l.location_id';
+$titles;
+
+if(isset($_POST['genre'])) {
+    $genre = $_POST['genre'];
+
+    $stmt = $db->prepare('SELECT * FROM Genre g
+                        JOIN Movies m on g.genre_id = m.genre_id
+                    WHERE g.genre_id=:id');
+
+    $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
+    $stmt->execute();
+    $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 ?>
 
@@ -40,7 +49,12 @@ $moviejoin = 'SELECT * FROM Movies m
             <h1>Let's Modify [Movie Title]</h1>
         <form>
             <div class="form-group">
-                <label for="movie_title">Movie Title</label>
+                <label for="movie_title">
+                    <?php 
+                    $view = $row[movie_title]
+
+                    ?>
+                </label>
                 <input type="email" class="form-control form-control-lg" id="movie_title" placeholder="Tell me the movie name" required>
             </div>
 

@@ -88,7 +88,8 @@ h1, h2, h3, h4, .headerfont {
 /* --------- Hello/home page ----------- */
 /* ----------------------------------------------------- */
 .add form {
-  text-align: left; }
+  text-align: left;
+  margin-bottom: 30px; }
   .add form .bump-right {
     float: right; }
   .add form small {
