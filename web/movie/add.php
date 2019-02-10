@@ -119,7 +119,7 @@ if(isset($_POST['inputFormat'])) {
                         
                         <?php
                         foreach($db->query('SELECT * FROM Rating g') as $row) {
-                            echo "<option value=" . $row[rating_id] . ">". $row[rating_name] . "</option>";
+                            echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
                         }
                         ?>
                     
