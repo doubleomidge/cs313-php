@@ -1,3 +1,22 @@
+<?php
+
+require 'dbconnect.php';
+
+$titles;
+
+if(isset($_POST['inputGenre'])) {
+    $genre = $_POST['inputGenre'];
+
+    $stmt = $db->prepare('SELECT * FROM Genre g
+                        JOIN Movies m on g.genre_id = m.genre_id
+                    WHERE g.genre_id=:id');
+
+    $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
+    $stmt->execute();
+    $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,22 +98,18 @@
                     </select>
                 </div>
 
-                <div class="form-group col-md-4">
-                    <label for="inputGenre">Genre</label>
-                    <select id="inputGenre" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>Adventure</option>
-                        <option>Action</option>
-                        <option>Comedy</option>
-                        <option>Drama</option>
-                        <option>Fantasy</option>
-                        <option>Horror</option>
-                        <option>Musical</option>
-                        <option>Mystery</option>
-                        <option>Rom Com</option>
-                        <option>Science Fiction</option>
-                        <option>Childrens'</option>
-                    </select>
+            <div class="form-group col-md-4">
+                <label for="inputGenre">Genre</label>
+                <select id="inputGenre" class="form-control">
+                    <option selected>Choose...</option>
+                    
+                    <?php
+                    foreach($db->query('SELECT * FROM Genre g') as $row) {
+                        echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                    }
+                    ?>
+                
+                </select>
                 </div>
 
                 <div class="form-group col-md-4">
