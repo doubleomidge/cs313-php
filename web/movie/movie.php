@@ -60,7 +60,7 @@ $moviejoin = 'SELECT * FROM Movies m
                 <th scrope="col">Movie Title</th>
                 <th scrope="col">Movie Rating</th>
                 <th scrope="col">Genre</th>
-                <th scrope="col">Movie Location</th>
+                <th scrope="col">Movie Format</th>
                 <th colspan="2"></th>
             </tr>
            </thead>
@@ -73,6 +73,7 @@ $moviejoin = 'SELECT * FROM Movies m
                 echo '<td>' . $row['genre_name'] . '</td>';
                 echo '<td>' . $row['location_name'] . '</td>';
                 echo '<td><a href="index.php?action=modify&itemId=' . $row['movie_id'] . '">Modify</a></td>';
+                echo '<td><a href="index.php?action=delete&itemId=' . $row['movie_id'] . '">Delete</a></td>';
                 echo '</tr>';
             }
         ?>

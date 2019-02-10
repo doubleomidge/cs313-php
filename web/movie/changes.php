@@ -102,7 +102,7 @@ $moviejoin = 'SELECT * FROM Movies m
                 </div>
 
                 <div class="form-group col-md-4">
-                    <label for="inputLocation">Location Type</label>
+                    <label for="inputLocation">Format Type</label>
                     <select id="inputLocation" class="form-control">
                         <option selected>Choose...</option>
                         <option>Physical</option>
