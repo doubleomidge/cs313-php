@@ -65,9 +65,9 @@ $moviejoin = 'SELECT * FROM Movies m
                         ?>
                         </select>
                         
-                        <span class="input-group-btn col-auto">
+                        <div class="col-auto">
                             <button class="btn btn-primary movie-search" type="submit">Find!</button>
-                        </span>
+                        </div>
                     </div>
                 </form>
             <!-- </div> -->
