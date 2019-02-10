@@ -37,8 +37,8 @@ require 'dbconnect.php';
             <div class="form-group">
                 <label for="movie_title">
                     <?php 
-                    $view = $movie[movie_title];
-                    echo $view;
+                    if ( isset( $_GET[ "id" ] ) )
+                        echo "<p>ID: " . $_GET[ "id" ] . "</p>";
                     ?>
                 </label>
                 <input type="email" class="form-control form-control-lg" id="movie_title" placeholder="Tell me the movie name" required>
