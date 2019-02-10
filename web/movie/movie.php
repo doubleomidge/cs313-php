@@ -73,7 +73,7 @@ $moviejoin = 'SELECT * FROM Movies m
                 echo '<td>' . $row['genre_name'] . '</td>';
                 echo '<td>' . $row['location_name'] . '</td>';
                 echo '<td><a href="index.php?action=modify&id=' . $row['movie_id'] . '">Modify</a></td>';
-                echo '<td><a href="index.php?action=delete">Delete</a></td>';
+                // echo '<td><a href="index.php?action=delete">Delete</a></td>';
                 echo '</tr>';
             }
         ?>
