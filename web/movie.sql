@@ -7,20 +7,12 @@ DROP TABLE Users CASCADE;
 DROP TABLE Movies CASCADE;
 
 
--- RESET AUTO INCREMENT
-ALTER TABLE Family AUTO_INCREMENT = 1;
-ALTER TABLE Rating AUTO_INCREMENT = 1;
-ALTER TABLE Location AUTO_INCREMENT = 1;
-ALTER TABLE Genre AUTO_INCREMENT = 1;
-ALTER TABLE Users AUTO_INCREMENT = 1;
-ALTER TABLE Movies AUTO_INCREMENT = 1;
-
-
 -- CREATE TABLE
 
 CREATE TABLE Family (
     family_id       SERIAL          PRIMARY KEY,
-    family_name     varchar(30)     NOT NULL
+    family_name     varchar(30)     NOT NULL,
+    family_email    varchar(50)     NOT NULL
 );
 
 CREATE TABLE Users (
@@ -42,9 +34,9 @@ CREATE TABLE Genre (
     genre_name      varchar(100)    NOT NULL
 );
 
-CREATE TABLE Location (
-    location_id     SERIAL          PRIMARY KEY,
-    location_name   varchar(100)    NOT NULL
+CREATE TABLE Format (
+    format_id     SERIAL          PRIMARY KEY,
+    format_type   varchar(100)    NOT NULL
 );
 
 CREATE TABLE Movies (
@@ -59,7 +51,7 @@ CREATE TABLE Movies (
     genre_id        int             NOT NULL REFERENCES Genre(genre_id),
     family_id       int             NOT NULL REFERENCES Family(family_id),
     user_id         int             NOT NULL REFERENCES Users(user_id),
-    location_id     int             NOT NULL REFERENCES Location(location_id)
+    format_id     int             NOT NULL REFERENCES Format(format_id)
 );
 
 INSERT INTO Genre VALUES (
@@ -103,13 +95,9 @@ INSERT INTO Genre VALUES (
     'Science Fiction'
 );
 
-INSERT INTO Location VALUES (
+INSERT INTO Format VALUES (
     DEFAULT,
-    'Physical in Boise'
-),
-(
-    DEFAULT,
-    'Physical in Rexburg'
+    'Physical'
 ),
 (
     DEFAULT,
@@ -139,7 +127,8 @@ INSERT INTO Rating VALUES (
 
 INSERT INTO Family VALUES (
     DEFAULT,
-    'King'
+    'King',
+    'gimmethatcokezero@gmail.com'
 );
 
 INSERT INTO Users VALUES (
@@ -147,6 +136,13 @@ INSERT INTO Users VALUES (
     'abby_loo',
     'Abby',
     'Loosle',
+    'pass',
+    1
+), (
+    DEFAULT,
+    'boku_king',
+    'Chuck',
+    'King',
     'pass',
     1
 );
@@ -161,7 +157,7 @@ INSERT INTO Movies VALUES (
     110,
     3,
     3,
-    1,
+    3,
     1,
     3
 ), (
@@ -174,7 +170,7 @@ INSERT INTO Movies VALUES (
     109,
     3,
     7,
-    1,
+    3,
     1,
     3
 ), (
@@ -187,7 +183,7 @@ INSERT INTO Movies VALUES (
     152,
     3,
     2,
-    1,
+    3,
     1,
     3
 ), (
@@ -200,7 +196,7 @@ INSERT INTO Movies VALUES (
     104,
     3,
     3,
-    1,
+    3,
     1,
     3
 );
