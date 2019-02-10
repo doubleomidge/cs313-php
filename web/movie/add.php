@@ -126,18 +126,6 @@ if(isset($_POST['inputFormat'])) {
                     </select>
                 </div>
 
-                <!-- <div class="form-group col-md-4">
-                    <label for="inputRating">Rating</label>
-                    <select id="inputRating" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>G</option>
-                        <option>PG</option>
-                        <option>PG-13</option>
-                        <option>R</option>
-                        <option>NR</option>
-                    </select>
-                </div> -->
-
                 <div class="form-group col-md-4">
                     <label for="inputGenre">Genre</label>
                     <select id="inputGenre" class="form-control">
@@ -165,16 +153,6 @@ if(isset($_POST['inputFormat'])) {
                     
                     </select>
                 </div>
-
-                <!-- <div class="form-group col-md-4">
-                    <label for="inputLocation">Format Type</label>
-                    <select id="inputLocation" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>Physical</option>
-                        <option>iTunes / Apple TV</option>
-                        <option>Amazon Prime</option>
-                    </select>
-                </div> -->
             </div>
 
             <div class="form-check">

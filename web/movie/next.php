@@ -49,7 +49,7 @@ if(isset($_POST['genre'])) {
             <h1>Let's find a movie</h1>
             <div class="input-group">
                 <form action="#" method="post">
-                    <select name="genre">
+                    <select class="form-control form-control-lg" name="genre">
                     <?php
                     foreach($db->query('SELECT * FROM Genre g') as $row) {
                         echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
