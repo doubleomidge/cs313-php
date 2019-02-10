@@ -2,7 +2,21 @@
 
 require 'dbconnect.php';
 
+$ratings;
 $titles;
+$formats;
+
+if(isset($_POST['inputRating'])) {
+    $genre = $_POST['inputRating'];
+
+    $stmt = $db->prepare('SELECT * FROM Rating r
+                        JOIN Movies m on r.rating_id = m.rating_id
+                    WHERE r.rating_id=:id');
+
+    $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
+    $stmt->execute();
+    $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 if(isset($_POST['inputGenre'])) {
     $genre = $_POST['inputGenre'];
@@ -14,6 +28,18 @@ if(isset($_POST['inputGenre'])) {
     $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
     $stmt->execute();
     $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+if(isset($_POST['inputFormat'])) {
+    $genre = $_POST['inputFormat'];
+
+    $stmt = $db->prepare('SELECT * FROM Location l
+                        JOIN Movies m on l.location_id = m.location_id
+                    WHERE l.genre_id=:id');
+
+    $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
+    $stmt->execute();
+    $formats = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 
@@ -90,29 +116,57 @@ if(isset($_POST['inputGenre'])) {
                     <label for="inputRating">Rating</label>
                     <select id="inputRating" class="form-control">
                         <option selected>Choose...</option>
+                        
+                        <?php
+                        foreach($db->query('SELECT * FROM Rating g') as $row) {
+                            echo "<option value=" . $row[rating_id] . ">". $row[rating_name] . "</option>";
+                        }
+                        ?>
+                    
+                    </select>
+                </div>
+
+                <!-- <div class="form-group col-md-4">
+                    <label for="inputRating">Rating</label>
+                    <select id="inputRating" class="form-control">
+                        <option selected>Choose...</option>
                         <option>G</option>
                         <option>PG</option>
                         <option>PG-13</option>
                         <option>R</option>
                         <option>NR</option>
                     </select>
-                </div>
+                </div> -->
 
-            <div class="form-group col-md-4">
-                <label for="inputGenre">Genre</label>
-                <select id="inputGenre" class="form-control">
-                    <option selected>Choose...</option>
+                <div class="form-group col-md-4">
+                    <label for="inputGenre">Genre</label>
+                    <select id="inputGenre" class="form-control">
+                        <option selected>Choose...</option>
+                        
+                        <?php
+                        foreach($db->query('SELECT * FROM Genre g') as $row) {
+                            echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                        }
+                        ?>
                     
-                    <?php
-                    foreach($db->query('SELECT * FROM Genre g') as $row) {
-                        echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
-                    }
-                    ?>
-                
-                </select>
+                    </select>
                 </div>
 
                 <div class="form-group col-md-4">
+                    <label for="inputFormat">Format Type</label>
+                    <select id="inputRating" class="form-control">
+                        <option selected>Choose...</option>
+                        
+                        <?php
+                        foreach($db->query('SELECT * FROM Location l') as $row) {
+                            echo "<option value=" . $row[location_id] . ">". $row[location_name] . "</option>";
+                        }
+                        ?>
+                    
+                    </select>
+                </div>
+
+                <!-- <div class="form-group col-md-4">
                     <label for="inputLocation">Format Type</label>
                     <select id="inputLocation" class="form-control">
                         <option selected>Choose...</option>
@@ -120,7 +174,7 @@ if(isset($_POST['inputGenre'])) {
                         <option>iTunes / Apple TV</option>
                         <option>Amazon Prime</option>
                     </select>
-                </div>
+                </div> -->
             </div>
 
             <div class="form-check">
