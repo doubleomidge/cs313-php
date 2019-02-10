@@ -48,16 +48,16 @@ $moviejoin = 'SELECT * FROM Movies m
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body class="suggestion">
     <?php include 'nav.php'; ?>
 
     <div class="container-fluid movie-hero">
         <div class="container search">
             <h1>Let's find a movie</h1>
-            <div class="input-group">
+            <div class="input-group flex-v-center">
                 <form action="#" method="post">
                     <div class="row">
-                        <select class="form-control form-control-lg" name="genre">
+                        <select class="form-control form-control-lg col-xs-6" name="genre">
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
                             echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
@@ -65,14 +65,14 @@ $moviejoin = 'SELECT * FROM Movies m
                         ?>
                         </select>
                         
-                        <span class="input-group-btn">
+                        <span class="input-group-btn col-xs-6">
                             <button class="btn btn-primary movie-search" type="submit">Find!</button>
                         </span>
                     </div>
                 </form>
             </div>
 
-            <div class="container" style="background-color: white;">
+            <div class="container movie-holder" style="background-color: white;">
                 <?php
                     foreach($titles as $title) {
                         echo "<p>" . $title['movie_title'] . "</p>";

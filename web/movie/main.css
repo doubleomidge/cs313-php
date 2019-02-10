@@ -120,10 +120,16 @@ h1, h2, h3, h4, .headerfont {
 .search {
   padding-top: 15%; }
   .search h1 {
-    color: #B06AB3;
-    margin-bottom: 20px; }
+    color: #B74F6F;
+    margin-bottom: 20px;
+    font-size: 4em; }
+  .search form {
+    margin: 0 auto; }
 
 .next {
-  background-color: #ffffffe8; }
+  background-color: #E2FCEF; }
+
+.suggestion .movie-holder {
+  margin-top: 30px; }
 
 /*# sourceMappingURL=main.css.map */
