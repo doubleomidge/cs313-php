@@ -71,22 +71,31 @@ $moviejoin = 'SELECT * FROM Movies m
             </div>
 
             <div class="container" style="background-color: white;">
-                <?php
-                    foreach($titles as $title) {
-                        echo "<p>" . $title['movie_title'] . "</p>";
-                    }
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scrope="col">Movie Title</th>
+                            <th scrope="col">Movie Rating</th>
+                            <th scrope="col">Genre</th>
+                            <th scrope="col">Movie Format</th>
+                            <th colspan="2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            
+                    <?php
+                        foreach($db->query($moviejoin) as $row) {
+                            echo '<tr><td scope="row">' . $row['movie_title'] . '</td>';
+                            echo '<td>' . $row['rating_type'] . '</td>';
+                            echo '<td>' . $row['genre_name'] . '</td>';
+                            echo '<td>' . $row['format_type'] . '</td>';
+                            echo "<td><a href='/movie/index.php?action=mod&id=$row[movie_id]' title='Click to modify'>Modify</a></td>";
+                            echo '</tr>';
+                        }
+                    ?>
 
-                    foreach($db->query($moviejoin) as $row) {
-                echo '<tr><td scope="row">' . $row['movie_title'] . '</td>';
-                echo '<td>' . $row['rating_type'] . '</td>';
-                echo '<td>' . $row['genre_name'] . '</td>';
-                echo '<td>' . $row['format_type'] . '</td>';
-                echo "<td><a href='/movie/index.php?action=mod&id=$row[movie_id]' title='Click to modify'>Modify</a></td>";
-                //echo '<td><a href="index.php?action=modify">Modify</a></td>';
-                // echo '<td><a href="index.php?action=delete">Delete</a></td>';
-                echo '</tr>';
-            }
-                ?>
+                    </tbody>
+                </table>
             </div>
         </div>
 
