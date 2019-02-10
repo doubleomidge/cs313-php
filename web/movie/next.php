@@ -57,7 +57,7 @@ $moviejoin = 'SELECT * FROM Movies m
             <!-- <div class="input-group"> -->
                 <form action="#" method="post">
                     <div class="form-row align-items-center">
-                        <select class="form-control form-control-lg col-xs-6" name="genre">
+                        <select class="form-control form-control-lg col-auto" name="genre">
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
                             echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
@@ -65,7 +65,7 @@ $moviejoin = 'SELECT * FROM Movies m
                         ?>
                         </select>
                         
-                        <span class="input-group-btn col-xs-6">
+                        <span class="input-group-btn col-auto">
                             <button class="btn btn-primary movie-search" type="submit">Find!</button>
                         </span>
                     </div>
