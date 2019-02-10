@@ -5,7 +5,7 @@ require 'dbconnect.php';
 $moviejoin = 'SELECT * FROM Movies m
                 JOIN Rating r ON m.movie_rating_id = r.rating_id
                 JOIN Genre g ON m.genre_id = g.genre_id
-                JOIN Location l on m.location_id = l.location_id';
+                JOIN Format f on m.format_id = f.format_id';
 
 ?>
 
@@ -71,7 +71,7 @@ $moviejoin = 'SELECT * FROM Movies m
                 echo '<tr><td scope="row">' . $row['movie_title'] . '</td>';
                 echo '<td>' . $row['rating_type'] . '</td>';
                 echo '<td>' . $row['genre_name'] . '</td>';
-                echo '<td>' . $row['location_name'] . '</td>';
+                echo '<td>' . $row['format_type'] . '</td>';
                 echo '<td><a href="index.php?action=modify&id=' . $row['movie_id'] . '">Modify</a></td>';
                 //echo '<td><a href="index.php?action=modify">Modify</a></td>';
                 // echo '<td><a href="index.php?action=delete">Delete</a></td>';
