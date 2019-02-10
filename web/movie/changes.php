@@ -2,20 +2,6 @@
 
 require 'dbconnect.php';
 
-$titles;
-
-if(isset($_POST['genre'])) {
-    $genre = $_POST['genre'];
-
-    $stmt = $db->prepare('SELECT * FROM Genre g
-                        JOIN Movies m on g.genre_id = m.genre_id
-                    WHERE g.genre_id=:id');
-
-    $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
-    $stmt->execute();
-    $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
-
 ?>
 
 <!DOCTYPE html>
