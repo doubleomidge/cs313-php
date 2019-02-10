@@ -85,7 +85,7 @@ h1, h2, h3, h4, .headerfont {
   margin-top: 30px; }
 
 /* ----------------------------------------------------- */
-/* --------- Hello/home page ----------- */
+/* --------- Add movie page ----------- */
 /* ----------------------------------------------------- */
 .add form {
   text-align: left;
@@ -122,5 +122,8 @@ h1, h2, h3, h4, .headerfont {
   .search h1 {
     color: #B06AB3;
     margin-bottom: 20px; }
+
+.next {
+  background-color: #ffffffe8; }
 
 /*# sourceMappingURL=main.css.map */
