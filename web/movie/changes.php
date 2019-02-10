@@ -36,9 +36,12 @@ require 'dbconnect.php';
         <form>
             <div class="form-group">
                 <label for="movie_title">
-                    <?php 
-                    if ( isset( $_GET[ "id" ] ) )
-                        echo "<p>ID: " . $_GET[ "id" ] . "</p>";
+                    <?php
+                    if (isset($movieInfo['movie_name'])) {
+                        echo "Modify $movieInfo[movie_name]";
+                    } elseif (isset($movie_name)) {
+                        echo $movie_name;
+                    }
                     ?>
                 </label>
                 <input type="email" class="form-control form-control-lg" id="movie_title" placeholder="Tell me the movie name" required>

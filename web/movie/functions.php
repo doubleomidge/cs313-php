@@ -1,9 +1,12 @@
 <?php
 
 function getMovieById($id){
-    $db = dbConnect();
-    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+     $db = dbConnect();
+    $sql = 'SELECT * FROM Movies WHERE movie_id = :movie_id';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':movie_id', $movie_id, PDO::PARAM_INT);
     $stmt->execute();
-    $movie = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $movie;
-}
+    $movieInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $movieInfo;
+};
