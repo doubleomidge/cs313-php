@@ -19,21 +19,21 @@ switch ($action) {
         break;
 
     case 'add':
-        $ratings = ratingList();
+        $ratings;
         $titles;
         $formats;
 
-        // if(isset($_POST['inputRating'])) {
-        //     $rating = $_POST['inputRating'];
+        if(isset($_POST['inputRating'])) {
+            $rating = $_POST['inputRating'];
 
-        //     $stmt = $db->prepare('SELECT * FROM Rating r
-        //                         JOIN Movies m on r.rating_id = m.rating_id
-        //                     WHERE r.rating_id=:id');
+            $stmt = $db->prepare('SELECT * FROM Rating r
+                                JOIN Movies m on r.rating_id = m.rating_id
+                            WHERE r.rating_id=:id');
 
-        //     $stmt->bindValue(':id', $rating, PDO::PARAM_INT);
-        //     $stmt->execute();
-        //     $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        // }
+            $stmt->bindValue(':id', $rating, PDO::PARAM_INT);
+            $stmt->execute();
+            $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
 
         if(isset($_POST['inputGenre'])) {
             $genre = $_POST['inputGenre'];
