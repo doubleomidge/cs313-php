@@ -26,11 +26,12 @@ function dbConnect() {
 };
 
 function getMovieById($movieId){
-    echo $movieId;
     $db = dbConnect();
     $sql = 'SELECT * FROM Movies WHERE movie_id = :movie_id';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':movie_id', $movieId, PDO::PARAM_INT);
+    $stmt->bindValue(':movie_name', $movieName, PDO::PARAM_STRING);
+    $stmt->bindValue(':movie_desc', $movieDesc, PDO::PARAM_STRING);
     $stmt->execute();
     $movieInfo = $stmt->fetch(PDO::FETCH_ASSOC);
     // $stmt->closeCursor();
