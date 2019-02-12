@@ -145,7 +145,7 @@ require 'dbconnect.php';
         };
     });
 
-    $("h1 span").append("&quot;");
+    // $("h1 span").append("&quot;");
     $("h1 span").prepend("&quot;");
 </script>
 
