@@ -69,6 +69,8 @@ $moviejoin = 'SELECT * FROM Movies m
            <tbody>
 
         <?php
+        $db = dbConnect();
+        
         foreach($db->query($moviejoin) as $row) {
                 echo '<tr><td scope="row">' . $row['movie_title'] . '</td>';
                 echo '<td>' . $row['rating_type'] . '</td>';
