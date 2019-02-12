@@ -35,3 +35,17 @@ function getMovieById($movieId){
     // $stmt->closeCursor();
     return $movieInfo;
 };
+
+function ratingList($ratings){
+  if(isset($_POST['inputRating'])) {
+            $rating = $_POST['inputRating'];
+
+            $stmt = $db->prepare('SELECT * FROM Rating r
+                                JOIN Movies m on r.rating_id = m.rating_id
+                            WHERE r.rating_id=:id');
+
+            $stmt->bindValue(':id', $rating, PDO::PARAM_INT);
+            $stmt->execute();
+            $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+};
