@@ -13,8 +13,7 @@ switch ($action) {
     case 'modify':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $movieInfo = getMovieById($movieId);
-
-        case 'add':
+        
         $ratings;
         $titles;
         $formats;
