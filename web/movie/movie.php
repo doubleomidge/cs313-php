@@ -44,7 +44,7 @@ $moviejoin = 'SELECT * FROM Movies m
             </p>
             <div class="row">
                 <div class="col-md-6">
-                    <a href="add.php" class="btn btn-primary">Add more movies</a>
+                    <a href="index.php?action=add" class="btn btn-primary">Add more movies</a>
                 </div>
                 <div class="col-md-6">
                     <a href="next.php" class="btn btn-primary">What to watch</a>
