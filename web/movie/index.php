@@ -58,6 +58,7 @@ switch ($action) {
             $stmt->execute();
             $formats = $stmt->fetchAll(PDO::FETCH_ASSOC);
         } 
+        include 'add.php';
         break;
 
     default: 
