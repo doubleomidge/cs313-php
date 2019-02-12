@@ -87,16 +87,21 @@ h1, h2, h3, h4, .headerfont {
 /* ----------------------------------------------------- */
 /* --------- Add movie page ----------- */
 /* ----------------------------------------------------- */
-.add form {
+.add form,
+.changes form {
   text-align: left;
   margin-bottom: 30px; }
-  .add form .bump-right {
+  .add form .bump-right,
+  .changes form .bump-right {
     float: right; }
-  .add form small {
+  .add form small,
+  .changes form small {
     font-style: oblique; }
-.add .d-flex {
+.add .d-flex,
+.changes .d-flex {
   justify-content: space-around; }
-.add .form-check {
+.add .form-check,
+.changes .form-check {
   padding-bottom: 20px; }
 
 /* ----------------------------------------------------- */

@@ -28,7 +28,7 @@ require 'dbconnect.php';
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body class="changes">
     <?php include 'nav.php'; ?>
 
         <div class="container">
@@ -131,7 +131,7 @@ require 'dbconnect.php';
 </body>
 
 <script>
-    var maxLength = 100;
+    var maxLength = 500;
 
     $('textarea').keyup(function () {
         var length = $(this).val().length;
@@ -145,7 +145,6 @@ require 'dbconnect.php';
         };
     });
 
-    // $("h1 span").append("&quot;");
     $("h1 span").prepend("&quot;");
 </script>
 
