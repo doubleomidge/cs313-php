@@ -10,6 +10,7 @@ if ($action == NULL) {
 switch ($action) {
     case 'modify':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+        echo $movieId;
         $movieInfo = getMovieById($movieId);
         
         include 'changes.php';

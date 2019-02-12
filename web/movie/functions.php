@@ -1,6 +1,6 @@
 <?php
 
-function getMovieById($id){
+function getMovieById($movieId){
      $db = dbConnect();
     $sql = 'SELECT * FROM Movies WHERE movie_id = :movie_id';
     $stmt = $db->prepare($sql);
