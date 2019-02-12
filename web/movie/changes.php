@@ -34,7 +34,7 @@ require 'dbconnect.php';
         <div class="container">
             <h1><?php
             if (isset($movieInfo['movie_title'])) {
-                echo "Modify $movieInfo[movie_title] ";
+                echo "Modify <span>$movieInfo[movie_title]<span>";
             }
             ?></h1>
         <form>
@@ -129,5 +129,24 @@ require 'dbconnect.php';
 
     <?php include 'footer.php'; ?>
 </body>
+
+<script>
+    var maxLength = 100;
+
+    $('textarea').keyup(function () {
+        var length = $(this).val().length;
+        var length = maxLength - length;
+        $('#chars').text(length);
+
+        if (length < 20) {
+            $('.bump-right').css({ "color": "red" });
+        } else {
+            $('.bump-right').css({ "color": "black" });
+        };
+    });
+
+    $("h1 span").append(" '" );
+    $("h1 span").prepend("' " );
+</script>
 
 </html>
