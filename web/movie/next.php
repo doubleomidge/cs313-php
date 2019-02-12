@@ -2,9 +2,12 @@
 
 require 'dbconnect.php';
 
+$db = dbConnect();
+
 $titles;
 
 if(isset($_POST['genre'])) {
+
     $genre = $_POST['genre'];
 
     $stmt = $db->prepare('SELECT * FROM Genre g
