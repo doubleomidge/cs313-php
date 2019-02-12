@@ -2,8 +2,6 @@
 
 require 'dbconnect.php';
 
-require 'index.php';
-
 // $ratings;
 // $titles;
 // $formats;
