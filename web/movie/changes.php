@@ -32,7 +32,11 @@ require 'dbconnect.php';
     <?php include 'nav.php'; ?>
 
         <div class="container">
-            <h1>Let's Modify [Movie Title]</h1>
+            <h1><?php
+            if (isset($movieInfo['movie_name'])) {
+                echo "Modify $movieInfo[movie_name] ";
+            }
+            ?></h1>
         <form>
             <div class="form-group">
                 <label for="movie_title">
