@@ -2,45 +2,47 @@
 
 require 'dbconnect.php';
 
-$ratings;
-$titles;
-$formats;
+require 'index.php';
 
-if(isset($_POST['inputRating'])) {
-    $rating = $_POST['inputRating'];
+// $ratings;
+// $titles;
+// $formats;
 
-    $stmt = $db->prepare('SELECT * FROM Rating r
-                        JOIN Movies m on r.rating_id = m.rating_id
-                    WHERE r.rating_id=:id');
+// if(isset($_POST['inputRating'])) {
+//     $rating = $_POST['inputRating'];
 
-    $stmt->bindValue(':id', $rating, PDO::PARAM_INT);
-    $stmt->execute();
-    $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
+//     $stmt = $db->prepare('SELECT * FROM Rating r
+//                         JOIN Movies m on r.rating_id = m.rating_id
+//                     WHERE r.rating_id=:id');
 
-if(isset($_POST['inputGenre'])) {
-    $genre = $_POST['inputGenre'];
+//     $stmt->bindValue(':id', $rating, PDO::PARAM_INT);
+//     $stmt->execute();
+//     $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// }
 
-    $stmt = $db->prepare('SELECT * FROM Genre g
-                        JOIN Movies m on g.genre_id = m.genre_id
-                    WHERE g.genre_id=:id');
+// if(isset($_POST['inputGenre'])) {
+//     $genre = $_POST['inputGenre'];
 
-    $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
-    $stmt->execute();
-    $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
+//     $stmt = $db->prepare('SELECT * FROM Genre g
+//                         JOIN Movies m on g.genre_id = m.genre_id
+//                     WHERE g.genre_id=:id');
 
-if(isset($_POST['inputFormat'])) {
-    $format = $_POST['inputFormat'];
+//     $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
+//     $stmt->execute();
+//     $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// }
 
-    $stmt = $db->prepare('SELECT * FROM Format f
-                        JOIN Movies m on f.format_id = m.format_id
-                    WHERE l.format_id=:id');
+// if(isset($_POST['inputFormat'])) {
+//     $format = $_POST['inputFormat'];
 
-    $stmt->bindValue(':id', $format, PDO::PARAM_INT);
-    $stmt->execute();
-    $formats = $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
+//     $stmt = $db->prepare('SELECT * FROM Format f
+//                         JOIN Movies m on f.format_id = m.format_id
+//                     WHERE l.format_id=:id');
+
+//     $stmt->bindValue(':id', $format, PDO::PARAM_INT);
+//     $stmt->execute();
+//     $formats = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// }
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +89,7 @@ if(isset($_POST['inputFormat'])) {
 
             <div class="form-group">
                 <label for="movie_desc">Movie Description</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="100" placeholder="Tell me a bit about the movie"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" placeholder="Tell me a bit about the movie"></textarea>
                 <p class="bump-right">
                     <span id="chars">500</span> characters remaining</p>
             </div>

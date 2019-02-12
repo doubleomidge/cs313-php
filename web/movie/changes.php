@@ -53,7 +53,7 @@ require 'dbconnect.php';
 
             <div class="form-group">
                 <label for="movie_desc">Movie Description</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="100" placeholder="Tell me a bit about the movie"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" placeholder="Tell me a bit about the movie"></textarea>
                 <p class="bump-right">
                     <span id="chars">500</span> characters remaining</p>
             </div>
