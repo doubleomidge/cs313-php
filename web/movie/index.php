@@ -13,7 +13,7 @@ switch ($action) {
     case 'modify':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $movieInfo = getMovieById($movieId);
-        
+
         $ratings;
         $titles;
         $formats;
@@ -52,9 +52,7 @@ switch ($action) {
             $stmt->bindValue(':id', $format, PDO::PARAM_INT);
             $stmt->execute();
             $formats = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        } 
-        include 'add.php';
-        break;
+        }
         
         include 'changes.php';
         exit;
