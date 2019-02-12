@@ -82,11 +82,11 @@ require 'dbconnect.php';
                     <label for="inputRating">Rating</label>
                     <select id="inputRating" class="form-control">
                         <option selected>Choose...</option>
-                        <option>G</option>
-                        <option>PG</option>
-                        <option>PG-13</option>
-                        <option>R</option>
-                        <option>NR</option>
+                        <?php
+                        foreach($db->query('SELECT * FROM Rating g') as $row) {
+                            echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
+                        }
+                        ?>
                     </select>
                 </div>
 
@@ -94,17 +94,11 @@ require 'dbconnect.php';
                     <label for="inputGenre">Genre</label>
                     <select id="inputGenre" class="form-control">
                         <option selected>Choose...</option>
-                        <option>Adventure</option>
-                        <option>Action</option>
-                        <option>Comedy</option>
-                        <option>Drama</option>
-                        <option>Fantasy</option>
-                        <option>Horror</option>
-                        <option>Musical</option>
-                        <option>Mystery</option>
-                        <option>Rom Com</option>
-                        <option>Science Fiction</option>
-                        <option>Childrens'</option>
+                        <?php
+                        foreach($db->query('SELECT * FROM Genre g') as $row) {
+                            echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                        }
+                        ?>
                     </select>
                 </div>
 
@@ -112,9 +106,11 @@ require 'dbconnect.php';
                     <label for="inputLocation">Format Type</label>
                     <select id="inputLocation" class="form-control">
                         <option selected>Choose...</option>
-                        <option>Physical</option>
-                        <option>iTunes / Apple TV</option>
-                        <option>Amazon Prime</option>
+                        <?php
+                        foreach($db->query('SELECT * FROM Format f') as $row) {
+                            echo "<option value=" . $row[format_id] . ">". $row[format_type] . "</option>";
+                        }
+                        ?>
                     </select>
                 </div>
             </div>
