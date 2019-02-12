@@ -33,8 +33,8 @@ require 'dbconnect.php';
 
         <div class="container">
             <h1><?php
-            if (isset($movieInfo['movie_name'])) {
-                echo "Modify $movieInfo[movie_name] ";
+            if (isset($movieInfo['movie_title'])) {
+                echo "Modify $movieInfo[movie_title] ";
             }
             ?></h1>
         <form>
