@@ -39,19 +39,25 @@ require 'dbconnect.php';
             ?></h1>
         <form>
             <div class="form-group">
-                <label for="movie_title">
+                <label for="movie_title"> Movie Title </label>
+                <input type="email" class="form-control form-control-lg" id="movie_title" required> 
                     <?php
-                    if (isset($movieInfo['movie_name'])) {
-                        echo "$movieInfo[movie_name]";
+                    if (isset($movieInfo['movie_title'])) {
+                        echo "$movieInfo[movie_title]";
                     }
                     ?>
-                </label>
-                <input type="email" class="form-control form-control-lg" id="movie_title" required>
+                </input>
             </div>
 
             <div class="form-group">
-                <label for="movie_desc">Movie Description</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" placeholder="Tell me a bit about the movie"></textarea>
+                <label for="movie_desc">
+                    <?php
+                    if (isset($movieInfo['movie_desc'])) {
+                        echo "$movieInfo[movie_desc]";
+                    }
+                    ?>
+                </label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" required></textarea>
                 <p class="bump-right">
                     <span id="chars">500</span> characters remaining</p>
             </div>
