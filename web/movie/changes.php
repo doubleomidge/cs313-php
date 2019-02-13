@@ -42,9 +42,7 @@ require 'dbconnect.php';
                 <label for="movie_title">
                     <?php
                     if (isset($movieInfo['movie_name'])) {
-                        echo "Modify $movieInfo[movie_name]";
-                    } elseif (isset($movie_name)) {
-                        echo $movie_name;
+                        echo "$movieInfo[movie_name]";
                     }
                     ?>
                 </label>
