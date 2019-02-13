@@ -60,7 +60,7 @@ require 'dbconnect.php';
 
             <div class="form-group">
                 <label for="movie_year">Year Released</label>
-                <input type="password" class="form-control" id="movie_year" type="number"
+                <input class="form-control" id="movie_year" type="number"
                     <?php
                     if (isset($movieInfo['movie_year'])) {
                         echo "value=' ". strval($movieInfo[movie_year]) . " ' ";
