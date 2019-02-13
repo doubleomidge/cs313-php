@@ -75,7 +75,7 @@ require 'dbconnect.php';
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="movieCheck" 
                         <?php
-                        if (isset($movieInfo['movie_title'])) {
+                        if (isset($movieInfo['movie_yn'])) {
                             echo checked;
                         }
                         ?> >
@@ -85,7 +85,7 @@ require 'dbconnect.php';
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="digital"
                         <?php
-                        if (isset($movieInfo['movie_title'])) {
+                        if (isset($movieInfo['movie_digital'])) {
                             echo checked;
                         }
                         ?> >
