@@ -52,7 +52,7 @@ require 'dbconnect.php';
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" required>
                     <?php
                     if (isset($movieInfo['movie_desc'])) {
-                        echo "$movieInfo[movie_desc]";
+                        echo trim("$movieInfo[movie_desc]");
                     }
                     ?>
                 </textarea>
@@ -65,7 +65,7 @@ require 'dbconnect.php';
                 <input type="password" class="form-control" id="movie_year"
                     <?php
                     if (isset($movieInfo['movie_year'])) {
-                        echo "value='$movieInfo[movie_year]'";
+                        echo "value=' ". strval($movieInfo[movie_year]) . " ' ";
                     }
                     ?> required>
                 <small id="movie_year" class="form-text text-muted">If this isn't as important to you, it isn't required.</small>
