@@ -99,6 +99,9 @@ require 'dbconnect.php';
                     <label for="inputRating">Rating</label>
                     <select id="inputRating" class="form-control">
                         <option selected>Choose...</option>
+                        <option value="<?php if (isset($movieInfo['movie_rating'])) {echo checked;}?>">
+                            <?php if (isset($movieInfo['movie_rating'])) {echo "movie_rating";}?></option>
+
                         <?php
                         foreach($db->query('SELECT * FROM Rating g') as $row) {
                             echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
