@@ -41,7 +41,7 @@ require 'dbconnect.php';
             <div class="form-group">
                 <label for="movie_title"> Movie Title </label>
                 <input type="email" class="form-control form-control-lg" id="movie_title" 
-                   <?php
+                   type="text" <?php
                         if (isset($movieInfo['movie_title'])) {
                             echo "$movieInfo[movie_title]";
                         }
