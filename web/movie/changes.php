@@ -41,11 +41,11 @@ require 'dbconnect.php';
             <div class="form-group">
                 <label for="movie_title"> Movie Title </label>
                 <input type="email" class="form-control form-control-lg" id="movie_title" 
-                    placeholder="<?php
+                   <?php
                         if (isset($movieInfo['movie_title'])) {
                             echo "$movieInfo[movie_title]";
                         }
-                        ?>" required>
+                        ?> required>
             </div>
 
             <div class="form-group">
