@@ -40,42 +40,55 @@ require 'dbconnect.php';
         <form>
             <div class="form-group">
                 <label for="movie_title"> Movie Title </label>
-                <input type="email" class="form-control form-control-lg" id="movie_title" required> 
-                    <?php
-                    if (isset($movieInfo['movie_title'])) {
-                        echo "$movieInfo[movie_title]";
-                    }
-                    ?>
-                </input>
+                <input type="email" class="form-control form-control-lg" id="movie_title" 
+                    placeholder="<?php
+                        if (isset($movieInfo['movie_title'])) {
+                            echo "$movieInfo[movie_title]";
+                        }
+                        ?>" required>
             </div>
 
             <div class="form-group">
-                <label for="movie_desc">
-                    <?php
-                    if (isset($movieInfo['movie_desc'])) {
-                        echo "$movieInfo[movie_desc]";
-                    }
-                    ?>
-                </label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" required></textarea>
+                <label for="movie_desc"> Movie Description </label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" 
+                    placeholder="<?php
+                        if (isset($movieInfo['movie_desc'])) {
+                            echo "$movieInfo[movie_desc]";
+                        }
+                        ?>" required></textarea>
                 <p class="bump-right">
                     <span id="chars">500</span> characters remaining</p>
             </div>
 
             <div class="form-group">
                 <label for="movie_year">Year Released</label>
-                <input type="password" class="form-control" id="movie_year" placeholder="Year Released">
+                <input type="password" class="form-control" id="movie_year" 
+                    placeholder="<?php
+                        if (isset($movieInfo['movie_year'])) {
+                            echo "$movieInfo[movie_year]";
+                        }
+                        ?>" required>
                 <small id="movie_year" class="form-text text-muted">If this isn't as important to you, it isn't required.</small>
             </div>
 
             <div class="d-flex justify-space-around">
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="movieCheck">
+                    <input type="checkbox" class="form-check-input" id="movieCheck" 
+                        <?php
+                        if (isset($movieInfo['movie_title'])) {
+                            echo checked;
+                        }
+                        ?> >
                     <label class="form-check-label" for="movieCheck">Is this a movie?</label>
                 </div>
 
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="digital">
+                    <input type="checkbox" class="form-check-input" id="digital"
+                        <?php
+                        if (isset($movieInfo['movie_title'])) {
+                            echo checked;
+                        }
+                        ?> >
                     <label class="form-check-label" for="digital">Is this a digital copy?</label>
                 </div>
             </div>
