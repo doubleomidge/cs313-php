@@ -28,10 +28,10 @@ require 'dbconnect.php';
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body class="changes">
+<body>
     <?php include 'nav.php'; ?>
 
-        <div class="container">
+        <div class="container changes">
             <h1><?php
             if (isset($movieInfo['movie_title'])) {
                 echo "Modify <span>$movieInfo[movie_title]<span>";
