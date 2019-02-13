@@ -55,7 +55,7 @@ require 'dbconnect.php';
 
             <div class="form-group">
                 <label for="movie_year">Year Released</label>
-                <input type="password" class="form-control" id="movie_year" placeholder="Year Released">
+                <input class="form-control" id="movie_year" placeholder="Year Released" type="number">
                 <small id="movie_year" class="form-text text-muted">If this isn't as important to you, it isn't required.</small>
             </div>
 
