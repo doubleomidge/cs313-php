@@ -63,7 +63,7 @@ require 'dbconnect.php';
                 <input class="form-control" id="movie_year" type="number"
                     <?php
                     if (isset($movieInfo['movie_year'])) {
-                        echo "value=' ". strval($movieInfo[movie_year]) . " ' ";
+                        echo "value='$movieInfo[movie_year])'";
                     }
                     ?> required>
                 <small id="movie_year" class="form-text text-muted">If this isn't as important to you, it isn't required.</small>
