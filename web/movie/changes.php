@@ -48,7 +48,7 @@ require 'dbconnect.php';
                     }
                     ?>
                 </label>
-                <input type="email" class="form-control form-control-lg" id="movie_title" placeholder="Tell me the movie name" required>
+                <input type="email" class="form-control form-control-lg" id="movie_title" required>
             </div>
 
             <div class="form-group">
