@@ -63,7 +63,7 @@ require 'dbconnect.php';
                 <input class="form-control" id="movie_year" type="number"
                     <?php
                     if (isset($movieInfo['movie_year'])) {
-                        echo "value='$movieInfo[movie_year])'";
+                        echo "value='$movieInfo[movie_year]'";
                     }
                     ?> required>
                 <small id="movie_year" class="form-text text-muted">If this isn't as important to you, it isn't required.</small>
@@ -97,9 +97,11 @@ require 'dbconnect.php';
                     <label for="inputRating">Rating</label>
                     <select id="inputRating" class="form-control">
                         <option selected>Choose...</option>
-                        <option value="<?php if (isset($movieInfo['movie_rating'])) {echo checked;}?>">
+                        <!-- selected -->
+                        <option value="<?php if (isset($movieInfo['movie_rating'])) {echo checked;}?>" selected>
                             <?php if (isset($movieInfo['movie_rating'])) {echo "movie_rating";}?></option>
 
+                        <!-- generate list -->
                         <?php
                         foreach($db->query('SELECT * FROM Rating g') as $row) {
                             echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
