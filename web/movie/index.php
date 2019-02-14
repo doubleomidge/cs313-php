@@ -131,7 +131,7 @@ switch ($action) {
         // }
 
         // echo "Show me the money $title, $desc, $year, $run, $movieb, $digitalb, $rate, $gen, $type";
-        $addOutcome = addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);
+        $addOutcome = addMovie($title, $desc, $year, $run, $rate, $gen, $type);
 
         if ($addOutcome === 1) {
             $message = '<p class="container-fluid success">Thanks for adding ' . $title . '.</p>';
