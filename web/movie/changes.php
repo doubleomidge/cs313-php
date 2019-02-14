@@ -56,7 +56,7 @@ require 'dbconnect.php';
                 <p class="bump-right">
                     <span id="chars">
                         <?php
-                            echo 500-strelen($movieInfo['movie_desc']);
+                            echo 500-strlen($movieInfo['movie_desc']);
                         ?>
                     </span> characters remaining</p>
             </div>
