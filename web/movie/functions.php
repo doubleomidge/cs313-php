@@ -65,5 +65,6 @@ function addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $
     $stmt->bindValue(':type', $type, PDO::PARAM_STRING);
     $stmt->execute();
     $addOutcome = $stmt->rowCount();
+    echo $addOutcome;
     return $addOutcome;
 };

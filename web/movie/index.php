@@ -130,18 +130,18 @@ switch ($action) {
         //     exit;
         // }
 
-        echo "Show me the money $title, $desc, $year, $run, $movieb, $digitalb, $rate, $gen, $type";
-        // $addOutcome = addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);
+        // echo "Show me the money $title, $desc, $year, $run, $movieb, $digitalb, $rate, $gen, $type";
+        $addOutcome = addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);
 
-        // if ($addOutcome === 1) {
-        //     $message = '<p class="container-fluid success">Thanks for adding ' . $title . '.</p>';
-        //     include 'add.php';
-        //     exit;
-        // } else {
-        //     $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not added. Please try again, check all fields.</p>';
-        //     include 'add.php';
-        //     exit;
-        // }
+        if ($addOutcome === 1) {
+            $message = '<p class="container-fluid success">Thanks for adding ' . $title . '.</p>';
+            include 'add.php';
+            exit;
+        } else {
+            $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not added. Please try again, check all fields.</p>';
+            include 'add.php';
+            exit;
+        }
         break;
 
     default: 
