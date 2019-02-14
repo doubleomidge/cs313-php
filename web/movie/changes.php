@@ -98,12 +98,10 @@ require 'dbconnect.php';
                     <label for="inputRating">Rating</label>
                     <select id="inputRating" class="form-control">
                         <option selected>Choose...</option>
-                        
-
                         <!-- generate list -->
                         <?php
                         foreach($db->query('SELECT * FROM Rating g') as $row) {
-                            if($movieInfo['movie_rating'] == $row[rating_id]) {
+                            if(isset($movieInfo['movie_rating']) == $row[rating_id]) {
                                     echo "<option value=" . $row[rating_id] . " selected>". $row[rating_type] . "</option>";
                                 } else {
                                     echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
