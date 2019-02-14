@@ -75,12 +75,12 @@ require 'dbconnect.php';
             <div class="row">
                 <div class="form-group col-md-4">
                     <label for="inputRating">Rating</label>
-                    <select id="inputRating" class="form-control">
+                    <select id="inputRating" class="form-control" name="rate">
                         <option selected>Choose...</option>
                         
                         <?php
                         foreach($db->query('SELECT * FROM Rating g') as $row) {
-                            echo "<option name='rate' value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
+                            echo "<option  value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
                         }
                         ?>
                     
