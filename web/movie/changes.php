@@ -101,7 +101,7 @@ require 'dbconnect.php';
                         <!-- generate list -->
                         <?php
                         foreach($db->query('SELECT * FROM Rating g') as $row) {
-                            if($movieInfo['movie_rating'] == $row[rating_id]) {
+                            if($movieInfo['movie_rating_id'] == $row[rating_id]) {
                                     echo "<option value=" . $row[rating_id] . " selected>". $row[rating_type] . "</option>";
                                 } else {
                                     echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
