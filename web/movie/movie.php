@@ -57,7 +57,7 @@ $moviejoin = 'SELECT * FROM Movies m
         <table class="table table-hover">
            <thead>
             <tr>
-                <th scrope="col">Movie Title</th>
+                <th scrope="col wow">Movie Title!!!!!</th>
                 <th scrope="col">Movie Rating</th>
                 <th scrope="col">Genre</th>
                 <th scrope="col">Movie Format</th>
