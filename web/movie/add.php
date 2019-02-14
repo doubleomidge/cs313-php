@@ -43,7 +43,7 @@ require 'dbconnect.php';
         <form action="index.php?action=addToData" method="post">
             <div class="form-group">
                 <label for="movie_title">Movie Title</label>
-                <input type="text" class="form-control form-control-lg" id="movie_title" placeholder="Tell me the movie name" required>
+                <input type="text" class="form-control form-control-lg" name="movie_title" id="movie_title" placeholder="Tell me the movie name" required>
             </div>
 
             <div class="form-group">
