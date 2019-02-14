@@ -40,7 +40,7 @@ require 'dbconnect.php';
     </div>
 
     <div class="container">
-        <form>
+        <form action="index.php?action=addToData" method="post">
             <div class="form-group">
                 <label for="movie_title">Movie Title</label>
                 <input type="email" class="form-control form-control-lg" id="movie_title" placeholder="Tell me the movie name" required>

@@ -101,6 +101,13 @@ switch ($action) {
         include 'add.php';
         break;
 
+    case 'addToData':
+        $title = filter_input(INPUT_POST, 'movie_title', FILTER_SANITIZE_STRING);
+
+        echo "Title: $title";
+
+        break;
+
     default: 
     include 'home.php';
 
