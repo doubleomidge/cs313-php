@@ -104,11 +104,11 @@ h1, h2, h3, h4, .headerfont {
 .changes .form-check {
   padding-bottom: 20px; }
 
-.container-fluid .success {
+.success {
   background-color: #83EF95;
   margin-top: 30px; }
 
-.container-fluid .notice {
+.notice {
   background-color: #EF9283;
   margin-top: 30px; }
 
