@@ -55,16 +55,15 @@ function addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $
     $sql = 'INSERT INTO movies VALUES(DEFAULT, :title, :year, :desc, :digitalb, :movieb, :run, :rate, :gen, 1, 1, :type)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':title', $title, PDO::PARAM_STRING);
-    $stmt->bindValue(':desc', $desc, PDO::PARAM_STRING);
     $stmt->bindValue(':year', $year, PDO::PARAM_INT);
-    $stmt->bindValue(':movieb', $movieb, PDO::PARAM_BOOL);
+    $stmt->bindValue(':desc', $desc, PDO::PARAM_STRING);
     $stmt->bindValue(':digitalb', $digitalb, PDO::PARAM_BOOL);
+    $stmt->bindValue(':movieb', $movieb, PDO::PARAM_BOOL);
     $stmt->bindValue(':run', $run, PDO::PARAM_INT);
     $stmt->bindValue(':rate', $rate, PDO::PARAM_STRING);
     $stmt->bindValue(':gen', $gen, PDO::PARAM_STRING);
     $stmt->bindValue(':type', $type, PDO::PARAM_STRING);
     $stmt->execute();
     $addOutcome = $stmt->rowCount();
-    echo "here is the outcome $addOutcome";
     return $addOutcome;
 };

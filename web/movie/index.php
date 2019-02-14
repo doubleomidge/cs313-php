@@ -130,7 +130,7 @@ switch ($action) {
         //     exit;
         // }
 
-        // echo "Show me the money $title, $desc, $year, $movieb, $digitalb, $rate, $gen, $type";
+        echo "Show me the money $title, $desc, $year, $movieb, $digitalb, $rate, $gen, $type";
         $addOutcome = addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);
 
         if ($addOutcome === 1) {
