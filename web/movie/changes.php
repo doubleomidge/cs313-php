@@ -54,7 +54,11 @@ require 'dbconnect.php';
                         echo "$movieInfo[movie_desc]";
                     }?></textarea>
                 <p class="bump-right">
-                    <span id="chars">500</span> characters remaining</p>
+                    <span id="chars">
+                        <?php
+                            echo 500-strelen($movieInfo['movie_desc']);
+                        ?>
+                    </span> characters remaining</p>
             </div>
 
             <div class="form-group">
@@ -148,7 +152,7 @@ require 'dbconnect.php';
 <script>
     var maxLength = 500;
 
-    $('textarea').keyup(function () {
+    $('textarea').ready(function () {
         var length = $(this).val().length;
         var length = maxLength - length;
         $('#chars').text(length);
