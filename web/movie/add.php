@@ -62,12 +62,12 @@ require 'dbconnect.php';
             <div class="d-flex justify-space-around">
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="movieCheck">
-                    <label class="form-check-label" name="movieb" for="movieCheck">Is this a movie?</label>
+                    <label class="form-check-label" name="movie_bool" for="movieCheck">Is this a movie?</label>
                 </div>
 
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="digital">
-                    <label class="form-check-label" name="digitalb" for="digital">Is this a digital copy?</label>
+                    <label class="form-check-label" name="digital_bool" for="digital">Is this a digital copy?</label>
                 </div>
             </div>
 

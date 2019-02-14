@@ -105,8 +105,8 @@ switch ($action) {
         $title = filter_input(INPUT_POST, 'movie_title', FILTER_SANITIZE_STRING);
         $desc = filter_input(INPUT_POST, 'movie_desc', FILTER_SANITIZE_STRING);
         $year = filter_input(INPUT_POST, 'movie_year', FILTER_SANITIZE_NUMBER_INT);
-        $movieb = filter_input(INPUT_POST, 'movie_bool', FILTER_SANITIZE_NUMBER_INT);
-        $digitalb = filter_input(INPUT_POST, 'digital_bool', FILTER_SANITIZE_NUMBER_INT);
+        $movieb = $_POST['movie_bool'];
+        $digitalb = $_POST['digital_bool'];
         $rate = filter_input(INPUT_POST, 'movie_rate', FILTER_SANITIZE_STRING);
         $gen = filter_input(INPUT_POST, 'movie_gen', FILTER_SANITIZE_STRING);
         $type = filter_input(INPUT_POST, 'movie_type', FILTER_SANITIZE_STRING);
