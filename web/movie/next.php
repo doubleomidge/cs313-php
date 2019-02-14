@@ -61,7 +61,7 @@ $moviejoin = 'SELECT * FROM Movies m
                         <select class="form-control form-control-lg col-auto" name="genre">
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
-                            if($_POST['genre'] == $row.[genre_id]) {
+                            if($_POST['genre'] == $row[genre_id]) {
                                 echo "<option value=" . $row[genre_id] . " selected>". $row[genre_name] . "</option>";
                             } else {
                                 echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
