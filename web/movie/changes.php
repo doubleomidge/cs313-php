@@ -49,12 +49,10 @@ require 'dbconnect.php';
 
             <div class="form-group">
                 <label for="movie_desc"> Movie Description </label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" required>
-                    <?php
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" required><?php
                     if (isset($movieInfo['movie_desc'])) {
                         echo "$movieInfo[movie_desc]";
-                    }
-                    ?></textarea>
+                    }?></textarea>
                 <p class="bump-right">
                     <span id="chars">500</span> characters remaining</p>
             </div>
