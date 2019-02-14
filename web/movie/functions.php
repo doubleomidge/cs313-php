@@ -52,7 +52,7 @@ function ratingList($ratings){
 
 function addMovie($title, $desc, $year, $run, $rate, $gen, $type) {
     $db = dbConnect();
-    $sql = 'INSERT INTO movies VALUES(DEFAULT, :title, :year, :desc, t, t, :run, :rate, :gen, 1, 1, :type)';
+    $sql = 'INSERT INTO movies VALUES(DEFAULT, :title, :year, :desc, TRUE, TRUE, :run, :rate, :gen, 1, 1, :type)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':title', $title, PDO::PARAM_STRING);
     $stmt->bindValue(':year', $year, PDO::PARAM_INT);
