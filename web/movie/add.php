@@ -61,13 +61,13 @@ require 'dbconnect.php';
 
             <div class="d-flex justify-space-around">
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="movieCheck">
-                    <label class="form-check-label" name="movie_bool" for="movieCheck">Is this a movie?</label>
+                    <input type="checkbox" name="movie_bool" class="form-check-input" id="movieCheck">
+                    <label class="form-check-label" for="movieCheck">Is this a movie?</label>
                 </div>
 
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="digital">
-                    <label class="form-check-label" name="digital_bool" for="digital">Is this a digital copy?</label>
+                    <input type="checkbox" name="digital_bool" class="form-check-input" id="digital">
+                    <label class="form-check-label" for="digital">Is this a digital copy?</label>
                 </div>
             </div>
 
