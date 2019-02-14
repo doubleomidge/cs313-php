@@ -75,12 +75,12 @@ require 'dbconnect.php';
             <div class="row">
                 <div class="form-group col-md-4">
                     <label for="inputRating">Rating</label>
-                    <select id="inputRating" class="form-control">
+                    <select id="inputRating" class="form-control" name="movie_rate">
                         <option selected>Choose...</option>
                         
                         <?php
                         foreach($db->query('SELECT * FROM Rating g') as $row) {
-                            echo "<option name='movie_rate' value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
+                            echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
                         }
                         ?>
                     
@@ -89,12 +89,12 @@ require 'dbconnect.php';
 
                 <div class="form-group col-md-4">
                     <label for="inputGenre">Genre</label>
-                    <select id="inputGenre" class="form-control">
+                    <select id="inputGenre" class="form-control" name="movie_gen">
                         <option selected>Choose...</option>
                         
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
-                            echo "<option name='movie_gen' value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                            echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
                         }
                         ?>
                     
@@ -103,12 +103,12 @@ require 'dbconnect.php';
 
                 <div class="form-group col-md-4">
                     <label for="inputFormat">Format Type</label>
-                    <select id="inputRating" class="form-control">
+                    <select id="inputRating" class="form-control" name="movie_type">
                         <option selected>Choose...</option>
                         
                         <?php
                         foreach($db->query('SELECT * FROM Format f') as $row) {
-                            echo "<option name='movie_type' value=" . $row[format_id] . ">". $row[format_type] . "</option>";
+                            echo "<option value=" . $row[format_id] . ">". $row[format_type] . "</option>";
                         }
                         ?>
                     
