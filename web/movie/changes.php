@@ -1,5 +1,4 @@
 <?php
-
 require 'dbconnect.php';
 
 ?>
@@ -40,7 +39,8 @@ require 'dbconnect.php';
         <form>
             <div class="form-group">
                 <label for="movie_title"> Movie Title </label>
-                <input type="text" class="form-control form-control-lg" id="movie_title" type="text" <?php
+                <input type="text" class="form-control form-control-lg" id="movie_title" type="text"
+                    <?php
                     if (isset($movieInfo['movie_title'])) {
                         echo "value='$movieInfo[movie_title]'";
                     }
@@ -49,7 +49,8 @@ require 'dbconnect.php';
 
             <div class="form-group">
                 <label for="movie_desc"> Movie Description </label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" required><?php
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" required>
+                    <?php
                     if (isset($movieInfo['movie_desc'])) {
                         echo "$movieInfo[movie_desc]";
                     }

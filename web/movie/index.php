@@ -124,11 +124,11 @@ switch ($action) {
         $type = filter_input(INPUT_POST, 'movie_type', FILTER_SANITIZE_STRING);
 
         // check to see if any requireds are empty
-        // if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
-        //     $message = '<p class="notice">Please provide information for all empty form fields.</p>';
-        //     include 'add.php';
-        //     exit;
-        // }
+        if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
+            $message = '<p class="notice">Please provide information for all empty form fields.</p>';
+            include 'add.php';
+            exit;
+        }
 
         // echo "Show me the money $title, $desc, $year, $run, $movieb, $digitalb, $rate, $gen, $type";
         $addOutcome = addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);
