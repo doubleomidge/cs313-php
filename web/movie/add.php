@@ -39,6 +39,12 @@ require 'dbconnect.php';
         </div>
     </div>
 
+    <?php
+    if (isset($message)) {
+        echo $message;
+    }
+    ?>
+
     <div class="container">
         <form action="index.php?action=addToData" method="post">
             <div class="form-group">
