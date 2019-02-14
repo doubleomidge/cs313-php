@@ -57,14 +57,13 @@ function addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $
     $stmt->bindValue(':title', $title, PDO::PARAM_STR);
     $stmt->bindValue(':year', $year, PDO::PARAM_INT);
     $stmt->bindValue(':desc', $desc, PDO::PARAM_STR);
-    $stmt->bindValue(':digitalb', $desc, PDO::PARAM_BOOL);
-    $stmt->bindValue(':movieb', $desc, PDO::PARAM_BOOL);
+    $stmt->bindValue(':digitalb', $digitalb, PDO::PARAM_BOOL);
+    $stmt->bindValue(':movieb', $movieb, PDO::PARAM_BOOL);
     $stmt->bindValue(':run', $run, PDO::PARAM_INT);
     $stmt->bindValue(':rate', $rate, PDO::PARAM_STR);
     $stmt->bindValue(':gen', $gen, PDO::PARAM_STR);
     $stmt->bindValue(':type', $type, PDO::PARAM_STR);
     $stmt->execute();
     $addOutcome = $stmt->rowCount();
-    echo $addOutcome;
     return $addOutcome;
 };
