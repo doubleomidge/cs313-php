@@ -98,15 +98,16 @@ require 'dbconnect.php';
                     <label for="inputRating">Rating</label>
                     <select id="inputRating" class="form-control">
                         <option selected>Choose...</option>
-                        <!-- selected -->
-                        <option value="<?php if (isset($movieInfo['movie_rating'])) {echo checked;}?>" selected>
-                            <?php if (isset($movieInfo['movie_rating'])) {echo "movie_rating";}?></option>
+                        
 
                         <!-- generate list -->
                         <?php
                         foreach($db->query('SELECT * FROM Rating g') as $row) {
-                            echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
-                        }
+                            if($movieInfo['movie_rating'] == $row[rating_id]) {
+                                    echo "<option value=" . $row[rating_id] . " selected>". $row[rating_type] . "</option>";
+                                } else {
+                                    echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
+                                }
                         ?>
                     </select>
                 </div>
