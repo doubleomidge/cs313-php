@@ -57,7 +57,7 @@ $moviejoin = 'SELECT * FROM Movies m
         <table class="table table-hover">
            <thead>
             <tr>
-                <th scrope="col wow">Movie Title!!!!!</th>
+                <th scrope="col">Movie Title</th>
                 <th scrope="col">Movie Rating</th>
                 <th scrope="col">Genre</th>
                 <th scrope="col">Movie Format</th>
@@ -74,7 +74,7 @@ $moviejoin = 'SELECT * FROM Movies m
                 echo '<td>' . $row['genre_name'] . '</td>';
                 echo '<td>' . $row['format_type'] . '</td>';
                 echo "<td><a href='/movie/index.php?action=modify&id=$row[movie_id]' title='Click to modify'>Modify</a></td>";
-                //echo '<td><a href="index.php?action=modify">Modify</a></td>';
+                echo "<td><a href='/movie/index.php?action=delete&id=$row[movie_id]' title='Click to delete'>Delete</a></td>";
                 echo '</tr>';
             }
         ?>

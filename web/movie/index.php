@@ -58,6 +58,13 @@ switch ($action) {
         exit;
         break;
 
+    case 'delete':
+        $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+        $delOutcome = deleteMovie($movieId);
+
+        break;
+
     case 'add':
         $ratings;
         $titles;

@@ -54,11 +54,7 @@ require 'dbconnect.php';
                         echo "$movieInfo[movie_desc]";
                     }?></textarea>
                 <p class="bump-right">
-                    <span id="chars">
-                        <?php
-                            echo 500-strlen($movieInfo['movie_desc']);
-                        ?>
-                    </span> characters remaining</p>
+                    <span id="chars">500</span> characters remaining</p>
             </div>
 
             <div class="form-group">
