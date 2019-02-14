@@ -97,7 +97,7 @@ require 'dbconnect.php';
                 <div class="form-group col-md-4">
                     <label for="inputRating">Rating</label>
                     <select id="inputRating" class="form-control">
-                        <option selected>Choose...</option>
+                        <option>Choose...</option>
                         <!-- generate list -->
                         <?php
                         foreach($db->query('SELECT * FROM Rating g') as $row) {
@@ -114,7 +114,7 @@ require 'dbconnect.php';
                 <div class="form-group col-md-4">
                     <label for="inputGenre">Genre</label>
                     <select id="inputGenre" class="form-control">
-                        <option selected>Choose...</option>
+                        <option>Choose...</option>
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
                             echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
@@ -126,7 +126,7 @@ require 'dbconnect.php';
                 <div class="form-group col-md-4">
                     <label for="inputLocation">Format Type</label>
                     <select id="inputLocation" class="form-control">
-                        <option selected>Choose...</option>
+                        <option>Choose...</option>
                         <?php
                         foreach($db->query('SELECT * FROM Format f') as $row) {
                             echo "<option value=" . $row[format_id] . ">". $row[format_type] . "</option>";
