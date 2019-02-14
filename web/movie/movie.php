@@ -74,7 +74,7 @@ $moviejoin = 'SELECT * FROM Movies m
                 echo '<td>' . $row['genre_name'] . '</td>';
                 echo '<td>' . $row['format_type'] . '</td>';
                 echo "<td><a href='/movie/index.php?action=modify&id=$row[movie_id]' title='Click to modify'>Modify</a></td>";
-                echo "<td><a href='/movie/index.php?action=delete&id=$row[movie_id]' title='Click to delete'>Delete</a></td>";
+                echo "<td><a data-toggle='modal' title='Click to delete'>Delete</a></td>";
                 echo '</tr>';
             }
         ?>
@@ -82,6 +82,27 @@ $moviejoin = 'SELECT * FROM Movies m
         </table>
 
     </div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>This will delete the movie from the database. Are you sure you want to delete [title]?</p>
+      </div>
+      <div class="modal-footer">
+        <a href='/movie/index.php?action=delete&id=$row[movie_id]' class="btn btn-default">Delete</a>
+        <a href='/movie/index.php?action=delete&id=$row[movie_id]' class="btn btn-default" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+
+  </div>
+        </div>
 
     <?php include 'footer.php'; ?>
 </body>

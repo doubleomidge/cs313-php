@@ -63,6 +63,7 @@ switch ($action) {
 
         $delOutcome = deleteMovie($movieId);
 
+        include 'movies.php';
         break;
 
     case 'add':
