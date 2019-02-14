@@ -74,7 +74,7 @@ $moviejoin = 'SELECT * FROM Movies m
                 echo '<td>' . $row['genre_name'] . '</td>';
                 echo '<td>' . $row['format_type'] . '</td>';
                 echo "<td><a href='/movie/index.php?action=modify&id=$row[movie_id]' title='Click to modify'>Modify</a></td>";
-                echo "<td><a href='myModal' data-toggle='modal' title='Click to delete'>Delete</a></td>";
+                echo "<td><a onclick='$(#myModal).modal('show')' title='Click to delete'>Delete</a></td>";
                 echo '</tr>';
             }
         ?>
