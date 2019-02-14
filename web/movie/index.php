@@ -118,12 +118,13 @@ switch ($action) {
             } else {
                 $digitalb == FALSE;
             }
+        $run = filter_input(INPUT_POST, 'movie_run', FILTER_SANITIZE_NUMBER_INT);
         $rate = filter_input(INPUT_POST, 'movie_rate', FILTER_SANITIZE_STRING);
         $gen = filter_input(INPUT_POST, 'movie_gen', FILTER_SANITIZE_STRING);
         $type = filter_input(INPUT_POST, 'movie_type', FILTER_SANITIZE_STRING);
 
         // echo "Show me the money $title, $desc, $year, $movieb, $digitalb, $rate, $gen, $type";
-        $addOutcome = addMovie($title, $desc, $year, $movieb, $digitalb, $rate, $gen, $type);
+        $addOutcome = addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);
 
         if ($addOutcome === 1) {
             $message = '<p class="container-fluid success">Thanks for adding ' . $title . '.</p>';
