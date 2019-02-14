@@ -109,15 +109,15 @@ switch ($action) {
         $movieb = $_POST['movie_bool'];
             // check if the box is checked and change it to something the database can interpret
             if($movieb == 'on'){
-                $movieb = 't';
+                $movieb = 'TRUE';
             } else {
-                $movieb = 'f';
+                $movieb = 'FALSE';
             }
         $digitalb = $_POST['digital_bool'];
             if($digitalb == 'on'){
-                $digitalb = 't';
+                $digitalb = 'TRUE';
             } else {
-                $digitalb = 'f';
+                $digitalb = 'FALSE';
             }
         $rate = filter_input(INPUT_POST, 'movie_rate', FILTER_SANITIZE_STRING);
         $gen = filter_input(INPUT_POST, 'movie_gen', FILTER_SANITIZE_STRING);
