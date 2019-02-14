@@ -62,12 +62,12 @@ require 'dbconnect.php';
             <div class="d-flex justify-space-around">
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="movieCheck">
-                    <label class="form-check-label" for="movieCheck">Is this a movie?</label>
+                    <label class="form-check-label" name="movieb" for="movieCheck">Is this a movie?</label>
                 </div>
 
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="digital">
-                    <label class="form-check-label" for="digital">Is this a digital copy?</label>
+                    <label class="form-check-label" name="digitalb" for="digital">Is this a digital copy?</label>
                 </div>
             </div>
 
@@ -80,7 +80,7 @@ require 'dbconnect.php';
                         
                         <?php
                         foreach($db->query('SELECT * FROM Rating g') as $row) {
-                            echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
+                            echo "<option name='rate' value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
                         }
                         ?>
                     
@@ -94,7 +94,7 @@ require 'dbconnect.php';
                         
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
-                            echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                            echo "<option name='gen' value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
                         }
                         ?>
                     
@@ -108,7 +108,7 @@ require 'dbconnect.php';
                         
                         <?php
                         foreach($db->query('SELECT * FROM Format f') as $row) {
-                            echo "<option value=" . $row[format_id] . ">". $row[format_type] . "</option>";
+                            echo "<option name='type' value=" . $row[format_id] . ">". $row[format_type] . "</option>";
                         }
                         ?>
                     
