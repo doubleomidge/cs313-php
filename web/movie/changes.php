@@ -106,6 +106,7 @@ require 'dbconnect.php';
                                 } else {
                                     echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
                                 }
+                            }
                         ?>
                     </select>
                 </div>
