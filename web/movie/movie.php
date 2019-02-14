@@ -96,8 +96,10 @@ $moviejoin = 'SELECT * FROM Movies m
         <p>This will delete the movie from the database. Are you sure you want to delete [title]?</p>
       </div>
       <div class="modal-footer">
-        <a href='/movie/index.php?action=delete&id=$row[movie_id]' class="btn btn-default">Delete</a>
-        <a href='/movie/index.php?action=delete&id=$row[movie_id]' class="btn btn-default" data-dismiss="modal">Close</a>
+        <?php
+            echo "<a href='/movie/index.php?action=delete&id=$movieInfo[movie_id]' class='btn btn-default'>Delete</a>";
+        ?>
+        <a class="btn btn-default" data-dismiss="modal">Close</a>
       </div>
     </div>
 
