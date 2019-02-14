@@ -50,15 +50,16 @@ function ratingList($ratings){
         }
 };
 
-function addMovie($title, $desc, $year, $movieb, $digitalb, $rate, $gen, $type) {
+function addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type) {
     $db = dbConnect();
-    $sql = 'INSERT INTO Movies VALUES(DEFAULT, :title, :desc, :year, :movieb, :digitalb, :rate, :gen, :type)';
+    $sql = 'INSERT INTO Movies VALUES(DEFAULT, :title, :desc, :year, :movieb, :digitalb, :run, :rate, :gen, :type)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':title', $title, PDO::PARAM_STRING);
     $stmt->bindValue(':desc', $desc, PDO::PARAM_STRING);
     $stmt->bindValue(':year', $year, PDO::PARAM_INT);
     $stmt->bindValue(':movieb', $movieb, PDO::PARAM_STRING);
     $stmt->bindValue(':digitalb', $digitalb, PDO::PARAM_STRING);
+    $stmt->bindValue(':run', $run, PDO::PARAM_INT);
     $stmt->bindValue(':rate', $rate, PDO::PARAM_STRING);
     $stmt->bindValue(':gen', $gen, PDO::PARAM_STRING);
     $stmt->bindValue(':type', $type, PDO::PARAM_STRING);

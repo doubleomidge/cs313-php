@@ -59,10 +59,17 @@ require 'dbconnect.php';
                     <span id="chars">500</span> characters remaining</p>
             </div>
 
-            <div class="form-group">
-                <label for="movie_year">Year Released</label>
-                <input class="form-control" name="movie_year" id="movie_year" placeholder="Year Released" type="number">
-                <small id="movie_year" class="form-text text-muted">If this isn't as important to you, it isn't required.</small>
+            <div class="row">
+                <div class="form-group col-xs-6">
+                    <label for="movie_year">Year Released</label>
+                    <input class="form-control" name="movie_year" id="movie_year" placeholder="Year Released" type="number">
+                    <small id="movie_year" class="form-text text-muted">If this isn't as important to you, it isn't required.</small>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label for="run_time">Run Time</label>
+                    <input class="form-control" name="run_time" id="run_time" placeholder="Year Released" type="number" required>
+                </div>
             </div>
 
             <div class="d-flex justify-space-around">

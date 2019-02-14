@@ -40,7 +40,7 @@ require 'dbconnect.php';
         <form>
             <div class="form-group">
                 <label for="movie_title"> Movie Title </label>
-                <input type="email" class="form-control form-control-lg" id="movie_title" type="text" <?php
+                <input type="text" class="form-control form-control-lg" id="movie_title" type="text" <?php
                     if (isset($movieInfo['movie_title'])) {
                         echo "value='$movieInfo[movie_title]'";
                     }
