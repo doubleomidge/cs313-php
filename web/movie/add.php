@@ -48,14 +48,14 @@ require 'dbconnect.php';
 
             <div class="form-group">
                 <label for="movie_desc">Movie Description</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" placeholder="Tell me a bit about the movie"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" name="movie_desc" placeholder="Tell me a bit about the movie"></textarea>
                 <p class="bump-right">
                     <span id="chars">500</span> characters remaining</p>
             </div>
 
             <div class="form-group">
                 <label for="movie_year">Year Released</label>
-                <input class="form-control" id="movie_year" placeholder="Year Released" type="number">
+                <input class="form-control" name="movie_year" id="movie_year" placeholder="Year Released" type="number">
                 <small id="movie_year" class="form-text text-muted">If this isn't as important to you, it isn't required.</small>
             </div>
 

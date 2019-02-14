@@ -49,3 +49,20 @@ function ratingList($ratings){
             $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 };
+
+function addMovie($title, $desc, $year, $movieb, $digitalb, $rate, $gen, $type) {
+    $db = dbConnect();
+    $sql = 'INSERT INTO Movies VALUES(DEFAULT, :title, :desc, :year, :movieb, :digitalb, :rate, :gen, :type)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':title', $title, PDO::PARAM_STRING);
+    $stmt->bindValue(':desc', $desc, PDO::PARAM_STRING);
+    $stmt->bindValue(':year', $year, PDO::PARAM_INT);
+    $stmt->bindValue(':movieb', $movieb, PDO::PARAM_STRING);
+    $stmt->bindValue(':digitalb', $digitalb, PDO::PARAM_STRING);
+    $stmt->bindValue(':rate', $rate, PDO::PARAM_STRING);
+    $stmt->bindValue(':gen', $gen, PDO::PARAM_STRING);
+    $stmt->bindValue(':type', $type, PDO::PARAM_STRING);
+    $stmt->execute();
+    $movieInfo = $stmt->rowCount();
+    return $movieInfo;
+};
