@@ -60,8 +60,9 @@ function updateMovie($movieId, $title, $desc, $year, $movieb, $digitalb, $run, $
           family_id       = 1, 
           user_id         = 1, 
           format_id       = :type
-      WHERE movie_id = $movieId)';
+      WHERE movie_id = :movieId)';
     $stmt = $db->prepare($sql);
+    $stmt->bindValue(':movieId', $movieId, PDO::PARAM_INT);
     $stmt->bindValue(':title', $title, PDO::PARAM_STR);
     $stmt->bindValue(':year', $year, PDO::PARAM_INT);
     $stmt->bindValue(':desc', $desc, PDO::PARAM_STR);
