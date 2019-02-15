@@ -46,7 +46,7 @@ function deleteMovie($movieId){
   return $delOutcome;
 };
 
-function updateMovie($movieId){
+function updateMovie($movieId, $title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type){
   $db = dbConnect();
     $sql = 'UPDATE movies 
       SET movie_title     = :title, 
@@ -59,7 +59,8 @@ function updateMovie($movieId){
           genre_id        = :gen, 
           family_id       = 1, 
           user_id         = 1, 
-          format_id       = :type)';
+          format_id       = :type
+      WHERE movie_id = $movieId)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':title', $title, PDO::PARAM_STR);
     $stmt->bindValue(':year', $year, PDO::PARAM_INT);
