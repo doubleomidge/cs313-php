@@ -50,12 +50,12 @@ require 'dbconnect.php';
                     if (isset($movieInfo['movie_title'])) {
                         echo "value='$movieInfo[movie_title]'";
                     }
-                    ?> required>
+                    ?> name="movie_title" required>
             </div>
 
             <div class="form-group">
                 <label for="movie_desc"> Movie Description </label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" required><?php
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" name="movie_desc" required><?php
                     if (isset($movieInfo['movie_desc'])) {
                         echo "$movieInfo[movie_desc]";
                     }?></textarea>
@@ -63,20 +63,32 @@ require 'dbconnect.php';
                     <span id="chars">500</span> characters remaining</p>
             </div>
 
-            <div class="form-group">
-                <label for="movie_year">Year Released</label>
-                <input class="form-control" id="movie_year" type="number"
-                    <?php
-                    if (isset($movieInfo['movie_year'])) {
-                        echo "value='$movieInfo[movie_year]'";
-                    }
-                    ?> required>
-                <small id="movie_year" class="form-text text-muted">If this isn't as important to you, it isn't required.</small>
+            <div class="row">
+                <div class="form-group">
+                    <label for="movie_year">Year Released</label>
+                    <input class="form-control" id="movie_year" type="number" name="movie_year"
+                        <?php
+                        if (isset($movieInfo['movie_year'])) {
+                            echo "value='$movieInfo[movie_year]'";
+                        }
+                        ?> required>
+                    <small id="movie_year" class="form-text text-muted">If this isn't as important to you, it isn't required.</small>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label for="run_time">Run Time</label>
+                    <input class="form-control" name="movie_run" id="run_time" placeholder="Run time" type="number" 
+                        <?php
+                        if (isset($movieInfo['movie_runtime'])) {
+                            echo "value='$movieInfo[movie_runtime]'";
+                        }
+                        ?> required>
+                </div>
             </div>
 
             <div class="d-flex justify-space-around">
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="movieCheck" 
+                    <input type="checkbox" class="form-check-input" id="movieCheck" name="movie_bool"
                         <?php
                         if (isset($movieInfo['movie_yn'])) {
                             echo checked;
@@ -86,7 +98,7 @@ require 'dbconnect.php';
                 </div>
 
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="digital"
+                    <input type="checkbox" class="form-check-input" id="digital" name="digital_bool"
                         <?php
                         if (isset($movieInfo['movie_digital'])) {
                             echo checked;
@@ -100,7 +112,7 @@ require 'dbconnect.php';
             <div class="row">
                 <div class="form-group col-md-4">
                     <label for="inputRating">Rating</label>
-                    <select id="inputRating" class="form-control">
+                    <select id="inputRating" class="form-control" name="movie_rate">
                         <option>Choose...</option>
                         <!-- generate list -->
                         <?php
@@ -117,7 +129,7 @@ require 'dbconnect.php';
 
                 <div class="form-group col-md-4">
                     <label for="inputGenre">Genre</label>
-                    <select id="inputGenre" class="form-control">
+                    <select id="inputGenre" class="form-control name="movie_gen"">
                         <option>Choose...</option>
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
@@ -134,7 +146,7 @@ require 'dbconnect.php';
 
                 <div class="form-group col-md-4">
                     <label for="inputLocation">Format Type</label>
-                    <select id="inputLocation" class="form-control">
+                    <select id="inputLocation" class="form-control name="movie_type"">
                         <option>Choose...</option>
                         <?php
                         foreach($db->query('SELECT * FROM Format f') as $row) {
