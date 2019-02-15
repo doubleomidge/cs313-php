@@ -121,7 +121,12 @@ require 'dbconnect.php';
                         <option>Choose...</option>
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
-                            echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                            // echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                            if($movieInfo['genre_id'] == $row[genre_id]) {
+                                    echo "<option value=" . $row[genre_id] . " selected>". $row[genre_name] . "</option>";
+                                } else {
+                                    echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                                }
                         }
                         ?>
                     </select>
@@ -133,7 +138,12 @@ require 'dbconnect.php';
                         <option>Choose...</option>
                         <?php
                         foreach($db->query('SELECT * FROM Format f') as $row) {
-                            echo "<option value=" . $row[format_id] . ">". $row[format_type] . "</option>";
+                            //echo "<option value=" . $row[format_id] . ">". $row[format_type] . "</option>";
+                            if($movieInfo['format_id'] == $row[format_id]) {
+                                    echo "<option value=" . $row[format_id] . " selected>". $row[format_type] . "</option>";
+                                } else {
+                                    echo "<option value=" . $row[format_id] . ">". $row[format_type] . "</option>";
+                                }
                         }
                         ?>
                     </select>
