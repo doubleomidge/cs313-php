@@ -129,7 +129,7 @@ require 'dbconnect.php';
 
                 <div class="form-group col-md-4">
                     <label for="inputGenre">Genre</label>
-                    <select id="inputGenre" class="form-control name="movie_gen"">
+                    <select id="inputGenre" class="form-control" name="movie_gen">
                         <option>Choose...</option>
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
@@ -146,7 +146,7 @@ require 'dbconnect.php';
 
                 <div class="form-group col-md-4">
                     <label for="inputLocation">Format Type</label>
-                    <select id="inputLocation" class="form-control name="movie_type"">
+                    <select id="inputLocation" class="form-control" name="movie_type">
                         <option>Choose...</option>
                         <?php
                         foreach($db->query('SELECT * FROM Format f') as $row) {
@@ -166,7 +166,7 @@ require 'dbconnect.php';
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Send the family an email saying this movie was added?</label>
             </div>
-            <input hidden value="<?php $movieInfo['movie_id']?>" name="movie_id">
+            <input hidden value="<?php echo $movieInfo['movie_id']; ?>" name="movie_id">
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
