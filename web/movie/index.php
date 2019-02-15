@@ -178,7 +178,7 @@ switch ($action) {
         // check to see if any requireds are empty
         // if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
         //     $message = '<p class="notice">Please provide information for all empty form fields.</p>';
-        //     include 'add.php';
+        //     include 'changes.php';
         //     exit;
         // }
 
@@ -187,11 +187,11 @@ switch ($action) {
 
         if ($modOutcome === 1) {
             $message = '<p class="container-fluid success">' . $title . ' has been updated.</p>';
-            include 'add.php';
+            include 'changes.php';
             exit;
         } else {
             $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not updated. Please try again, check all fields.</p>';
-            include 'add.php';
+            include 'changes.php';
             exit;
         }
         break;
