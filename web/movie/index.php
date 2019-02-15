@@ -152,6 +152,49 @@ switch ($action) {
         }
         break;
 
+    case 'modifyData':
+$title = filter_input(INPUT_POST, 'movie_title', FILTER_SANITIZE_STRING);
+        $desc = filter_input(INPUT_POST, 'movie_desc', FILTER_SANITIZE_STRING);
+        $year = filter_input(INPUT_POST, 'movie_year', FILTER_SANITIZE_NUMBER_INT);
+        $run = filter_input(INPUT_POST, 'movie_run', FILTER_SANITIZE_NUMBER_INT);
+        $movieb = $_POST['movie_bool'];
+            // check if the box is checked and change it to something the database can interpret
+            if($movieb == 'on'){
+                $movieb = TRUE;
+            } else {
+                $movieb = FALSE;
+            }
+        $digitalb = $_POST['digital_bool'];
+            if($digitalb == 'on'){
+                $digitalb = TRUE;
+            } else {
+                $digitalb = FALSE;
+            }
+        $rate = filter_input(INPUT_POST, 'movie_rate', FILTER_SANITIZE_STRING);
+        $gen = filter_input(INPUT_POST, 'movie_gen', FILTER_SANITIZE_STRING);
+        $type = filter_input(INPUT_POST, 'movie_type', FILTER_SANITIZE_STRING);
+
+        // check to see if any requireds are empty
+        if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
+            $message = '<p class="notice">Please provide information for all empty form fields.</p>';
+            include 'add.php';
+            exit;
+        }
+
+        // echo "Show me the money $title, $desc, $year, $run, $movieb, $digitalb, $rate, $gen, $type";
+        $modOutcome = updateMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);
+
+        if ($modOutcome === 1) {
+            $message = '<p class="container-fluid success">' . $title . ' has been updated.</p>';
+            include 'add.php';
+            exit;
+        } else {
+            $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not updated. Please try again, check all fields.</p>';
+            include 'add.php';
+            exit;
+        }
+        break;
+
     default: 
     include 'home.php';
 

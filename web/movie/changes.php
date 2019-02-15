@@ -30,13 +30,19 @@ require 'dbconnect.php';
 <body>
     <?php include 'nav.php'; ?>
 
+        <?php
+        if (isset($message)) {
+            echo $message;
+        }
+        ?>
+
         <div class="container changes">
             <h1><?php
             if (isset($movieInfo['movie_title'])) {
                 echo "Modify <span>$movieInfo[movie_title]<span>";
             }
             ?></h1>
-        <form>
+        <form action="index.php?action=addToData" method="post">
             <div class="form-group">
                 <label for="movie_title"> Movie Title </label>
                 <input type="text" class="form-control form-control-lg" id="movie_title" type="text"

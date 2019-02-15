@@ -46,6 +46,35 @@ function deleteMovie($movieId){
   return $delOutcome;
 };
 
+function updateMovie($movieId){
+  $db = dbConnect();
+    $sql = 'UPDATE movies 
+      SET movie_title     = :title, 
+          movie_year      = :year, 
+          movie_desc      = :desc, 
+          movie_digital   = :digitalb, 
+          movie_yn        = :movieb, 
+          movie_runtime   = :run, 
+          movie_rating_id = :rate, 
+          genre_id        = :gen, 
+          family_id       = 1, 
+          user_id         = 1, 
+          format_id       = :type)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':title', $title, PDO::PARAM_STR);
+    $stmt->bindValue(':year', $year, PDO::PARAM_INT);
+    $stmt->bindValue(':desc', $desc, PDO::PARAM_STR);
+    $stmt->bindValue(':digitalb', $digitalb, PDO::PARAM_BOOL);
+    $stmt->bindValue(':movieb', $movieb, PDO::PARAM_BOOL);
+    $stmt->bindValue(':run', $run, PDO::PARAM_INT);
+    $stmt->bindValue(':rate', $rate, PDO::PARAM_STR);
+    $stmt->bindValue(':gen', $gen, PDO::PARAM_STR);
+    $stmt->bindValue(':type', $type, PDO::PARAM_STR);
+    $stmt->execute();
+    $updateOutcome = $stmt->rowCount();
+    return $updateOutcome;
+}
+
 function ratingList($ratings){
   if(isset($_POST['inputRating'])) {
             $rating = $_POST['inputRating'];
