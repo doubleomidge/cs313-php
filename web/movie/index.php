@@ -109,6 +109,26 @@ switch ($action) {
         include 'add.php';
         break;
 
+    case 'register':
+        $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
+        $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        $password_confirm = filter_input(INPUT_POST, 'password_confirm', FILTER_SANITIZE_STRING);
+
+        if ($password == $password_confirm) {
+            $icon = '<span class="pass"></span>';
+            include 'register.php';
+            exit;
+        } else {
+            $icon = '<span class="fail"></span>';
+            include 'register.php';
+            exit;
+        }
+
+    
+        break;
+
     case 'addToData':
         $title = filter_input(INPUT_POST, 'movie_title', FILTER_SANITIZE_STRING);
         $desc = filter_input(INPUT_POST, 'movie_desc', FILTER_SANITIZE_STRING);
@@ -176,11 +196,11 @@ switch ($action) {
         $type = filter_input(INPUT_POST, 'movie_type', FILTER_SANITIZE_STRING);
 
         // check to see if any requireds are empty
-        // if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
-        //     $message = '<p class="notice">Please provide information for all empty form fields.</p>';
-        //     include 'changes.php';
-        //     exit;
-        // }
+        if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
+            $message = '<p class="notice">Please provide information for all empty form fields.</p>';
+            include 'changes.php';
+            exit;
+        }
 
         // echo "Show me the money $title, $desc, $year, $run, $movieb, $digitalb, $rate, $gen, $type";
         $modOutcome = updateMovie($movieId, $title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);

@@ -26,7 +26,7 @@
     <?php include 'nav.php'; ?>
 
     <div class="container register card">
-        <form method="post" action="#">
+        <form method="post" action="index.php?action=register">
             <h1 class="bump-center">Register</h1>
             <div class="row">
                 <div class="col-md-6 mb-3">
@@ -37,6 +37,11 @@
                     <label for="lastName">Last Name</label>
                     <input type="text" class="form-control" id="lastName" name="lastname" required>
                 </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="you@example.com" required>
             </div>
 
             <div class="mb-3">
@@ -51,7 +56,7 @@
 
             <div class="mb-3">
                 <label for="password-confirm">Confirm Password</label>
-                <input type="text" class="form-control" id="password-confirm" name="password-confirm" placeholder="Confirm Password" required>
+                <input type="text" class="form-control" id="password-confirm" name="password_confirm" placeholder="Confirm Password" required>
             </div>
 
             <button class="btn btn-primary btn-lg btn-block register-button" type="submit">Register Now</button>

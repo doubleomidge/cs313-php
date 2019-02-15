@@ -44,7 +44,7 @@ require 'dbconnect.php';
             ?></h1>
         <form action="index.php?action=modifyData" method="post">
             <div class="form-group">
-                <label for="movie_title"> Movie Title!!!! </label>
+                <label for="movie_title"> Movie Title</label>
                 <input type="text" class="form-control form-control-lg" id="movie_title" type="text"
                     <?php
                     if (isset($movieInfo['movie_title'])) {
@@ -154,6 +154,7 @@ require 'dbconnect.php';
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Send the family an email saying this movie was added?</label>
             </div>
+            <input hidden value="<?php $movieInfo['movie_id']?>" name="movie_id">
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
