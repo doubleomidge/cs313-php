@@ -195,12 +195,15 @@ switch ($action) {
         $gen = filter_input(INPUT_POST, 'movie_gen', FILTER_SANITIZE_STRING);
         $type = filter_input(INPUT_POST, 'movie_type', FILTER_SANITIZE_STRING);
 
+        echo "Results: $movieId, $title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type";
+        exit;
+
         // check to see if any requireds are empty
-        if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
-            $message = '<p class="notice">Please provide information for all empty form fields.</p>';
-            include 'changes.php';
-            exit;
-        }
+        // if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
+        //     $message = '<p class="notice">Please provide information for all empty form fields.</p>';
+        //     include 'changes.php';
+        //     exit;
+        // }
 
         // echo "Show me the money $title, $desc, $year, $run, $movieb, $digitalb, $rate, $gen, $type";
         $modOutcome = updateMovie($movieId, $title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);
