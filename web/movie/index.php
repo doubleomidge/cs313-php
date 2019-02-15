@@ -205,7 +205,6 @@ switch ($action) {
             exit;
         }
 
-        // echo "Show me the money $title, $desc, $year, $run, $movieb, $digitalb, $rate, $gen, $type";
         $modOutcome = updateMovie($movieId, $title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);
 
         if ($modOutcome === 1) {
