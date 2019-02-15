@@ -44,7 +44,7 @@ require 'dbconnect.php';
             ?></h1>
         <form action="index.php?action=addToData" method="post">
             <div class="form-group">
-                <label for="movie_title"> Movie Title </label>
+                <label for="movie_title"> Movie Title!!!! </label>
                 <input type="text" class="form-control form-control-lg" id="movie_title" type="text"
                     <?php
                     if (isset($movieInfo['movie_title'])) {
