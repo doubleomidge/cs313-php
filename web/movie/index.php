@@ -117,9 +117,19 @@ switch ($action) {
         $password_confirm = filter_input(INPUT_POST, 'password_confirm', FILTER_SANITIZE_STRING);
 
         if ($password == $password_confirm) {
-            $icon = '<span class="pass"></span>';
-            include 'register.php';
-            exit;
+            $userOutcome = newUser($firstname, $lastname, $username, $password);
+
+            if ($userOutcome === 1) {
+                $message = '<p class="container-fluid success">Thanks for registering ' . $firstname . '.</p>';
+
+                
+                include 'movie.php';
+                exit;
+            } else {
+                $message = '<p class="container-fluid notice">Sorry, ' . $firstname . ' was not registered successfully. Please try again, check all fields.</p>';
+                include 'register.php';
+                exit;
+            }
         } else {
             $icon = '<span class="fail"></span>';
             include 'register.php';

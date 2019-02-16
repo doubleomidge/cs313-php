@@ -39,7 +39,7 @@ CREATE TABLE Format
 CREATE TABLE Movies
 (
     movie_id SERIAL PRIMARY KEY,
-    movie_title varchar(30) NOT NULL,
+    movie_title varchar(128) NOT NULL,
     movie_year int             ,
     movie_desc varchar(500) NOT NULL,
     movie_digital BOOL NOT NULL,

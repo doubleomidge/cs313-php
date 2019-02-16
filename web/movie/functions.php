@@ -124,3 +124,16 @@ function modMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $
     $modOutcome = $stmt->rowCount();
     return $modOutcome;
 };
+
+function newUser($firstname, $lastname, $username, $password) {
+  $db = dbConnect();
+    $sql = 'INSERT INTO Userss VALUES(DEFAULT, :username, :first, :last, :password, 1)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+    $stmt->bindValue(':first', $firstname, PDO::PARAM_STR);
+    $stmt->bindValue(':last', $lastname, PDO::PARAM_STR);
+    $stmt->bindValue(':password', $password, PDO::PARAM_STR);
+    $stmt->execute();
+    $regOutcome = $stmt->rowCount();
+    return $regOutcome;
+}
