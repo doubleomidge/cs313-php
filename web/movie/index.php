@@ -141,6 +141,8 @@ switch ($action) {
 
     case 'addToData':
         $title = filter_input(INPUT_POST, 'movie_title', FILTER_SANITIZE_STRING);
+        //truncate at 30 char
+
         $desc = filter_input(INPUT_POST, 'movie_desc', FILTER_SANITIZE_STRING);
         $year = filter_input(INPUT_POST, 'movie_year', FILTER_SANITIZE_NUMBER_INT);
         $run = filter_input(INPUT_POST, 'movie_run', FILTER_SANITIZE_NUMBER_INT);

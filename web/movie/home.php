@@ -41,8 +41,7 @@
                     <span class="fas fa-user-alt"></span>
                     <h2>Add users to your family</h2>
                     <div class="card-content">
-                        <p>We know that you probably share your movies with those in your family. Why purchase the same movie
-                            when someone in your family already owns it?</p>
+                        <p>We know that you probably share your movies with those in your family.</p>
                         <p>Easily know all the movies you, and your family, owns.</p>
                     </div>
                 </div>
@@ -53,9 +52,8 @@
                     <span class="fas fa-video"></span>
                     <h2>Find the movie you're looking for</h2>
                     <div class="card-content">
-                        <p>With digital movie libraries, and DVD collections, as well as multiple viewing devices, it's now easier than ever
-                        to lose track of what you actually own.</p>
-                        <p>By using this site, you can have no more movie viewing confusion.</p>
+                        <p>With digital movie libraries, and DVD collections, as well as multiple viewing devices, it's hard to keep track
+                        of your movies. But with this, you can have no more viewing confusion.</p>
                     </div>
                 </div>
             </div>
@@ -65,7 +63,6 @@
                     <span class="fas fa-couch"></span>
                     <h2>Get movie suggestions</h2>
                     <div class="card-content">
-                        <p>You know the mood you're in, but can't place your finger on exactly which movie to watch.</p>
                         <p>You can have all your movies, at your fingertips, and easily look up all the movies you own by genre, release date, year, and more!</p>
                     </div>
                 </div>
@@ -81,11 +78,11 @@
             <div class="col-7">
                 <h3>Movies made easier to share</h3>
                 <div class="share-content">
-                    <p>Just like you, I enjoy settling in for a movie night with my family. Selecting the movie has never been easy.
+                    <!-- <p>Just like you, I enjoy settling in for a movie night with my family. Selecting the movie has never been easy.
                     We usually start by opening up our Apple TV and going through movies we own there, then looking at our DVDs, then going
                     back to our devices to see what other digital movies we own.</p>
                     <p>At that point, it's already been an hour and I am getting tired. So I figured why not start a database, for my family,
-                    and others, to be able to see all their movies at once.</p>
+                    and others, to be able to see all their movies at once.</p> -->
                     <p>With Movie-o-file, you can add members to your family, find all your movies, add new movies, look for suggestions, and more!
                     It's never been easier to pick a movie.</p>
                 </div>

@@ -68,7 +68,7 @@ require 'dbconnect.php';
 
                 <div class="form-group col-xs-6">
                     <label for="run_time">Run Time</label>
-                    <input class="form-control" name="movie_run" id="run_time" placeholder="Year Released" type="number" required>
+                    <input class="form-control" name="movie_run" id="run_time" placeholder="Run time in minutes" type="number" required>
                 </div>
             </div>
 
