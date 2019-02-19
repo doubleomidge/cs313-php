@@ -36,7 +36,7 @@
 
             <div class="mb-3">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" value="password" name="password" placeholder="Choose a password" required>
+                <input type="password" class="form-control" name="password" placeholder="Choose a password" required>
             </div>
             <small class="form-text text-muted">Create a password that is at least 8 characters in length, has a capital letter, and a special character.</small>
 
