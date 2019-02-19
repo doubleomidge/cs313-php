@@ -34,11 +34,16 @@
                 <input type="text" class="form-control" name="username" placeholder="Enter a username" required>
             </div>
 
-            <div class="mb-3">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name="password" placeholder="Choose a password" required>
+            <div class="row">
+                <div class="mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Choose a password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password2">Re-enter Your Password</label>
+                    <input type="password" class="form-control" name="password2" placeholder="Re-enter your password" required>
+                </div>
             </div>
-            <small class="form-text text-muted">Create a password that is at least 8 characters in length, has a capital letter, and a special character.</small>
 
             <br>
 
