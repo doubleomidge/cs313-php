@@ -31,7 +31,7 @@
 
             <div class="mb-3">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" value="username" name="username" placeholder="Enter a username" required>
+                <input type="text" class="form-control" name="username" placeholder="Enter a username" required>
             </div>
 
             <div class="mb-3">
