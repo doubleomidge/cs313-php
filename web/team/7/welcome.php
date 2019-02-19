@@ -29,8 +29,8 @@
         <h1>Welcome</h1>
 
         <div class="row">
-            <a href="login.php" class="btn btn-primary">Login</a>
             <a href="signup.php" class="btn btn-primary">Sign Up</a>
+            <a href="login.php">Login</a>
         </div>
     </div>
 
