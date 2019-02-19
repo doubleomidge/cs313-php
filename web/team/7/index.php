@@ -11,8 +11,8 @@ if ($action == NULL) {
 
 switch ($action) {
     case 'register':
-        $username = filter_input($POST, 'username', FILTER_SANITIZE_STRING);
-        $password = filter_input($POST, 'password', FILTER_SANITIZE_STRING);
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
         $safepass = password_hash($password, PASSWORD_DEFAULT);
 
