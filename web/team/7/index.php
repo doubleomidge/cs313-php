@@ -17,7 +17,7 @@ switch ($action) {
 
         $passcomp = strcmp($password, $password2);
 
-        if ($passcomp === 0) {
+        if ($passcomp == 0) {
             $safepass = password_hash($password, PASSWORD_DEFAULT);
             $added = addUser($username, $safepass);
             include 'login.php';
