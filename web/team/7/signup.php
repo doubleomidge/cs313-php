@@ -25,8 +25,8 @@
 <body>
     <?php include 'nav.php'; ?>
 
-    <?php if (isset($message)) {
-        echo $message;
+    <?php if (isset($passMessage)) {
+        echo $passMessage;
     } ?>
 
     <div class="container register card">
@@ -41,17 +41,13 @@
             <div class="mb-3">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" name="password" placeholder="Choose a password" required>
-                <?php if (isset($star)) {
-                 echo $star;
-             } ?>
+                <?php if (isset($star)) { echo $star;} ?>
 
             </div>
             <div class="mb-3">
                 <label for="password2">Re-enter Your Password</label>
                 <input type="password" class="form-control" name="password2" placeholder="Re-enter your password" required>
-                <?php if (isset($star)) {
-                 echo $star;
-             } ?>
+                <?php if (isset($star)) { echo $star; } ?>
             </div>
 
             <br>
