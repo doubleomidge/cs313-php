@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="jumbotron">
+    <div class="jumbotron centering">
         <h1>Welcome</h1>
 
         <div class="row">
