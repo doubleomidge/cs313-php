@@ -26,7 +26,11 @@
     <?php include 'nav.php'; ?>
 
     <div class="jumbotron centering">
-        <h1>Welcome</h1>
+        <h1>Welcome
+            <?php if(isset($_SESSION['user'])) {
+                echo $_SESSION['user']['username'];
+            } ?>
+        </h1>
 
         <div class="row">
             <a href="signup.php" class="btn btn-primary">Sign Up</a>

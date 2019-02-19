@@ -33,7 +33,7 @@ switch ($action) {
         $compare = password_verify($password, $userPass['password']);
 
         if ($compare) {
-            $_SESSION['user'] = $userPass['id'];
+            $_SESSION['user'] = $userPass;
             include 'welcome.php';
         } else {
             $message = "Invalid credentials";
