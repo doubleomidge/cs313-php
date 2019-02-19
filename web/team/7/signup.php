@@ -25,6 +25,10 @@
 <body>
     <?php include 'nav.php'; ?>
 
+    <?php if (isset($message)) {
+        echo $message;
+    } ?>
+
     <div class="container register card">
         <form method="post" action="index.php?action=register">
             <h1 class="bump-center">Register</h1>
@@ -34,15 +38,20 @@
                 <input type="text" class="form-control" name="username" placeholder="Enter a username" required>
             </div>
 
-            <div class="row">
-                <div class="mb-3">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Choose a password" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password2">Re-enter Your Password</label>
-                    <input type="password" class="form-control" name="password2" placeholder="Re-enter your password" required>
-                </div>
+            <div class="mb-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Choose a password" required>
+                <?php if (isset($star)) {
+                 echo $star;
+             } ?>
+
+            </div>
+            <div class="mb-3">
+                <label for="password2">Re-enter Your Password</label>
+                <input type="password" class="form-control" name="password2" placeholder="Re-enter your password" required>
+                <?php if (isset($star)) {
+                 echo $star;
+             } ?>
             </div>
 
             <br>

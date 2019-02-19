@@ -13,10 +13,21 @@ switch ($action) {
     case 'register':
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        $password2 = filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_STRING);
 
-        $safepass = password_hash($password, PASSWORD_DEFAULT);
+        $passcomp = strcmp($password, $password2);
 
-        $added = addUser($username, $safepass);
+        if ($passcomp == 0) {
+            $safepass = password_hash($password, PASSWORD_DEFAULT);
+            $added = addUser($username, $safepass);
+        } else {
+            $passMessage = "<p class='container-fluid success'> Sorry, there was an error logging you in.</p>";
+            $star = "<span style='color: red;'>*</span>";
+        }
+        
+        //$safepass = password_hash($password, PASSWORD_DEFAULT);
+
+        //$added = addUser($username, $safepass);
 
         include 'login.php';
 
@@ -29,7 +40,7 @@ switch ($action) {
         //$safepass = password_hash($password, PASSWORD_DEFAULT);
 
         $userPass = getPassword($username);
-
+    
         $compare = password_verify($password, $userPass['password']);
 
         if ($compare) {

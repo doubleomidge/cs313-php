@@ -45,3 +45,8 @@ function getPassword ($username) {
     $pass = $stmt->fetch(PDO::FETCH_ASSOC);
     return $pass;
 }
+
+function checkPassword($clientPassword) {
+    $pattern = '/^(?=.*[[:digit:]])(?=.*[[:punct:]])[[:print:]]{7,}$/';
+    return preg_match($pattern, $clientPassword);
+}
