@@ -22,6 +22,23 @@ switch ($action) {
 
         break;
 
+    case 'login':
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+
+        $safepass = password_hash($password, PASSWORD_DEFAULT);
+
+        $userPass = getPassword($username);
+
+        if ($userPass == $safepass) {
+            include 'welcome.php';
+        } else {
+            $message = "Invalid credentials";
+            header('Location: login.php');
+        }
+
+        break;
+
     default:
         include 'welcome.php';
 }

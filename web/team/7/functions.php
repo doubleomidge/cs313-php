@@ -34,4 +34,14 @@ function addUser ($username, $safepassword) {
     $stmt->execute();
     $add = $stmt->rowCount();
     return $add;
+};
+
+function getPassword ($username) {
+    $db = dbConnect();
+    $sql = 'SELECT password FROM User7 WHERE username = :username';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+    $stmt->execute();
+    $pass = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $pass;
 }

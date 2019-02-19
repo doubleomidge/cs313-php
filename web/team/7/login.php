@@ -26,8 +26,12 @@
     <?php include 'nav.php'; ?>
 
     <div class="container register card">
-        <form method="post" action="#">
+        <form method="post" action="index.php?action=login">
             <h1 class="bump-center">Welcome Back</h1>
+
+             <?php if (isset($message)) {
+                 echo $message;
+             } ?>
 
             <div class="mb-3">
                 <label for="username">Username</label>
@@ -36,7 +40,7 @@
 
             <div class="mb-3">
                 <label for="password">Password</label>
-                <input type="text" class="form-control" name="password" placeholder="Password" required>
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
             </div>
 
             <button class="btn btn-primary btn-lg btn-block register-button" type="submit">Sign in</button>
