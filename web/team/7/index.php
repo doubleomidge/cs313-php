@@ -18,10 +18,10 @@ switch ($action) {
 
         $added = addUser($username, $safepass);
 
-        include ('login.php');
+        include 'login.php';
 
         break;
 
     default:
-        include ('welcome.php');
+        include 'welcome.php';
 }
