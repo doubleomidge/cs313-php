@@ -23,6 +23,8 @@
 </head>
 
 <body>
+    <?php include 'nav.php'; ?>
+
     <div class="container register card">
         <form method="post" action="#">
             <h1 class="bump-center">Welcome Back</h1>

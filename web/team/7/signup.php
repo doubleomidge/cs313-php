@@ -23,6 +23,7 @@
 </head>
 
 <body>
+    <?php include 'nav.php'; ?>
 
     <div class="container register card">
         <form method="post" action="index.php?action=register">
