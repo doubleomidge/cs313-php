@@ -30,13 +30,13 @@
             <h1 class="bump-center">Welcome Back</h1>
 
             <div class="mb-3">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                <label for="username">Username</label>
+                <input type="text" class="form-control" value="username" name="username" placeholder="Your username here" required>
             </div>
 
             <div class="mb-3">
                 <label for="password">Password</label>
-                <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
+                <input type="text" class="form-control" value="password" name="password" placeholder="Password" required>
             </div>
 
             <button class="btn btn-primary btn-lg btn-block register-button" type="submit">Sign in</button>
