@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-expand-lg">
+<nav class="navbar navbar-light navbar-expand-lg">
     <a class="navbar-brand" href="#" class="headerfont">Team 7</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -9,12 +9,14 @@
             <li class="nav-item active">
                 <a class="nav-link" href="welcome.php">Welcome</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="signup.php">Signup</a>
-            </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="register.php">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signin.php">Log in</a>
+                </li>
+            </ul>
     </div>
 </nav>
