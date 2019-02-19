@@ -1,6 +1,6 @@
 <?php
 if (!isset($_SESSION['user'])) {
-    header('Location: signin.php');
+    header('Location: signup.php');
 }
 
 ?>
