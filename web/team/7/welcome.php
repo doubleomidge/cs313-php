@@ -30,7 +30,7 @@
 
         <div class="row">
             <a href="signup.php" class="btn btn-primary">Sign Up</a>
-            <a href="login.php">Login</a>
+            <a href="login.php" class="btn btn-primary">Login</a>
         </div>
     </div>
 
