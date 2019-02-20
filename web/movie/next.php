@@ -58,7 +58,7 @@ $moviejoin = 'SELECT * FROM Movies m
             <!-- <div class="input-group"> -->
                 <form action="#" method="post">
                     <div class="form-row align-items-center">
-                        <select class="form-control form-control-lg col-auto" name="genre">
+                        <select class="col-sm-2 col-form-label" name="genre">
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
                             if($_POST['genre'] == $row[genre_id]) {
