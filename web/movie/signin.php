@@ -19,11 +19,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- my compiled css -->
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <?php include '../common/nav.php'; ?>
+    <?php include './common/nav.php'; ?>
 
     <div class="container register card">
         <form method="post" action="../index.php?action=login">
@@ -44,7 +44,7 @@
 
     </div>
 
-    <?php include '../common/footer.php'; ?>
+    <?php include './common/footer.php'; ?>
 </body>
 
 </html>
