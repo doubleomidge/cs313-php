@@ -25,6 +25,8 @@
 <body>
     <?php include './common/nav.php'; ?>
 
+    <?php echo $_SESSION['user']; ?>
+
     <div class="container-fluid hero">
         <div class="container hero-info">
             <h1>Movie-o-file</h1>
