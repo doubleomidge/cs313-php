@@ -44,7 +44,6 @@
                 <label for="password">Password</label>
                 <input type="password" class="form-control" name="password" placeholder="Choose a password" required>
                 <?php if (isset($star)) { echo $star;} ?>
-
             </div>
             <div class="mb-3">
                 <label for="password2">Re-enter Your Password</label>

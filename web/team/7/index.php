@@ -22,7 +22,8 @@ switch ($action) {
             $star = "<span style='color: red;'>*</span>";
             include 'signup.php';
         } else {
-            $safepass = password_hash($password, PASSWORD_DEFAULT);
+            $verify = checkPassword($password);
+            $safepass = password_hash($verify, PASSWORD_DEFAULT);
             $added = addUser($username, $safepass);
             include 'login.php';
         }
