@@ -274,10 +274,9 @@ switch ($action) {
         // $safepass = password_hash($password, PASSWORD_DEFAULT);
 
         $userPass = getPassword($username);
+        var_dump($userPass);
     
         $compare = password_verify($password, $userPass['password']);
-        echo $compare;
-        exit;
 
         if ($compare) {
             $_SESSION['user'] = $userPass;
