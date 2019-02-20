@@ -271,9 +271,11 @@ switch ($action) {
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
-        $safepass = password_hash($password, PASSWORD_DEFAULT);
+        // $safepass = password_hash($password, PASSWORD_DEFAULT);
 
         $userPass = getPassword($username);
+        echo $userPass;
+        exit;
     
         $compare = password_verify($password, $userPass['password']);
 
