@@ -278,11 +278,11 @@ switch ($action) {
         $compare = password_verify($password, $userPass['password']);
 
         if ($compare) {
-            // $_SESSION['user'] = $userPass;
-            include '/movie/home.php';
+            $_SESSION['user'] = $userPass;
+            include 'home.php';
         } else {
             $message = "Invalid credentials";
-            header('Location: login.php');
+            header('Location: signin.php');
         }
 
         break;
