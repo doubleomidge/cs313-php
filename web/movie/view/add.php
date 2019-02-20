@@ -25,7 +25,7 @@ require '../model/dbconnect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- my compiled css -->
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="./main.css">
 </head>
 
 <body class="add">
