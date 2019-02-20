@@ -33,7 +33,11 @@
 
     <div class="container register card">
         <form method="post" action="index.php?action=login">
-            <h1 class="bump-center">Welcome Back</h1>
+            <h1 class="bump-center">Welcome Back 
+            <?php if(isset($_SESSION['user'])) {
+                echo $_SESSION['user']['username'];
+            } ?>
+            </h1>
 
             <div class="mb-3">
                 <label for="username">Username</label>
