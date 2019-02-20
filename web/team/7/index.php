@@ -17,14 +17,14 @@ switch ($action) {
 
         $passcomp = strcmp($password, $password2);
 
-        if ($passcomp == 0) {
-            $safepass = password_hash($password, PASSWORD_DEFAULT);
-            $added = addUser($username, $safepass);
-            include 'login.php';
-        } else {
+        if ($passcomp != 0) {
             $passMessage = "<p class='container-fluid success'> Sorry, there was an error logging you in.</p>";
             $star = "<span style='color: red;'>*</span>";
             header('Location: signup.php');
+        } else {
+            $safepass = password_hash($password, PASSWORD_DEFAULT);
+            $added = addUser($username, $safepass);
+            include 'login.php';
         }
         
         //$safepass = password_hash($password, PASSWORD_DEFAULT);
