@@ -54,7 +54,7 @@ switch ($action) {
             $formats = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
         
-        include '/view/changes.php';
+        include 'changes.php';
         exit;
         break;
 
@@ -63,7 +63,7 @@ switch ($action) {
 
         $delOutcome = deleteMovie($movieId);
 
-        include '/view/movies.php';
+        include 'movies.php';
         break;
 
     case 'add':
@@ -106,7 +106,7 @@ switch ($action) {
             $stmt->execute();
             $formats = $stmt->fetchAll(PDO::FETCH_ASSOC);
         } 
-        include '/view/add.php';
+        include 'add.php';
         break;
 
     case 'addToData':
@@ -136,7 +136,7 @@ switch ($action) {
         // check to see if any requireds are empty
         if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
             $message = '<p class="notice">Please provide information for all empty form fields.</p>';
-            include '/view/add.php';
+            include 'add.php';
             exit;
         }
 
@@ -145,11 +145,11 @@ switch ($action) {
 
         if ($addOutcome === 1) {
             $message = '<p class="container-fluid success">Thanks for adding ' . $title . '.</p>';
-            include '/view/add.php';
+            include 'add.php';
             exit;
         } else {
             $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not added. Please try again, check all fields.</p>';
-            include '/view/add.php';
+            include 'add.php';
             exit;
         }
         break;
@@ -183,7 +183,7 @@ switch ($action) {
         // check to see if any requireds are empty
         if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
             $message = '<p class="notice">Please provide information for all empty form fields.</p>';
-            include '/view/changes.php';
+            include 'changes.php';
             exit;
         }
 
@@ -191,11 +191,11 @@ switch ($action) {
 
         if ($modOutcome === 1) {
             $message = '<p class="container-fluid success">' . $title . ' has been updated.</p>';
-            include '/view/changes.php';
+            include 'changes.php';
             exit;
         } else {
             $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not updated. Please try again, check all fields.</p>';
-            include '/view/changes.php';
+            include 'changes.php';
             exit;
         }
         break;
@@ -214,16 +214,16 @@ switch ($action) {
         //         $message = '<p class="container-fluid success">Thanks for registering ' . $firstname . '.</p>';
 
                 
-        //         include '/view/movie.php';
+        //         include 'movie.php';
         //         exit;
         //     } else {
         //         $message = '<p class="container-fluid notice">Sorry, ' . $firstname . ' was not registered successfully. Please try again, check all fields.</p>';
-        //         include '/view/register.php';
+        //         include 'register.php';
         //         exit;
         //     }
         // } else {
         //     $icon = '<span class="fail"></span>';
-        //     include '/view/register.php';
+        //     include 'register.php';
         //     exit;
         // }
 
@@ -239,19 +239,19 @@ switch ($action) {
         if ($passcomp != 0) {
             $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error logging you in.</p>";
             $star = "<span style='color: red;'>*</span>";
-            include '/view/signup.php';
+            include 'signup.php';
         } else {
             // $verify = checkPassword($password);
             
             // if (empty($verify)) {
             //     $passMessage = '<p style="color: red; text-align: center;">Please provide a valid password.</p>';
-            //     include '../view/signup.php';
+            //     include 'signup.php';
             //     exit;
             // }
 
             $safepass = password_hash($password, PASSWORD_DEFAULT);
             $added = addUser($username, $firstname, $lastname, $email, $safepass);
-            include '/view/login.php';
+            include 'login.php';
         }
         
         
@@ -262,7 +262,7 @@ switch ($action) {
         //     $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error registering.</p>";
         //     exit;
         // } else {
-        //     include './view/login.php';
+        //     include 'login.php';
         // }
     
         break;
@@ -279,7 +279,7 @@ switch ($action) {
 
         if ($compare) {
             // $_SESSION['user'] = $userPass;
-            include './home.php';
+            include 'home.php';
         } else {
             $message = "Invalid credentials";
             header('Location: login.php');
@@ -288,7 +288,7 @@ switch ($action) {
         break;
 
     default: 
-    include './view/home.php';
+    include '/home.php';
 
 }
 

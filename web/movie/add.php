@@ -25,11 +25,11 @@ require '../model/dbconnect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- my compiled css -->
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body class="add">
-    <?php include '../common/nav.php'; ?>
+    <?php include './common/nav.php'; ?>
 
     <div class="jumbotron">
         <div class="list-intro">
@@ -137,7 +137,7 @@ require '../model/dbconnect.php';
         </form>
     </div>
 
-    <?php include '../common/footer.php'; ?>
+    <?php include './common/footer.php'; ?>
 </body>
 
 <script>
