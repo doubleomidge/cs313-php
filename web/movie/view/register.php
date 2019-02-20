@@ -25,6 +25,12 @@
 <body>
     <?php include '../common/nav.php'; ?>
 
+    <?php
+        if (isset($passMessage)) {
+            echo $passMessage;
+        }
+        ?>
+
     <div class="container register card">
         <form method="post" action="../index.php?action=register">
             <h1 class="bump-center">Register</h1>
@@ -50,12 +56,12 @@
             </div>
 
             <div class="mb-3">
-                <label for="password">Password</label>
+                 <?php if (isset($star)) { echo $star;} ?><label for="password">Password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
             </div>
 
             <div class="mb-3">
-                <label for="password-confirm">Confirm Password</label>
+                 <?php if (isset($star)) { echo $star;} ?><label for="password-confirm">Confirm Password</label>
                 <input type="password" class="form-control" id="password-confirm" name="password_confirm" placeholder="Confirm Password" required>
             </div>
 
