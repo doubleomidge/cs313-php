@@ -144,7 +144,7 @@ switch ($action) {
 
         $safepass = password_hash($password, PASSWORD_DEFAULT);
         $added = addUser($username, $firstname, $lastname, $email, $safepass);
-        include 'login.php';
+        include '/view/login.php';
     
         break;
 
