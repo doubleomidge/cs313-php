@@ -19,7 +19,8 @@ CREATE TABLE Users
     user_firstname varchar(20) NOT NULL,
     user_lastname varchar(20) NOT NULL,
     user_password varchar(200) NOT NULL,
-    family_id int NOT NULL REFERENCES Family(family_id)
+    family_id int NOT NULL REFERENCES Family(family_id),
+    email varchar(100) NOT NULL
 );
 CREATE TABLE Rating
 (
