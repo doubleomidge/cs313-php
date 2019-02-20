@@ -47,7 +47,7 @@
 
             <div class="mb-3">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="you@example.com" required>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
             </div>
 
             <div class="mb-3">
