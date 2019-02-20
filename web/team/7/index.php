@@ -30,7 +30,7 @@ switch ($action) {
                 exit;
             }
 
-            $safepass = password_hash($verify, PASSWORD_DEFAULT);
+            $safepass = password_hash($password, PASSWORD_DEFAULT);
             $added = addUser($username, $safepass);
             include 'login.php';
         }
