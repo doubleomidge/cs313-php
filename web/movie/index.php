@@ -136,6 +136,7 @@ switch ($action) {
         //     exit;
         // }
 
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
         $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
@@ -158,7 +159,7 @@ switch ($action) {
             }
 
             $safepass = password_hash($password, PASSWORD_DEFAULT);
-            $added = addUser($firstname, $lastname, $email, $safepass);
+            $added = addUser($username, $firstname, $lastname, $email, $safepass);
             include 'login.php';
         }
 

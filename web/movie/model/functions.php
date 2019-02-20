@@ -138,10 +138,11 @@ function newUser($firstname, $lastname, $username, $password) {
     return $regOutcome;
 };
 
-function addUser($firstname, $lastname, $email, $safepass) {
+function addUser($username, $firstname, $lastname, $email, $safepass) {
     $db = dbConnect();
-    $sql = 'INSERT INTO Users VALUES(DEFAULT, "user", :first, :last, :email, :pass)';
+    $sql = 'INSERT INTO Users VALUES(DEFAULT, :user, :first, :last, :email, :pass)';
     $stmt = $db->prepare($sql);
+    $stmt->bindValue(':user', $username, PDO::PARAM_STR);
     $stmt->bindValue(':first', $firstname, PDO::PARAM_STR);
     $stmt->bindValue(':last', $lastname, PDO::PARAM_STR);
     $stmt->bindValue(':email', $email, PDO::PARAM_STR);
