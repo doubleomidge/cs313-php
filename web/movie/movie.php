@@ -79,16 +79,17 @@ $moviejoin = 'SELECT * FROM Movies m
                     // echo '<td><a onclick="$(\'#myModal\').modal(\'show\')" class="cursor-link" title="Click to delete">Delete</a></td>';
                     echo '</tr>';
             }
+            echo '</tbody>';
+            echo '</table>';
         } else { ?>
             </tbody>
-            
+            </table>
+
             <div class="container-fluid">
                 <p style="font-style: italic;">You could see all your movies here, if you
                     either <a href="signin.php">login</a> or <a href="register.php">signup</a>.</p>
             </div>
         <?php } ?>
-            </tbody>
-        </table>
 
     </div>
 
