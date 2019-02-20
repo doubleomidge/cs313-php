@@ -34,12 +34,6 @@ switch ($action) {
             $added = addUser($username, $safepass);
             include 'login.php';
         }
-        
-        //$safepass = password_hash($password, PASSWORD_DEFAULT);
-
-        //$added = addUser($username, $safepass);
-
-        //include 'login.php';
 
         break;
 
