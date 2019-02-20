@@ -64,5 +64,5 @@ switch ($action) {
         break;
 
     default:
-        include 'signin.php';
+        include 'welcome.php';
 }
