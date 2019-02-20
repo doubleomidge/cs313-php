@@ -241,13 +241,13 @@ switch ($action) {
             $star = "<span style='color: red;'>*</span>";
             include '../view/signup.php';
         } else {
-            $verify = checkPassword($password);
+            // $verify = checkPassword($password);
             
-            if (empty($verify)) {
-                $passMessage = '<p style="color: red; text-align: center;">Please provide a valid password.</p>';
-                include '../view/signup.php';
-                exit;
-            }
+            // if (empty($verify)) {
+            //     $passMessage = '<p style="color: red; text-align: center;">Please provide a valid password.</p>';
+            //     include '../view/signup.php';
+            //     exit;
+            // }
 
             $safepass = password_hash($password, PASSWORD_DEFAULT);
             $added = addUser($username, $firstname, $lastname, $email, $safepass);
