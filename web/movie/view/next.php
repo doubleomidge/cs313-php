@@ -1,6 +1,6 @@
 <?php
 
-require 'dbconnect.php';
+require '../model/dbconnect.php';
 
 $titles;
 
@@ -50,7 +50,7 @@ $moviejoin = 'SELECT * FROM Movies m
 </head>
 
 <body class="suggestion">
-    <?php include 'nav.php'; ?>
+    <?php include '../common/nav.php'; ?>
 
     <div class="container-fluid movie-hero">
         <div class="container search">
@@ -88,7 +88,7 @@ $moviejoin = 'SELECT * FROM Movies m
 
     </div>
 
-    <?php include 'footer.php'; ?>
+    <?php include '../common/footer.php'; ?>
 </body>
 
 </html>

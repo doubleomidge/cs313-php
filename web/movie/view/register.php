@@ -23,10 +23,10 @@
 </head>
 
 <body>
-    <?php include 'nav.php'; ?>
+    <?php include '../common/nav.php'; ?>
 
     <div class="container register card">
-        <form method="post" action="index.php?action=register">
+        <form method="post" action="../index.php?action=register">
             <h1 class="bump-center">Register</h1>
             <div class="row">
                 <div class="col-md-6 mb-3">
@@ -63,12 +63,12 @@
         </form>
         <div class="log-in-text bump-center">
             <p>Already have an account?
-                <a href="signin.php">Sign In</a>
+                <a href="../view/signin.php">Sign In</a>
             </p>
         </div>
     </div>
 
-    <?php include 'footer.php'; ?>
+    <?php include '../common/footer.php'; ?>
 </body>
 
 </html>

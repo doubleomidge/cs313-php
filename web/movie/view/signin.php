@@ -23,10 +23,10 @@
 </head>
 
 <body>
-    <?php include 'nav.php'; ?>
+    <?php include '../common/nav.php'; ?>
 
     <div class="container register card">
-        <form method="post" action="#">
+        <form method="post" action="../index.php?action=login">
             <h1 class="bump-center">Welcome Back</h1>
 
             <div class="mb-3">
@@ -44,7 +44,7 @@
 
     </div>
 
-    <?php include 'footer.php'; ?>
+    <?php include '../common/footer.php'; ?>
 </body>
 
 </html>

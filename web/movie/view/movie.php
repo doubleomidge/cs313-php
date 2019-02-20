@@ -1,6 +1,6 @@
 <?php
 
-require 'dbconnect.php';
+require '../model/dbconnect.php';
 
 $moviejoin = 'SELECT * FROM Movies m
                 JOIN Rating r ON m.movie_rating_id = r.rating_id
@@ -34,7 +34,7 @@ $moviejoin = 'SELECT * FROM Movies m
 </head>
 
 <body>
-    <?php include 'nav.php'; ?>
+    <?php include '../common/nav.php'; ?>
 
     <div class="jumbotron">
         <div class="list-intro">
@@ -107,7 +107,7 @@ $moviejoin = 'SELECT * FROM Movies m
   </div>
         </div>
 
-    <?php include 'footer.php'; ?>
+    <?php include '../common/footer.php'; ?>
 </body>
 
 </html>
