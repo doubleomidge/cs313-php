@@ -1,7 +1,7 @@
 <?php
 
-require_once ('../model/dbconnect.php');
-require_once ('../model/functions.php');
+require_once ('/model/dbconnect.php');
+require_once ('/model/functions.php');
 
 
 $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
@@ -54,7 +54,7 @@ switch ($action) {
             $formats = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
         
-        include '../view/changes.php';
+        include '/view/changes.php';
         exit;
         break;
 
@@ -63,7 +63,7 @@ switch ($action) {
 
         $delOutcome = deleteMovie($movieId);
 
-        include '../view/movies.php';
+        include '/view/movies.php';
         break;
 
     case 'add':
@@ -106,7 +106,7 @@ switch ($action) {
             $stmt->execute();
             $formats = $stmt->fetchAll(PDO::FETCH_ASSOC);
         } 
-        include '../view/add.php';
+        include '/view/add.php';
         break;
 
     case 'register':
@@ -123,16 +123,16 @@ switch ($action) {
                 $message = '<p class="container-fluid success">Thanks for registering ' . $firstname . '.</p>';
 
                 
-                include '../view/movie.php';
+                include '/view/movie.php';
                 exit;
             } else {
                 $message = '<p class="container-fluid notice">Sorry, ' . $firstname . ' was not registered successfully. Please try again, check all fields.</p>';
-                include '../view/register.php';
+                include '/view/register.php';
                 exit;
             }
         } else {
             $icon = '<span class="fail"></span>';
-            include '../view/register.php';
+            include '/view/register.php';
             exit;
         }
 
@@ -166,7 +166,7 @@ switch ($action) {
         // check to see if any requireds are empty
         if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
             $message = '<p class="notice">Please provide information for all empty form fields.</p>';
-            include '../view/add.php';
+            include '/view/add.php';
             exit;
         }
 
@@ -175,11 +175,11 @@ switch ($action) {
 
         if ($addOutcome === 1) {
             $message = '<p class="container-fluid success">Thanks for adding ' . $title . '.</p>';
-            include '../view/add.php';
+            include '/view/add.php';
             exit;
         } else {
             $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not added. Please try again, check all fields.</p>';
-            include '../view/add.php';
+            include '/view/add.php';
             exit;
         }
         break;
@@ -213,7 +213,7 @@ switch ($action) {
         // check to see if any requireds are empty
         if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
             $message = '<p class="notice">Please provide information for all empty form fields.</p>';
-            include '../view/changes.php';
+            include '/view/changes.php';
             exit;
         }
 
@@ -221,17 +221,17 @@ switch ($action) {
 
         if ($modOutcome === 1) {
             $message = '<p class="container-fluid success">' . $title . ' has been updated.</p>';
-            include '../view/changes.php';
+            include '/view/changes.php';
             exit;
         } else {
             $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not updated. Please try again, check all fields.</p>';
-            include '../view/changes.php';
+            include '/view/changes.php';
             exit;
         }
         break;
 
     default: 
-    include '../view/home.php';
+    include '/view/home.php';
 
 }
 
