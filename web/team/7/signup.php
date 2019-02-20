@@ -41,14 +41,12 @@
             </div>
 
             <div class="mb-3">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name="password" placeholder="Choose a password" required>
-                <?php if (isset($star)) { echo $star;} ?>
+                <?php if (isset($star)) { echo $star;} ?><label for="password">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Choose a password" required> 
             </div>
             <div class="mb-3">
-                <label for="password2">Re-enter Your Password</label>
+                <?php if (isset($star)) { echo $star; } ?><label for="password2">Re-enter Your Password</label>
                 <input type="password" class="form-control" name="password2" placeholder="Re-enter your password" required>
-                <?php if (isset($star)) { echo $star; } ?>
             </div>
 
             <br>

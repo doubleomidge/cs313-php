@@ -18,11 +18,18 @@ switch ($action) {
         $passcomp = strcmp($password, $password2);
 
         if ($passcomp != 0) {
-            $passMessage = "<p style='color: red; margin: 0 auto;'> Sorry, there was an error logging you in.</p>";
+            $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error logging you in.</p>";
             $star = "<span style='color: red;'>*</span>";
             include 'signup.php';
         } else {
             $verify = checkPassword($password);
+            
+            if (empty($verify)) {
+                $passMessage = '<p class="notice">Please provide a valid password.</p>';
+                include '../view/client-update.php';
+                exit;
+            }
+
             $safepass = password_hash($verify, PASSWORD_DEFAULT);
             $added = addUser($username, $safepass);
             include 'login.php';
