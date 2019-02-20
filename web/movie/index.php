@@ -276,8 +276,6 @@ switch ($action) {
         $userPass = getPassword($username);
     
         $compare = password_verify($password, $userPass['password']);
-        echo $compare;
-        exit;
 
         if ($compare) {
             $_SESSION['user'] = $userPass;
