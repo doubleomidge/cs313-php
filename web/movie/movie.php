@@ -68,17 +68,23 @@ $moviejoin = 'SELECT * FROM Movies m
 
         <?php
 
-        foreach($db->query($moviejoin) as $row) {
-                echo '<tr><td scope="row">' . $row['movie_title'] . '</td>';
-                echo '<td>' . $row['rating_type'] . '</td>';
-                echo '<td>' . $row['genre_name'] . '</td>';
-                echo '<td>' . $row['format_type'] . '</td>';
-                echo "<td><a href='/movie/index.php?action=modify&id=$row[movie_id]' title='Click to modify'>Modify</a></td>";
-                echo "<td><a href='/movie/index.php?action=delete&id=$row[movie_id]' title='Click to delete'>Delete</a></td>";
-                // echo '<td><a onclick="$(\'#myModal\').modal(\'show\')" class="cursor-link" title="Click to delete">Delete</a></td>';
-                echo '</tr>';
+        if ($_SESSION['user']) {
+            foreach($db->query($moviejoin) as $row) {
+                    echo '<tr><td scope="row">' . $row['movie_title'] . '</td>';
+                    echo '<td>' . $row['rating_type'] . '</td>';
+                    echo '<td>' . $row['genre_name'] . '</td>';
+                    echo '<td>' . $row['format_type'] . '</td>';
+                    echo "<td><a href='/movie/index.php?action=modify&id=$row[movie_id]' title='Click to modify'>Modify</a></td>";
+                    echo "<td><a href='/movie/index.php?action=delete&id=$row[movie_id]' title='Click to delete'>Delete</a></td>";
+                    // echo '<td><a onclick="$(\'#myModal\').modal(\'show\')" class="cursor-link" title="Click to delete">Delete</a></td>';
+                    echo '</tr>';
             }
-        ?>
+        } else { ?>
+            <div class="container-fluid">
+                <p style="font-style: italic;">You could see all your movies here, if you
+                    either <a href="signin.php">login</a> or <a href="register.php">signup</a>.</p>
+            </div>
+        <?php } ?>
             </tbody>
         </table>
 

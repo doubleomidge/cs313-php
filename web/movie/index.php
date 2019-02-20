@@ -289,6 +289,13 @@ switch ($action) {
 
         break;
 
+    case 'logout':
+        //end the session
+        session_destroy();
+
+        header('Location: home.php');
+        break;
+    
     default: 
     include '/home.php';
 
