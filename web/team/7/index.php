@@ -18,7 +18,7 @@ switch ($action) {
         $passcomp = strcmp($password, $password2);
 
         if ($passcomp != 0) {
-            $passMessage = "<p class='container-fluid success'> Sorry, there was an error logging you in.</p>";
+            $passMessage = "<p style='color: red; margin: 0 auto;'> Sorry, there was an error logging you in.</p>";
             $star = "<span style='color: red;'>*</span>";
             include 'signup.php';
         } else {
