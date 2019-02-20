@@ -22,6 +22,25 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
+<script>
+
+  function checkForm(form)
+  {
+    if(this.username.value == "") {
+      alert("Please enter your Username in the form");
+      this.name.focus();
+      return false;
+    }
+    if(this.password.value == this.password2.value) {
+      alert("Passwords do not match");
+      this.password2.focus();
+      return false;
+    }
+
+    return false;
+  }
+</script>
+
 <body>
     <?php include 'nav.php'; ?>
 
@@ -37,7 +56,9 @@
 
             <div class="mb-3">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" name="username" placeholder="Enter a username" required>
+                <input type="text" class="form-control" name="username" placeholder="Enter a username" 
+                onchange="this.value = this.value.replace(/^\s+|\s+$/g, ''); valid_name.checked = this.value;"
+                required>
             </div>
 
             <div class="mb-3">
@@ -46,7 +67,9 @@
             </div>
             <div class="mb-3">
                 <?php if (isset($star)) { echo $star; } ?><label for="password2">Re-enter Your Password</label>
-                <input type="password" class="form-control" name="password2" placeholder="Re-enter your password" required>
+                <input type="password" class="form-control" name="password2" placeholder="Re-enter your password" 
+                onchange="if(this.value != '') callAjax('checkEmail', this.value, this.id);"
+                required>
             </div>
 
             <br>
