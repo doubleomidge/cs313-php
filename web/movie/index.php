@@ -243,7 +243,6 @@ switch ($action) {
         } else {
             include '/view/login.php';
         }
-        
     
         break;
 
