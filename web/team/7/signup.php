@@ -39,6 +39,16 @@
 
     return false;
   }
+
+  function callAjax(method, value, target)
+  {
+    var params = {
+      "method" : method,
+      "value" : value,
+      "target" : target,
+    };
+    return (new AjaxRequestXML()).post("/scripts/ajax-validate.xml.php", params);
+  }
 </script>
 
 <body>
