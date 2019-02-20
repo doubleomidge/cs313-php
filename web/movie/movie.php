@@ -80,6 +80,8 @@ $moviejoin = 'SELECT * FROM Movies m
                     echo '</tr>';
             }
         } else { ?>
+            </tbody>
+            
             <div class="container-fluid">
                 <p style="font-style: italic;">You could see all your movies here, if you
                     either <a href="signin.php">login</a> or <a href="register.php">signup</a>.</p>
