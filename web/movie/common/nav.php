@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-expand-lg">
-        <a class="navbar-brand" href="home.php" class="headerfont">
+        <a class="navbar-brand" href="./view/home.php" class="headerfont">
             <span class="fas fa-film logo"></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
@@ -9,21 +9,21 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="home.php#about">About</a>
+                    <a class="nav-link" href="./view/home.php#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="movie.php">Movies</a>
+                    <a class="nav-link" href="./view/movie.php">Movies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="next.php">Watch next</a>
+                    <a class="nav-link" href="./view/next.php">Watch next</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item">
-                    <a class="nav-link" href="register.php">Sign up</a>
+                    <a class="nav-link" href="./view/register.php">Sign up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="signin.php">Log in</a>
+                    <a class="nav-link" href="./view/signin.php">Log in</a>
                 </li>
             </ul>
         </div>
