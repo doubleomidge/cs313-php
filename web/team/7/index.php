@@ -25,7 +25,7 @@ switch ($action) {
             $verify = checkPassword($password);
             
             if (empty($verify)) {
-                $passMessage = '<p class="notice">Please provide a valid password.</p>';
+                $passMessage = '<p style="color: red; text-align: center;">Please provide a valid password.</p>';
                 include 'signup.php';
                 exit;
             }
