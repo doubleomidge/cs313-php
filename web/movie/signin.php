@@ -25,6 +25,12 @@
 <body>
     <?php include './common/nav.php'; ?>
 
+    <?php
+        if (isset($message)) {
+            echo $message;
+        }
+    ?>
+
     <div class="container register card">
         <form method="post" action="index.php?action=login">
             <h1 class="bump-center">Welcome Back</h1>
