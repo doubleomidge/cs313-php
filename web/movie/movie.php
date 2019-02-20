@@ -42,6 +42,10 @@ $moviejoin = 'SELECT * FROM Movies m
             <p class="lead">This is all the movies that your family has added so far. It doesn't end here, you can add more movies, update
                 movies, or get a suggestion on what to watch next.
             </p>
+            <?php
+
+            if ($_SESSION['user']) { ?>
+
             <div class="row">
                 <div class="col-md-6">
                     <a href="index.php?action=add" class="btn btn-primary">Add more movies</a>
@@ -50,6 +54,9 @@ $moviejoin = 'SELECT * FROM Movies m
                     <a href="next.php" class="btn btn-primary">What to watch</a>
                 </div>
             </div>
+            
+            <?php } ?>
+
         </div>
     </div>
 
