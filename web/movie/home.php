@@ -35,7 +35,7 @@
     </div>
 
     <div class="container" id="about">
-        <div class="row match-height d-flex justify-content-between">
+        <div class="row d-flex justify-content-between">
             <div class="col-md-4">
                 <div class="card">
                     <span class="fas fa-user-alt"></span>
