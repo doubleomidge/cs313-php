@@ -141,6 +141,7 @@ switch ($action) {
         $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        $password2 = filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_STRING);
 
         $safepass = password_hash($password, PASSWORD_DEFAULT);
         $added = addUser($username, $firstname, $lastname, $email, $safepass);
