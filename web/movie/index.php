@@ -239,19 +239,19 @@ switch ($action) {
         if ($passcomp != 0) {
             $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error logging you in.</p>";
             $star = "<span style='color: red;'>*</span>";
-            include '/view/signup.php';
+            include '../view/signup.php';
         } else {
             $verify = checkPassword($password);
             
             if (empty($verify)) {
                 $passMessage = '<p style="color: red; text-align: center;">Please provide a valid password.</p>';
-                include '/view/signup.php';
+                include '../view/signup.php';
                 exit;
             }
 
             $safepass = password_hash($password, PASSWORD_DEFAULT);
             $added = addUser($username, $firstname, $lastname, $email, $safepass);
-            include '/view/login.php';
+            include '../view/login.php';
         }
         
         
