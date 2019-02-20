@@ -26,7 +26,7 @@ switch ($action) {
             
             if (empty($verify)) {
                 $passMessage = '<p class="notice">Please provide a valid password.</p>';
-                include '../view/client-update.php';
+                include 'signup.php';
                 exit;
             }
 
