@@ -73,7 +73,7 @@ function updateMovie($movieId, $title, $desc, $year, $movieb, $digitalb, $run, $
     $stmt->execute();
     $updateOutcome = $stmt->rowCount();
     return $updateOutcome;
-}
+};
 
 function ratingList($ratings){
   if(isset($_POST['inputRating'])) {
@@ -136,4 +136,35 @@ function newUser($firstname, $lastname, $username, $password) {
     $stmt->execute();
     $regOutcome = $stmt->rowCount();
     return $regOutcome;
-}
+};
+
+function addUser($firstname, $lastname, $email, $safepass) {
+    $db = dbConnect();
+    $sql = 'INSERT INTO Users VALUES(DEFAULT, "user", :first, :last, :email, :pass)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':first', $firstname, PDO::PARAM_STR);
+    $stmt->bindValue(':last', $lastname, PDO::PARAM_STR);
+    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+    $stmt->bindValue(':pass', $safepass, PDO::PARAM_STR);
+    $stmt->execute();
+    $add = $stmt->rowCount();
+    return $add;
+};
+
+function getPassword ($username) {
+    $db = dbConnect();
+    $sql = 'SELECT * FROM User WHERE username = :username';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+    $stmt->execute();
+    $pass = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $pass;
+};
+
+// Check the password for a minimum of 8 characters,
+// at least one 1 capital letter, at least 1 number and
+// at least 1 special character
+function checkPassword($clientPassword) {
+    $pattern = '/^(?=.*[[:digit:]])(?=.*[[:punct:]])[[:print:]]{8,}$/';
+    return preg_match($pattern, $clientPassword);
+};

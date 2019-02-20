@@ -110,30 +110,56 @@ switch ($action) {
         break;
 
     case 'register':
+        // $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
+        // $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
+        // $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+        // $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        // $password_confirm = filter_input(INPUT_POST, 'password_confirm', FILTER_SANITIZE_STRING);
+
+        // if ($password == $password_confirm) {
+        //     $userOutcome = newUser($firstname, $lastname, $username, $password);
+
+        //     if ($userOutcome === 1) {
+        //         $message = '<p class="container-fluid success">Thanks for registering ' . $firstname . '.</p>';
+
+                
+        //         include '/view/movie.php';
+        //         exit;
+        //     } else {
+        //         $message = '<p class="container-fluid notice">Sorry, ' . $firstname . ' was not registered successfully. Please try again, check all fields.</p>';
+        //         include '/view/register.php';
+        //         exit;
+        //     }
+        // } else {
+        //     $icon = '<span class="fail"></span>';
+        //     include '/view/register.php';
+        //     exit;
+        // }
+
         $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
         $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-        $password_confirm = filter_input(INPUT_POST, 'password_confirm', FILTER_SANITIZE_STRING);
+        $password2 = filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_STRING);
 
-        if ($password == $password_confirm) {
-            $userOutcome = newUser($firstname, $lastname, $username, $password);
+        $passcomp = strcmp($password, $password2);
 
-            if ($userOutcome === 1) {
-                $message = '<p class="container-fluid success">Thanks for registering ' . $firstname . '.</p>';
-
-                
-                include '/view/movie.php';
-                exit;
-            } else {
-                $message = '<p class="container-fluid notice">Sorry, ' . $firstname . ' was not registered successfully. Please try again, check all fields.</p>';
-                include '/view/register.php';
+        if ($passcomp != 0) {
+            $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error logging you in.</p>";
+            $star = "<span style='color: red;'>*</span>";
+            include 'signup.php';
+        } else {
+            $verify = checkPassword($password);
+            
+            if (empty($verify)) {
+                $passMessage = '<p style="color: red; text-align: center;">Please provide a valid password.</p>';
+                include 'signup.php';
                 exit;
             }
-        } else {
-            $icon = '<span class="fail"></span>';
-            include '/view/register.php';
-            exit;
+
+            $safepass = password_hash($password, PASSWORD_DEFAULT);
+            $added = addUser($firstname, $lastname, $email, $safepass);
+            include 'login.php';
         }
 
     
