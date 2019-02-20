@@ -1,6 +1,6 @@
 <?php
 
-require '/model/dbconnect.php';
+require '../model/dbconnect.php';
 
 ?>
 
@@ -29,7 +29,7 @@ require '/model/dbconnect.php';
 </head>
 
 <body class="add">
-    <?php include '/common/nav.php'; ?>
+    <?php include '../common/nav.php'; ?>
 
     <div class="jumbotron">
         <div class="list-intro">
@@ -137,7 +137,7 @@ require '/model/dbconnect.php';
         </form>
     </div>
 
-    <?php include '/common/footer.php'; ?>
+    <?php include '../common/footer.php'; ?>
 </body>
 
 <script>
