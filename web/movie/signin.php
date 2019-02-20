@@ -30,8 +30,8 @@
             <h1 class="bump-center">Welcome Back</h1>
 
             <div class="mb-3">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
             </div>
 
             <div class="mb-3">
