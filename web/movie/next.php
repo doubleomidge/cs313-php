@@ -1,6 +1,6 @@
 <?php
 
-require '../model/dbconnect.php';
+require 'dbconnect.php';
 
 $titles;
 
@@ -46,11 +46,11 @@ $moviejoin = 'SELECT * FROM Movies m
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- my compiled css -->
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body class="suggestion">
-    <?php include '../common/nav.php'; ?>
+    <?php include './common/nav.php'; ?>
 
     <div class="container-fluid movie-hero">
         <div class="container search">
@@ -88,7 +88,7 @@ $moviejoin = 'SELECT * FROM Movies m
 
     </div>
 
-    <?php include '../common/footer.php'; ?>
+    <?php include './common/footer.php'; ?>
 </body>
 
 </html>

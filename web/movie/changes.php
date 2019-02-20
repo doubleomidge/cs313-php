@@ -1,5 +1,5 @@
 <?php
-require '../model/dbconnect.php';
+require 'dbconnect.php';
 
 ?>
 
