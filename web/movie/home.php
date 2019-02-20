@@ -19,18 +19,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- my compiled css -->
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <?php include '../common/nav.php'; ?>
+    <?php include './common/nav.php'; ?>
 
     <div class="container-fluid hero">
         <div class="container hero-info">
             <h1>Movie-o-file</h1>
             <p>All your movies</p>
             <p>in one place</p>
-            <a href="../view/register.php" class="btn btn-light" role="button">Sign me up</a>
+            <a href="register.php" class="btn btn-light" role="button">Sign me up</a>
         </div>
     </div>
 
@@ -90,7 +90,7 @@
         </div>
     </div>
 
-    <?php include '../common/footer.php'; ?>
+    <?php include './common/footer.php'; ?>
 </body>
 
 </html>
