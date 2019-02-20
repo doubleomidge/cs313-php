@@ -32,7 +32,7 @@
         ?>
 
     <div class="container register card">
-        <form method="post" action="../index.php?action=register">
+        <form method="post" action="index.php?action=register">
             <h1 class="bump-center">Register</h1>
             <div class="row">
                 <div class="col-md-6 mb-3">

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Movieofile || Sign up</title>
+    <title>Movieofile || Log in</title>
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -26,7 +26,7 @@
     <?php include './common/nav.php'; ?>
 
     <div class="container register card">
-        <form method="post" action="../index.php?action=login">
+        <form method="post" action="index.php?action=login">
             <h1 class="bump-center">Welcome Back</h1>
 
             <div class="mb-3">
@@ -36,7 +36,7 @@
 
             <div class="mb-3">
                 <label for="password">Password</label>
-                <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
             </div>
 
             <button class="btn btn-primary btn-lg btn-block register-button" type="submit">Sign in</button>
