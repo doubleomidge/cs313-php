@@ -279,7 +279,7 @@ switch ($action) {
 
         if ($compare) {
             // $_SESSION['user'] = $userPass;
-            include 'home.php';
+            include '/movie/home.php';
         } else {
             $message = "Invalid credentials";
             header('Location: login.php');
