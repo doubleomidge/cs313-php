@@ -235,6 +235,10 @@ switch ($action) {
         $password2 = filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_STRING);
 
         $safepass = password_hash($password, PASSWORD_DEFAULT);
+
+        echo $safepass;
+        exit;
+        
         $added = addUser($username, $firstname, $lastname, $email, $safepass);
 
         if ($added == 0) {
