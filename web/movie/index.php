@@ -1,7 +1,7 @@
 <?php
 
-require_once ('../model/dbconnect.php');
-require_once ('../model/functions.php');
+require_once ('/movie/model/dbconnect.php');
+require_once ('/movie/model/functions.php');
 
 
 $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
