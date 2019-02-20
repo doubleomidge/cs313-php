@@ -231,7 +231,7 @@ switch ($action) {
         break;
 
     default: 
-    include 'home.php';
+    include '/view/home.php';
 
 }
 

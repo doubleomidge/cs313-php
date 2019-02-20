@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <?php include 'nav.php'; ?>
+    <?php include '/common/nav.php'; ?>
 
     <div class="container-fluid hero">
         <div class="container hero-info">
@@ -90,7 +90,7 @@
         </div>
     </div>
 
-    <?php include 'footer.php'; ?>
+    <?php include '/common/footer.php'; ?>
 </body>
 
 </html>
