@@ -19,12 +19,24 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item">
-                    <a class="nav-link" href="register.php">Sign up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="signin.php">Log in</a>
-                </li>
+               <?php
+                    if (isset($_SESSION['user']['user_firstname'])) {
+                        echo '<li class="nav-item">  <a href="/acme/accounts/index.php?action=admin">Welcome '. $_SESSION['user']['user_firstname'] . '</a>  </li>';
+                    } else {
+                    echo ''; 
+                    }
+                ?>
+
+                <?php
+                    if (isset($_SESSION['user'])) {
+                        echo '<a href="/acme/accounts/index.php?action=Logout">Log Out</a>';
+                    } else {
+                        echo '<li class="nav-item">  <a class="nav-link" href="register.php">Sign up</a>  </li>';
+                        echo '<li class="nav-item">  <a class="nav-link" href="signin.php">Log in</a>  </li>';
+                    }
+                ?>
             </ul>
         </div>
     </nav>
+
+    
