@@ -234,36 +234,36 @@ switch ($action) {
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         $password2 = filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_STRING);
 
-        // $passcomp = strcmp($password, $password2);
+        $passcomp = strcmp($password, $password2);
 
-        // if ($passcomp != 0) {
-        //     $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error logging you in.</p>";
-        //     $star = "<span style='color: red;'>*</span>";
-        //     include 'signup.php';
-        // } else {
-        //     // $verify = checkPassword($password);
-            
-        //     // if (empty($verify)) {
-        //     //     $passMessage = '<p style="color: red; text-align: center;">Please provide a valid password.</p>';
-        //     //     include 'signup.php';
-        //     //     exit;
-        //     // }
-
-        //     $safepass = password_hash($password, PASSWORD_DEFAULT);
-        //     $added = addUser($username, $firstname, $lastname, $email, $safepass);
-        //     include 'login.php';
-        // }
-        
-        
-        $safepass = password_hash($password, PASSWORD_DEFAULT);
-        $added = addUser($username, $firstname, $lastname, $email, $safepass);
-
-        if ($added == 0) {
-            $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error registering.</p>";
-            exit;
+        if ($passcomp != 0) {
+            $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error logging you in.</p>";
+            $star = "<span style='color: red;'>*</span>";
+            include 'register.php';
         } else {
-            include 'login.php';
+            // $verify = checkPassword($password);
+            
+            // if (empty($verify)) {
+            //     $passMessage = '<p style="color: red; text-align: center;">Please provide a valid password.</p>';
+            //     include 'register.php';
+            //     exit;
+            // }
+
+            $safepass = password_hash($password, PASSWORD_DEFAULT);
+            $added = addUser($username, $firstname, $lastname, $email, $safepass);
+            include 'signin.php';
         }
+        
+        
+        // $safepass = password_hash($password, PASSWORD_DEFAULT);
+        // $added = addUser($username, $firstname, $lastname, $email, $safepass);
+
+        // if ($added == 0) {
+        //     $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error registering.</p>";
+        //     exit;
+        // } else {
+        //     include 'signin.php';
+        // }
     
         break;
 
