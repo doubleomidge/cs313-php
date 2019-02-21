@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <nav class="navbar navbar-default navbar-expand-lg">
         <a class="navbar-brand" href="home.php" class="headerfont">
             <span class="fas fa-film logo"></span>
