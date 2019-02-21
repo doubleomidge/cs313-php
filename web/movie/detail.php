@@ -35,11 +35,10 @@ require 'dbconnect.php';
 
         <p> <?php echo $movieInfo['movie_year']; ?> </p>
         <p> <?php echo $movieInfo['movie_runtime']; ?> minutes</p>
-        <p> <?php echo $movieInfo['movie_rating']; ?> </p>
+        <p> <?php echo $movieInfo['rating_type']; ?> </p>
 
         <p> <?php echo $movieInfo['genre_name']; ?> </p>
 
-        <p> <?php echo $movieInfo['rating_name']; ?> </p>
         <p>Added by: <?php echo $movieInfo['user_firstname']; ?> </p>
         <p> <?php echo $movieInfo['format_type']; ?> </p>
 
