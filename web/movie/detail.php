@@ -1,11 +1,20 @@
 <?php
 require 'dbconnect.php';
-require 'functions.php';
 
 $movieId = $movieInfo['movie_id'];
 $genre = $movieInfo['genre_id'];
 
-$similarG = findSimilarGen($genre, $movieId);
+function findSimilarGen($genreId, $movieId) {
+    $db = dbConnect();
+    $sql = 'SELECT movie_id, movie_title FROM Movies
+            WHERE genre_id = :genre_id AND movie_id != :movie_id';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':movie_id', $movieId, PDO::PARAM_INT);
+    $stmt->bindValue(':genre_id', $genreId, PDO::PARAM_INT);
+    $stmt->execute();
+    $movieSimilarG = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $movieSimilarG;
+}
 
 ?>
 
@@ -50,11 +59,11 @@ $similarG = findSimilarGen($genre, $movieId);
 
         <ul>
             <?php
-            echo '<li>'. $similarG[0]['movie_title'] . '</li>';
-            echo '<li>'. $similarG[1]['movie_title'] . '</li>';
-            echo '<li>'. $similarG[2]['movie_title'] . '</li>';
-            echo '<li>'. $similarG[3]['movie_title'] . '</li>';
-            echo '<li>'. $similarG[4]['movie_title'] . '</li>';
+            echo '<li>'. $movieSmilarG[0]['movie_title'] . '</li>';
+            echo '<li>'. $movieSimilarG[1]['movie_title'] . '</li>';
+            echo '<li>'. $movieSimilarG[2]['movie_title'] . '</li>';
+            echo '<li>'. $movieSimilarG[3]['movie_title'] . '</li>';
+            echo '<li>'. $movieSimilarG[4]['movie_title'] . '</li>';
             ?>
         </ul>
     </div>
