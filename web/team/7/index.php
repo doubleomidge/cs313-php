@@ -16,6 +16,8 @@ switch ($action) {
         $password2 = filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_STRING);
 
         $passcomp = strcmp($password, $password2);
+        echo $passcomp;
+        exit;
 
         if ($passcomp != 0) {
             $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error logging you in.</p>";
