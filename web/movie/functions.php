@@ -154,7 +154,7 @@ function addUser($username, $firstname, $lastname, $email, $safepass) {
 
 function getPassword ($username) {
     $db = dbConnect();
-    $sql = 'SELECT * FROM Users WHERE username = :username';
+    $sql = 'SELECT user_password FROM Users WHERE username = :username';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':username', $username, PDO::PARAM_STR);
     $stmt->execute();
