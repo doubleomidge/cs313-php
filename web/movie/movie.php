@@ -75,7 +75,6 @@ $moviejoin = 'SELECT * FROM Movies m
 
         <?php
 
-        if ($_SESSION['user']) {
             foreach($db->query($moviejoin) as $row) {
                     echo "<tr><td scope='row'><a href='/movie/index.php?action=detail&id=$row[movie_id]'>" . $row['movie_title'] . "</a></td>";
                     echo '<td>' . $row['rating_type'] . '</td>';
@@ -88,15 +87,7 @@ $moviejoin = 'SELECT * FROM Movies m
             }
             echo '</tbody>';
             echo '</table>';
-        } else { ?>
-            </tbody>
-            </table>
-
-            <div class="container-fluid movie-blank">
-                <p style="font-style: italic;">You could see all your movies here, if you
-                    either <a href="signin.php">login</a> or <a href="register.php">signup</a>.</p>
-            </div>
-        <?php } ?>
+        ?>
 
     </div>
 
