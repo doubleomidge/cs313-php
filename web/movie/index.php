@@ -299,7 +299,8 @@ switch ($action) {
 
     case 'detail':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
-        $movieInfo = getAllMovieDetails($movieId);
+        $movieInfo = getAllMovieById($movieId);
+        $rating = getallMovie($movieId);
 
         include 'detail.php';
         break;
