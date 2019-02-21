@@ -38,7 +38,7 @@ $moviejoin = 'SELECT * FROM Movies m
 
     <div class="jumbotron">
         <div class="list-intro">
-            <h1 class="display-4">Your movies! lol</h1>
+            <h1 class="display-4">Your movies</h1>
             <p class="lead">This is all the movies that your family has added so far. It doesn't end here, you can add more movies, update
                 movies, or get a suggestion on what to watch next.
             </p>
