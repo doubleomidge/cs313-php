@@ -38,7 +38,7 @@ require 'dbconnect.php';
 
             <div class="fam" style="width: auto; margin-right: 30px; width: 800px;">
                 <h2>Join / Set up a family</h2>
-                <form action="" method="post">
+                <form method="post" action="index.php?action=family">
                     <div class="form-group">
                         <label for="family">Family name</label>
                         <input type="text" class="form-control" id="family" placeholder="Look for a family">
@@ -59,7 +59,7 @@ require 'dbconnect.php';
                     <li></li>
                 </ul>
 
-                <form action="index.php?action=formatadd" method="post">
+                <form method="post" action="index.php?action=format">
                     <div class="form-group">
                         <label for="newFormat">Name of new format</label>
                         <input type="text" class="form-control" id="newFormat" name="newFormat" placeholder="Enter desired name here">
