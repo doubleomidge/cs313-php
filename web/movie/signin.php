@@ -33,20 +33,20 @@
 
     <div class="container register card">
         <form method="post" action="index.php?action=login">
-            <h1 class="bump-center">Welcome Back !!
-            <?php if(isset($_SESSION['user'])) {
-                echo $_SESSION['user']['username'];
-            } ?>
-            </h1>
+            <h1 class="bump-center">Welcome Back</h1>
+
+             <?php if (isset($message)) {
+                 echo $message;
+             } ?>
 
             <div class="mb-3">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+                <input type="text" class="form-control" name="username" placeholder="Your username here" required>
             </div>
 
             <div class="mb-3">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
             </div>
 
             <button class="btn btn-primary btn-lg btn-block register-button" type="submit">Sign in</button>
