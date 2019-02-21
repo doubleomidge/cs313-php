@@ -44,11 +44,11 @@ require 'dbconnect.php';
 
         <ul>
             <?php
-            echo '<li>'. $similarG[0]['movie_title'] . '/li>';
-            echo '<li>'. $similarG[1]['movie_title'] . '/li>';
-            echo '<li>'. $similarG[2]['movie_title'] . '/li>';
-            echo '<li>'. $similarG[3]['movie_title'] . '/li>';
-            echo '<li>'. $similarG[4]['movie_title'] . '/li>';
+            echo '<li>'. $similarG[0]['movie_title'] . '</li>';
+            echo '<li>'. $similarG[1]['movie_title'] . '</li>';
+            echo '<li>'. $similarG[2]['movie_title'] . '</li>';
+            echo '<li>'. $similarG[3]['movie_title'] . '</li>';
+            echo '<li>'. $similarG[4]['movie_title'] . '</li>';
             ?>
         </ul>
     </div>
