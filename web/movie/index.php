@@ -236,17 +236,6 @@ switch ($action) {
 
             exit;
         }
-        
-        
-        // $safepass = password_hash($password, PASSWORD_DEFAULT);
-        // $added = addUser($username, $firstname, $lastname, $email, $safepass);
-
-        // if ($added == 0) {
-        //     $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error registering.</p>";
-        //     exit;
-        // } else {
-        //     include 'signin.php';
-        // }
     
         break;
 
@@ -257,10 +246,10 @@ switch ($action) {
         // $safepass = password_hash($password, PASSWORD_DEFAULT);
 
         $userPass = getPassword($username);
-        var_dump($userPass);
-        exit;
     
         $compare = password_verify($password, $userPass['password']);
+        echo $compare;
+        exit;
 
         if ($compare) {
             $_SESSION['user'] = $userPass;
