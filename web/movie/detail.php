@@ -2,19 +2,9 @@
 require 'dbconnect.php';
 
 $movieId = $movieInfo['movie_id'];
-$genre = $movieInfo['genre_id'];
+$genreId = $movieInfo['genre_id'];
 
-function findSimilarGen($genreId, $movieId) {
-    $db = dbConnect();
-    $sql = 'SELECT movie_id, movie_title FROM Movies
-            WHERE genre_id = :genre_id AND movie_id != :movie_id';
-    $stmt = $db->prepare($sql);
-    $stmt->bindValue(':movie_id', $movieId, PDO::PARAM_INT);
-    $stmt->bindValue(':genre_id', $genreId, PDO::PARAM_INT);
-    $stmt->execute();
-    $movieSimilarG = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $movieSimilarG;
-}
+$movieSimilarG = findSimilarGen($genreId, $movieId);
 
 ?>
 
