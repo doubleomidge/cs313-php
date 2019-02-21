@@ -228,6 +228,7 @@ switch ($action) {
         // }
 
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+        $username = htmlspecialchars($username);
         $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
         $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
@@ -291,9 +292,16 @@ switch ($action) {
 
     case 'logout':
         //end the session
-        session_destroy();
+        unset($_SESSION['username']);
 
         header('Location: home.php');
+        die();
+        break;
+
+    case 'detail':
+        $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+        $movieInfo = getMovieById($movieId);
+
         break;
     
     default: 
