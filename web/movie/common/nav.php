@@ -35,7 +35,7 @@ session_start();
 
                 <?php
                     if (isset($_SESSION['user'])) {
-                        echo '<a href="/acme/accounts/index.php?action=Logout">Log Out</a>';
+                        echo '<a href="/acme/accounts/index.php?action=logout">Log Out</a>';
                     } else {
                         echo '<li class="nav-item">  <a class="nav-link" href="register.php">Sign up</a>  </li>';
                         echo '<li class="nav-item">  <a class="nav-link" href="signin.php">Log in</a>  </li>';
