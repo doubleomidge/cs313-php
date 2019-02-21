@@ -56,15 +56,13 @@
             </div>
 
             <div class="mb-3">
-                 <?php if (isset($star)) { echo $star;} ?><label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                <?php if (isset($star)) { echo $star;} ?><label for="password">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Choose a password" required> 
             </div>
-
             <div class="mb-3">
-                 <?php if (isset($star)) { echo $star;} ?><label for="password-confirm">Confirm Password</label>
-                <input type="password" class="form-control" id="password-confirm" name="password_confirm" placeholder="Confirm Password" required>
+                <?php if (isset($star)) { echo $star; } ?><label for="password2">Re-enter Your Password</label>
+                <input type="password" class="form-control" name="password2" placeholder="Re-enter your password" required>
             </div>
-
             <button class="btn btn-primary btn-lg btn-block register-button" type="submit">Register Now</button>
         </form>
         <div class="log-in-text bump-center">
