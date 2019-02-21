@@ -215,15 +215,16 @@ function orderTitle() {
     return $movieInfo;
 }
 
-function findSimilarGen($movieId) {
+function findSimilarGen($genreId, $movieId) {
     $db = dbConnect();
     $sql = 'SELECT movie_id, movie_title FROM Movies m 
                 JOIN Genre g ON m.genre_id = g.genre_id
-            WHERE movie_id = :movie_id
+            WHERE genre_id = :genre_id AND movie_id != :movie_id
             ORDER BY random()
             LIMIT 5';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':movie_id', $movieId, PDO::PARAM_INT);
+    $stmt->bindValue(':genre_id', $genreId, PDO::PARAM_INT);
     $stmt->execute();
     $movieInfo = $stmt->fetch(PDO::FETCH_ASSOC);
     return $movieInfo;
