@@ -271,7 +271,7 @@ switch ($action) {
     case 'detail':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $movieInfo = getAllMovieDetails($movieId);
-        
+
         include 'detail.php';
         break;
 
@@ -305,8 +305,8 @@ switch ($action) {
                 include 'user.php';
             }
 
-        break; 
-        
+        break;
+
 
     
     default: 

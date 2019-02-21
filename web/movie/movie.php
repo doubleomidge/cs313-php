@@ -2,10 +2,19 @@
 
 require 'dbconnect.php';
 
-$moviejoin = 'SELECT * FROM Movies m
+if(!isset($_GET['action'])) {
+    $moviejoin = 'SELECT * FROM Movies m
                 JOIN Rating r ON m.movie_rating_id = r.rating_id
                 JOIN Genre g ON m.genre_id = g.genre_id
                 JOIN Format f on m.format_id = f.format_id';
+} else {
+    $column = $_GET['action'];
+
+    $moviejoin = "SELECT * FROM Movies m
+                JOIN Rating r ON m.movie_rating_id = r.rating_id
+                JOIN Genre g ON m.genre_id = g.genre_id
+                JOIN Format f on m.format_id = f.format_id'
+                ORDER BY $column";
 
 ?>
 
@@ -72,10 +81,10 @@ $moviejoin = 'SELECT * FROM Movies m
         <table class="table table-hover">
            <thead>
             <tr>
-                <th scrope="col">Movie Title</th>
-                <th scrope="col">Movie Rating</th>
-                <th scrope="col">Genre</th>
-                <th scrope="col">Movie Format</th>
+                <th scrope="col"><a href="movie.php?action=m.movie_title">Movie Title</a></th>
+                <th scrope="col"><a href="movie.php?action=r.rating_type">Movie Rating</a></th>
+                <th scrope="col"><a href="movie.php?action=g.genre_name">Genre</a></th>
+                <th scrope="col"><a href="movie.php?action=f.format_type">Movie Format</a></th>
                 <th colspan="2"></th>
             </tr>
            </thead>

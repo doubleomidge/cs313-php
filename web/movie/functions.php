@@ -205,3 +205,12 @@ function joinFamily($familyname, $userId) {
     $format = $stmt->rowCount();
     return $format;
 }
+
+function orderTitle() {
+    $db = dbConnect();
+    $sql = 'SELECT * FROM Movies m ORDER BY movie_title';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $movieInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $movieInfo;
+}
