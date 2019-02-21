@@ -271,9 +271,9 @@ switch ($action) {
     case 'detail':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $movieInfo = getAllMovieDetails($movieId);
-        $genre = $movieInfo['genre_id'];
+        // $genre = $movieInfo['genre_id'];
 
-        $similarG = findSimilarGen($genre, $movieId);
+        // $similarG = findSimilarGen($genre, $movieId);
 
         include 'detail.php';
         break;

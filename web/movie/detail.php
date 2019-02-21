@@ -1,5 +1,11 @@
 <?php
 require 'dbconnect.php';
+require 'functions.php';
+
+$movieId = $movieInfo['movie_id'];
+$genre = $movieInfo['genre_id'];
+
+$similarG = findSimilarGen($genre, $movieId);
 
 ?>
 
