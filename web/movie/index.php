@@ -272,6 +272,8 @@ switch ($action) {
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $movieInfo = getAllMovieDetails($movieId);
 
+        $similarG = findSimilarGen($movieId);
+
         include 'detail.php';
         break;
 

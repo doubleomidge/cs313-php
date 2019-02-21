@@ -42,6 +42,14 @@ require 'dbconnect.php';
         <p> <?php echo $movieInfo['rating_name']; ?> </p>
         <p>Added by: <?php echo $movieInfo['user_firstname']; ?> </p>
         <p> <?php echo $movieInfo['format_type']; ?> </p>
+
+        <ul>
+            <?php
+            foreach($db->query($similarG) as $row) {
+                echo "<li><a href='/movie/index.php?action=detail&id=$row[movie_id]'>" . $row['movie_title'] . "</a></li>";
+            }
+            ?>
+        </ul>
     </div>
     
     <?php include './common/footer.php'; ?>
