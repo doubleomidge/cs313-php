@@ -301,10 +301,12 @@ switch ($action) {
     case 'detail':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $movieInfo = getMovieById($movieId);
-       var_dump($movieInfo);
 
-        header('Location: detail.php');
-        die();
+        var_dump($movieInfo);
+
+        // header('Location: detail.php');
+        // die();
+        include 'detail.php';
         break;
     
     default: 
