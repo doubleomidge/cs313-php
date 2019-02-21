@@ -273,10 +273,6 @@ switch ($action) {
         $movieInfo = getAllMovieDetails($movieId);
         $genre = $movieInfo['genre_id'];
 
-        echo "Movie $movieId Genre $genre";
-        exit;
-
-
         $similarG = findSimilarGen($genre, $movieId);
 
         include 'detail.php';
