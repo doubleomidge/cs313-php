@@ -24,6 +24,9 @@ h1, h2, h3, h4, .headerfont {
   .navbar .logo {
     transform: rotate(90deg); }
 
+.nav-bump {
+  margin-right: 20px; }
+
 .emp-text {
   color: #301847;
   font-weight: 600; }

@@ -27,7 +27,7 @@ session_start();
             <ul class="nav navbar-nav navbar-right">
                <?php
                     if (isset($_SESSION['user']['user_firstname'])) {
-                        echo '<li class="nav-item">  <a href="index.php?action=account">Welcome '. $_SESSION['user']['user_firstname'] . '</a>  </li>';
+                        echo '<li class="nav-item nav-bump">  <a href="index.php?action=account">Welcome '. $_SESSION['user']['user_firstname'] . '</a>  </li>';
                     } else {
                     echo ''; 
                     }
