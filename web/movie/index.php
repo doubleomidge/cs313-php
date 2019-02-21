@@ -253,10 +253,10 @@ switch ($action) {
 
         if ($compare) {
             $_SESSION['user'] = $userPass;
-            $message = '<p style="color: red; text-align: center;">Login successful' . $SESSION['user'] . '.</p>';
+            $message = '<p class="success">Login successful' . $SESSION['user'] . '.</p>';
             include 'home.php';
         } else {
-            $message = "Invalid credentials";
+            $message = '<p style="color: red; text-align: center;">Invalid credentials</p>';
             include 'signin.php';
         }
 
