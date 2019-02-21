@@ -301,6 +301,7 @@ switch ($action) {
     case 'detail':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $movieInfo = getMovieById($movieId);
+        print_r($movieInfo);
 
         header('Location: detail.php');
         die();
