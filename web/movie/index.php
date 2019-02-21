@@ -209,7 +209,7 @@ switch ($action) {
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         $password2 = filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_STRING);
 
-        $passcomp = strcmp($password, $password2);
+        $passcomp = strcmp('$password', '$password2');
 
         echo $passcomp;
         exit;
