@@ -28,6 +28,8 @@ require 'dbconnect.php';
 </head>
 
 <body>
+    <?php include './common/nav.php'; ?>
+
     <div class="container detail">
         <h1> <?php echo $movieInfo['movie_title']; ?> </h1>
 
@@ -42,6 +44,8 @@ require 'dbconnect.php';
         <p>Added by: [user]</p>
         <p>Format</p>
     </div>
+    
+    <?php include './common/footer.php'; ?>
 </body>
 
 </html>
