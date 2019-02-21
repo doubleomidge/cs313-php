@@ -278,6 +278,7 @@ switch ($action) {
 
     case 'formatadd':
         $customFormat = filter_input(INPUT_GET, 'newFormat', FILTER_SANITIZE_STRING);
+        echo $customFormat;
 
         $format = addCustomFormat($customFormat);
 
