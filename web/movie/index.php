@@ -273,7 +273,7 @@ switch ($action) {
         $movieInfo = getAllMovieDetails($movieId);
 
         $similarG = findSimilarGen($movieId);
-        echo $similarG;
+        var_dump($similarG);
 
         include 'detail.php';
         break;

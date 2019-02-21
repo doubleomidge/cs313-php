@@ -217,7 +217,7 @@ function orderTitle() {
 
 function findSimilarGen($movieId) {
     $db = dbConnect();
-    $sql = 'SELECT movie_title FROM Movies m 
+    $sql = 'SELECT movie_id, movie_title FROM Movies m 
                 JOIN Genre g ON m.genre_id = g.genre_id
             WHERE movie_id = :movie_id
             ORDER BY random()
