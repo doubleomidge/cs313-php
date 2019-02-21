@@ -47,7 +47,7 @@ require 'dbconnect.php';
             var_dump($similarG);
             
             foreach($similarG as $row) {
-                echo '<li><a href="/movie/index.php?action=detail&id=' . $row['movie_id'] . ' "> ' . $row['movie_title'] . '</a></li>';
+                echo '<li>'. $row['movie_title'] . '/li>';
             }
             ?>
         </ul>
