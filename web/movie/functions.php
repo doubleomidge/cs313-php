@@ -219,7 +219,7 @@ function findSimilarGen($genreId, $movieId) {
     $db = dbConnect();
     $sql = 'SELECT movie_id, movie_title FROM Movies m 
                 JOIN Genre g ON m.genre_id = g.genre_id
-            WHERE genre_id = :genre_id AND movie_id != :movie_id
+            WHERE g.genre_id = :genre_id AND m.movie_id != :movie_id
             ORDER BY random()
             LIMIT 5';
     $stmt = $db->prepare($sql);
