@@ -209,15 +209,14 @@ switch ($action) {
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         $password2 = filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_STRING);
 
-        $passcomp = Strcmp($password, $password2);
-
+        $passcomp = strcmp($password, $password2);
         echo $passcomp;
         exit;
 
-        if ($passcomp !== 0) {
-            $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error registering you. with the passwords</p>";
+        if ($passcomp != 0) {
+            $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error logging you in.</p>";
             $star = "<span style='color: red;'>*</span>";
-            include 'register.php';
+            include 'signup.php';
         } else {
             // $verify = checkPassword($password);
             
