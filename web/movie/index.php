@@ -3,6 +3,8 @@
 require_once ('dbconnect.php');
 require_once ('functions.php');
 
+// Create or access a Session
+session_start();
 
 $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
 if ($action == NULL) {
