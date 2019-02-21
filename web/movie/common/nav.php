@@ -27,7 +27,7 @@ session_start();
             <ul class="nav navbar-nav navbar-right">
                <?php
                     if (isset($_SESSION['user']['user_firstname'])) {
-                        echo '<li class="nav-item">  <a href="/acme/accounts/index.php?action=admin">Welcome '. $_SESSION['user']['user_firstname'] . '</a>  </li>';
+                        echo '<li class="nav-item">  <a href="index.php?action=account">Welcome '. $_SESSION['user']['user_firstname'] . '</a>  </li>';
                     } else {
                     echo ''; 
                     }
@@ -35,7 +35,7 @@ session_start();
 
                 <?php
                     if (isset($_SESSION['user'])) {
-                        echo '<a href="/acme/accounts/index.php?action=logout">Log Out</a>';
+                        echo '<a href="index.php?action=logout">Log Out</a>';
                     } else {
                         echo '<li class="nav-item">  <a class="nav-link" href="register.php">Sign up</a>  </li>';
                         echo '<li class="nav-item">  <a class="nav-link" href="signin.php">Log in</a>  </li>';
