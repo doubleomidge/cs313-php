@@ -218,9 +218,7 @@ function orderTitle() {
 function findSimilarGen($genreId, $movieId) {
     $db = dbConnect();
     $sql = 'SELECT movie_id, movie_title FROM Movies
-            WHERE genre_id = :genre_id AND movie_id != :movie_id
-            ORDER BY random()
-            LIMIT 5';
+            WHERE genre_id = :genre_id AND movie_id != :movie_id';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':movie_id', $movieId, PDO::PARAM_INT);
     $stmt->bindValue(':genre_id', $genreId, PDO::PARAM_INT);
