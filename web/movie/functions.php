@@ -180,6 +180,15 @@ function getAllMovieDetails($movieId){
     $stmt->bindValue(':movie_id', $movieId, PDO::PARAM_INT);
     $stmt->execute();
     $movieInfo = $stmt->fetch(PDO::FETCH_ASSOC);
-    // $stmt->closeCursor();
     return $movieInfo;
 };
+
+function addCustomFormat($customFormat) {
+    $db = dbConnect();
+    $sql = 'INSERT INTO Format VALUES (DEFAULT, :type)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':type', $customFormat, PDO::PARAM_INT);
+    $stmt->execute();
+    $format = $stmt->rowCount();
+    return $format;
+}

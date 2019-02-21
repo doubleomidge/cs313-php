@@ -59,7 +59,7 @@ require 'dbconnect.php';
                     <li></li>
                 </ul>
 
-                <form action="" method="post">
+                <form action="index.php?action=formatadd" method="post">
                     <div class="form-group">
                         <label for="newFormat">Name of new format</label>
                         <input type="text" class="form-control" id="newFormat" placeholder="Enter desired name here">
