@@ -44,6 +44,8 @@ require 'dbconnect.php';
 
         <ul>
             <?php
+            var_dump($similarG);
+            
             foreach($similarG as $row) {
                 echo "<li><a href='/movie/index.php?action=detail&id=$row[movie_id]'>" . $row['movie_title'] . "</a></li>";
             }
