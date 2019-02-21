@@ -295,17 +295,12 @@ switch ($action) {
         unset($_SESSION['username']);
 
         header('Location: home.php');
-        die();
         break;
 
     case 'detail':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
-        $movieInfo = getMovieById($movieId);
+        $movieInfo = getAllMovieDetails($movieId);
 
-        var_dump($movieInfo);
-
-        // header('Location: detail.php');
-        // die();
         include 'detail.php';
         break;
     

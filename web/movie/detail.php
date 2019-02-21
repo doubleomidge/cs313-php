@@ -34,7 +34,7 @@ require 'dbconnect.php';
         <h1> <?php echo $movieInfo['movie_title']; ?> </h1>
 
         <p> <?php echo $movieInfo['movie_year']; ?> </p>
-        <p> <?php echo $movieInfo['movie_runtime']; ?> </p>
+        <p> <?php echo $movieInfo['movie_runtime']; ?> minutes</p>
         <p> <?php echo $movieInfo['movie_rating']; ?> </p>
         <p>Movie rating</p>
 

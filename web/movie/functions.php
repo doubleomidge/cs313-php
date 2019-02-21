@@ -169,3 +169,17 @@ function checkPassword($clientPassword) {
     $pattern = '/^(?=.*[[:digit:]])(?=.*[[:punct:]])[[:print:]]{8,}$/';
     return preg_match($pattern, $clientPassword);
 };
+
+function getAllMovieDetails($movieId){
+    $db = dbConnect();
+    $sql = 'SELECT * FROM Movies m WHERE movie_id = :movie_id
+                JOIN Genre g ON m.genre_id = g.genre_id
+                JOIN Rating r ON m.movie_rating_id = r.movie_rating_id
+                JOIN Format f ON m.format_id = f.format_id';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':movie_id', $movieId, PDO::PARAM_INT);
+    $stmt->execute();
+    $movieInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+    // $stmt->closeCursor();
+    return $movieInfo;
+};
