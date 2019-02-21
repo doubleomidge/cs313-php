@@ -276,6 +276,7 @@ switch ($action) {
 
         $userPass = getPassword($username);
         var_dump($userPass);
+        exit;
     
         $compare = password_verify($password, $userPass['password']);
 
@@ -285,7 +286,7 @@ switch ($action) {
             include 'home.php';
         } else {
             $message = "Invalid credentials";
-            header('Location: signin.php');
+            include 'signin.php';
         }
 
         break;
