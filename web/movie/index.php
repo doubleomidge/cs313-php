@@ -201,34 +201,8 @@ switch ($action) {
         break;
 
     case 'register':
-        // $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
-        // $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
-        // $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-        // $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-        // $password_confirm = filter_input(INPUT_POST, 'password_confirm', FILTER_SANITIZE_STRING);
-
-        // if ($password == $password_confirm) {
-        //     $userOutcome = newUser($firstname, $lastname, $username, $password);
-
-        //     if ($userOutcome === 1) {
-        //         $message = '<p class="container-fluid success">Thanks for registering ' . $firstname . '.</p>';
-
-                
-        //         include 'movie.php';
-        //         exit;
-        //     } else {
-        //         $message = '<p class="container-fluid notice">Sorry, ' . $firstname . ' was not registered successfully. Please try again, check all fields.</p>';
-        //         include 'register.php';
-        //         exit;
-        //     }
-        // } else {
-        //     $icon = '<span class="fail"></span>';
-        //     include 'register.php';
-        //     exit;
-        // }
-
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-        $username = htmlspecialchars($username);
+        // $username = htmlspecialchars($username);
         $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
         $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
