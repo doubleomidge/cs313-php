@@ -223,6 +223,6 @@ function findSimilarGen($genreId, $movieId) {
     $stmt->bindValue(':movie_id', $movieId, PDO::PARAM_INT);
     $stmt->bindValue(':genre_id', $genreId, PDO::PARAM_INT);
     $stmt->execute();
-    $movieInfo = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $movieInfo;
+    $gen = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $gen;
 }
