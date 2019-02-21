@@ -211,6 +211,9 @@ switch ($action) {
 
         $passcomp = strcmp($password, $password2);
 
+        echo $passcomp;
+        exit;
+
         if ($passcomp != 0) {
             $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error registering you. with the passwords</p>";
             $star = "<span style='color: red;'>*</span>";
