@@ -15,8 +15,8 @@ if(!isset($_GET['action'])) {
                 JOIN Genre g ON m.genre_id = g.genre_id
                 JOIN Format f on m.format_id = f.format_id
                 ORDER BY $column ASC";
-    echo $moviejoin;
-    exit;
+    // echo $moviejoin;
+    // exit;
 }
 
 ?>
