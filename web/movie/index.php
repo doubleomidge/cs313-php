@@ -296,7 +296,7 @@ switch ($action) {
     case 'family':
         $familyname = filter_input(INPUT_GET, 'newFormat', FILTER_SANITIZE_STRING);
 
-        $format = addCustomFormat($customFormat);
+        $format = joinFamily($familyname);
 
         if ($format == 0) {
                 $message = "<p class='notice'> Sorry, there was an error finding that family.</p>";

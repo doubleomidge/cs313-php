@@ -40,8 +40,8 @@ require 'dbconnect.php';
                 <h2>Join / Set up a family</h2>
                 <form method="post" action="index.php?action=family">
                     <div class="form-group">
-                        <label for="family">Family name</label>
-                        <input type="text" class="form-control" id="family" placeholder="Look for a family">
+                        <label for="family">Search families</label>
+                        <input type="text" class="form-control" id="family" name="family" placeholder="Look for a family" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary mb-2">Request to Join</button>
@@ -67,6 +67,14 @@ require 'dbconnect.php';
 
                     <button type="submit" class="btn btn-primary mb-2">Add Format</button>
                 </form>
+            </div>
+
+            <div class="update">
+                <a href="index.php?action=updateUser" class="btn btn-outline-success">Update Account Info</a>
+            </div>
+
+            <div class="delete">
+                <a href="index.php?action=deleteUser" class="btn btn-outline-danger">Delete Account</a>
             </div>
         </div>
     </div>

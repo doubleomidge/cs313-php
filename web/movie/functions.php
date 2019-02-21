@@ -192,3 +192,15 @@ function addCustomFormat($customFormat) {
     $format = $stmt->rowCount();
     return $format;
 }
+
+function joinFamily($familyname, $userId) {
+    $db = dbConnect();
+    $sql = 'UPDATE Users WHERE user_id = :userId
+                SET family_id = :family';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
+    $stmt->bindValue(':family', $familyname, PDO::PARAM_STR);
+    $stmt->execute();
+    $format = $stmt->rowCount();
+    return $format;
+}
