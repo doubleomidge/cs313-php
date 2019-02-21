@@ -49,11 +49,8 @@ $movieSimilarG = findSimilarGen($genreId, $movieId);
 
         <ul>
             <?php
-            echo '<li>'. $movieSmilarG[0]['movie_title'] . '</li>';
-            echo '<li>'. $movieSimilarG[1]['movie_title'] . '</li>';
-            echo '<li>'. $movieSimilarG[2]['movie_title'] . '</li>';
-            echo '<li>'. $movieSimilarG[3]['movie_title'] . '</li>';
-            echo '<li>'. $movieSimilarG[4]['movie_title'] . '</li>';
+            var_dump($movieSimilarG);
+            echo '<li>'. $movieSmilarG . '</li>';
             ?>
         </ul>
     </div>
