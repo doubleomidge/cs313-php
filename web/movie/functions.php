@@ -175,7 +175,8 @@ function getAllMovieDetails($movieId){
     $sql = 'SELECT * FROM Movies m WHERE movie_id = :movie_id
                 JOIN Genre g ON m.genre_id = g.genre_id
                 JOIN Rating r ON m.movie_rating_id = r.movie_rating_id
-                JOIN Format f ON m.format_id = f.format_id';
+                JOIN Format f ON m.format_id = f.format_id
+            WHERE movie_id = :movie_id';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':movie_id', $movieId, PDO::PARAM_INT);
     $stmt->execute();
