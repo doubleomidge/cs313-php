@@ -212,7 +212,7 @@ switch ($action) {
         $passcomp = strcmp($password, $password2);
 
         if ($passcomp != 0) {
-            $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error logging you in.</p>";
+            $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error registering you. with the passwords</p>";
             $star = "<span style='color: red;'>*</span>";
             include 'register.php';
         } else {
@@ -226,7 +226,15 @@ switch ($action) {
 
             $safepass = password_hash($password, PASSWORD_DEFAULT);
             $added = addUser($username, $firstname, $lastname, $email, $safepass);
-            include 'signin.php';
+
+            if ($added == 0) {
+                $passMessage = "<p style='color: red; text-align: center;'> Sorry, there was an error adding.</p>";
+                exit;
+            } else {
+                include 'signin.php';
+            }
+
+            exit;
         }
         
         
