@@ -187,7 +187,7 @@ function addCustomFormat($customFormat) {
     $db = dbConnect();
     $sql = 'INSERT INTO Format VALUES (DEFAULT, :type)';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':type', $customFormat, PDO::PARAM_INT);
+    $stmt->bindValue(':type', $customFormat, PDO::PARAM_STR);
     $stmt->execute();
     $format = $stmt->rowCount();
     return $format;
