@@ -112,8 +112,10 @@ function addGenres($movieId, $genre) {
     foreach($genre as $row) {
         $sql = 'INSERT INTO Genre_Movie VALUES(DEFAULT, :genre, :movie)';
         $stmt = $db->prepare($sql);
-        $stmt->bindValue(':movie', $movie, PDO::PARAM_INT);
+        $stmt->bindValue(':movie', (int)$movie, PDO::PARAM_INT);
         $stmt->bindValue(':genre', (int)$row, PDO::PARAM_INT);
+        echo $movie;
+        echo $row;
         $stmt->execute();
     }
     $genOutcome = $stmt->rowCount();
