@@ -9,7 +9,7 @@ if(!isset($_GET['action'])) {
                 JOIN Genre_movie gm ON m.movie_id = gm.movie_id
                 JOIN Genre g ON gm.genre_id = g.genre_id
                 JOIN Format f on m.format_id = f.format_id
-                GROUP BY movie_title";
+                GROUP BY m.movie_title";
 } else {
     $column = $_GET['action'];
 
@@ -20,7 +20,7 @@ if(!isset($_GET['action'])) {
                 JOIN Genre g ON gm.genre_id = g.genre_id
                 JOIN Format f on m.format_id = f.format_id
                 ORDER BY $column ASC
-                GROUP BY m.movie_id, m.movie_title, r.rating_type, f.format_type";
+                GROUP BY m.movie_title";
     // echo $moviejoin;
     // exit;
 }
