@@ -119,14 +119,6 @@ switch ($action) {
         $year = filter_input(INPUT_POST, 'movie_year', FILTER_SANITIZE_NUMBER_INT);
         $run = filter_input(INPUT_POST, 'movie_run', FILTER_SANITIZE_NUMBER_INT);
         $genres = $_POST['genre_list'];
-            var_dump($genres);
-
-            // // check if the box is checked and change it to something the database can interpret
-            // if($genres == 'on'){
-            //     $genres = TRUE;
-            // } else {
-            //     $genres = FALSE;
-            // }
         $rate = filter_input(INPUT_POST, 'movie_rate', FILTER_SANITIZE_STRING);
         $type = filter_input(INPUT_POST, 'movie_type', FILTER_SANITIZE_STRING);
 

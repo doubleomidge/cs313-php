@@ -72,6 +72,7 @@ require 'dbconnect.php';
                 </div>
             </div>
 
+
             <div class="d-flex justify-space-around">
                 <?php
                     foreach($db->query('SELECT * FROM Genre g') as $row) {

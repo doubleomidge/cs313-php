@@ -110,10 +110,10 @@ function addMovie($title, $desc, $year, $run, $rate, $type){
 function addGenres($movieId, $genre) {
     $db = dbConnect();
     foreach($genre as $row) {
-        $sql = 'INSERT INTO Genre_Movie VALUES(DEFAULT, :movie, :genre)';
+        $sql = 'INSERT INTO Genre_Movie VALUES(DEFAULT, :genre, :movie)';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':movie', $movie, PDO::PARAM_INT);
-        $stmt->bindValue(':genre', $row, PDO::PARAM_INT);
+        $stmt->bindValue(':genre', (int)$row, PDO::PARAM_INT);
         $stmt->execute();
     }
     $genOutcome = $stmt->rowCount();
