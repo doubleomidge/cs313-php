@@ -98,7 +98,6 @@ function addMovie($title, $desc, $year, $run, $rate, $gen, $type) {
     $stmt->bindValue(':desc', $desc, PDO::PARAM_STR);
     $stmt->bindValue(':run', $run, PDO::PARAM_INT);
     $stmt->bindValue(':rate', $rate, PDO::PARAM_STR);
-    $stmt->bindValue(':gen', $gen, PDO::PARAM_STR);
     $stmt->bindValue(':type', $type, PDO::PARAM_STR);
     $stmt->execute();
     if(rowCount() == 0){
