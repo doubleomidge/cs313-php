@@ -136,7 +136,7 @@ switch ($action) {
         }
 
         // echo "Show me the money $title, $desc, $year, $run, $movieb, $digitalb, $rate, $gen, $type";
-        $addOutcome = addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);
+        $addOutcome = addMovie($title, $desc, $year, $run, $rate, $type);
 
         if ($addOutcome === 0) {
             $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not added. Please try again, check all fields.</p>';
