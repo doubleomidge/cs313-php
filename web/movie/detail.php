@@ -37,16 +37,18 @@ $movieSimilarG = findSimilarGen($genreId, $movieId);
 
     <div class="container detail">
         <h1> <?php echo $movieInfo['movie_title']; ?> </h1>
+        <p class="subhead"> <?php echo $movieInfo['movie_desc']; ?> </p>
 
         <p> <?php echo $movieInfo['movie_year']; ?> </p>
         <p> <?php echo $movieInfo['movie_runtime']; ?> minutes</p>
-        <p> <?php echo $movieInfo['rating_type']; ?> </p>
+        <p> Rated: <?php echo $movieInfo['rating_type']; ?> </p>
 
         <p> <?php echo $movieInfo['genre_name']; ?> </p>
 
         <p>Added by: <?php echo $movieInfo['user_firstname']; ?> </p>
         <p> <?php echo $movieInfo['format_type']; ?> </p>
 
+        <!-- trying to get similar movies list -->
         <ul>
             <?php
             var_dump($movieSimilarG);

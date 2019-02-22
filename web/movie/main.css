@@ -167,4 +167,13 @@ h1, h2, h3, h4, .headerfont {
 .fam {
   background-color: #e9ecef; }
 
+/* ----------------------------------------------------- */
+/* --------- Detail page ----------- */
+/* ----------------------------------------------------- */
+.detail {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .detail .subhead {
+    font-style: italic; }
+
 /*# sourceMappingURL=main.css.map */
