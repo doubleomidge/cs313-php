@@ -190,6 +190,7 @@ function checkPassword($clientPassword) {
 function getAllMovieDetails($movieId){
     $db = dbConnect();
     $sql = 'SELECT * FROM Movies m
+                JOIN Genre_Moive gm ON m.movie_id = gm.movie_id
                 JOIN Genre g ON m.genre_id = g.genre_id
                 JOIN Rating r ON m.movie_rating_id = r.rating_id
                 JOIN Format f ON m.format_id = f.format_id
