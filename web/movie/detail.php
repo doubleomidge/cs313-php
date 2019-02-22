@@ -43,7 +43,7 @@ $movieSimilarG = findSimilarGen($genreId, $movieId);
         <p> <?php echo $movieInfo['movie_runtime']; ?> minutes</p>
         <p> Rated: <?php echo $movieInfo['rating_type']; ?> </p>
 
-        <p> <?php echo $movieInfo['genre_name']; ?> </p>
+        <p> <?php //echo $movieInfo['genre_name']; ?> </p>
 
         <p>Added by: <?php echo $movieInfo['user_firstname']; ?> </p>
         <p> <?php echo $movieInfo['format_type']; ?> </p>
