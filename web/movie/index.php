@@ -118,25 +118,18 @@ switch ($action) {
         $desc = filter_input(INPUT_POST, 'movie_desc', FILTER_SANITIZE_STRING);
         $year = filter_input(INPUT_POST, 'movie_year', FILTER_SANITIZE_NUMBER_INT);
         $run = filter_input(INPUT_POST, 'movie_run', FILTER_SANITIZE_NUMBER_INT);
-        $movieb = $_POST['movie_bool'];
+        $genres = $_POST['genre_list'];
             // check if the box is checked and change it to something the database can interpret
-            if($movieb == 'on'){
-                $movieb = TRUE;
+            if($genres == 'on'){
+                $genres = TRUE;
             } else {
-                $movieb = FALSE;
-            }
-        $digitalb = $_POST['digital_bool'];
-            if($digitalb == 'on'){
-                $digitalb = TRUE;
-            } else {
-                $digitalb = FALSE;
+                $genres = FALSE;
             }
         $rate = filter_input(INPUT_POST, 'movie_rate', FILTER_SANITIZE_STRING);
-        $gen = filter_input(INPUT_POST, 'movie_gen', FILTER_SANITIZE_STRING);
         $type = filter_input(INPUT_POST, 'movie_type', FILTER_SANITIZE_STRING);
 
         // check to see if any requireds are empty
-        if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($gen) || empty($type)) {
+        if (empty($title) || empty($desc) || empty($year) || empty($run) || empty($rate) || empty($type)) {
             $message = '<p class="notice">Please provide information for all empty form fields.</p>';
             include 'add.php';
             exit;
@@ -145,12 +138,14 @@ switch ($action) {
         // echo "Show me the money $title, $desc, $year, $run, $movieb, $digitalb, $rate, $gen, $type";
         $addOutcome = addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type);
 
-        if ($addOutcome === 1) {
-            $message = '<p class="container-fluid success">Thanks for adding ' . $title . '.</p>';
+        if ($addOutcome === 0) {
+            $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not added. Please try again, check all fields.</p>';
             include 'add.php';
             exit;
         } else {
-            $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not added. Please try again, check all fields.</p>';
+            $gen = addGenres($addOutcome, $genres);
+
+            $message = '<p class="container-fluid success">Thanks for adding ' . $title . '.</p>';
             include 'add.php';
             exit;
         }
@@ -271,7 +266,7 @@ switch ($action) {
     case 'detail':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $movieInfo = getAllMovieDetails($movieId);
-        // $genre = $movieInfo['genre_id'];
+        
 
         // $similarG = findSimilarGen($genre, $movieId);
 

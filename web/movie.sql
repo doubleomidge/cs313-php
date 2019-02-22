@@ -47,10 +47,15 @@ CREATE TABLE Movies
     movie_yn BOOL NOT NULL,
     movie_runtime int            ,
     movie_rating_id int NOT NULL REFERENCES Rating(rating_id),
-    genre_id int NOT NULL REFERENCES Genre(genre_id),
     family_id int NOT NULL REFERENCES Family(family_id),
     user_id int NOT NULL REFERENCES Users(user_id),
     format_id int NOT NULL REFERENCES Format(format_id)
+);
+CREATE TABLE Genre_Movie
+(
+    genre_movie_id SERIAL PRIMARY KEY,
+    genre_id int REFERENCES Genre(genre_id),
+    movie_id int REFERENCES Movies(movie_id)
 );
 INSERT INTO Genre
 VALUES

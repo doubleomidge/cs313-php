@@ -73,15 +73,14 @@ require 'dbconnect.php';
             </div>
 
             <div class="d-flex justify-space-around">
-                <div class="form-check">
-                    <input type="checkbox" name="movie_bool" class="form-check-input" id="movieCheck">
-                    <label class="form-check-label" for="movieCheck">Is this a movie?</label>
-                </div>
-
-                <div class="form-check">
-                    <input type="checkbox" name="digital_bool" class="form-check-input" id="digital">
-                    <label class="form-check-label" for="digital">Is this a digital copy?</label>
-                </div>
+                <?php
+                    foreach($db->query('SELECT * FROM Genre g') as $row) {
+                        echo "<div class='form-check'>";
+                        echo '<input type="checkbox" name="genre_list[]" class="form-check-input" id="genreCheck" value=' . $row[genre_id] . '>';
+                        echo '<label class="form-check-label" for="genreCheck">'. $row[genre_name] .'</label>';
+                        echo "</div>";
+                    }
+                ?>
             </div>
 
             <!-- drop downs -->
@@ -100,19 +99,19 @@ require 'dbconnect.php';
                     </select>
                 </div>
 
-                <div class="form-group col-md-4">
+                <!-- <div class="form-group col-md-4">
                     <label for="inputGenre">Genre</label>
                     <select id="inputGenre" class="form-control" name="movie_gen">
                         <option selected>Choose...</option>
                         
                         <?php
-                        foreach($db->query('SELECT * FROM Genre g') as $row) {
-                            echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
-                        }
+                        // foreach($db->query('SELECT * FROM Genre g') as $row) {
+                        //     echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                        // }
                         ?>
                     
                     </select>
-                </div>
+                </div> -->
 
                 <div class="form-group col-md-4">
                     <label for="inputFormat">Format Type</label>

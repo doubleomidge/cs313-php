@@ -89,22 +89,36 @@ function ratingList($ratings){
         }
 };
 
-function addMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type) {
+function addMovie($title, $desc, $year, $run, $rate, $gen, $type) {
     $db = dbConnect();
-    $sql = 'INSERT INTO movies VALUES(DEFAULT, :title, :year, :desc, :digitalb, :movieb, :run, :rate, :gen, 1, 1, :type)';
+    $sql = 'INSERT INTO movies VALUES(DEFAULT, :title, :year, :desc, :run, :rate, 1, 1, :type)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':title', $title, PDO::PARAM_STR);
     $stmt->bindValue(':year', $year, PDO::PARAM_INT);
     $stmt->bindValue(':desc', $desc, PDO::PARAM_STR);
-    $stmt->bindValue(':digitalb', $digitalb, PDO::PARAM_BOOL);
-    $stmt->bindValue(':movieb', $movieb, PDO::PARAM_BOOL);
     $stmt->bindValue(':run', $run, PDO::PARAM_INT);
     $stmt->bindValue(':rate', $rate, PDO::PARAM_STR);
     $stmt->bindValue(':gen', $gen, PDO::PARAM_STR);
     $stmt->bindValue(':type', $type, PDO::PARAM_STR);
     $stmt->execute();
-    $addOutcome = $stmt->rowCount();
+    if(rowCount() == 0){
+        return 0;
+    }
+    $addOutcome = $stmt->lastInsertId();
     return $addOutcome;
+};
+
+function addGenres($movieId, $genre) {
+    $db = dbConnect();
+    foreach($genre as $row) {
+        $sql = 'INSERT INTO Genre_Movie VALUES(DEFAULT, :movie, :genre)';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':movie', $movie, PDO::PARAM_INT);
+        $stmt->bindValue(':genre', $row, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+    $genOutcome = $stmt->rowCount();
+    return $genOutcome;
 };
 
 function modMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $type) {
