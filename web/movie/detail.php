@@ -50,7 +50,7 @@ $movieSimilarG = findSimilarGen($genreId, $movieId);
         <ul>
             <?php
             var_dump($movieSimilarG);
-            echo '<li>'. $movieSmilarG['movie_title'] . '</li>';
+            echo '<li>'. $movie_title . '</li>';
             ?>
         </ul>
     </div>

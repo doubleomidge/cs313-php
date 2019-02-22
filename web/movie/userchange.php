@@ -44,11 +44,11 @@ require 'dbconnect.php';
             ?></h1>
         <form action="index.php?action=modifyData" method="post">
             <div class="form-group">
-                <label for="movie_title"> Movie Title</label>
-                <input type="text" class="form-control form-control-lg" id="movie_title" type="text"
+                <label for="username">User name</label>
+                <input type="text" class="form-control form-control-lg" id="username" type="text"
                     <?php
-                    if (isset($movieInfo['movie_title'])) {
-                        echo "value='$movieInfo[movie_title]'";
+                    if (isset($movieInfo['username'])) {
+                        echo "value='$movieInfo[username]'";
                     }
                     ?> name="movie_title" required>
             </div>

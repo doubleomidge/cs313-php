@@ -70,7 +70,7 @@ require 'dbconnect.php';
             </div>
 
             <div class="update">
-                <a href="index.php?action=updateUser" class="btn btn-outline-success">Update Account Info</a>
+                <a href="index.php?action=updateUser&id=$_SESSION['user'][]" class="btn btn-outline-success">Update Account Info</a>
             </div>
 
             <div class="delete">
