@@ -88,7 +88,7 @@ if(!isset($_GET['action'])) {
             <tr>
                 <th scrope="col"><a href="movie.php?action=m.movie_title">Movie Title</a></th>
                 <th scrope="col"><a href="movie.php?action=r.rating_type">Movie Rating</a></th>
-                <th scrope="col"><a href="movie.php?action=g.genre_name">Genre</a></th>
+                <th scrope="col">Genre</th>
                 <th scrope="col"><a href="movie.php?action=f.format_type">Movie Format</a></th>
                 <th colspan="2"></th>
             </tr>
