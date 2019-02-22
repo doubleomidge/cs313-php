@@ -191,7 +191,7 @@ function getAllMovieDetails($movieId){
     $db = dbConnect();
     $sql = 'SELECT * FROM Movies m
                 JOIN Genre_Movie gm ON m.movie_id = gm.movie_id
-                JOIN Genre g ON m.genre_id = g.genre_id
+                JOIN Genre g ON gm.genre_id = g.genre_id
                 JOIN Rating r ON m.movie_rating_id = r.rating_id
                 JOIN Format f ON m.format_id = f.format_id
                 JOIN Users u ON m.user_id = u.user_id
