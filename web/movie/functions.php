@@ -89,7 +89,7 @@ function ratingList($ratings){
         }
 };
 
-function addMovie($title, $desc, $year, $run, $rate, $gen, $type) {
+function addMovie($title, $desc, $year, $run, $rate, $type){
     $db = dbConnect();
     $sql = 'INSERT INTO movies VALUES(DEFAULT, :title, :year, :desc, :run, :rate, 1, 1, :type)';
     $stmt = $db->prepare($sql);
