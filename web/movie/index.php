@@ -137,6 +137,7 @@ switch ($action) {
             include 'add.php';
             exit;
         } else {
+            echo $addOutcome; exit;
             $gen = addGenres($addOutcome, $genres);
 
             $message = '<p class="container-fluid success">Thanks for adding ' . $title . '.</p>';

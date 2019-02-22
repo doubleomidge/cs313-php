@@ -114,8 +114,6 @@ function addGenres($movieId, $genre) {
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':movie', (int)$movie, PDO::PARAM_INT);
         $stmt->bindValue(':genre', (int)$row, PDO::PARAM_INT);
-        echo $movie;
-        echo $row;
         $stmt->execute();
     }
     $genOutcome = $stmt->rowCount();
