@@ -100,10 +100,10 @@ function addMovie($title, $desc, $year, $run, $rate, $type){
     $stmt->bindValue(':rate', $rate, PDO::PARAM_STR);
     $stmt->bindValue(':type', $type, PDO::PARAM_STR);
     $stmt->execute();
-    if(rowCount() == 0){
+    if($stmt->rowCount() == 0){
         return 0;
     }
-    $addOutcome = $stmt->lastInsertId();
+    $addOutcome = $db->lastInsertId();
     return $addOutcome;
 };
 
