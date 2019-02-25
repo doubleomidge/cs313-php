@@ -17,8 +17,6 @@ switch ($action) {
         $movieInfo = getMovieById($movieId);
 
         $genInfo = getGenres($movieId);
-        echo $genInfo;
-        exit;
 
         $ratings;
         $titles;
