@@ -81,7 +81,6 @@ require 'dbconnect.php';
                         <?php
                         if (isset($movieInfo['movie_runtime'])) {
                             echo "value='$movieInfo[movie_runtime]'";
-                            echo $movieInfo;
                         }
                         ?> required>
                 </div>

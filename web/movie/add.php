@@ -85,7 +85,7 @@ require 'dbconnect.php';
 
             <!-- drop downs -->
             <div class="row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="inputRating">Rating</label>
                     <select id="inputRating" class="form-control" name="movie_rate">
                         <option selected>Choose...</option>
@@ -113,7 +113,7 @@ require 'dbconnect.php';
                     </select>
                 </div> -->
 
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="inputFormat">Format Type</label>
                     <select id="inputRating" class="form-control" name="movie_type">
                         <option selected>Choose...</option>
