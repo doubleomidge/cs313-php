@@ -86,31 +86,19 @@ require 'dbconnect.php';
                 </div>
             </div>
 
-            <div class="d-flex justify-space-around">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="movieCheck" name="movie_bool"
-                        <?php
-                        if (isset($movieInfo['movie_yn'])) {
-                            echo checked;
-                        }
-                        ?> >
-                    <label class="form-check-label" for="movieCheck">Is this a movie?</label>
-                </div>
-
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="digital" name="digital_bool"
-                        <?php
-                        if (isset($movieInfo['movie_digital'])) {
-                            echo checked;
-                        }
-                        ?> >
-                    <label class="form-check-label" for="digital">Is this a digital copy?</label>
-                </div>
-            </div>
+            <p>Select from these Movie Genres (you can choose more than one)</p>
+            <?php
+                foreach($db->query('SELECT * FROM Genre g') as $row) {
+                    echo "<div class='form-check'>";
+                    echo '<input type="checkbox" name="genre_list[]" class="form-check-input" id="genreCheck" value=' . $row[genre_id] . '>';
+                    echo '<label class="form-check-label" for="genreCheck">'. $row[genre_name] .'</label>';
+                    echo "</div>";
+                }
+            ?>
 
             <!-- drop downs -->
             <div class="row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="inputRating">Rating</label>
                     <select id="inputRating" class="form-control" name="movie_rate">
                         <option>Choose...</option>
@@ -127,24 +115,24 @@ require 'dbconnect.php';
                     </select>
                 </div>
 
-                <div class="form-group col-md-4">
+                <!-- <div class="form-group col-md-4">
                     <label for="inputGenre">Genre</label>
                     <select id="inputGenre" class="form-control" name="movie_gen">
                         <option>Choose...</option>
                         <?php
-                        foreach($db->query('SELECT * FROM Genre g') as $row) {
-                            // echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
-                            if($movieInfo['genre_id'] == $row[genre_id]) {
-                                    echo "<option value=" . $row[genre_id] . " selected>". $row[genre_name] . "</option>";
-                                } else {
-                                    echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
-                                }
-                        }
+                        // foreach($db->query('SELECT * FROM Genre g') as $row) {
+                        //     // echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                        //     if($movieInfo['genre_id'] == $row[genre_id]) {
+                        //             echo "<option value=" . $row[genre_id] . " selected>". $row[genre_name] . "</option>";
+                        //         } else {
+                        //             echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
+                        //         }
+                        // }
                         ?>
                     </select>
-                </div>
+                </div> -->
 
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="inputLocation">Format Type</label>
                     <select id="inputLocation" class="form-control" name="movie_type">
                         <option>Choose...</option>

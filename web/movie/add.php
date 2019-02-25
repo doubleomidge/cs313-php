@@ -73,16 +73,15 @@ require 'dbconnect.php';
             </div>
 
 
-            <div class="d-flex justify-space-around">
-                <?php
-                    foreach($db->query('SELECT * FROM Genre g') as $row) {
-                        echo "<div class='form-check'>";
-                        echo '<input type="checkbox" name="genre_list[]" class="form-check-input" id="genreCheck" value=' . $row[genre_id] . '>';
-                        echo '<label class="form-check-label" for="genreCheck">'. $row[genre_name] .'</label>';
-                        echo "</div>";
-                    }
-                ?>
-            </div>
+            <p>Select from these Movie Genres (you can choose more than one)</p>
+            <?php
+                foreach($db->query('SELECT * FROM Genre g') as $row) {
+                    echo "<div class='form-check'>";
+                    echo '<input type="checkbox" name="genre_list[]" class="form-check-input" id="genreCheck" value=' . $row[genre_id] . '>';
+                    echo '<label class="form-check-label" for="genreCheck">'. $row[genre_name] .'</label>';
+                    echo "</div>";
+                }
+            ?>
 
             <!-- drop downs -->
             <div class="row">
