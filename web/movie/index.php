@@ -16,6 +16,8 @@ switch ($action) {
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $movieInfo = getMovieById($movieId);
 
+        $genInfo = getGenres($movieId);
+
         $ratings;
         $titles;
         $formats;

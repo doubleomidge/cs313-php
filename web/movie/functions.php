@@ -136,6 +136,16 @@ function modMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $
     return $modOutcome;
 };
 
+function getGenres ($movideId) {
+    $db = dbConnect();
+    $sql = 'SELECT * FROM Genre_Movie WHERE movie_id = :movie_id';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':movie', $movieId, PDO::PARAM_INT);
+    $stmt->execute();
+    $genAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $genAll;
+}
+
 function modGenres($genre, $movieId) {
     $db = dbConnect();
     foreach($genre as $row) {
