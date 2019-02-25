@@ -137,8 +137,6 @@ function modMovie($title, $desc, $year, $movieb, $digitalb, $run, $rate, $gen, $
 };
 
 function getGenres ($movideId) {
-    echo $movieId;
-    exit;
     $db = dbConnect();
     $sql = 'SELECT * FROM Genre_Movie WHERE movie_id = :movie_id';
     $stmt = $db->prepare($sql);
