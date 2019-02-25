@@ -1,10 +1,10 @@
 <?php
 require 'dbconnect.php';
 
-$movieId = $movieInfo['movie_id'];
-$genreId = $movieInfo['genre_id'];
+// $movieId = $movieInfo['movie_id'];
+// $genreId = $movieInfo['genre_id'];
 
-$movieSimilarG = findSimilarGen($genreId, $movieId);
+// $movieSimilarG = findSimilarGen($genreId, $movieId);
 
 ?>
 
@@ -49,12 +49,12 @@ $movieSimilarG = findSimilarGen($genreId, $movieId);
         <p> <?php echo $movieInfo['format_type']; ?> </p>
 
         <!-- trying to get similar movies list -->
-        <ul>
+        <!-- <ul>
             <?php
-            var_dump($movieSimilarG);
-            echo '<li>'. $movie_title . '</li>';
+            // var_dump($movieSimilarG);
+            // echo '<li>'. $movie_title . '</li>';
             ?>
-        </ul>
+        </ul> -->
     </div>
     
     <?php include './common/footer.php'; ?>
