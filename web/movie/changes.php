@@ -89,7 +89,7 @@ require 'dbconnect.php';
             <p>Select from these Movie Genres (you can choose more than one)</p>
             <?php
                 foreach($db->query('SELECT * FROM Genre g') as $row) {
-                    var_dump($gen);
+                    var_dump($modOutcome);
                     var_dump($movieInfo);
                     exit;
                     echo "<div class='form-check'>";
