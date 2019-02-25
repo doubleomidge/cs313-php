@@ -15,6 +15,8 @@ switch ($action) {
     case 'modify':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $movieInfo = getMovieById($movieId);
+        echo $movieId;
+        exit;
 
         $genInfo = getGenres($movieId);
 
