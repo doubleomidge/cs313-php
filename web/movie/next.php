@@ -2,6 +2,7 @@
 
 require 'dbconnect.php';
 
+
 $titles;
 
 if(isset($_POST['genre'])) {

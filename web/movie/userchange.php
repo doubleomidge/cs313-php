@@ -1,6 +1,10 @@
 <?php
 require 'dbconnect.php';
 
+if (!isset($_SESSION['user'])) {
+    header('Location: home.php');
+}
+
 ?>
 
 <!DOCTYPE html>
