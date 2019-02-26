@@ -49,9 +49,9 @@ session_start();
             </div>
 
             <div class="buttonRow">
-                <div class="update">
+                <!-- <div class="update">
                     <a href="index.php?action=format" class="btn btn-outline-success">Add a Custom Format</a>
-                </div>
+                </div> -->
         
                 <div class="update">
                     <a href="index.php?action=updateUser&id=$_SESSION['user']['user_id']" class="btn btn-outline-success">Update Account Info</a>

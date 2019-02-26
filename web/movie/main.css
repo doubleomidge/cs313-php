@@ -171,7 +171,8 @@ h1, h2, h3, h4, .headerfont {
   background-color: #e9ecef;
   margin-right: 30px;
   width: 500px;
-  padding: 30px; }
+  padding: 30px;
+  margin-bottom: 30px; }
 
 .buttonRow {
   display: flex;
