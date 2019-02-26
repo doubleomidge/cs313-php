@@ -63,9 +63,9 @@ session_start();
                 </ul>
 
                 <form method="post" action="index.php?action=format">
-                    <div class="form-group">
-                        <label for="newFormat">Name of new format</label>
-                        <input type="text" class="form-control" id="newFormat" name="newFormat" placeholder="Enter desired name here">
+                   <div class="form-group">
+                        <label for="newFormat">New Format:</label>
+                        <input type="text" class="form-control form-control-lg" id="newFormat" name="newFormat" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary mb-2">Add Format</button>
