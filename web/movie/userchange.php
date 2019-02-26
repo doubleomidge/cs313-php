@@ -45,12 +45,12 @@ require 'dbconnect.php';
         <form action="index.php?action=modifyData" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" class="form-control form-control-lg" id="username" type="text"
+                <input type="text" class="form-control form-control-lg" id="username" type="text" value="
                     <?php
                     if (isset($_SESSION['user'])) {
                         echo "" . $_SESSION[user][username] . "";
                     }
-                    ?> name="movie_title" required>
+                    ?>" name="username" required>
             </div>
                 
             </div>
