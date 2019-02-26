@@ -64,7 +64,7 @@ require 'dbconnect.php';
             </div>
 
             <div class="row">
-                <div class="form-group">
+                <div class="form-group col-xs-6">
                     <label for="movie_year">Year Released</label>
                     <input class="form-control" id="movie_year" type="number" name="movie_year"
                         <?php
