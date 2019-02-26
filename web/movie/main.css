@@ -68,6 +68,9 @@ h1, h2, h3, h4, .headerfont {
     border-color: #B06AB3;
     color: #051937; }
 
+.family {
+  width: 500px; }
+
 .card {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -170,6 +173,9 @@ h1, h2, h3, h4, .headerfont {
 .buttonRow {
   display: flex;
   flex-direction: column; }
+
+.ii {
+  font-style: italic; }
 
 /* ----------------------------------------------------- */
 /* --------- Detail page ----------- */

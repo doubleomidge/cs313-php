@@ -39,7 +39,7 @@ session_start();
 
             <div class="fam" style="width: 500px; text-align: left;">
                 <h3>Add a specific family format</h3>
-                <p style="font-style: italic;">We may not have every format ready for you, and your family, to use, if there is a format you'd like, enter it here!</p>
+                <p class="ii">We may not have every format ready for you, and your family, to use, if there is a format you'd like, enter it here!</p>
 
                 <p>Here's a reminder of the types we already have:</p>
                 <ul>

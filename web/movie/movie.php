@@ -134,7 +134,7 @@ if(!isset($_GET['action'])) {
             </table>
 
             <div class="container-fluid movie-blank">
-                <p style="font-style: italic;">You could see all your movies here, if you
+                <p c;ass="ii">You could see all your movies here, if you
                     either <a href="signin.php">login</a> or <a href="register.php">signup</a>.</p>
             </div>
         <?php } ?>

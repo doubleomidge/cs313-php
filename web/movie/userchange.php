@@ -30,18 +30,18 @@ require 'dbconnect.php';
 <body>
     <?php include './common/nav.php'; ?>
 
-        <?php
-            if (isset($passMessage)) {
-                echo $passMessage;
-            }
-        ?>
+    <?php
+        if (isset($passMessage)) {
+            echo $passMessage;
+        }
+    ?>
 
-        <div class="container changes">
-            <h1><?php
-            if (isset($_SESSION['user'])) {
-                echo "Modify <span>" . $_SESSION['user']['user_firstname'] . "<span>";
-            }
-            ?></h1>
+    <div class="container changes">
+        <h1><?php
+        if (isset($_SESSION['user'])) {
+            echo "Modify <span>" . $_SESSION['user']['user_firstname'] . "<span>";
+        }
+        ?></h1>
         <form action="index.php?action=userInfo" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -88,40 +88,6 @@ require 'dbconnect.php';
             <input hidden value="<?php echo "" . $_SESSION[user][user_id] . ""; ?>" name="user_id">
             <button type="submit" class="btn btn-primary">Update Info</button>
         </form>
-
-        <hr>
-
-        <div class="container changes">
-            <h1><?php
-            if (isset($_SESSION['user'])) {
-                echo "Update <span>" . $_SESSION['user']['user_firstname'] . " Password<span>";
-            }
-            ?></h1>
-        <form action="index.php?action=newPass" method="post">
-            <div class="form-group">
-                <?php if (isset($star)) { echo $star;} ?><label for="old">Old Password</label>
-                <input type="password" class="form-control form-control-lg" id="old" value="<?php
-
-                    ?>" name="old" required>
-            </div>
-
-            <div class="form-group">
-                <?php if (isset($star)) { echo $star;} ?><label for="new">New Password</label>
-                <input type="password" class="form-control form-control-lg" id="new" value="<?php
-
-                    ?>" name="new" required>
-            </div>
-
-            <div class="form-group">
-                <?php if (isset($star)) { echo $star;} ?><label for="new2">Confirm New Password</label>
-                <input type="password" class="form-control form-control-lg" id="new2" value="<?php
-
-                    ?>" name="new2" required>
-            </div>
-            <input hidden value="<?php echo "" . $_SESSION[user][user_id] . ""; ?>" name="user_id">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-
     </div>
 
     <?php include './common/footer.php'; ?>

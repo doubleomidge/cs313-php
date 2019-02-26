@@ -86,7 +86,7 @@
     <div class="container">
         <div class="row">
             <div class="col-5">
-                <img src="img/dog-family.png" alt="" style="width: 500px;">
+                <img src="img/dog-family.png" alt="Family illustration with dog" class="family">
             </div>
             <div class="col-7">
                 <h3>Movies made easier to share</h3>

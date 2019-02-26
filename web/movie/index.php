@@ -70,11 +70,11 @@ switch ($action) {
 
         if ($delOutcome === 0 && $delgentT === 0) {
             $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not deleted. Please try again, check all fields.</p>';
-            include 'movie.php';
+            header('Location: movie.php');
             exit;
         } else {
             $message = '<p class="container-fluid success">' . $title . ' has been successfully deleted.</p>';
-            include 'movie.php';
+            header('Location: movie.php');
             exit;
         }
 
