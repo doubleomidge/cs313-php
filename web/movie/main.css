@@ -150,13 +150,14 @@ h1, h2, h3, h4, .headerfont {
   height: 95vh; }
 
 .search {
-  padding-top: 15%;
-  display: flex;
-  justify-content: center; }
+  padding-top: 15%; }
   .search h1 {
     color: #B74F6F;
     margin-bottom: 20px;
     font-size: 4em; }
+  .search form {
+    display: flex;
+    justify-content: center; }
 
 .next {
   background-color: #E2FCEF; }

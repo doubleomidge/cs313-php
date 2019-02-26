@@ -118,7 +118,7 @@ if(!isset($_GET['action'])) {
 
         <?php if ($_SESSION['user']) {
             foreach($db->query($moviejoin) as $row) {
-                    echo "<tr><td scope='row'><a href='/movie/index.php?action=detail&id=$row[movie_id]'>" . $row['movie_title'] . "</a></td>";
+                    echo "<tr><td scope='row'></td>";
                     echo '<td>' . $row['rating_type'] . '</td>';
                     echo '<td>' . $row['genre_name'] . '</td>';
                     echo '<td>' . $row['format_type'] . '</td>';
