@@ -96,13 +96,13 @@ if(!isset($_GET['action'])) {
     </div>
 
     <div class="container">
-        <div class="input-group md-form form-sm form-1 pl-0">
+        <!-- <div class="input-group md-form form-sm form-1 pl-0">
             <div class="input-group-prepend">
                 <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-white"
                     aria-hidden="true"></i></span>
             </div>
             <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
-        </div>
+        </div> -->
 
         <table class="table table-hover">
            <thead>
@@ -124,7 +124,6 @@ if(!isset($_GET['action'])) {
                     echo '<td>' . $row['format_type'] . '</td>';
                     echo "<td><a href='/movie/index.php?action=modify&id=$row[movie_id]' title='Click to modify'>Modify</a></td>";
                     echo "<td><a href='/movie/index.php?action=delete&id=$row[movie_id]' title='Click to delete'>Delete</a></td>";
-                    // echo '<td><a onclick="$(\'#myModal\').modal(\'show\')" class="cursor-link" title="Click to delete">Delete</a></td>';
                     echo '</tr>';
             }
             echo '</tbody>';
@@ -140,29 +139,6 @@ if(!isset($_GET['action'])) {
         <?php } ?>
 
     </div>
-
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>This will delete the movie from the database. Are you sure you want to delete [title]?</p>
-      </div>
-      <div class="modal-footer">
-        <?php
-            echo "<a href='/movie/index.php?action=delete&id=$moviejoin[movie_id]' class='btn btn-default'>Delete</a>";
-        ?>
-        <a class="btn btn-default" data-dismiss="modal">Close</a>
-      </div>
-    </div>
-
-  </div>
-        </div>
 
     <?php include './common/footer.php'; ?>
 </body>

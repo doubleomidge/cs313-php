@@ -309,11 +309,11 @@ switch ($action) {
 
         if ($userOutcome === 1) {
             $message = '<p class="container-fluid success"> The account for ' . $first . 'has been updated.</p>';
-            include 'changes.php';
+            include 'user.php';
             exit;
         } else {
             $message = '<p class="container-fluid notice">Sorry, but the account for ' . $first . ' was not updated. Please try again, check all fields.</p>';
-            include 'changes.php';
+            include 'user.php';
             exit;
         }
 
