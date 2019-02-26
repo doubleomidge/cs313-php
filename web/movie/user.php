@@ -64,7 +64,6 @@ session_start();
 
                 <form action="index.php?action=formatAdd" method="post">
                     <div class="form-group">
-                        <label for="newFormat">New Format</label>
                         <input type="text" class="form-control form-control-lg" id="newFormat" placeholder="Enter custom format here" name="newFormat" required>
                     </div>
 
