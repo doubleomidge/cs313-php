@@ -38,128 +38,21 @@ require 'dbconnect.php';
 
         <div class="container changes">
             <h1><?php
-            if (isset($movieInfo['movie_title'])) {
-                echo "Modify <span>$movieInfo[movie_title]<span>";
+            if (isset($_SESSION['user'])) {
+                echo "Modify <span>" . $_SESSION['user']['user_firstname'] . "<span>";
             }
             ?></h1>
         <form action="index.php?action=modifyData" method="post">
             <div class="form-group">
-                <label for="username">User name</label>
+                <label for="username">Username</label>
                 <input type="text" class="form-control form-control-lg" id="username" type="text"
                     <?php
-                    if (isset($movieInfo['username'])) {
-                        echo "value='$movieInfo[username]'";
+                    if (isset($_SESSION['user'])) {
+                        echo $_SESSION['user']['username'];
                     }
                     ?> name="movie_title" required>
             </div>
-
-            <div class="form-group">
-                <label for="movie_desc"> Movie Description </label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500" name="movie_desc" required><?php
-                    if (isset($movieInfo['movie_desc'])) {
-                        echo "$movieInfo[movie_desc]";
-                    }?></textarea>
-                <p class="bump-right">
-                    <span id="chars">500</span> characters remaining</p>
-            </div>
-
-            <div class="row">
-                <div class="form-group">
-                    <label for="movie_year">Year Released</label>
-                    <input class="form-control" id="movie_year" type="number" name="movie_year"
-                        <?php
-                        if (isset($movieInfo['movie_year'])) {
-                            echo "value='$movieInfo[movie_year]'";
-                        }
-                        ?> required>
-                    <small id="movie_year" class="form-text text-muted">If this isn't as important to you, it isn't required.</small>
-                </div>
-
-                <div class="form-group col-xs-6">
-                    <label for="run_time">Run Time</label>
-                    <input class="form-control" name="movie_run" id="run_time" placeholder="Run time" type="number" 
-                        <?php
-                        if (isset($movieInfo['movie_runtime'])) {
-                            echo "value='$movieInfo[movie_runtime]'";
-                        }
-                        ?> required>
-                </div>
-            </div>
-
-            <div class="d-flex justify-space-around">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="movieCheck" name="movie_bool"
-                        <?php
-                        if (isset($movieInfo['movie_yn'])) {
-                            echo checked;
-                        }
-                        ?> >
-                    <label class="form-check-label" for="movieCheck">Is this a movie?</label>
-                </div>
-
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="digital" name="digital_bool"
-                        <?php
-                        if (isset($movieInfo['movie_digital'])) {
-                            echo checked;
-                        }
-                        ?> >
-                    <label class="form-check-label" for="digital">Is this a digital copy?</label>
-                </div>
-            </div>
-
-            <!-- drop downs -->
-            <div class="row">
-                <div class="form-group col-md-4">
-                    <label for="inputRating">Rating</label>
-                    <select id="inputRating" class="form-control" name="movie_rate">
-                        <option>Choose...</option>
-                        <!-- generate list -->
-                        <?php
-                        foreach($db->query('SELECT * FROM Rating g') as $row) {
-                            if($movieInfo['movie_rating_id'] == $row[rating_id]) {
-                                    echo "<option value=" . $row[rating_id] . " selected>". $row[rating_type] . "</option>";
-                                } else {
-                                    echo "<option value=" . $row[rating_id] . ">". $row[rating_type] . "</option>";
-                                }
-                            }
-                        ?>
-                    </select>
-                </div>
-
-                <div class="form-group col-md-4">
-                    <label for="inputGenre">Genre</label>
-                    <select id="inputGenre" class="form-control" name="movie_gen">
-                        <option>Choose...</option>
-                        <?php
-                        foreach($db->query('SELECT * FROM Genre g') as $row) {
-                            // echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
-                            if($movieInfo['genre_id'] == $row[genre_id]) {
-                                    echo "<option value=" . $row[genre_id] . " selected>". $row[genre_name] . "</option>";
-                                } else {
-                                    echo "<option value=" . $row[genre_id] . ">". $row[genre_name] . "</option>";
-                                }
-                        }
-                        ?>
-                    </select>
-                </div>
-
-                <div class="form-group col-md-4">
-                    <label for="inputLocation">Format Type</label>
-                    <select id="inputLocation" class="form-control" name="movie_type">
-                        <option>Choose...</option>
-                        <?php
-                        foreach($db->query('SELECT * FROM Format f') as $row) {
-                            //echo "<option value=" . $row[format_id] . ">". $row[format_type] . "</option>";
-                            if($movieInfo['format_id'] == $row[format_id]) {
-                                    echo "<option value=" . $row[format_id] . " selected>". $row[format_type] . "</option>";
-                                } else {
-                                    echo "<option value=" . $row[format_id] . ">". $row[format_type] . "</option>";
-                                }
-                        }
-                        ?>
-                    </select>
-                </div>
+                
             </div>
             <input hidden value="<?php echo $movieInfo['movie_id']; ?>" name="movie_id">
             <button type="submit" class="btn btn-primary">Submit</button>

@@ -289,6 +289,11 @@ switch ($action) {
         include 'user.php';
         break;
 
+    case 'updateUser':
+        $userId = filter_input(INPUT_GET, $_SESSION['user']['user_id'], FILTER_SANITIZE_NUMBER_INT);
+
+        include 'userchange.php';
+        break;
 
     
     default: 

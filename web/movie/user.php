@@ -73,7 +73,7 @@ session_start();
             </div>
 
             <div class="update">
-                <a href="index.php?action=updateUser&id=$_SESSION['user']['userFirstname']" class="btn btn-outline-success">Update Account Info</a>
+                <a href="index.php?action=updateUser&id=$_SESSION['user']['user_id']" class="btn btn-outline-success">Update Account Info</a>
             </div>
 
             <div class="delete">
