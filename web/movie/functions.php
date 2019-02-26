@@ -140,7 +140,7 @@ function getGenres ($movideId) {
     $db = dbConnect();
     $sql = 'SELECT * FROM Genre_Movie WHERE movie_id = :movie_id';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':movie', (int)$movieId, PDO::PARAM_INT);
+    $stmt->bindValue(':movie_id', (int)$movieId, PDO::PARAM_INT);
     $stmt->execute();
     $genAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
     var_dump($genAll);
