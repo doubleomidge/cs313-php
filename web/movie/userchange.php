@@ -80,7 +80,7 @@ require 'dbconnect.php';
                 <label for="email">Email</label>
                 <input type="text" class="form-control form-control-lg" id="email" type="text" value="<?php
                     if (isset($_SESSION['user'])) {
-                        echo "" . $_SESSION[user][user_email] . "";
+                        echo "" . $_SESSION[user][email] . "";
                     }
                     ?>" name="email" required>
             </div>

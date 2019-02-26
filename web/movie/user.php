@@ -50,7 +50,7 @@ session_start();
 
             <div class="buttonRow">
                 <div class="update">
-                    <a href="index.php?action=format" class="btn btn-outline-success">Update Account Info</a>
+                    <a href="index.php?action=format" class="btn btn-outline-success">Add a Custom Format</a>
                 </div>
         
                 <div class="update">
