@@ -167,6 +167,10 @@ h1, h2, h3, h4, .headerfont {
 .fam {
   background-color: #e9ecef; }
 
+.buttonRow {
+  display: flex;
+  flex-direction: column; }
+
 /* ----------------------------------------------------- */
 /* --------- Detail page ----------- */
 /* ----------------------------------------------------- */

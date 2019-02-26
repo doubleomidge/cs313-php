@@ -250,6 +250,11 @@ background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
     background-color: #e9ecef;
 }
 
+.buttonRow {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 /* ----------------------------------------------------- */
