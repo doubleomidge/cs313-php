@@ -77,7 +77,7 @@ if(isset($_POST['genre'])) {
                 <?php
                     foreach($titles as $title) {
                         echo "<p>" . $title['movie_title'] . "</p>";
-                        echo "<a href='/movie/index.php?action=detail&id=$title[movie_id]'>" . $title['movie_title'] . "</a>"
+                        echo "<a href='/movie/index.php?action=detail&id=$title[movie_id]'>" . $title['movie_title'] . "</a>";
                     }
                 ?>
             </div>
