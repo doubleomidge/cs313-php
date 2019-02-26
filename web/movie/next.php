@@ -76,7 +76,6 @@ if(isset($_POST['genre'])) {
             <div class="container movie-holder" style="background-color: white;">
                 <?php
                     foreach($titles as $title) {
-                        echo "<p>" . $title['movie_title'] . "</p>";
                         echo "<a href='/movie/index.php?action=detail&id=$title[movie_id]'>" . $title['movie_title'] . "</a>";
                     }
                 ?>
