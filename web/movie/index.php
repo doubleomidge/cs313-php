@@ -300,11 +300,12 @@ switch ($action) {
 
     case 'userInfo':
         $userId = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_NUMBER_INT);
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         $first = filter_input(INPUT_POST, 'first', FILTER_SANITIZE_STRING);
         $last = filter_input(INPUT_POST, 'last', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
 
-        $userOutcome = updateUser($userId, $first, $last, $email);
+        $userOutcome = updateUser($userId, $username, $first, $last, $email);
 
         if ($userOutcome === 1) {
             $message = '<p class="container-fluid success"> The account for ' . $first . 'has been updated.</p>';
@@ -315,60 +316,6 @@ switch ($action) {
             include 'changes.php';
             exit;
         }
-
-        break;
-
-    case 'newPass':
-        $userId = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_NUMBER_INT);
-        $old = filter_input(INPUT_POST, 'old', FILTER_SANITIZE_STRING);
-        $new = filter_input(INPUT_POST, 'new', FILTER_SANITIZE_STRING);
-        $new2 = filter_input(INPUT_POST, 'new2', FILTER_SANITIZE_STRING);
-
-        $safepass = password_hash($old, PASSWORD_DEFAULT);
-
-        if ($old === $_SESSION['user']['user_password']) {
-
-        //start if
-
-            $passcomp = strcmp($new, $new2);
-
-            if ($passcomp != 0) {
-                $passMessage = '<p class="container-fluid notice">New passwords do not match.</p>';
-                $star = "<span style='color: red;'>*</span>";
-                include 'userchange.php';
-            } else {
-                $verify = checkPassword($password);
-                
-                if (empty($verify)) {
-                    $passMessage = '<p class="container-fluid notice>Please provide a valid password.</p>';
-                    include 'userchange.php';
-                    exit;
-                }
-
-                $updateUserPass = updateUser($username, $firstname, $lastname, $email, $safepass);
-
-                if ($updateUserPass == 0) {
-                    $passMessage = '<p class="container-fluid notice"> Sorry, there was an error updating your password.</p>';
-                    exit;
-                } else {
-                    include 'userchange.php';
-                }
-
-                exit;
-            }
-        // end if
-
-        } else {
-            $passMessage = '<p class="container-fluid notice">Old password is incorrect.</p>';
-            $star = "<span style='color: red;'>*</span>";
-            include 'userchange.php';
-        }
-
-        break;
-
-    case 'deleteUser':
-        $userId = filter_input(INPUT_POST, $_SESSION['user']['user_id'], FILTER_SANITIZE_NUMBER_INT);
-
 
         break;
 
