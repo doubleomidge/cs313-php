@@ -13,14 +13,14 @@ if(!isset($_GET['action'])) {
 } else {
     $column = $_GET['action'];
 
-    $moviejoin = 'SELECT m.movie_title, r.rating_type, string_agg(g.genre_name, `, `), f.format_type
+    $moviejoin = "SELECT m.movie_title, r.rating_type, string_agg(g.genre_name, `, `), f.format_type
                 FROM Movies m
                 JOIN Rating r ON m.movie_rating_id = r.rating_id
                 JOIN Genre_movie gm ON m.movie_id = gm.movie_id
                 JOIN Genre g ON gm.genre_id = g.genre_id
                 JOIN Format f on m.format_id = f.format_id
                 GROUP BY m.movie_title, r.rating_type, f.format_type
-                ORDER BY $column ASC';
+                ORDER BY $column ASC";
 }
 
 ?>
