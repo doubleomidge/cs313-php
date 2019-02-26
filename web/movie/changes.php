@@ -88,7 +88,7 @@ require 'dbconnect.php';
 
             <p>Select from these Movie Genres (you can choose more than one)</p>
             <?php
-                foreach($db->query('SELECT * FROM Genre g') as $row) {
+                foreach($db->query('SELECT * FROM Genre_Movie g') as $row) {
                     if($genInfo['genre_id'] == $row[genre_id]) {
                                     echo "<div class='form-check'>";
                                     echo '<input type="checkbox" name="genre_list[]" class="form-check-input" id="genreCheck" value=' . $row[genre_id] . '>';
