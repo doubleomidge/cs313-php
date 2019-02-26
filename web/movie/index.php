@@ -295,6 +295,25 @@ switch ($action) {
         include 'userchange.php';
         break;
 
+    case 'userInfo':
+        $userId = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_NUMBER_INT);
+        $first = filter_input(INPUT_POST, 'first', FILTER_SANITIZE_STRING);
+        $last = filter_input(INPUT_POST, 'last', FILTER_SANITIZE_STRING);
+
+        $userOutcome = updateUser($userId, $first, $last);
+
+        if ($userOutcome === 1) {
+            $message = '<p class="container-fluid success"> The account for ' . $first . 'has been updated.</p>';
+            include 'changes.php';
+            exit;
+        } else {
+            $message = '<p class="container-fluid notice">Sorry, but the account for ' . $first . ' was not updated. Please try again, check all fields.</p>';
+            include 'changes.php';
+            exit;
+        }
+
+        break;
+
     
     default: 
     include '/home.php';

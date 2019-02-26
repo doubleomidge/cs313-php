@@ -42,7 +42,7 @@ require 'dbconnect.php';
                 echo "Modify <span>" . $_SESSION['user']['user_firstname'] . "<span>";
             }
             ?></h1>
-        <form action="index.php?action=modifyData" method="post">
+        <form action="index.php?action=userInfo" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" class="form-control form-control-lg" id="username" type="text" value="<?php
@@ -75,8 +75,8 @@ require 'dbconnect.php';
                     </div>
                 </div>
             </div>
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input hidden value="<?php echo "" . $_SESSION[user][user_id] . ""; ?>" name="user_id">
+            <button type="submit" class="btn btn-primary">Update Info</button>
         </form>
 
         <hr>
@@ -87,7 +87,7 @@ require 'dbconnect.php';
                 echo "Update <span>" . $_SESSION['user']['user_firstname'] . " Password<span>";
             }
             ?></h1>
-        <form action="index.php?action=modifyData" method="post">
+        <form action="index.php?action=newPass" method="post">
             <div class="form-group">
                 <label for="old">Old Password</label>
                 <input type="password" class="form-control form-control-lg" id="old" value="<?php
@@ -108,7 +108,7 @@ require 'dbconnect.php';
 
                     ?>" name="new2" required>
             </div>
-
+            <input hidden value="<?php echo "" . $_SESSION[user][user_id] . ""; ?>" name="user_id">
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 

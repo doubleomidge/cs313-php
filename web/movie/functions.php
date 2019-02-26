@@ -271,3 +271,17 @@ function findSimilarGen($genreId, $movieId) {
     $gen = $stmt->fetch(PDO::FETCH_ASSOC);
     return $gen;
 }
+
+function updateUser($userId, $first, $last) {
+    $db = dbConnect();
+    $sql = 'UPDATE Users WHERE user_id = :userId
+                SET user_firstname = :first,
+                    user_lastname = :last';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
+    $stmt->bindValue(':first', $first, PDO::PARAM_STR);
+    $stmt->bindValue(':last', $last, PDO::PARAM_STR);
+    $stmt->execute();
+    $user = $stmt->rowCount();
+    return $user;
+};
