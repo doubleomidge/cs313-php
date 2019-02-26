@@ -51,11 +51,67 @@ require 'dbconnect.php';
                     }
                     ?>" name="username" required>
             </div>
-                
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="first">First name</label>
+                        <input type="text" class="form-control form-control-lg" id="first" type="text" value="<?php
+                            if (isset($_SESSION['user'])) {
+                                echo "" . $_SESSION[user][user_firstname] . "";
+                            }
+                            ?>" name="first" required>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <label for="last">Last name</label>
+                        <input type="text" class="form-control form-control-lg" id="last" type="text" value="<?php
+                            if (isset($_SESSION['user'])) {
+                                echo "" . $_SESSION[user][user_lastname] . "";
+                            }
+                            ?>" name="last" required>
+                    </div>
+                </div>
             </div>
-            <input hidden value="<?php echo $movieInfo['movie_id']; ?>" name="movie_id">
+            
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
+        <hr>
+
+        <div class="container changes">
+            <h1><?php
+            if (isset($_SESSION['user'])) {
+                echo "Update <span>" . $_SESSION['user']['user_firstname'] . " Password<span>";
+            }
+            ?></h1>
+        <form action="index.php?action=modifyData" method="post">
+            <div class="form-group">
+                <label for="old">Old Password</label>
+                <input type="password" class="form-control form-control-lg" id="old" value="<?php
+
+                    ?>" name="old" required>
+            </div>
+
+            <div class="form-group">
+                <label for="new">Old Password</label>
+                <input type="password" class="form-control form-control-lg" id="new" value="<?php
+
+                    ?>" name="new" required>
+            </div>
+
+            <div class="form-group">
+                <label for="new2">Old Password</label>
+                <input type="password" class="form-control form-control-lg" id="new2" value="<?php
+
+                    ?>" name="new2" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
     </div>
 
     <?php include './common/footer.php'; ?>
