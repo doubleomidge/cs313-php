@@ -65,8 +65,8 @@ switch ($action) {
     case 'delete':
         $movieId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
-        $delOutcome = deleteMovie($movieId);
         $delgenT = deleteFK($movieId);
+        $delOutcome = deleteMovie($movieId);
 
         if ($delOutcome === 0 && $delgentT === 0) {
             $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not deleted. Please try again, check all fields.</p>';
@@ -77,7 +77,7 @@ switch ($action) {
             include 'movies.php';
             exit;
         }
-        
+
         break;
 
     case 'add':
