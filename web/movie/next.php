@@ -10,7 +10,7 @@ if(isset($_POST['genre'])) {
 
     $stmt = $db->prepare('SELECT * FROM Genre g
                         JOIN Genre_Movie gm ON g.genre_id = gm.genre_id
-                        JOIN Movies m ON gm.movie = m.movie_id
+                        JOIN Movies m ON gm.movie_id = m.movie_id
                     WHERE g.genre_id=:id');
 
     $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
