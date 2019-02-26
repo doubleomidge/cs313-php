@@ -267,16 +267,16 @@ switch ($action) {
         include 'detail.php';
         break;
 
-    case 'format':
+    case 'formatAdd':
         $customFormat = filter_input(INPUT_GET, 'newFormat', FILTER_SANITIZE_STRING);
 
         $format = addCustomFormat($customFormat);
 
         if ($format == 0) {
-                $message = "<p class='notice'> Sorry, there was an error adding the new format.</p>";
+                $message = "<p class='container-fluid notice'> Sorry, there was an error adding the new format.</p>";
                 exit;
         } else {
-            $message = "<p class='success'> Congrats, $customFormat was added.</p>";
+            $message = "<p class='container-fluid success'> Congrats, $customFormat was added.</p>";
             include 'user.php';
         }
 

@@ -62,7 +62,7 @@ session_start();
                     ?>
                 </ul>
 
-                <form method="post" action="index.php?action=format">
+                <form action="index.php?action=formatAdd" method="post">
                    <div class="form-group">
                         <label for="newFormat">New Format:</label>
                         <input type="text" class="form-control form-control-lg" id="newFormat" name="newFormat" required>
@@ -74,10 +74,6 @@ session_start();
 
             <div class="update">
                 <a href="index.php?action=updateUser&id=$_SESSION['user']['user_id']" class="btn btn-outline-success">Update Account Info</a>
-            </div>
-
-            <div class="delete">
-                <a href="index.php?action=deleteUser&id=$_SESSION['user']['user_id']" class="btn btn-outline-danger">Delete Account</a>
             </div>
         </div>
     </div>
