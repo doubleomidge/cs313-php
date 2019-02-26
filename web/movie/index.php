@@ -146,13 +146,13 @@ switch ($action) {
 
         if ($addOutcome === 0) {
             $message = '<p class="container-fluid notice">Sorry, but ' . $title . ' was not added. Please try again, check all fields.</p>';
-            include 'add.php';
+            include 'movie.php';
             exit;
         } else {
             $gen = addGenres($genres, $addOutcome);
 
             $message = '<p class="container-fluid success">Thanks for adding ' . $title . '.</p>';
-            include 'add.php';
+            include 'movie.php';
             exit;
         }
         break;
