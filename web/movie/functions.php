@@ -55,7 +55,8 @@ function updateMovie($movieId, $title, $desc, $year, $run, $rate, $type){
           movie_runtime   = :run, 
           movie_rating_id = :rate,
           format_id       = :type
-      WHERE movie_id = :movieId';
+      WHERE movie_id = :movieId
+      CASCADE';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':movieId', $movieId, PDO::PARAM_INT);
     $stmt->bindValue(':title', $title, PDO::PARAM_STR);
