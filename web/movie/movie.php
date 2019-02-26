@@ -3,7 +3,7 @@
 require 'dbconnect.php';
 
 if(!isset($_GET['action'])) {
-    $moviejoin = "SELECT m.movie_id, m.movie_title, r.rating_type, string_agg(g.genre_name, ', '), f.format_type
+    $moviejoin = "SELECT *
                 FROM Movies m
                 JOIN Rating r ON m.movie_rating_id = r.rating_id
                 JOIN Genre_movie gm ON m.movie_id = gm.movie_id
@@ -13,7 +13,7 @@ if(!isset($_GET['action'])) {
 } else {
     $column = $_GET['action'];
 
-    $moviejoin = "SELECT m.movie_id, m.movie_title, r.rating_type, string_agg(g.genre_name, ', '), f.format_type
+    $moviejoin = "SELECT *
                 FROM Movies m
                 JOIN Rating r ON m.movie_rating_id = r.rating_id
                 JOIN Genre_movie gm ON m.movie_id = gm.movie_id
