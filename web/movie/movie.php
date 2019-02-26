@@ -2,6 +2,8 @@
 
 require 'dbconnect.php';
 
+session_start();
+
 if(!isset($_GET['action'])) {
     $moviejoin = "SELECT *
                 FROM Movies m

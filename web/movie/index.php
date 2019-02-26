@@ -74,7 +74,7 @@ switch ($action) {
             exit;
         } else {
             $message = '<p class="container-fluid success">' . $title . ' has been successfully deleted.</p>';
-            include 'movies.php';
+            include 'movie.php';
             exit;
         }
 
@@ -282,6 +282,11 @@ switch ($action) {
                 include 'user.php';
             }
 
+        break;
+
+    case 'account':
+
+        include 'user.php';
         break;
 
 
