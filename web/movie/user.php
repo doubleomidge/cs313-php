@@ -35,9 +35,9 @@ session_start();
     <div class="container">
         <h1><?php echo "" . $_SESSION['user']['user_firstname'] . ""?> Account Info</h1>
 
-        <div class="container d-flex" style="margin: 0 auto;">
+        <div class="container d-flex">
 
-            <div class="fam" style="width: auto; margin-right: 30px; width: 800px;">
+            <div class="fam">
                 <h2>Your family</h2>
                 <ul>
                     <?php

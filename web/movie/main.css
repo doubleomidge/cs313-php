@@ -168,7 +168,10 @@ h1, h2, h3, h4, .headerfont {
 /* --------- User page ----------- */
 /* ----------------------------------------------------- */
 .fam {
-  background-color: #e9ecef; }
+  background-color: #e9ecef;
+  margin-right: 30px;
+  width: 500px;
+  padding: 30px; }
 
 .buttonRow {
   display: flex;
