@@ -45,8 +45,7 @@ require 'dbconnect.php';
         <form action="index.php?action=modifyData" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" class="form-control form-control-lg" id="username" type="text" value="
-                    <?php
+                <input type="text" class="form-control form-control-lg" id="username" type="text" value="<?php
                     if (isset($_SESSION['user'])) {
                         echo "" . $_SESSION[user][username] . "";
                     }
