@@ -18,12 +18,6 @@ if(isset($_POST['genre'])) {
     $titles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-$moviejoin = 'SELECT * FROM Movies m
-                JOIN Genre_Movie gm ON m.movie_id = gm.movie_id
-                JOIN Rating r ON m.movie_rating_id = r.rating_id
-                JOIN Genre g ON m.genre_id = g.genre_id
-                JOIN Format f on m.format_id = f.format_id';
-
 
 ?>
 
@@ -62,8 +56,7 @@ $moviejoin = 'SELECT * FROM Movies m
                     <div class="form-row align-items-center">
                         <select class="col-sm-6 col-form-label" name="genre">
                         <?php
-                        foreach($db->query('SELECT * FROM Genre g
-                                            JOIN Genre_Movie gm ON g.genre_id = gm.genre_id') as $row) {
+                        foreach($db->query('SELECT * FROM Genre g') as $row) {
                             if($_POST['genre'] == $row[genre_id]) {
                                 echo "<option value=" . $row[genre_id] . " selected>". $row[genre_name] . "</option>";
                             } else {
