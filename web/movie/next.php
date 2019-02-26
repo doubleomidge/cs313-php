@@ -75,8 +75,12 @@ if(isset($_POST['genre'])) {
 
             <div class="container movie-holder" style="background-color: white;">
                 <?php
-                    foreach($titles as $title) {
+                    if ($_SESSION['user']) {
+                        foreach($titles as $title) {
                         echo "<a href='/movie/index.php?action=detail&id=$title[movie_id]'>" . $title['movie_title'] . "</a>";
+                        } 
+                    } else {
+                        echo "<p class='ii'>You could see suggestions here, if you either <a href='signin.php'>login</a> or <a href='register.php'>signup</a>.</p>";
                     }
                 ?>
             </div>
