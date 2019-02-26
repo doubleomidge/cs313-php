@@ -35,25 +35,28 @@ session_start();
     <div class="container">
         <h1>[user] Account Info</h1>
 
-        <div class="container d-flex" style="margin: 0 auto;">
+        <div class="container">
 
-            <div class="fam" style="width: auto; margin-right: 30px; width: 800px;">
-                <h2>Your family</h2>
+            <div class="fam" style="width: 500px; text-align: left;">
+                <h3>Add a specific family format</h3>
+                <p style="font-style: italic;">We may not have every format ready for you, and your family, to use, if there is a format you'd like, enter it here!</p>
+
+                <p>Here's a reminder of the types we already have:</p>
                 <ul>
                     <?php
-                        foreach($db->query('SELECT user_firstname, user_lastname FROM Users WHERE family_id = 1') as $row) {
-                            echo "<li>". $row[user_firstname] . " " . $row[user_lastname] . "</li>";
+                        foreach($db->query('SELECT format_type FROM Format') as $row) {
+                            echo "<li>". $row[format_type] . "</li>";
                         }
                     ?>
                 </ul>
-            </div>
 
-            <div class="update">
-                <a href="index.php?action=format" class="btn btn-outline-success">Update Account Info</a>
-            </div>
-    
-            <div class="update">
-                <a href="index.php?action=updateUser&id=$_SESSION['user']['user_id']" class="btn btn-outline-success">Update Account Info</a>
+                <form action="index.php?action=formatAdd" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" id="newFormat" placeholder="Enter custom format here" name="newFormat" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit New Format</button>
+                </form>
             </div>
         </div>
     </div>

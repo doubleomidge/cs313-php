@@ -267,6 +267,11 @@ switch ($action) {
         include 'detail.php';
         break;
 
+    case 'format':
+
+        include 'format.php';
+        break;
+
     case 'formatAdd':
         $customFormat = filter_input(INPUT_GET, 'newFormat', FILTER_SANITIZE_STRING);
 
