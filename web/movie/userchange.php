@@ -31,9 +31,9 @@ require 'dbconnect.php';
     <?php include './common/nav.php'; ?>
 
         <?php
-        if (isset($message)) {
-            echo $message;
-        }
+            if (isset($passMessage)) {
+                echo $passMessage;
+            }
         ?>
 
         <div class="container changes">
@@ -89,21 +89,21 @@ require 'dbconnect.php';
             ?></h1>
         <form action="index.php?action=newPass" method="post">
             <div class="form-group">
-                <label for="old">Old Password</label>
+                <?php if (isset($star)) { echo $star;} ?><label for="old">Old Password</label>
                 <input type="password" class="form-control form-control-lg" id="old" value="<?php
 
                     ?>" name="old" required>
             </div>
 
             <div class="form-group">
-                <label for="new">New Password</label>
+                <?php if (isset($star)) { echo $star;} ?><label for="new">New Password</label>
                 <input type="password" class="form-control form-control-lg" id="new" value="<?php
 
                     ?>" name="new" required>
             </div>
 
             <div class="form-group">
-                <label for="new2">Confirm New Password</label>
+                <?php if (isset($star)) { echo $star;} ?><label for="new2">Confirm New Password</label>
                 <input type="password" class="form-control form-control-lg" id="new2" value="<?php
 
                     ?>" name="new2" required>

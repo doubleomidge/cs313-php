@@ -41,7 +41,6 @@ session_start();
                 <h2>Your family</h2>
                 <ul>
                     <?php
-                    var_dump($_SESSION['user']);
                         foreach($db->query('SELECT user_firstname, user_lastname FROM Users WHERE family_id = 1') as $row) {
                             echo "<li>". $row[user_firstname] . " " . $row[user_lastname] . "</li>";
                         }

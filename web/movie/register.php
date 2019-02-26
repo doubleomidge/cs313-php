@@ -29,7 +29,7 @@
         if (isset($passMessage)) {
             echo $passMessage;
         }
-        ?>
+    ?>
 
     <div class="container register card">
         <form method="post" action="index.php?action=register">

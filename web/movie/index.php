@@ -314,6 +314,53 @@ switch ($action) {
 
         break;
 
+    case 'newPass':
+        $userId = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_NUMBER_INT);
+        $old = filter_input(INPUT_POST, 'old', FILTER_SANITIZE_STRING);
+        $new = filter_input(INPUT_POST, 'new', FILTER_SANITIZE_STRING);
+        $new2 = filter_input(INPUT_POST, 'new2', FILTER_SANITIZE_STRING);
+
+        if ($old === $_SESSION['user']['user_password']) {
+
+        //start if
+
+            $passcomp = strcmp($new, $new2);
+
+            if ($passcomp != 0) {
+                $passMessage = '<p class="container-fluid notice">New passwords do not match.</p>';
+                $star = "<span style='color: red;'>*</span>";
+                include 'userchange.php';
+            } else {
+                $verify = checkPassword($password);
+                
+                if (empty($verify)) {
+                    $passMessage = '<p class="container-fluid notice>Please provide a valid password.</p>';
+                    include 'userchange.php';
+                    exit;
+                }
+
+                $safepass = password_hash($password, PASSWORD_DEFAULT);
+                $added = addUser($username, $firstname, $lastname, $email, $safepass);
+
+                if ($added == 0) {
+                    $passMessage = '<p class="container-fluid notice"> Sorry, there was an error updating your password.</p>';
+                    exit;
+                } else {
+                    include 'signin.php';
+                }
+
+                exit;
+            }
+        // end if
+
+        } else {
+            $passMessage = '<p class="container-fluid notice">Old password is incorrect.</p>';
+            $star = "<span style='color: red;'>*</span>";
+            include 'userchange.php';
+        }
+
+        break;
+
     
     default: 
     include '/home.php';
