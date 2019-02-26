@@ -143,6 +143,8 @@ function getGenres ($movieId) {
     $stmt->bindValue(':movie_id', $movieId, PDO::PARAM_INT);
     $stmt->execute();
     $movieInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+    var_dump($movieId);
+    exit;
     return $movieInfo;
 }
 
