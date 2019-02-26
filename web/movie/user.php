@@ -56,7 +56,11 @@ require 'dbconnect.php';
 
                 <p>Here's a reminder of the types we already have:</p>
                 <ul>
-                    <li></li>
+                    <?php
+                        foreach($db->query('SELECT format_type FROM Format') as $row) {
+                            echo "<li>". $row[format_type] . "</li>";
+                        }
+                        ?>
                 </ul>
 
                 <form method="post" action="index.php?action=format">
@@ -70,7 +74,7 @@ require 'dbconnect.php';
             </div>
 
             <div class="update">
-                <a href="index.php?action=updateUser&id=$_SESSION['user'][]" class="btn btn-outline-success">Update Account Info</a>
+                <a href="index.php?action=updateUser&id=$_SESSION['user']['userFirstname']" class="btn btn-outline-success">Update Account Info</a>
             </div>
 
             <div class="delete">

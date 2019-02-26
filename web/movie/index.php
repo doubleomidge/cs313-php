@@ -283,21 +283,6 @@ switch ($action) {
             }
 
         break;
-        
-    case 'family':
-        $familyname = filter_input(INPUT_GET, 'newFormat', FILTER_SANITIZE_STRING);
-
-        $format = joinFamily($familyname);
-
-        if ($format == 0) {
-                $message = "<p class='notice'> Sorry, there was an error finding that family.</p>";
-                exit;
-            } else {
-                $message = "<p class='success'> Congrats, $customFormat was added.</p>";
-                include 'user.php';
-            }
-
-        break;
 
 
     
