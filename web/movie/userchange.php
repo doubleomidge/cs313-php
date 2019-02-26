@@ -96,14 +96,14 @@ require 'dbconnect.php';
             </div>
 
             <div class="form-group">
-                <label for="new">Old Password</label>
+                <label for="new">New Password</label>
                 <input type="password" class="form-control form-control-lg" id="new" value="<?php
 
                     ?>" name="new" required>
             </div>
 
             <div class="form-group">
-                <label for="new2">Old Password</label>
+                <label for="new2">Confirm New Password</label>
                 <input type="password" class="form-control form-control-lg" id="new2" value="<?php
 
                     ?>" name="new2" required>
