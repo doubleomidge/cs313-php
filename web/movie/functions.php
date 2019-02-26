@@ -38,7 +38,17 @@ function getMovieById($movieId){
 
 function deleteMovie($movieId){
   $db = dbConnect();
-  $sql = 'DELETE FROM Movies WHERE movie_id = :id CASCADE';
+  $sql = 'DELETE FROM Movies WHERE movie_id = :id';
+  $stmt = $db->prepare($sql);
+  $stmt->bindValue(':id', $movieId, PDO::PARAM_INT);
+  $stmt->execute();
+  $delOutcome = $stmt->rowCount();
+  return $delOutcome;
+};
+
+function deleteFK($movieId){
+  $db = dbConnect();
+  $sql = 'DELETE FROM Genre_Movie WHERE movie_id = :id';
   $stmt = $db->prepare($sql);
   $stmt->bindValue(':id', $movieId, PDO::PARAM_INT);
   $stmt->execute();
