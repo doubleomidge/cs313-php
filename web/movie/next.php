@@ -54,7 +54,7 @@ if(isset($_POST['genre'])) {
             <!-- <div class="input-group"> -->
                 <form action="#" method="post">
                     <div class="form-row align-items-center">
-                        <select class="col-sm-6 col-form-label" name="genre">
+                        <select class="col-sm-6 col-form-label nextform" name="genre">
                         <?php
                         foreach($db->query('SELECT * FROM Genre g') as $row) {
                             if($_POST['genre'] == $row[genre_id]) {

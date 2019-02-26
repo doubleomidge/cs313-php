@@ -152,7 +152,7 @@ switch ($action) {
             $gen = addGenres($genres, $addOutcome);
 
             $message = '<p class="container-fluid success">Thanks for adding ' . $title . '.</p>';
-            include 'movie.php';
+            header('Location: movie.php');
             exit;
         }
         break;
@@ -251,8 +251,8 @@ switch ($action) {
         break;
 
     case 'logout':
-        //end the session
-        unset($_SESSION['username']);
+        // end the session
+        session_destroy();
 
         header('Location: home.php');
         break;
