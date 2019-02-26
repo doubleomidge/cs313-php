@@ -9,7 +9,8 @@ if(isset($_POST['genre'])) {
     $genre = $_POST['genre'];
 
     $stmt = $db->prepare('SELECT * FROM Genre g
-                        JOIN Movies m on g.genre_id = m.genre_id
+                        JOIN Genre_Movie gm ON g.genre_id = gm.genre_id
+                        JOIN Movies m ON g.genre_id = gm.genre_id
                     WHERE g.genre_id=:id');
 
     $stmt->bindValue(':id', $genre, PDO::PARAM_INT);
@@ -18,6 +19,7 @@ if(isset($_POST['genre'])) {
 }
 
 $moviejoin = 'SELECT * FROM Movies m
+                JOIN Genre_Movie gm ON m.movie_id = gm.movie_id
                 JOIN Rating r ON m.movie_rating_id = r.rating_id
                 JOIN Genre g ON m.genre_id = g.genre_id
                 JOIN Format f on m.format_id = f.format_id';
