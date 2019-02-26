@@ -57,7 +57,8 @@
 
             <div class="mb-3">
                 <?php if (isset($star)) { echo $star;} ?><label for="password">Password</label>
-                <input type="password" class="form-control" name="password" placeholder="Choose a password" required> 
+                <input type="password" class="form-control" name="password" placeholder="Choose a password" required>
+                <small class="form-text text-muted">Minimum of 8 characters long. Must contain 1 capital letter, 1 number, and 1 special character.</small>
             </div>
             <div class="mb-3">
                 <?php if (isset($star)) { echo $star; } ?><label for="password2">Re-enter Your Password</label>
