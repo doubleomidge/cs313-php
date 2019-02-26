@@ -269,18 +269,16 @@ switch ($action) {
 
     case 'format':
         $customFormat = filter_input(INPUT_GET, 'newFormat', FILTER_SANITIZE_STRING);
-        echo $customFormat;
-        exit;
 
         $format = addCustomFormat($customFormat);
 
         if ($format == 0) {
                 $message = "<p class='notice'> Sorry, there was an error adding the new format.</p>";
                 exit;
-            } else {
-                $message = "<p class='success'> Congrats, $customFormat was added.</p>";
-                include 'user.php';
-            }
+        } else {
+            $message = "<p class='success'> Congrats, $customFormat was added.</p>";
+            include 'user.php';
+        }
 
         break;
 
@@ -360,6 +358,12 @@ switch ($action) {
             $star = "<span style='color: red;'>*</span>";
             include 'userchange.php';
         }
+
+        break;
+
+    case 'deleteUser':
+        $userId = filter_input(INPUT_POST, $_SESSION['user']['user_id'], FILTER_SANITIZE_NUMBER_INT);
+
 
         break;
 

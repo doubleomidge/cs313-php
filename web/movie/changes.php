@@ -86,7 +86,6 @@ require 'dbconnect.php';
                 </div>
             </div>
 
-            <br>
             <p>Select from these Movie Genres (you can choose more than one)</p>
             <?php
                 foreach($db->query('SELECT * FROM Genre g') as $row) {

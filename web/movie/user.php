@@ -77,7 +77,7 @@ session_start();
             </div>
 
             <div class="delete">
-                <a href="index.php?action=deleteUser" class="btn btn-outline-danger">Delete Account</a>
+                <a href="index.php?action=deleteUser&id=$_SESSION['user']['user_id']" class="btn btn-outline-danger">Delete Account</a>
             </div>
         </div>
     </div>
