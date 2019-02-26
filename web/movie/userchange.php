@@ -48,7 +48,7 @@ require 'dbconnect.php';
                 <input type="text" class="form-control form-control-lg" id="username" type="text"
                     <?php
                     if (isset($_SESSION['user'])) {
-                        echo $_SESSION['user']['username'];
+                        echo "" . $_SESSION[user][username] . "";
                     }
                     ?> name="movie_title" required>
             </div>
