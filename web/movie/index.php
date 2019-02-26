@@ -167,7 +167,7 @@ switch ($action) {
             exit;
         }
 
-        $modOutcome = updateMovie($movieId, $title, $desc, $year, $run, $rate, $gen, $type);
+        $modOutcome = updateMovie($movieId, $title, $desc, $year, $run, $rate, $type);
 
         if ($modOutcome === 1) {
             $message = '<p class="container-fluid success">' . $title . ' has been updated.</p>';
