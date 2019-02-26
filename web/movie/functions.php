@@ -169,8 +169,8 @@ function modGenres($genre, $movieId) {
 };
 
 function newUser($firstname, $lastname, $username, $password) {
-  $db = dbConnect();
-    $sql = 'INSERT INTO Userss VALUES(DEFAULT, :username, :first, :last, :password, 1)';
+    $db = dbConnect();
+    $sql = 'INSERT INTO Users VALUES(DEFAULT, :username, :first, :last, :password, 1)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':username', $username, PDO::PARAM_STR);
     $stmt->bindValue(':first', $firstname, PDO::PARAM_STR);
@@ -272,17 +272,33 @@ function findSimilarGen($genreId, $movieId) {
     return $gen;
 }
 
-function updateUser($userId, $first, $last) {
+function updateUser($userId, $username, $first, $last, $email) {
     $db = dbConnect();
     $sql = 'UPDATE Users 
-                SET user_firstname = :first,
-                    user_lastname = :last
+                SET username = :name,
+                    user_firstname = :first,
+                    user_lastname = :last,
+                    email = :email
                 WHERE user_id = :userId';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
+    $stmt->bindValue(':name', $username, PDO::PARAM_STR);
     $stmt->bindValue(':first', $first, PDO::PARAM_STR);
     $stmt->bindValue(':last', $last, PDO::PARAM_STR);
+    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
     $stmt->execute();
     $user = $stmt->rowCount();
     return $user;
+};
+
+function updatePass($userId, $newPassword) {
+    $db = dbConnect();
+    $sql = 'UPDATE Users 
+                SET user_password = :password
+                WHERE user_id = :user_id';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
+    $stmt->bindValue(':password', $newPassword, PDO::PARAM_STR);
+    $stmt->execute();
+    $regOutcome = $stmt->rowCount();
 };

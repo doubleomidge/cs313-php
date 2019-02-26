@@ -299,8 +299,9 @@ switch ($action) {
         $userId = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_NUMBER_INT);
         $first = filter_input(INPUT_POST, 'first', FILTER_SANITIZE_STRING);
         $last = filter_input(INPUT_POST, 'last', FILTER_SANITIZE_STRING);
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
 
-        $userOutcome = updateUser($userId, $first, $last);
+        $userOutcome = updateUser($userId, $first, $last, $email);
 
         if ($userOutcome === 1) {
             $message = '<p class="container-fluid success"> The account for ' . $first . 'has been updated.</p>';
@@ -319,6 +320,8 @@ switch ($action) {
         $old = filter_input(INPUT_POST, 'old', FILTER_SANITIZE_STRING);
         $new = filter_input(INPUT_POST, 'new', FILTER_SANITIZE_STRING);
         $new2 = filter_input(INPUT_POST, 'new2', FILTER_SANITIZE_STRING);
+
+        $safepass = password_hash($old, PASSWORD_DEFAULT);
 
         if ($old === $_SESSION['user']['user_password']) {
 
@@ -339,14 +342,13 @@ switch ($action) {
                     exit;
                 }
 
-                $safepass = password_hash($password, PASSWORD_DEFAULT);
-                $added = addUser($username, $firstname, $lastname, $email, $safepass);
+                $updateUserPass = updateUser($username, $firstname, $lastname, $email, $safepass);
 
-                if ($added == 0) {
+                if ($updateUserPass == 0) {
                     $passMessage = '<p class="container-fluid notice"> Sorry, there was an error updating your password.</p>';
                     exit;
                 } else {
-                    include 'signin.php';
+                    include 'userchange.php';
                 }
 
                 exit;

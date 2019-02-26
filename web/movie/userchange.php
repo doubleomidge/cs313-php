@@ -75,6 +75,16 @@ require 'dbconnect.php';
                     </div>
                 </div>
             </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control form-control-lg" id="email" type="text" value="<?php
+                    if (isset($_SESSION['user'])) {
+                        echo "" . $_SESSION[user][user_email] . "";
+                    }
+                    ?>" name="email" required>
+            </div>
+
             <input hidden value="<?php echo "" . $_SESSION[user][user_id] . ""; ?>" name="user_id">
             <button type="submit" class="btn btn-primary">Update Info</button>
         </form>
