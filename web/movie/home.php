@@ -33,10 +33,6 @@
 
 <body>
     <?php include './common/nav.php'; ?>
-    
-    <?php if(isset($_SESSION['user'])) {
-        echo $_SESSION['user']['username'];
-    } ?>
 
     <div class="container-fluid hero">
         <div class="container hero-info">

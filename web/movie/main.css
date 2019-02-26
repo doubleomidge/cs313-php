@@ -150,19 +150,22 @@ h1, h2, h3, h4, .headerfont {
   height: 95vh; }
 
 .search {
-  padding-top: 15%; }
+  padding-top: 15%;
+  display: flex;
+  justify-content: center; }
   .search h1 {
     color: #B74F6F;
     margin-bottom: 20px;
     font-size: 4em; }
-  .search form {
-    margin: 0 auto; }
 
 .next {
   background-color: #E2FCEF; }
 
 .suggestion .movie-holder {
   margin-top: 30px; }
+
+.nextform {
+  width: 300px; }
 
 /* ----------------------------------------------------- */
 /* --------- User page ----------- */
