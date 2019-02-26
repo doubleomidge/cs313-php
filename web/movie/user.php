@@ -37,16 +37,14 @@ require 'dbconnect.php';
         <div class="container d-flex" style="margin: 0 auto;">
 
             <div class="fam" style="width: auto; margin-right: 30px; width: 800px;">
-                <h2>Join / Set up a family</h2>
-                <form method="post" action="index.php?action=family">
-                    <div class="form-group">
-                        <label for="family">Search families</label>
-                        <input type="text" class="form-control" id="family" name="family" placeholder="Look for a family" required>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary mb-2">Request to Join</button>
-                    <small class="form-text text-muted">This will send the main user an email to review.</small>
-                </form>
+                <h2>Your family</h2>
+                <ul>
+                    <?php
+                        foreach($db->query('SELECT user_firstname, user_lastname FROM Users WHERE family_id = 1') as $row) {
+                            echo "<li>". $row[user_firstname] . " " . $row[user_lastname] . "</li>";
+                        }
+                    ?>
+                </ul>
             </div>
 
 
@@ -60,7 +58,7 @@ require 'dbconnect.php';
                         foreach($db->query('SELECT format_type FROM Format') as $row) {
                             echo "<li>". $row[format_type] . "</li>";
                         }
-                        ?>
+                    ?>
                 </ul>
 
                 <form method="post" action="index.php?action=format">
