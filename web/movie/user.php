@@ -62,13 +62,13 @@ session_start();
                     ?>
                 </ul>
 
-                <form action="index.php?action=userInfo" method="post">
+                <form action="index.php?action=formatAdd" method="post">
                     <div class="form-group">
                         <label for="newFormat">New Format</label>
                         <input type="text" class="form-control form-control-lg" id="newFormat" placeholder="Enter custom format here" name="newFormat" required>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Update Info</button>
+                    <button type="submit" class="btn btn-primary">Submit New Format</button>
                 </form>
             </div>
 
