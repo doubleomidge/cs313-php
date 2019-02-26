@@ -53,8 +53,7 @@ function updateMovie($movieId, $title, $desc, $year, $run, $rate, $type){
           movie_year      = :year, 
           movie_desc      = :desc,
           movie_runtime   = :run, 
-          movie_rating_id = :rate, 
-          genre_id        = :gen,
+          movie_rating_id = :rate,
           format_id       = :type
       WHERE movie_id = :movieId';
     $stmt = $db->prepare($sql);
