@@ -50,7 +50,7 @@ h1, h2, h3, h4, .headerfont {
   background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%); }
   .hero .hero-info {
     color: #ffffff;
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 200px; }
     .hero .hero-info h1 {
       font-size: 11em;
@@ -77,6 +77,9 @@ h1, h2, h3, h4, .headerfont {
   padding: 30px; }
   .card span {
     padding-bottom: 15px; }
+
+.share-content {
+  padding-top: 7%; }
 
 /* ----------------------------------------------------- */
 /* --------- Registration page ----------- */

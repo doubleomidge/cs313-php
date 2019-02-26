@@ -79,7 +79,7 @@ background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
 
     .hero-info {
         color:  #ffffff;
-        padding-top: 150px;
+        padding-top: 100px;
         padding-bottom: 200px;
 
         & h1 {
@@ -116,6 +116,10 @@ background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
     & span {
         padding-bottom: 15px;
     }
+}
+
+.share-content {
+    padding-top: 7%;
 }
 
 
